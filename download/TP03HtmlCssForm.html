@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP03htmlMenu</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index,follow" />
+	<style type="text/css"> 
+    
+    /* Placez ici les directives CSS */ 
+/************* Gestion de la présentation (layout) *************/
+.flex-form li{
+	display: flex;
+	flex-wrap: wrap; /* */	
+	justify-content: flex-start;/*  */
+	align-items: center;/*  */
+}
+	/* la taille du label va de 120 à 220px */
+.flex-form > li > label {
+	flex-grow: 1;/*  */
+	flex-shrink: 0;/*  */
+	flex-basis:120px;/*  */	 
+	max-width: 220px;/*  */	
+}
+/* la taille de la saisie est de 220px la taille totale de la ligne est de 340px*/
+.flex-form > li > label + *{
+	flex-grow: 1;/*  */
+	flex-shrink: 0;/* */
+	flex-basis:220px;/*  */	
+}
+	/************* Gestion des styles *************/
+body {
+  background: #f2f2f2;
+}	
+.flex-form li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;/*  */
+  letter-spacing: .09em;/*  */
+  border-radius: 2px;/*  */
+  cursor: pointer;/* */
+}
+.flex-form li {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <form  action="mailto:adresse@email.tld" method="post">
+    <ul class="flex-form">
+      <li>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" placeholder="Entrez votre nom ici">
+      </li>
+      <li>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" placeholder="Entrez votre prénom ici">
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Entrez votre email ici">
+      </li>
+      <li>
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" placeholder="Entrez votre téléphone ici">
+      </li>
+      <li>
+        <label for="message">Message</label>
+        <textarea rows="6" id="message" placeholder="Entrez votre message ici"></textarea>
+      </li>     
+      <li>
+        <button type="submit">Envoyer</button>
+      </li>
+    </ul>
+  </form>
+</div>
+				
+</body>
+
+
+
+
+
+</html>

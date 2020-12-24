@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 juin 2015, 10:37:57
+    Author     : prof
+*/
+* { margin: 0; padding: 0; }
+.bloc1 {
+    background-color: blue;
+    height: 50px;
+    color: white;
+}
+.bloc2 {
+    background-color: green;
+    height: 50px;
+    margin-top: 20px;
+    color: white;
+}
+
+.blocb {
+    background-color: blue;
+    height:100px;
+    width: 100px;
+    float: left;
+    color: white;
+}
+.blocv {
+    background-color: green;
+    height:100px;
+    width: 100px;
+    margin: 10px;
+    float: left;
+    margin-left: 20px;
+    color: white;
+}
+.blocr {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    float: left;
+    margin-left: 20px;
+    border: 3px solid black;
+    color: white;
+}
+.sautlg{
+clear: both
+}
+
+.conteneurb {
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+    padding-top: 40px;
+    color: white;
+}
+.blocj {
+    background-color: yellow;
+    height: 75px;
+    width: 50px;
+    margin-left: 20px;
+    color: black;
+}
+
+.conteneurj {
+    width: 40%;
+    background-color: yellow;
+}
+.image {
+    float: right;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    padding: 5px; 
+    color: white; 
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.border {
+    border: 10px solid black;
+}
+
+.red.border { 
+    border-color: #900; 
+}
+
+.red.border.box {
+    color: black; 
+}
+
+.border.box:not(.red):not(.blue):not(.green) {
+    color: black;
+}

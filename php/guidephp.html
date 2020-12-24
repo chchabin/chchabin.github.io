@@ -1,0 +1,2049 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <title>Guide php</title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1 class="display-4">Guide PHP</h1>
+    <hr class="my-4">
+    <div class="accordion" id="titre">
+        <div class="card">
+            <div class="card-header" id="_1">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#a0"
+                            aria-expanded="false" aria-controls="a0">
+                    I - Introduction au développement Web
+                    </button>
+                </h2>
+            </div>
+            <div id="a0" class="collapse" aria-labelledby="_1" data-parent="#titre">
+                <div class="card-body">
+                    <p>L'objectif de ce chapitre est de découvrir les notions fondamentales liées au développement Web.</p>
+                    <p><img src="images/intro-dev-web/dev-web.png" alt="" /></p>
+                    <p><strong>Note</strong> : ce chapitre s'inspire de la <a target="_blank" href="http://symfony.com/doc/current/book/from_flat_php_to_symfony2.html">documentation du framework PHP Symfony</a>.</p>
+
+                    <div class="accordion" id="stitre">
+                        <div class="card">
+                            <div class="card-header" id="_s00">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#b0" aria-expanded="false" aria-controls="b0">
+                                        A - Le fonctionnement du Web
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="b0" class="collapse" aria-labelledby="_s00" data-parent="#stitre">
+                                <div class="card-body">
+                                    <p>Pour consulter un site Web sur Internet, il suffit de taper l'adresse correcte du site dans la barre d'adresse d'un navigateur Web, et le site s'affiche (si l'accès au réseau fonctionne). Nous allons tenter de comprendre ce qui se cache derrière cette opération très simple en apparence.</p>
+
+                                    <div class="accordion" id="sstitre">
+                                        <div class="card">
+                                            <div class="card-header" id="_s01">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseThree">
+                                                        a - La notion de serveur Web
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="_s01"
+                                                 data-parent="#sstitre">
+                                                <div class="card-body">
+                                                    <p>Pour être accessible, un site Web doit être publié sur un <strong>serveur</strong>. Un serveur est un type particulier d'ordinateur dont le rôle est d'attendre les demandes de clients, et d'y répondre. Un serveur rend un service à ses clients.</p>
+                                                    <p>Il existe de nombreux types de serveurs, en fonction du service rendu : serveur de fichiers, de messagerie, d'authentification... Un serveur qui permet de publier des sites Web est appelé serveur Web.</p>
+                                                    <p><strong>Note</strong> : une même machine peut rendre différents services (exemple : serveur Web et serveur de fichiers).</p>
+                                                    <p>Plus précisément, une machine serveur Web embarque et exécute un logiciel serveur, capable de répondre aux demandes de consultations de sites Web. Les logiciels serveurs Web les plus populaires sont <a target="_blank" href="http://httpd.apache.org/">Apache</a>, <a target="_blank" href="http://www.iis.net/">Microsoft IIS</a> et <a target="_blank" href="http://nginx.org/">nginx</a>.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_s001">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c00"
+                                                            aria-expanded="false" aria-controls="c00">
+                                                        b - La notion de client Web
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c00" class="collapse" aria-labelledby="_s001"
+                                                 data-parent="#sstitre">
+                                                <div class="card-body">
+                                                    <p>La machine qui permet la consultation du site Web demandé est appelé <strong>client Web</strong>. Il s'agit d'un abus de langage : en réalité, le véritable client est un logiciel qui s'exécute sur cette machine et réalise l'opération de consultation. Ce logiciel est le plus souvent un navigateur Web (<em>browser</em>). Les navigateurs Web les plus populaires sont <a target="_blank" href="http://windows.microsoft.com/fr-fr/internet-explorer/">Internet Explorer</a>, <a target="_blank" href="https://www.mozilla.org/fr/firefox">Mozilla Firefox</a>, <a target="_blank" href="https://www.google.fr/chrome/browser/">Chrome</a>, <a target="_blank" href="https://www.apple.com/fr/safari/">Safari</a> et <a target="_blank" href="http://www.opera.com/fr">Opera</a>.</p>
+                                                    <p>D'autres types de logiciels que les navigateurs peuvent jouer le rôle de clients Web en se connectant à des serveurs Web. Exemples : robots d'indexation, aspirateurs Web, applications mobiles, etc.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_s02">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c4"
+                                                            aria-expanded="false" aria-controls="collapseThree">
+                                                        c - La communication entre client et serveur
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c4" class="collapse" aria-labelledby="_s02"
+                                                 data-parent="#sstitre">
+                                                <div class="card-body">
+                                                    <p>La compréhension des échanges ayant lieu entre un client et un serveur Web lors de la consultation d'un site est essentielle. Il s'agit d'un mécanisme de type <strong>requête/réponse</strong>.</p>
+                                                    <p><img src="images/intro-dev-web/web_http_echange.png" alt="Exemple d'échange entre client et serveur" /></p>
+                                                    <ol>
+                                                        <li>L'échange est initié par le client, qui envoie au serveur une requête pour consulter une ressource Web.</li>
+                                                        <li>Le serveur prépare la page HTML associée.</li>
+                                                        <li>Le serveur renvoie la page HTML au client, qui l'affiche.</li>
+                                                    </ol>
+                                                    <p>Afin de se comprendre, client et serveur Web utilisent pendant leurs échanges un protocole commun : HTTP.</p>
+                                                   </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s100">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#z0" aria-expanded="false" aria-controls="z0">
+                                        B - Le protocole HTTP
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="z0" class="collapse" aria-labelledby="_s100" data-parent="#stitre">
+                                <div class="card-body">
+                                    <p>HTTP (<em>HyperText Transfert Protocol</em>) est le protocole de transfert du Web. C'est son invention en 1989 au CERN de Genève, en même temps que le langage HTML, qui a conduit à l'apparition du World Wide Web : un immense réseau de réseaux, où on peut &quot;rebondir&quot; d'une page Web à une autre en utilisant des liens sans avoir besoin de connaître l'emplacement physique des serveurs et des ressources consultés.</p>
+                                    <p>HTTP est fondamentalement un protocole très simple, basé sur des commandes textuelles.</p>
+                                    <div class="accordion" id="sstitre03">
+                                        <div class="card">
+                                            <div class="card-header" id="_s04">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c6"
+                                                            aria-expanded="false" aria-controls="c6">
+                                                        d - Anatomie d'une requête HTTP
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c6" class="collapse" aria-labelledby="_s04"
+                                                 data-parent="#sstitre03">
+                                                <div class="card-body">
+                                                    <p>Prenons comme exemple la première étape de l'échange décrit plus haut.</p>
+                                                    <p><img src="images/intro-dev-web/web_http_requete.png" alt="" /></p>
+                                                    <p>La requête HTTP envoyée par le navigateur prend une forme similaire à celle-ci :</p>
+                                                    <pre><code>
+GET / HTTP/1.1
+Host: xkcd.com
+Accept: text/html
+User-Agent: Mozilla/5.0 (Macintosh)
+</code></pre>
+                                                    <p>La première ligne de cette requête HTTP est la plus importante. Elle contient :</p>
+                                                    <ul>
+                                                        <li>La <strong>méthode</strong> associée à la requête : ici, <code>GET</code> signifie une demande de ressource.</li>
+                                                        <li>L'identifiant de la <strong>ressource concernée</strong>. Ici, <code>/</code> (symbole de la racine, comme sous Linux) indique qu'on souhaite accéder au document par défaut.</li>
+                                                        <li>La <strong>version</strong> du protocole HTTP, ici 1.1.</li>
+                                                    </ul>
+                                                    <p>Les autres lignes de la requête HTTP sont appelés champs d'en-tête (<em>HTTP header fields</em> ou plus simplement <em>headers</em>). Ils précisent le site Web concerné (champ <code>Host</code>), les types de contenu acceptés par le client (champ <code>Accept</code>) et le logiciel client utilisé (champ <code>User-Agent</code>). Il existe d'autres champs d'en-tête, non présentés ici.</p>
+                                                    <p>Les méthodes HTTP les plus fréquemment utilisées sont <code>GET</code> (pour récupérer une ressource depuis le serveur) et <code>POST</code> (pour modifier une ressource sur le serveur). Il en existe d'autres comme <code>HEAD</code>, <code>PUT</code> ou <code>DELETE</code>.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_s06">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c09"
+                                                            aria-expanded="false" aria-controls="c09">
+                                                        e - Anatomie d'une réponse HTTP
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c09" class="collapse" aria-labelledby="_s06"
+                                                 data-parent="#sstitre03">
+                                                <div class="card-body">
+                                                    <p>Lorsqu'il reçoit une requête HTTP, le serveur Web y puise les informations nécessaires pour construire la réponse, puis la renvoie au client. Continuons avec notre exemple précédent.</p>
+                                                    <p><img src="images/intro-dev-web/web_http_echange.png" alt="" /></p>
+                                                    <p>La réponse HTTP renvoyée du serveur au client prend l'aspect ci-dessous.</p>
+                                                    <pre><code>
+HTTP/1.1 200 OK
+Date: Mon, 14 Apr 2013 14:05:05 GMT
+Server: lighttpd/1.4.19
+Content-Type: text/html
+
+&lt;html&gt;
+    &lt;!-- code HTML de la page --&gt;
+    &lt;!-- ... --&gt;
+&lt;/html&gt;
+                                                    </code></pre>
+                                                    <p>La première ligne de la réponse contient son <strong>statut</strong> sous la forme d'un code qui indique le résultat de la requête. Comme une requête, une réponse HTTP contient des champs d'en-tête (<code>Date</code>, <code>Content-Type</code> et bien d'autres) permettant de véhiculer des informations additionnelles. Par exemple, il est possible d'utiliser certains champs pour mettre en place un mécanisme de cache.</p>
+                                                    <p>Enfin, la réponse HTTP contient éventuellement la ressource demandée par le client. Le plus souvent, il s'agit d'une page Web décrite sous la forme de balises HTML.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_s08">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c07"
+                                                            aria-expanded="false" aria-controls="c07">
+                                                        f - Les codes HTTP
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c07" class="collapse" aria-labelledby="_s08"
+                                                 data-parent="#sstitre03">
+                                                <div class="card-body">
+                                                    <p>Les codes de retour HTTP peuvent être classés par familles en fonction du premier chiffre.</p>
+                                                    <table class="table">
+                                                        <tr>
+                                                            <th>Famille</th>
+                                                            <th>Signification</th>
+                                                            <th>Exemples</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><strong>1xx</strong></th>
+                                                            <td>Information</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><strong>2xx</strong></th>
+                                                            <td>Succès</td>
+                                                            <td>200 : requête traitée avec succès</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><strong>3xx</strong></th>
+                                                            <td>Redirection</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><strong>4xx</strong></th>
+                                                            <td>Erreur provenant du client</td>
+                                                            <td>400 : syntaxe de la requête erronée <br>404 : ressource demandée non trouvée</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><strong>5xx</strong></th>
+                                                            <td>Erreur provenant du serveur</td>
+                                                            <td>500 : erreur interne du serveur<br>503 : service temporairement indisponible</td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <p><img src="images/intro-dev-web/http_error_404.jpg" alt="" /></p>
+                                                    <p>Vous trouverez sur <a target="_blank" href="http://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Wikipedia</a> plus de détails sur le protocole HTTP.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_s05">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c7"
+                                                            aria-expanded="false" aria-controls="c7">
+                                                        g - La notion d'URL
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c7" class="collapse" aria-labelledby="_s05"
+                                                 data-parent="#sstitre03">
+                                                <div class="card-body">
+                                                    <p>On a l'habitude d'accéder à un site Web en utilisant son adresse. Celle-ci est de la forme : <code>http://www.monsite.fr/mondossier/mapage.html</code>. On peut décomposer cette adresse en plusieurs sous-parties.</p>
+                                                    <ul>
+                                                        <li><code>http://</code> signifie qu'on utilise le protocole HTTP.</li>
+                                                        <li><code>www.monsite.fr</code> est le nom de domaine du site Web visité.</li>
+                                                        <li><code>/mondossier/mapage.html</code> est le chemin de la ressource demandée au sein du site.</li>
+                                                    </ul>
+                                                    <p>La majorité des serveurs Web est configurée pour renvoyer une page par défaut (<code>index.html</code>, <code>index.php</code>, <code>Default.aspx</code>) lorsque le client ne précise pas explicitement quelle page il souhaite récupérer (exemples : http://www.monsite.fr ou http://www.monsite.fr/mondossier/).</p>
+                                                    <p>Une adresse Web telle que celle ci-dessus est ce qu'on appelle une <strong>URL</strong> ou <em>Uniform Resource Locator</em>. Elle permet de décrire l'emplacement d'une ressource Web et le moyen d'y accéder.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_1AB">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#b1" aria-expanded="false" aria-controls="b1">
+                                        C - L'évolution vers des sites dynamiques
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="b1" class="collapse" aria-labelledby="_1Ab" data-parent="#stitre">
+                                <div class="card-body">
+                                    <div class="accordion" id="stitre2">
+                                        <div class="card">
+                                            <div class="card-header" id="_1Ba">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c8"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseThree">
+                                                        a - Au commencement du Web : les sites statiques
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c8" class="collapse" aria-labelledby="_1Ba"
+                                                 data-parent="#stitre2">
+                                                <div class="card-body">
+                                                    <p>Les tous premiers sites Web créés dans les années 1990 étaient composés uniquement de pages HTML (pour le contenu) et de fichiers CSS (pour la mise en forme du contenu), et éventuellement d'autres types de ressources comme par exemple des images.</p>
+                                                    <p>La consultation d'un site Web statique met en jeu deux logiciels :</p>
+                                                    <ul>
+                                                        <li>Le logiciel client, le plus souvent un navigateur Web.</li>
+                                                        <li>Le logiciel serveur Web.</li>
+                                                    </ul>
+                                                    <p>Lorsqu'un client envoie une requête au serveur Web hébergeant un site statique, le serveur se contente de renvoyer la ressource demandée. Les pages HTML affichées ne peuvent pas évoluer automatiquement, d'où le terme &quot;statique&quot;.</p>
+                                                    <p><img src="images/intro-dev-web/web_site_statique.png" alt="" /></p>
+                                                    <p>L'accès à un site Web statique est un exemple d'architecture <strong>client/serveur</strong>,</p>
+                                                    <p>La mise à jour d'un site Web statique nécessite l'édition des fichiers sources, puis la mise en ligne des modifications (publication sur le serveur Web).</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_1Bc">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c9"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseThree">
+                                                        b - L'évolution vers des sites dynamiques
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c9" class="collapse" aria-labelledby="_1Bc"
+                                                 data-parent="#stitre2">
+                                                <div class="card-body">
+                                                    <p>L'explosion de la popularité du Web au début des années 2000 a provoqué l'appatition de nouveaux besoins et conduit à l'émergence des sites Web dynamiques. A l'inverse d'un site statique, un site dynamique est un type de site Web dans lequel le contenu des pages est construit au moment de la requête du client.</p>
+                                                    <p>Lorsqu'un client envoie une requête au serveur Web hébergeant un site dynamique, le serveur prépare la page HTML correspondant à cette requête, puis la renvoie au client pour affichage. Les pages Web affichées au visiteur ne sont pas figées comme dans le cas d'un site statique, mais <strong>générées</strong> au moment de leur consultation.</p>
+                                                    <p><img src="images/intro-dev-web/web_site_dynamique.png" alt="" /></p>
+                                                    <p><strong>Important</strong> : Le résultat renvoyé par le serveur Web et affiché par le client est <strong>toujours</strong> une page HTML.</p>
+                                                    <p>Contrairement à un site statique, un site dynamique ouvre la voie à des interactions quasiment illimitées avec ses visiteurs : identification, échange de données entre site et utilisateur, mise à jour du site par ses utilisateurs (&quot;Web 2.0&quot;)... Parmi les nombreux exemples de sites Web dynamiques, on peut citer les sites de e-commerce, CMS (<em>Content Management System</em> ou systèmes de gestion de contenu) , wikis, forums...</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_1Bd">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c10"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseThree">
+                                                        d - Les langages serveur du Web dynamique
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c10" class="collapse" aria-labelledby="_1Bd"
+                                                 data-parent="#stitre2">
+                                                <div class="card-body">
+                                                    <p>Pour créer un site Web dynamique. il faut obligatoirement utiliser un langage capable de <em>générer</em> des pages HTML. Le diagramme ci-dessous rassemble les principaux langages capables de réaliser cette tâche.</p>
+                                                    <p><img src="images/intro-dev-web/web_server_languages_chart.jpg" alt="" /></p>
+                                                    <p>On constate que la technologie la plus populaire est PHP, suivie de loin par ASP.NET (Microsoft) et Java (ORACLE). Les technologies ASP.NET et Java sont plus souvent employées pour des sites complexes avec d'importants besoins en matière de performances et de montée en charge. Ces sites sont assez peu nombreux, d'où la domination globale de PHP.</p>
+                                                    <p><strong>Note</strong> : cela ne veut pas dire que le langage PHP ne puisse pas, lui aussi, être employé dans des contextes exigeants.</p>
+                                                    <p>PHP est particulièrement dominant dans le secteur des CMS, ces logiciels qui permettent de publier du contenu en ligne sans presque aucune connaissance technique. On peut citer comme exemples Wordpress, Drupal ou Joomla. La position dominante de PHP s'explique également par la richesse de son écosystème : librairies, frameworks, etc.</p>
+                                                    <p>Quelle que soit la technologie mise en oeuvre, il est essentiel de bien comprendre que ces langages sont toujours employés côté serveur Web et jamais côté client (d'où le terme de langages &quot;serveur&quot;). Un navigateur Web ne sait pas exploiter directement une page PHP ou ASP.NET. En revanche, il sait afficher une page HTML qu'un serveur Web aura préalablement générée en utilisant PHP ou ASP.NET.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="_2">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#a1"
+                            aria-expanded="false" aria-controls="a1">
+                       II - Les bases du langage
+                    </button>
+                </h2>
+            </div>
+            <div id="a1" class="collapse" aria-labelledby="_2" data-parent="#titre">
+                <div class="card-body">
+                    <p>L'objectif de ce chapitre est de découvrir les bases du langage PHP.</p>
+                    <div class="accordion" id="stitre3">
+                        <div class="card">
+                            <div class="card-header" id="_s3">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d0" aria-expanded="false" aria-controls="d0">
+                                        A - Anatomie d'un fichier source PHP
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d0" class="collapse" aria-labelledby="_s3"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>Le code PHP est écrit dans des fichiers source portant l'extension <code>.php</code>. Le plus souvent, un fichier source PHP contient un mélange de balises HTML et de code PHP. Au moment où un client demande ce fichier à un serveur Web, le code PHP est exécuté par le serveur pour produire dynamiquement une page Web.</p>
+                                    <p>
+                                        <img src="images/bases-langage/web_php_htmlcss.png" alt="" />
+                                    </p>
+                                    <p>
+                                        <strong>Attention</strong> : un fichier contenant du code PHP mais portant l'extension <code>.html</code> sera renvoyé directement par le serveur sans exécution du code PHP qu'il contient.</p>
+                                    <p>Il est fortement conseillé d'adopter le standard HTML5 ainsi que le jeu de caractères Unicode UTF-8 (sans BOM). Tous les fichiers source doivent être encodés avec ce jeu de caractères pour que les caractères accentués soient affichés correctement, et la structure HTML doit être identique à celle ci-dessous.</p>
+                                    <pre>
+      <code>
+&lt;!doctype html&gt;
+&lt;head lang="fr"&gt;
+    &lt;meta charset="utf-8" /&gt;
+    ...
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s4">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d1" aria-expanded="false" aria-controls="d1">
+                                        B - Définition d'un bloc de code PHP
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d1" class="collapse" aria-labelledby="_s4"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>Dans un fichier source PHP, on définit une portion de code PHP gràce aux balises <code>&lt;?php</code> et <code>?&gt;</code>. Il est possible de définir plusieurs blocs de code dans un même fichier source PHP. A l'intérieur d'un bloc de code, on peut utiliser les fonctionnalités du langage. Chaque instruction doit se terminer par le symbole <code>;</code>.</p>
+                                    <pre>
+      <code class="language-php">
+&lt;!doctype html&gt;
+&lt;html lang="fr"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;Ma première page PHP&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Affichons du texte avec PHP...&lt;/h1&gt;
+        &lt;h3&gt;Ce titre est écrit directement en HTML&lt;/h3&gt;
+        &lt;h3&gt;Celui-ci contient une partie &lt;?php echo "générée avec PHP"; ?&gt;&lt;/h3&gt;
+        &lt;h3&gt;&lt;?php echo "Celui-là est entièrement généré avec PHP"; ?&gt;&lt;/h3&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s5">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d2" aria-expanded="false" aria-controls="d2">
+                                        C - Affichage de texte
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d2" class="collapse" aria-labelledby="_s5"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>L'affichage de texte s'effectue grâce à la commande <code>echo</code>.</p>
+                                    <pre>
+      <code class="language-php">&lt;?php echo "Bonjour Monde !"; ?&gt;
+</code>
+    </pre>
+                                    <p>On peut inclure des balises HTML dans le texte affiché par <code>echo</code>, ou bien inclure l'appel à <code>echo</code> dans des balises HTML. Ainsi, les deux appels suivants produisent exactement le même résultat.</p>
+                                    <pre>
+      <code class="language-php">
+&lt;?php echo "&lt;p&gt;Bonjour Monde !&lt;/p&gt;"; ?&gt;
+&lt;p&gt;&lt;?php echo "Bonjour Monde !"; ?&gt;&lt;/p&gt;
+</code>
+    </pre>
+                                    <p>
+                                        <strong>Conseil</strong> : sauf cas particulier, on utilisera plutôt la seconde technique, qui préserve mieux la structure HTML de la page.</p>
+                                    <p>
+                                        <strong>Note</strong> : il existe une syntaxe plus concise pour afficher du texte. Le code PHP <code>&lt;?= "Hello" ?&gt;</code> équivaut à <code>&lt;?php echo "Hello"; ?&gt;</code>.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s6">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d3" aria-expanded="false" aria-controls="d3">
+                                        D - Commentaires
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d3" class="collapse" aria-labelledby="_s6"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>A l'intérieur d'un bloc de code PHP, on peut ajouter des commentaires avec les symboles communs à de nombreux langages de programmation : <code>//</code> pour un commentaire sur une seule ligne et <code>/* ... */</code> pour un commentaire sur plusieurs lignes.</p>
+                                    <p>A l'extérieur d'un bloc PHP, on utilise la syntaxe HTML <code>&lt;!-- ... --&gt;</code> pour ajouter des commentaires.</p>
+                                    <pre>
+      <code class="language-php">
+&lt;h1&gt;Affichons du texte avec PHP...&lt;/h1&gt;  &lt;!-- un commentaire HTML --&gt;
+...
+&lt;h3&gt;&lt;?php echo "Celui-là est entièrement généré avec PHP"; ?&gt;&lt;/h3&gt;
+// un commentaire PHP ?&gt;
+</code>
+    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s7">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d4" aria-expanded="false" aria-controls="d4">
+                                        E - Inclure des portions de page
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d4" class="collapse" aria-labelledby="_s7"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>Un fichier PHP peut inclure le contenu d'un autre fichier grâce à l'instruction <code>include</code>.</p>
+                                    <pre>
+      <code class="language-php">&lt;?php include "monfichier.php"; ?&gt;
+</code>
+    </pre>
+                                    <p>Au moment de l'exécution, cette instruction sera remplacée par le contenu du fichier inclus.</p>
+                                    <p>Cette technique permet de centraliser le code des éléments communs à plusieurs fichiers PHP, comme par exemple des menus ou des pieds de page, pour éviter la duplication de code.</p>
+                                    <pre>
+      <code class="language-php">
+&lt;!doctype html&gt;
+&lt;html lang="fr"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;Une page PHP modulaire&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;?php include "header.php"; ?&gt;
+        &lt;?php include "menu.php"; ?&gt;
+
+        &lt;!-- ... (contenu spécifique) --&gt;
+
+        &lt;?php include "footer.php"; ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+                                    <p>Une autre instruction PHP, <code>require</code>, joue le même rôle avec la différence suivante : contrairement à <code>include</code>, <code>require</code> déclenche une erreur si le fichier à inclure est introuvable.</p>
+                                    <pre>
+      <code class="language-php">&lt;?php require "monfichier.php"; ?&gt;
+</code>
+    </pre>
+                                    <p>
+                                        <strong>Note</strong> : il existe aussi des instructions <code>include_once</code> et <code>require_once</code> qui vérifient si le fichier a déjà été inclus, et si c'est le cas, ne l'incluent pas une deuxième fois.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="_3">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#a2"
+                            aria-expanded="false" aria-controls="a2">
+                  III - Programmer avec PHP
+                    </button>
+                </h2>
+            </div>
+            <div id="a2" class="collapse" aria-labelledby="_3" data-parent="#titre">
+                <div class="card-body">
+                    <p>L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec le langage PHP.</p>
+
+                    <div class="accordion" id="stitre4">
+                        <div class="card">
+                            <div class="card-header" id="_s8">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e0" aria-expanded="false" aria-controls="e0">
+                                        A - Variables
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e0" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+
+                                    <div class="accordion" id="sstitre4">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss13">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee0" aria-expanded="false"
+                                                            aria-controls="ee0">
+                                                        a - Définition d'une variable
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee0" class="collapse" aria-labelledby="_ss13"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>Une variable joue en PHP le même rôle que dans tout autre langage : stocker une information. Une variable PHP est définie par un nom qui commence obligatoirement par le symbole <code>$</code>.</p>
+                                                    <pre>
+      <code>
+&lt;?php $message = "Bonjour Monde !";
+echo $message; ?&gt;
+</code>
+    </pre>
+                                                    <p>On remarque au passage que la variable <code>$message</code> n'a pas un type explicite comme <code>string</code> ou <code>int</code>. PHP n'impose pas au programmeur de définir les types des variables. On parle de <strong>typage dynamique</strong>.</p>
+                                                    <p>Après sa définition, une variable PHP est utilisable à n'importe quel endroit de la page, même dans un autre bloc de code.</p>
+                                                    <pre>
+      <code>
+&lt;?php $message = "Bonjour Monde !"; ?&gt;
+&lt;h1&gt;Un titre&lt;/h1&gt;
+&lt;h2&gt;Un sous-titre&lt;/h2&gt;
+&lt;p&gt;&lt;?php echo $message; ?&gt;&lt;/p&gt;
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss14">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee1" aria-expanded="false"
+                                                            aria-controls="ee1">
+                                                        b - Chaînes de caractères
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee1" class="collapse" aria-labelledby="_ss14"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>Les chaînes de caractères PHP sont délimitées par des guillemets doubles <code>"..."</code> ou par des guillemets simples <code>'...'</code>. Il est possible de concaténer (assembler) plusieurs chaînes de caractères au moyen du symbole <code>.</code>.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php echo "Bonjour" . " " . "Monde !"; ?&gt;
+&lt;?php echo 'Bonjour' . ' ' . 'Monde !'; ?&gt;
+</code>
+    </pre>
+                                                    <p>Chaque ligne ci-dessus affiche <code>Bonjour Monde !</code>.</p>
+                                                    <p>La différence entre guillemets simples et doubles apparaît lorsqu'on inclut une variable dans une chaîne de caractères.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php $age = 39; ?&gt;
+&lt;p&gt;&lt;?php echo "Vous avez $age ans"; ?&gt;&lt;/p&gt;
+&lt;p&gt;&lt;?php echo 'Vous avez $age ans'; ?&gt;&lt;/p&gt;
+</code>
+    </pre>
+                                                    <p>Le premier <code>echo</code> affiche : <code>Vous avez 39 ans</code>. Le second <code>echo</code> affiche : <code>Vous avez $age ans</code>.</p>
+                                                    <p>Lorsqu'on utilise des guillemets doubles pour définir une chaîne de caractères, les variables sont interprétées (remplacées par leur valeur). Ce n'est pas le cas avec des guillemets simples.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s9">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e1" aria-expanded="false" aria-controls="e1">
+                                        B - Tests et conditions
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e1" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre5">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss15">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee2" aria-expanded="false"
+                                                            aria-controls="ee2">
+                                                        c - L'instruction <code>if</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee2" class="collapse" aria-labelledby="_ss15"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>Dans un programme, on souhaite fréquemment agir en fonction du résultat d'une condition. Les traitements à effectuer peuvent être différents selon que la condition soit vraie ou fausse. En PHP, une alternative s'exprime grâce à l'instruction <code>if</code> éventuellement associée à une instruction <code>else</code>,. Elle permet de conditionner des traitements en fonction de certains critères. On parle parfois de branchement logique. Pendant l'exécution, les instructions exécutées seront différentes selon la valeur de la condition. Un seul des deux blocs d'instructions sera pris en compte.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+if ($nb1 &gt; $nb2) {
+    // sera exécuté si $nb1 &gt; $nb2
+}
+else {
+    // sera exécuté si $nb1 &lt;= $nb2
+}
+?&gt;
+</code>
+    </pre>
+                                                    <p>Il est possible de placer une instruction <code>if</code> à l'intérieur d'un bloc d'une autre instruction <code>if</code>. C'est ce qu'on appelle <strong>imbriquer des conditions</strong>. Attention à toujours bien refléter l'imbrication des blocs en décalant les instructions associées dans le code source : c'est ce qu'on appelle <strong>l'indentation</strong>.</p>
+                                                    <p>Si la seule opération réalisée dans un bloc <code>else</code> est un <code>if</code>, on peut également employer l'instruction <code>elseif</code>, plus concise.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+if ($nb1 &gt; $nb2) {
+    // sera exécuté si $nb1 &gt; $nb2
+}
+elseif ($nb2 &gt; $nb1) {
+    // sera exécuté si $nb1 &lt; $nb2
+}
+else {
+    // sera exécuté si $nb1 = $nb2
+}
+?&gt;
+</code>
+    </pre>
+                                                    <p>Une autre syntaxe possible de l'instruction if est la suivante :</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+if($a &gt; $b):
+    // sera exécuté si $a &gt; $b
+elseif($a == $b):
+   // sera exécuté si $a == $b
+else:
+   // sera exécuté si $a est plus petit que $b
+endif;
+?&gt;
+</code>
+    </pre>
+                                                    <p>Cette syntaxe, que l'on retrouve dans le code source de certains CMS, peut être pratique pour repérer plus facilement la fin des conditions (<code>endif;</code> au lieu de <code>}</code> ) lorsque le code PHP englobe de grandes portions de code HTML.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss16">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee3" aria-expanded="false"
+                                                            aria-controls="ee3">
+                                                        d - La notion de condition
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee3" class="collapse" aria-labelledby="_ss16"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>L'instruction <code>if</code> est associée à une condition. C'est une expression (une combinaison de variables, de valeurs et d'opérateurs) dont l'évaluation donne la valeur vraie (<code>true</code>) ou la valeur faux (<code>false</code>). On parle d'expression booléenne.</p>
+                                                    <p>Toute expression renvoyant une valeur booléenne peut être utilisée comme condition avec un <code>if</code>. C'est le cas des expressions utilisant des opérateurs de comparaison, dont voici la liste.</p>
+                                                    <table class="table">
+                                                        <tr><th>Opérateur</th><th>Signification</th></tr>
+                                                        <tr><td>==</td><td>Egal à</td></tr>
+                                                        <tr><td>!=</td><td>Différent de</td></tr>
+                                                        <tr><td>&lt;</td><td>Inférieur strictement</td></tr>
+                                                        <tr><td>&lt;=</td><td>Inférieur ou égal</td></tr>
+                                                        <tr><td>&gt;</td><td>Supérieur strictement</td></tr>
+                                                        <tr><td>&gt;=</td><td>Supérieur ou égal</td></tr>
+                                                    </table>
+                                                    <div class="alert alert-danger" role="alert">
+                                                    <p><strong>Note</strong> : la plupart des langages de programmation utilisent le symbole <code>=</code> pour symboliser l'affectation, et le symbole <code>==</code> pour l'égalité. Attention aux confusions avec le sens mathématique de l'opérateur <code>=</code>.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss17">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee4" aria-expanded="false"
+                                                            aria-controls="ee4">
+                                                        e - Les opérateurs logiques
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee4" class="collapse" aria-labelledby="_ss17"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>On peut définir des conditions plus complexes ("La valeur de X est entre 100 et 200") grâce aux opérateurs logiques. Ceux du langage PHP sont les suivants : </p>
+                                                    <ul>
+                                                        <li><code>&amp;&amp;</code> (Et),</li>
+                                                        <li><code>||</code> (Ou),</li>
+                                                        <li><code>!</code> (Non),</li>
+                                                        <li>il existe aussi <code>and</code> et <code>or</code>.</li>
+                                                    </ul>
+
+                                                    <p>Si <code>and</code> est utilisé avec <code>&amp;&amp;</code>, <code>&amp;&amp;</code> sera prioritaire. De même que <code>||</code> sera prioritaire sur <code>or</code>.
+                                                        Il existe aussi l'opérateur <code>xor</code> correspondant au Ou exclusif, c'est-à-dire qu'il vérifie qu'une des deux conditions qu'il sépare est vraie, mais pas les deux à la fois.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss18">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee5" aria-expanded="false"
+                                                            aria-controls="ee5">
+                                                        f - L'instruction <code>switch</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee5" class="collapse" aria-labelledby="_ss18"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc d'instructions parmi plusieurs possibles. Seul le bloc correspondant à la valeur testée sera pris en compte.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+switch ($nombre) {
+    case 1:
+        ...
+        break;     // break force la sortie du switch
+    case 2:
+        ...
+        break;
+    case 3:
+        ...
+        break;
+    default:
+        ...
+        break;
+}
+?&gt;
+</code>
+    </pre>
+                                                    <p>Il n'y a pas de limite au nombre de cas possibles. Le mot-clé <code>default</code>, à placer en fin de switch, est optionnel. Il sert souvent à gérer les cas d'erreurs.</p>
+                                                    <p>Les instructions <code>break;</code> dans les blocs <code>case</code> sont indispensables pour éviter de passer d'un bloc à un autre.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s10">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e2" aria-expanded="false" aria-controls="e2">
+                                        C - Tableaux
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e2" class="collapse" aria-labelledby="_s10" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre6">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss20">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee6" aria-expanded="false"
+                                                            aria-controls="ee6">
+                                                        g - Tableaux simples
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee6" class="collapse" aria-labelledby="_ss20"
+                                                 data-parent="#sstitre6">
+                                                <div class="card-body">
+                                                    <p>Un tableau permet de regrouper plusieurs données. On obtient la taille (nombre d'éléments) d'un tableau grâce à l'instruction PHP <code>count</code>.</p>
+                                                    <p>On accède aux éléments d'un tableau en utilisant leur indice, un entier qui commence à 0 et non à 1.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+$langages = array('C#', 'PHP', 'HTML');
+$nbLangages = count($langages);
+echo "Je connais $nbLangages langages de programmation";
+?&gt;
+&lt;ul&gt;
+     &lt;li&gt;&lt;?php echo $langages[0]; ?&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;?php echo $langages[1]; ?&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;?php echo $langages[2]; ?&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+                                                    <p>L'instruction PHP <code>var_dump()</code> permet d'afficher l'ensemble du contenu du tableau. Elle est utile pour déboguer un script.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;p&gt;Affichage direct du tableau :
+&lt;?php var_dump($langages); ?&gt;&lt;/p&gt;
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss21">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee7" aria-expanded="false"
+                                                            aria-controls="ee7">
+                                                        h - Tableaux associatifs
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee7" class="collapse" aria-labelledby="_ss21"
+                                                 data-parent="#sstitre6">
+                                                <div class="card-body">
+                                                    <p>Un tableau associatif, parfois appelé dictionnaire, joue le même rôle qu'un tableau, mais on accède à ses éléments grâce à une chaîne de caractères (appelée clé) et non un entier.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+$client = array(
+    "Nom" =&gt; "Annie ZETTE",
+    "Ville" =&gt; "Lyon",
+    "Courriel" =&gt; "annie@zette.fr"
+);
+$nbChamps = count($client);
+echo "Le tableau client contient $nbChamps champs";
+?&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;?php echo $client["Nom"]; ?&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;?php echo $client["Ville"]; ?&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;?php echo $client["Courriel"]; ?&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s11">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e3" aria-expanded="false" aria-controls="e3">
+                                        D - Boucles
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e3" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre7">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss30">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff0" aria-expanded="false"
+                                                            aria-controls="ff0">
+                                                        i - Définition
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff0" class="collapse" aria-labelledby="_ss30"
+                                                 data-parent="#sstitre7">
+                                                <div class="card-body">
+                                                    <p>Une structure répétitive, également appelée structure itérative ou encore boucle, permet de répéter plusieurs fois l'exécution d'une ou plusieurs instructions. Le nombre de répétitions peut :</p>
+                                                    <ul>
+                                                        <li>être connu à l'avance.</li>
+                                                        <li>dépendre de l'évaluation d'une condition.</li>
+                                                    </ul>
+                                                    <p>A chaque répétition, les instructions contenues dans la boucle sont exécutées. C'est ce qu'on appelle un tour de boucle ou encore une itération.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss31">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff1" aria-expanded="false"
+                                                            aria-controls="ff1">
+                                                        j - La boucle <code>while</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff1" class="collapse" aria-labelledby="_ss31"
+                                                 data-parent="#sstitre7">
+                                                <div class="card-body">
+                                                    <p>La boucle <code>while</code> permet de répéter des instructions tant qu'une condition est vérifiée.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+$i = 0;
+while ($i &lt; 10) {
+    ...
+    $i++;
+}
+?&gt;
+</code>
+    </pre>
+                                                    <p>Avant chaque tour de boucle, la condition associée au <code>while</code> est évaluée :
+                                                        Si elle est vraie, les instructions du bloc <code>while</code> sont exécutées. Ensuite, la ligne du while est à nouveau exécutée et la condition vérifiée.
+                                                        Si elle est fausse, les instructions du bloc ne sont pas exécutées et le programme continue juste après le bloc <code>while</code>.</p>
+                                                    <p>
+                                                        <strong>Attention</strong> : il faut absolument que la condition de la boucle <code>while</code> puisse devenir fausse. Dans le cas contraire, on obtient une boucle infinie qui ne s'arrête jamais.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss32">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff2" aria-expanded="false"
+                                                            aria-controls="ff2">
+                                                        k - La boucle <code>for</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff2" class="collapse" aria-labelledby="_ss32"
+                                                 data-parent="#sstitre7">
+                                                <div class="card-body">
+                                                    <p>La boucle <code>for</code> permet de répéter un bloc d'instructions un nombre défini de fois.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+for ($i = 0; $i &lt; 10; $i++) {
+    ...
+}
+?&gt;
+</code>
+    </pre>
+                                                    <p>Voici son fonctionnement :</p>
+                                                    <ul>
+                                                        <li>L'initialisation se produit une seule fois, au début de l'exécution.</li>
+                                                        <li>La condition est évaluée avant chaque tour de boucle. Si elle est vraie, un nouveau tour de boucle est effectué. Sinon, la boucle est terminée.</li>
+                                                        <li>L'étape est réalisée après chaque tour de boucle.</li>
+                                                    </ul>
+                                                    <p>La variable utilisée dans l'initialisation, la condition et l'étape est appelée le compteur de la boucle. Par convention, elle est souvent nommée <code>i</code>.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss33">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff3" aria-expanded="false"
+                                                            aria-controls="ff3">
+                                                        l - La boucle <code>foreach</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff3" class="collapse" aria-labelledby="_ss33"
+                                                 data-parent="#sstitre7">
+                                                <div class="card-body">
+                                                    <p>La boucle <code>foreach</code> est principalement utilisée pour parcourir un tableau (associatif ou non).</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+$langages = array('C#', 'PHP', 'HTML');
+foreach($langages as $langage) {
+    echo "$langage&lt;br&gt;";
+}
+?&gt;
+</code>
+    </pre>
+                                                    <p>
+                                                        <strong>Attention</strong> : ne pas confondre la variable qui représente le tableau (ici <code>$langages</code>, écrite au pluriel) et la variable qui représente l'élément courant dans la boucle (ici <code>$langage</code>).</p>
+                                                    <p>Le parcours d'un tableau associatif avec une boucle <code>foreach</code> permet d'obtenir la liste des clés et des valeurs associées.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+$client = array(
+    "Nom" =&gt; "Annie ZETTE",
+    "Ville" =&gt; "Lyon",
+    "Courriel" =&gt; "annie@zette.fr"
+);
+?&gt;
+&lt;ul&gt;
+&lt;?php foreach($client as $cle =&gt; $valeur) { ?&gt;
+    &lt;li&gt;&lt;?php echo $cle . ' : ' . $valeur ?&gt;&lt;/li&gt;
+&lt;?php } ?&gt;
+&lt;/ul&gt;
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s12">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button"
+                                            data-toggle="collapse"
+                                            data-target="#e4" aria-expanded="false" aria-controls="e4">
+                                        E - Fonctions
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e4" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre9">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss34">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff5" aria-expanded="false"
+                                                            aria-controls="ff5">
+                                                        m - Utilisation de fonctions prédéfinies
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff5" class="collapse" aria-labelledby="_ss34"
+                                                 data-parent="#sstitre9">
+                                                <div class="card-body">
+                                                    <p>Les fonctions permettent de centraliser une portion de code utilisée régulièrement.</p>
+                                                    <p>Le langage PHP dispose d'une large biblothèque de fonctions prédéfinies. En voici quelques exemples :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <code>count</code> permet de renvoyer la taille d'un tableau.</li>
+                                                        <li>
+                                                            <code>date</code> renvoie une date/heure qu'on peut ensuite formater pour affichage.</li>
+                                                        <li>
+                                                            <code>isset</code> vérifie si une variable existe ou non.</li>
+                                                        <li>
+                                                            <code>strlen</code> renvoie le nombre de caractères d'une chaîne.</li>
+                                                    </ul>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+$langages = array('C#', 'PHP', 'HTML');
+$nbLangages = count($langages);
+if (isset($a) == false) {
+    ...
+}
+$date = date("d-m-Y H:i:s");
+$msg = "Hello there";
+$longueurMsg = strlen($msg);
+?&gt;
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss35">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff6" aria-expanded="false"
+                                                            aria-controls="ff6">
+                                                        n - Ecriture de fonctions
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff6" class="collapse" aria-labelledby="_ss35"
+                                                 data-parent="#sstitre9">
+                                                <div class="card-body">
+                                                    <p>Il est possible et souvent utile de définir ses propres fonctions PHP. Cela permet de décomposer un problème à résoudre en sous-parties plus simples, parfois réutilisables.</p>
+                                                    <p>Lorsque qu'on a besoin d'utiliser une fonction, on effectue un appel à celle-ci. Cet appel provoque un "branchement" vers la fonction, qui s'exécute. Une fois l'exécution de la fonction terminée, le contrôle revient au niveau de l'appelant et l'exécution se poursuit.</p>
+                                                    <p>Les paramètres utilisés dans la définition du sous-programme sont appelés paramètres formels. Au moment de l'exécution, leur valeur devient celle des variables utilisés pour l'appel, appelées paramètres effectifs ou encore arguments.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+// $a et $b sont les paramètres de la fonction
+function multiplier($a, $b) {
+    return $a * $b;
+}
+
+$nb1 = 3;
+$nb2 = 7.5;
+// $nb1 et $nb2 sont les arguments de l'appel de la fonction
+$resultat = multiplier($nb1, $nb2);
+// La variable $resultat vaut maintenant 22.5
+?&gt;
+</code>
+    </pre>
+                                                    <p>
+                                                        <strong>Attention</strong> : en PHP, une variable définie à l'extérieur d'une fonction n'est pas accessible dans le corps de cette fonction. Il s'agit d'une différence importante avec la plupart des autres langages de programmation.</p>
+                                                    <pre>
+      <code class="language-php">
+&lt;?php
+$a = 1;
+
+function test() {
+    echo '$a vaut ' . $a; // $a n'existe pas dans ce contexte
+}
+
+test(); // Affiche uniquement "$a vaut "
+?&gt;
+</code>
+    </pre>
+                                                    <p>Le plus souvent, on externalise la définition des fonctions dans un fichier dédié qui est inclus dans la page utilisant la fonction.</p>
+                                                    <pre>
+      <code class="language-php">&lt;?php include 'fonctions.php'; ?&gt;
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="_4">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#a3"
+                            aria-expanded="false" aria-controls="a3">
+                        IV - Transmettre des données entre des pages
+                    </button>
+                </h2>
+            </div>
+            <div id="a3" class="collapse" aria-labelledby="_4" data-parent="#titre">
+                <div class="card-body">
+                    <p>L'objectif de ce chapitre est de connaître les différents moyens de faire passer des informations d'une page PHP à l'autre, ce qui est un besoin fréquent lorsqu'on crée un site Web.</p>
+
+                    <div class="accordion" id="stitre5">
+                        <div class="card">
+                            <div class="card-header" id="_s13">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#f0" aria-expanded="false" aria-controls="f0">
+                                        A - Notion de variable superglobale
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="f0" class="collapse" aria-labelledby="_s13" data-parent="#stitre5">
+                                <div class="card-body">
+                                    <p>Une <strong>variable superglobale</strong> est une variable PHP particulière créée par le langage et non par le développeur. Elle a comme particularité d'être disponible partout dans le code (d'où son nom). La plupart du temps, elle commence par le symbole <code>$_</code>. Une variable superglobale s'utilise comme un tableau associatif : elle associe des clés et des valeurs.</p>
+                                    <p>Les informations transmises entre pages PHP sont memorisées dans des variables superglobales particulières que nous allons maintenant découvrir.</p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s14">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#f1" aria-expanded="false" aria-controls="f1">
+                                        B - Transmission via l'URL
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="f1" class="collapse" aria-labelledby="_s14" data-parent="#stitre5">
+                                <div class="card-body">
+                                    <p>Une URL représente l'adresse d'une page web et commence par <code>http://</code> ou <code>https://</code>. Lorsqu'on fait un lien vers une autre page, il est possible d'ajouter des paramètres sous la forme <code>bonjour.php?nom=Dupont&amp;prenom=Jean</code> qui seront transmis à la page.</p>
+                                    <p>
+                                        <img src="images/transmettre-donnees/url_get_parameters.png" alt="" />
+                                    </p>
+                                    <p>On peut transmettre autant de paramètres que l'on veut dans une URL, la seule limite étant de ne pas dépasser une longueur totale de 256 caractères.</p>
+                                    <p>Dans ce cas, la page <code>bonjour.php</code> recevra ces paramètres dans la variable superglobale <code>$_GET</code> et défini automatiquement par PHP :</p>
+                                    <ul>
+                                        <li>
+                                            <code>$_GET['nom']</code> aura pour valeur <code>Dupont</code> ;</li>
+                                        <li>
+                                            <code>$_GET['prenom']</code> aura pour valeur <code>Jean</code>.</li>
+                                    </ul>
+                                    <p>Avant d'utiliser un paramètre transmis dans l'URL, on doit utiliser la fonction <code>isset</code> qui permet de vérifier si ce paramètre est défini ou non.</p>
+                                    <pre>
+      <code class="language-php">
+if (isset($_GET['nom']) {
+    // Utilisation de $_GET['nom']
+    // ...
+}
+</code>
+    </pre>
+                                    <p>Si un paramètre provenant de l'URL est destiné à être affiché dans la page HTML générée par PHP (exemple : <code>&lt;?php echo $_GET['nom']; ?&gt;</code>), il faut également prendre une précaution supplémentaire pour éviter certaines failles de sécurité (voir plus loin).</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s15">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#f2" aria-expanded="false" aria-controls="f2">
+                                        C - Transmission via un formulaire
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="f2" class="collapse" aria-labelledby="_s15" data-parent="#stitre5">
+                                <div class="card-body">
+                                    <p>Les formulaires sont le moyen le plus pratique pour le visiteur de transmettre des informations à un site. PHP est capable de récupérer les données saisies par vos visiteurs et de les traiter.</p>
+
+                                    <div class="accordion" id="sstitre10">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss40">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg0" aria-expanded="false"
+                                                            aria-controls="gg0">
+                                                        o - Création d'un formulaire
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg0" class="collapse" aria-labelledby="_ss40"
+                                                 data-parent="#sstitre10">
+                                                <div class="card-body">
+                                                    <p>On ajoute un formulaire à une page Web grâce à la balise HTML <code>&lt;form&gt;</code>.</p>
+                                                    <pre>
+      <code class="language-html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Mon premier formulaire&lt;/title&gt;
+        &lt;meta charset="UTF-8" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+         &lt;form action="login.php" method="post"&gt;
+            &lt;p&gt;Entrez votre login :
+                &lt;input type="text" name="login" size="20" required /&gt;&lt;/p&gt;
+            &lt;p&gt;Entrez votre mot de passe :
+                &lt;input type="password" name="password" size="20" required /&gt;&lt;/p&gt;
+            &lt;input type="submit" value="Envoyer" /&gt;
+         &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+                                                    <p>La balise HTML <code>&lt;form&gt;</code> possède deux attributs importants :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <code>action</code> permet de définir l'URL cible qui traitera les informations soumises par le formulaire, lorsque l'utilisateur le validera en cliquant sur le bouton de type <code>submit</code> (ici "Envoyer").</li>
+                                                        <li>
+                                                            <code>method</code> permet de définir le type de requête HTTP utilisée pour envoyer les données à l'URL d'action. Ici, ce sera une requête <code>POST</code>, le cas le plus fréquent avec les formulaires.</li>
+                                                    </ul>
+                                                    <p>
+                                                        <strong>Note</strong> : on peut également utiliser la méthode <code>GET</code> avec un formulaire, mais dans ce cas les paramètres seront visibles dans l'URL et on court le risque de dépasser la taille maximale de 256 caractères.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss41">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg1" aria-expanded="false"
+                                                            aria-controls="gg1">
+                                                        p - Récupération des données d'un formulaire
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg1" class="collapse" aria-labelledby="_ss41"
+                                                 data-parent="#sstitre10">
+                                                <div class="card-body">
+                                                    <p>A l'intérieur d'un formulaire, les balises HTML <code>&lt;input&gt;</code> permettent de définir des champs de saisie pour l'utilisateur.
+                                                    <br>L'attribut <code>name</code> d'une balise <code>&lt;input&gt;</code> définit le nom de <strong>la variable</strong> qui contiendra la valeur saisie.
+                                                        La variable peut aussi être un tableau, ce qui est d'ailleur plus utile pour la traiter. Le tableau est mon_champ dans l'exemple suivant :</p>
+                                                <pre><code class="language-html">
+// ...
+&lt;p&gt;Entrez votre login :
+&lt;input type="text" name="mon_champ[login]" size="20" required /&gt;&lt;/p&gt;
+&lt;p&gt;Entrez votre mot de passe :
+&lt;input type="password" name="mon_champ[password]" size="20" required /&gt;&lt;/p&gt;
+// ...
+                                                    </code></pre>
+                                                    <p>Lorsque l'utilisateur soumet un formulaire, la ressource identifiée par l'attribut <code>action</code> de la balise <code>&lt;form&gt;</code> reçoit les données du formulaire et peut les traiter.</p>
+                                                    <p>Si le formulaire est soumis avec la méthode <code>POST</code>, les données envoyées via un formulaire sont ajoutées dans le corps de la requête HTTP et se retrouvent dans un tableau associatif nommé <code>$_POST</code> défini automatiquement par PHP.</p>
+                                                    <ul>
+                                                        <li>Les clés de ce tableau sont les noms des champs du formulaire (attributs <code>name</code> des balises <code>&lt;input&gt;</code> du formulaire).</li>
+                                                        <li>Les valeurs associées aux clés sont les données saisies par l'utilisateur dans chaque champ.</li>
+                                                    </ul>
+                                                    <pre><code class="language-php">
+// récupération des zones de saisie dans des variables
+$login = $_POST["login"];
+$mdp = $_POST["password"];
+// ...
+// ...
+// Autre exemple récupération des zones de saisie dans une variable tableau
+$login = $_REQUEST['mon_champ']['login'];
+$mdp = $_REQUEST['mon_champ']['password'];
+// ...
+</code> </pre>
+                                                    <p><strong>Remarque</strong> : pour indifférencier la méthode d'envoie, c'est-à-dire <code>POST</code> ou <code>GET</code>, il est preférable d'utiliser le tableau associatif nommé <code>$_REQUEST</code>. </p>
+                                                    <p><strong>Debogage</strong> : à des fins de débogage, on peut afficher le contenu de <code>$_POST</code> en ajoutant une instruction <code>var_dump($_POST)</code>.</p>
+                                                    <p>
+                                                        <strong>Note</strong> : rien n'empêche une page PHP intégrant un formulaire d'être définie comme cible de ce formulaire par l'attribut <code>action</code>
+                                                        (on parle parfois de <em>page réentrante</em>). Dans ce cas, cette page doit être capable aussi bien d'afficher le formulaire que de traiter ses données. On fait la distinction en testant le contenu de la variable
+                                                        <code>$_POST</code>, le plus souvent en début de page.
+                                                    <strong>Attention</strong> : cette methode ne fait partie des bonnes pratiques, nous verrons avec le pattern MVC comment la contourner.</p>
+
+                                                    <pre>
+      <code class="language-php">
+if (isset($_POST['login'] &amp;&amp; isset($_POST['password']) {
+    // Le formulaire a été soumis : récupération des informations
+    $login = $_POST["login"];
+    $mdp = $_POST["password"];
+    // ...
+}
+else {
+    // Le formulaire n'a pas été soumis
+    // ...
+}
+// Code commun aux deux situations
+// ...
+</code>
+    </pre>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss42">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg2" aria-expanded="false"
+                                                            aria-controls="gg2">
+                                                        q - Types de champs de saisie
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg2" class="collapse" aria-labelledby="_ss42"
+                                                 data-parent="#sstitre10">
+                                                <div class="card-body">
+                                                    <p>L'attribut <code>type</code> d'une balise <code>&lt;input&gt;</code> permet de préciser le type de donnée à saisir.</p>
+                                                    <ul>
+                                                        <li>Pour faire saisir un texte court (une seule ligne), on utilise une balise <code>&lt;input type="text" ...&gt;</code>. On peut définir la valeur initiale du champ en ajout l'attribut <code>value</code>. L'attribut <code>size</code> permet de préciser la taille (nombre de caractères) du champ de saisie.</li>
+                                                    </ul>
+                                                    <pre>
+      <code class="language-html">&lt;input type="text" name="prenom" value="Baptiste" size="20" /&gt;
+</code>
+    </pre>
+                                                    <ul>
+                                                        <li>Pour faire saisir un mot de passe, on utilise une balise <code>&lt;input type="password" ...&gt;</code>. Dans ce cas, le navigateur masque les caractères saisis par l'utilisateur.</li>
+                                                    </ul>
+                                                    <pre>
+      <code class="language-html">&lt;input type="password" name="mdp" /&gt;
+</code>
+    </pre>
+                                                    <ul>
+                                                        <li>Pour faire saisir un texte plus long (plusieurs lignes), on utilise une balise <code>&lt;textarea&gt;</code>. La balise fermante <code>&lt;/textarea&gt;</code> est obligatoire et l'éventuelle valeur initiale est ajoutée entre les balises ouvrante et fermante. L'attribut <code>rows</code> est utilisé pour préciser le nombre le lignes de la zone de saisie.</li>
+                                                    </ul>
+                                                    <pre>
+      <code class="language-html">&lt;textarea name="message" rows="6"&gt;Entrez votre message&lt;/textarea&gt;
+</code>
+    </pre>
+                                                    <ul>
+                                                        <li>Pour faire saisir une donnée n'ayant que deux valeurs possibles, on utilise une balise <code>&lt;input type="checkbox" ...&gt;</code>. L'attribut <code>checked</code>, s'il est présent, précise que la case est cochée par défaut.</li>
+                                                    </ul>
+                                                    <pre>
+      <code class="language-html">&lt;input type="checkbox" name="familier" checked /&gt;
+</code>
+    </pre>
+                                                    <p>Lors de la récupération des données du formulaire, on vérifie l'état de la case (cochée ou non) à l'aide de la fonction <code>isset</code>.</p>
+                                                    <pre>
+      <code class="language-php">
+if (isset($_POST["familier"])) {
+    // La case est cochée
+else {
+    // La case est décochée
+}
+</code>
+    </pre>
+                                                    <ul>
+                                                        <li>Pour faire saisir un choix parmi plusieurs, on utilise des balises <code>&lt;input type="radio" ...&gt;</code> ayant la même valeur pour l'attribut <code>name</code>. On crée ainsi une série de boutons radios dont seul l'un pourra être sélectionné par l'utilisateur.</li>
+                                                    </ul>
+                                                    <pre>
+      <code class="language-html">
+&lt;input type="radio" name="politesse" value="1" checked /&gt; Mademoiselle&lt;br /&gt;
+&lt;input type="radio" name="politesse" value="2" /&gt; Madame&lt;br /&gt;
+&lt;input type="radio" name="politesse" value="3" /&gt; Monsieur&lt;br /&gt;
+</code>
+    </pre>
+                                                    <p>Lors de la récupération des données du formulaire, on examine la valeur du champ. Cette valeur correspond à l'attribut <code>value</code> du bouton sélectionné.</p>
+                                                    <pre>
+      <code class="language-php">
+$message = "Bonjour, ";
+switch($_POST["politesse"])
+{
+case 1:
+    $message = $message . " Mademoiselle.";
+    break;
+case 2:
+    $message = $message . " Madame.";
+    break;
+case 3:
+    $message = $message . " Monsieur.";
+    break;
+}
+</code>
+    </pre>
+                                                    <ul>
+                                                        <li>Une autre possibilité pour faire saisir un choix parmi plusieurs est de définir une liste déroulante grâce à une balise <code>&lt;select&gt;</code>. A l'intérieur de cette balise, on ajoute des choix possibles grâce à la balise <code>&lt;option&gt;</code>. L'attribut <code>size</code> de la balise <code>&lt;select&gt;</code> définit le nombre d'éléments affichés par la liste. L'élément sélectionné par défaut est indiqué par l'attribut <code>selected</code>.</li>
+                                                    </ul>
+                                                    <pre>
+      <code class="language-html">
+    &lt;select name="catpro" size="1"&gt;
+    &lt;option value="CP1" selected&gt; Etudiant&lt;/option&gt;
+    &lt;option value="CP2"&gt; Salarié&lt;/option&gt;
+    &lt;option value="CP3"&gt; Cadre&lt;/option&gt;
+&lt;/select&gt;
+</code>
+    </pre>
+                                                    <p>Lors de la récupération des données du formulaire, on examine la valeur du champ pour trouver l'élément qui a été sélectionné. Cette valeur correspond à l'attribut <code>value</code> de l'élément choisi.</p>
+                                                    <pre>
+      <code class="language-php">
+$codecat = $_POST["catpro"];
+if ($codecat == "CP1") $categorie = "Etudiant";
+elseif ($codecat == "CP2") $categorie = "Salarié";
+elseif ($codecat == "CP3") $categorie = "Cadre";
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss43">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg3" aria-expanded="false"
+                                                            aria-controls="gg3">
+                                                        rr - Aide à la saisie et validation
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg3" class="collapse" aria-labelledby="_ss43"
+                                                 data-parent="#sstitre10">
+                                                <div class="card-body">
+                                                    <p>Deux attributs des balises de saisie permettent d'aider l'utilisateur du formulaire dans sa saisie :</p>
+                                                    <ul>
+                                                        <li>
+                                                            <code>autofocus</code> (booléen) place le curseur de saisie sur le champ au chargement du formulaire.</li>
+                                                        <li>
+                                                            <code>placeholder</code> définit le contenu par défaut du champ.</li>
+                                                    </ul>
+                                                    <p>La norme HTML5 a apporté de nouveaux types de champs comme <code>email</code>, <code>number</code> ou <code>date</code>.</p>
+                                                    <pre>
+      <code class="language-html">&lt;input type="email" name="courriel" /&gt;
+</code>
+    </pre>
+                                                    <p>Les navigateurs modernes interprètent ce type pour :</p>
+                                                    <ul>
+                                                        <li>Améliorer l'expérience utilisateur pendant la saisie (exemple : un calendrier déroulant pour un champ de type <code>date</code>).</li>
+                                                        <li>Valider la saisie avant envoi de la requête au serveur (exemple : vérification de la présence d'un <code>@</code> pour un champ de type <code>email</code>).</li>
+                                                    </ul>
+                                                    <p>Il est également possible de rendre un champ obligatoire grâce à l'attribut booléen <code>required</code>.</p>
+                                                    <pre>
+      <code class="language-html">&lt;input type="email" name="courriel" required /&gt;
+</code>
+    </pre>
+                                                    <p>Malgré tout, la validation finale des valeurs saisies dans un formulaire doit toujours se faire aussi côté serveur (par exemple avec PHP) pour des raisons de sécurité.</p>
+                                                    <p>Vous pouvez consulter la documentation complète de la balise <code>&lt;input&gt;</code> sur <a target="_blank" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input">cette page</a>.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss49">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg9" aria-expanded="false"
+                                                            aria-controls="gg9">
+                                                        r - Envoi de fichiers avec un formulaire
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg9" class="collapse" aria-labelledby="_ss49"
+                                                 data-parent="#sstitre10">
+                                                <div class="card-body">
+                                                    <p>Les formulaires permettent également d'envoyer des fichiers. Pour faire choisir un fichier, on utilise une balise <code>&lt;input type="file" ... &gt;</code>. Il faut également ajouter l'attribut <code>enctype="multipart/form-data"</code> à la balise <code>&lt;form&gt;</code>.</p>
+                                                    <pre>
+      <code class="language-html">
+&lt;form enctype="multipart/form-data" action="upload.php" method="post"&gt;
+    ...
+    &lt;input type="file" name="image"/&gt;
+    ...
+&lt;/form&gt;
+</code>
+    </pre>
+                                                    <p>On retrouve les informations sur les fichiers envoyés dans un tableau associatif nommé <code>$_FILES</code>. Chaque fichier envoyé correspond à un élément de ce tableau, et est lui-même un tableau associatif contenant les informations sur le fichier : nom, type, taille, etc.</p>
+                                                    <p>Pour gérer le transfert du fichier vers le serveur, on utilise les fonctions PHP <code>is_uploaded_file</code>, <code>basename</code> et <code>move_uploaded_file</code>. Par exemple, le code suivant télécharge dans le répertoire <code>images/</code> du serveur le fichier choisi avec la balise <code>&lt;input&gt;</code> nommée <code>image</code>.</p>
+                                                    <pre>
+      <code class="language-php">
+$tmpFile = $_FILES['image']['tmp_name'];
+if (is_uploaded_file($tmpFile)) {
+    $image = basename($_FILES['image']['name']);
+    $uploadedFile = "images/$image";
+    move_uploaded_file($_FILES['image']['tmp_name'], $uploadedFile);
+}
+</code>
+    </pre>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s16">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#f3" aria-expanded="false" aria-controls="f3">
+                                        D - Transmission de données et sécurité
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="f3" class="collapse" aria-labelledby="_s16" data-parent="#stitre5">
+                                <div class="card-body">
+                                    <p>Qu'elles soient issues de l'URL (<code>$_GET</code>) ou d'un formulaire (<code>$_POST</code>), il faut garder à l'esprit que les données reçues par une page PHP sont saisies par l'utilisateur, ce qui peut constituer une menace pour la sécurité du site. Rien n'empêche un utilisateur malveillant de saisir des données de manière à provoquer un comportement inattendu du site Web. C'est ce que l'on appelle <strong>l'injection de code</strong>.</p>
+                                    <p>Pour se prémunir contre ces risques, il faut appliquer un principe très important : <strong>ne jamais faire confiance aux données de l'utilisateur</strong>. Un développeur Web qui suppose que ses utilisateurs saisiront uniquement des informations appropriées et n'effectue aucun contrôle sur ces saisies prend le risque d'exposer son site à des attaques très faciles à réaliser.</p>
+                                    <p>Il existe deux principaux types d'injection de code :</p>
+                                    <ul>
+                                        <li>L'injection JavaScript dans une page HTML, appelé parfois <a target="_blank" href="https://fr.wikipedia.org/wiki/Cross-site_scripting">XSS</a> (<em>Cross-Site Scripting</em>).</li>
+                                        <li>L'injection SQL dans une base données, dont nous parlerons dans un prochain chapitre.</li>
+                                    </ul>
+                                    <p>Pour réaliser une injection de code JavaScript, un utilisateur va saisir un morceau de code JavaScript au lieu d'une valeur "normale".</p>
+                                    <pre>
+      <code class="language-html">&lt;script type="text/javascript"&gt;alert('Miaou !')&lt;/script&gt;
+</code>
+    </pre>
+                                    <p>Si la valeur saisie est directement affichée par la page PHP, le résultat HTML généré contiendra un script JavaScript imprévu qui sera exécuté par le navigateur client. Cela peut potentiellement causer de gros problèmes de sécurité.</p>
+                                    <p>Un premier niveau de sécurité, qui doit devenir un réflexe, consiste à "nettoyer" toute donnée externe avant de l'utiliser pour générer une page Web. Il existe plusieurs fonctions PHP qui limitent fortement le risque d'injection de code JavaScript. Le choix le plus fréquent est la fonction <code>htmlspecialchars</code>. Cette fonction remplace certains caractères spéciaux par des entités HTML. Par exemple, le caractère <code>&lt;</code> est remplacé par <code>&amp;lt;</code>. Cela permet de désactiver l'exécution du code contenu dans des balises <code>&lt;script&gt;</code>.</p>
+                                    <p>On peut intégrer l'appel à <code>htmlspecialchars</code> dans une fonction <code>escape</code>.</p>
+                                    <pre>
+      <code class="language-php">
+&lt;?php
+
+/**
+ * Nettoie une valeur insérée dans une page HTML
+ * Doit être utilisée à chaque insertion de données dynamique dans une page HTML
+ * Permet d'éviter les problèmes d'exécution de code indésirable (XSS)
+ * @param string $valeur Valeur à nettoyer
+ * @return string Valeur nettoyée
+ */
+function escape($valeur)
+{
+    // Convertit les caractères spéciaux en entités HTML
+    return htmlspecialchars($valeur, ENT_QUOTES, 'UTF-8', false);
+}
+?&gt;
+</code>
+    </pre>
+                                    <p>Il faut toujours penser à utiliser cette fonction lors de l'insertion de données externes dans une page Web.</p>
+                                    <pre>
+      <code class="language-php">
+$prenom = $_GET["prenom"];
+$nom = $_GET["nom"];
+echo 'Bienvenue ' . escape($prenom) . ' ' . escape($nom) . ' !';
+</code>
+    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s17">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#f4" aria-expanded="false" aria-controls="f4">
+                                        E - Transmission via la session
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="f4" class="collapse" aria-labelledby="_s17" data-parent="#stitre5">
+                                <div class="card-body">
+                                    <p>La variable superglobale <code>$_SESSION</code> permet de stocker des informations qui seront automatiquement transmises de page en page pendant toute la durée de visite d'un internaute sur un site.</p>
+                                    <div class="accordion" id="sstitre11">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss44">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg4" aria-expanded="false"
+                                                            aria-controls="gg4">
+                                                        s - Création d'une session
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg4" class="collapse" aria-labelledby="_ss44"
+                                                 data-parent="#sstitre11">
+                                                <div class="card-body">
+                                                    <p>La création d'une nouvelle session s'effectue en appelant la fonction <code>session_start</code>.</p>
+                                                    <pre>
+      <code class="language-php">session_start();
+// ...
+</code>
+    </pre>
+                                                    <p>
+                                                        <strong>Attention</strong> : cette fonction doit obligatoirement être appelée au tout début de la page, avant tout code HTML.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss45">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg5" aria-expanded="false"
+                                                            aria-controls="gg5">
+                                                        t - Définition de variables de session
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg5" class="collapse" aria-labelledby="_ss45"
+                                                 data-parent="#sstitre11">
+                                                <div class="card-body">
+                                                    <p>Une fois la session créée, on peut y ajouter de nouvelles variables identifiées par leur nom.</p>
+                                                    <pre>
+      <code class="language-php">
+$_SESSION['prenom'] = 'Baptiste';
+$_SESSION['age'] = 39;
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss46">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg6" aria-expanded="false"
+                                                            aria-controls="gg6">
+                                                        u - Utilisation de variables de session
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg6" class="collapse" aria-labelledby="_ss46"
+                                                 data-parent="#sstitre11">
+                                                <div class="card-body">
+                                                    <p>Dans n'importe quelle page où la fonction <code>session_start</code> a été appelée, on peut utiliser <code>$_SESSION</code> pour accéder aux valeurs des variables de session. Il est prudent de vérifier au préalable que la variable existe, grâce à la fonction <code>isset</code>.</p>
+                                                    <pre>
+      <code class="language-php">
+if (isset($_SESSION['prenom']) &amp;&amp; isset($_SESSION['age'])) {
+    echo 'Je te connais toujours ! Tu es ' . $_SESSION['prenom'] .
+        ' et tu as ' . $_SESSION['age'] . ' ans.';
+}
+else {
+    echo "Je ne te connais pas...";
+}
+</code>
+    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss47">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg7" aria-expanded="false"
+                                                            aria-controls="gg7">
+                                                        u - Destruction d'une session
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg7" class="collapse" aria-labelledby="_ss47"
+                                                 data-parent="#sstitre11">
+                                                <div class="card-body">
+                                                    <p>En fin de visite, la destruction explicite d'une session se fait grâce à la fonction <code>session_destroy</code>. Après l'appel, la variable <code>$_SESSION</code> n'est plus utilisable.</p>
+                                                    <p>
+                                                        <strong>Rappel</strong> : cette destruction est automatique au bout d'un certain temps d'inactivité.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss48">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#gg8" aria-expanded="false"
+                                                            aria-controls="gg8">
+                                                        v - Utilité des sessions
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="gg8" class="collapse" aria-labelledby="_ss48"
+                                                 data-parent="#sstitre11">
+                                                <div class="card-body">
+                                                    <p>Un cas d'utilisation très fréquent des sessions est l'authentification d'un utilisateur par login/mot de passe. En utilisant une session pour mémoriser ces paramètres, on peut "reconnaître" l'utilisateur sur toutes les pages du site, mais aussi restreindre certaines zones aux utilisateurs authentifiés : si la variable de session associée au login existe, on affiche le contenu, sinon on affiche une erreur.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+        <div class="card-header" id="_5">
+            <h2 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+                        data-target="#a4"
+                        aria-expanded="false" aria-controls="a4">
+                V - Accéder à une base de données
+                </button>
+            </h2>
+        </div>
+        <div id="a4" class="collapse" aria-labelledby="_5" data-parent="#titre">
+            <div class="card-body">
+                <div class="accordion" id="stitre6">
+                    <div class="card">
+                        <div class="card-header" id="_s18">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#g0" aria-expanded="false" aria-controls="g0">
+                                    A - Introduction
+                                </button>
+                            </h2>
+                        </div>
+
+                    <div id="g0" class="collapse" aria-labelledby="_s18" data-parent="#stitre6">
+                        <div class="card-body">
+                            <p>Vous connaissez à présent les bases du langage PHP et vous savez transmettre des informations d'une page à une autre. Cependant, il nous reste à étudier le moyen de stocker des données de manière persistante. Ainsi, nous pourrons mémoriser les informations saisies par les utilisateurs, ou bien construire des pages dynamiques à partir des données externes.</p>
+                            <p>
+                                <strong>Définition</strong> : une donnée est dite <strong>persistante</strong> lorsqu'elle survit à l'arrêt du logiciel ou de la machine qui la manipule. Le contraire de "persistante" est "volatile".</p>
+                            <p>Actuellement, la technique la plus utilisée pour rendre des données persistantes consiste à les sauvegarder dans un logiciel dédié appelé SGBDR ou Système de Gestion de Bases de Données Relationelles. Parmi les SGBDR les plus connus, citons MySQL, PostgreSQL ou encore ORACLE.</p>
+                            <p>Nous allons donc étudier comment interagir avec un SGBDR depuis une page PHP. Pour cela, nous allons utiliser une extension récente du langage PHP appelée PDO (<em>Php Data Objects</em>). Par rapport aux autres solutions existantes, PDO possède le double avantage d'être orientée objet et d'être indépendante du SGBDR utilisé.</p>
+                            <p>Le schéma ci-dessous décrit l'architecture que nous allons mettre en oeuvre. Il s'agit d'un exemple d'<strong>architecture trois tiers</strong> (client, serveur Web, SGBD). Le rôle de PDO va être de faire le lien entre les pages PHP du serveur et les données stockées dans le SGBDR.</p>
+                            <p>
+                                <img src="images/acces-bd/archi-pdo.png" alt="" />
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="_s19">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#g1" aria-expanded="false" aria-controls="g1">
+                                    B - Connexion à la base de données
+                                </button>
+                            </h2>
+                        </div>
+
+                    <div id="g1" class="collapse" aria-labelledby="_s19" data-parent="#stitre6">
+                        <div class="card-body">
+                            <p>La connexion à une base de données depuis un fichier source PHP est réalisée de manière orientée objet, en instanciant un objet de la classe <code>PDO</code> par le biais de son constructeur.</p>
+                            <pre>
+      <code class="language-php">
+    $bdd = new PDO("mysql:host=localhost;dbname=mabase;charset=utf8",
+    "mabase_util", "mabase_mdp", array(PDO::ATTR_ERRMODE =&gt; PDO::ERRMODE_EXCEPTION));
+</code>
+    </pre>
+                            <p>Le constructeur utilisé ici comporte quatre paramètres :</p>
+                            <ul>
+                                <li>Le premier paramètre (<code>mysql:...</code>) définit le nom de la source de données ou DSN, <em>Data Source Name</em>. Ce nom contient le nom et le type du SGBD (ici MySQL sur la machine locale, <code>localhost</code>), le nom de la base de données (ici <code>mabase</code>) et le jeu de caractères utilisé (ici <code>utf8</code>).</li>
+                                <li>Le deuxième paramètre (<code>mabase_util</code>) est le login utilisé pour se connecter à la BD. Il doit auparavant avoir été créé au niveau du SGBDR.</li>
+                                <li>Le troisième paramètre (<code>mabase_mdp</code>) est le mot de passe associé au login.</li>
+                                <li>Le quatrième paramètre (<code>array(PDO::...)</code>) est relatif à la gestion des erreurs.</li>
+                            </ul>
+                            <p>
+                                <strong>Note</strong> : il est déconseillé d'utiliser le login <code>root</code> ayant tous les droits pour se connecter à une base de données depuis du code PHP. Il vaut mieux créer dans MySQL un utilisateur dédié n'ayant des droits que sur cette base.</p>
+                            <p>On peut traiter immédiatement les erreurs (base de données introuvable, mauvais login ou mot de passe, etc) en intégrant la connexion dans un bloc <code>try/catch</code>. Il s'agit d'un mécanisme de gestion des erreurs utilisant les <strong>exceptions</strong>. Sans rentrer dans des détails inutiles, son fonctionnement est le suivant :</p>
+                            <ol>
+                                <li>Les instructions situées dans le bloc <code>try</code> sont exécutées.</li>
+                                <li>Si l'une des instructions du bloc <code>try</code> provoque une erreur, elle est interceptée par le bloc <code>catch</code>, dont les instructions sont alors exécutées.</li>
+                                <li>Si aucune instruction du bloc <code>try</code> n'échoue, le contenu du bloc <code>catch</code> est ignoré et l'exécution se poursuit.</li>
+                            </ol>
+                            <pre>
+      <code class="language-php">
+try {
+    $bdd = new PDO("mysql:host=localhost;dbname=mabase;charset=utf8", "mabase_util",
+        "mabase_mdp", array(PDO::ATTR_ERRMODE =&gt; PDO::ERRMODE_EXCEPTION));
+}
+catch (Exception $e) {
+    die('Erreur fatale : ' . $e-&gt;getMessage());
+}
+// ...
+</code>
+    </pre>
+                            <p>Si un problème se produit pendant la connexion, l'exécution PHP est interrompue (fonction <code>die</code>) et un message d'erreur est affiché. Sinon, le reste de la page est exécuté normalement.</p>
+                            <p>La classe PDO dispose d'une <a target="_blank" href="http://www.php.net/manual/fr/class.pdo.php">documentation en ligne</a>.</p>
+
+                        </div>
+                    </div>
+                </div>
+                    <div class="card">
+                        <div class="card-header" id="_s20">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#g2" aria-expanded="false" aria-controls="g2">
+                                    C - Exécution de requêtes SQL
+                                </button>
+                            </h2>
+                        </div>
+
+                    <div id="g2" class="collapse" aria-labelledby="_s20" data-parent="#stitre6">
+                        <div class="card-body">
+                            <p>Une fois la connexion établie, il est possible d'utiliser l'objet instancié pour réaliser des opérations d'accès à la base. Pour cela, il faut écrire et exécuter des requêtes en utilisant le langage SQL.</p>
+                            <div class="accordion" id="sstitre12">
+                                <div class="card">
+                                    <div class="card-header" id="_ss50">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#hh0" aria-expanded="false"
+                                                    aria-controls="hh0">
+                                                w - Requêtes simples
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="hh0" class="collapse" aria-labelledby="_ss50"
+                                         data-parent="#sstitre12">
+                                        <div class="card-body">
+                                            <p>La méthode <code>query</code> de la classe <code>PDO</code> permet d'exécuter une requête SQL simple (sans paramètres).</p>
+                                            <pre>
+      <code class="language-php">
+// ...
+$requete = "select * from employe";
+$resultat = $bdd-&gt;query($requete);
+</code>
+    </pre>
+                                            <p>Le symbole <code>-&gt;</code> est l'équivalent PHP du symbole <code>.</code> utilisé dans d'autres langages comme Java ou C#. L'instruction <code>$bdd-&gt;query</code> se lit : "J'appelle la méthode <code>query</code> sur mon objet <code>$bdd</code>".</p>
+                                            <p>Après l'appel à <code>query</code>, on peut parcourir le résultat ligne par ligne en appelant à la méthode <code>fetch</code> sur le résultat de la requête.</p>
+                                            <ul>
+                                                <li>Dans le cas d'une requête qui renvoie une seule ligne de résultat, un seul appel à <code>fetch</code> suffit. C'est notamment le cas lorsqu'on recherche un enregistrement à partir de sa clé primaire.</li>
+                                            </ul>
+                                            <pre>
+      <code class="language-php">
+// ...
+$requete = "select * from employe where id=1;";
+$resultat = $bdd-&gt;query($requete);
+
+$ligne = $resultat-&gt;fetch();
+// On accède à la valeur de macolonne avec $ligne['macolonne'];
+</code>
+    </pre>
+                                            <ul>
+                                                <li>Si la requête renvoie plusieurs lignes de résultats, on peut itérer sur ces lignes avec une boucle <code>while</code> ou une boucle <code>foreach</code>.</li>
+                                            </ul>
+                                            <pre>
+      <code class="language-php">
+// ...
+$requete = "select * from employe";
+$resultat = $bdd-&gt;query($requete);
+
+// Itération sur les résultats de la requête SQL
+while ($ligne = $resultat-&gt;fetch()) {
+    // On accède à la valeur de macolonne avec $ligne['macolonne'];
+    // ...
+}
+?&gt;
+</code>
+    </pre>
+                                            <pre>
+      <code class="language-php">
+// ...
+$requete = "select * from employe";
+$resultat = $bdd-&gt;query($requete);
+
+// Récupération de tous les résultats de la requête dans un tableau
+$donnees = $resultat-&gt;fetchAll();
+// Itération sur le contenu du tableau
+foreach ($donnees as $ligne) {
+    // On accède à la valeur de macolonne avec $ligne['macolonne'];
+    // ...
+}
+?&gt;
+</code>
+    </pre>
+                                            <p>Dans tous les cas, la variable <code>$ligne</code> s'utilise comme un tableau associatif. Elle rassemble les valeurs des différentes colonnes pour une ligne de résultat SQL.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="_ss51">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#hh1" aria-expanded="false"
+                                                    aria-controls="hh1">
+                                                x - Requêtes avec paramètres
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="hh1" class="collapse" aria-labelledby="_ss51"
+                                         data-parent="#sstitre12">
+                                        <div class="card-body">
+                                            <p>Lorsque la requête SQL à exécuter comporte des paramètres, il faut utiliser une technique différente.</p>
+                                            <pre>
+      <code class="language-php">
+// ...
+
+// Préparation de la requête : le ? correspond au paramètre attendu
+$req = $bdd-&gt;prepare("select * from employe where servempl=?");
+
+// On reçoit le code depuis un formulaire
+$codeService = $_POST['service'];
+
+// Exécution de la requête en lui passant le tableau des arguments
+// (ici un seul élément : le code du service)
+$req-&gt;execute(array($codeService));
+</code>
+    </pre>
+                                            <p>Ce code source utilise ce qu'on appelle une <strong>requête préparée</strong>. Il s'agit d'une technique dans laquelle on définit d'abord le squelette de la requête (appel de la méthode <code>prepare</code> sur l'objet <code>$bdd</code>) en prévoyant ses différents paramètres, indiqués par des <code>?</code> dans le code SQL. Ensuite, on exécute la requête préparée (méthode <code>execute</code> sur l'objet <code>$req</code>). Lors de cet appel, on passe les paramètres nécessaires sous la forme d'un tableau.</p>
+                                            <p>
+                                                <strong>Avertissement</strong> : le tableau des paramètres doit contenir autant d'élément qu'il y a de <code>?</code> dans la requête préparée. L'ordre doit également être respecté.</p>
+                                            <p>Outre le gain de temps lorsqu'une même requête est exécutée plusieurs fois avec des paramètres différents, l'utilisation d'une requête préparée évite de construire une requête SQL en y intégrant directement des données utilisateur.</p>
+                                            <pre>
+      <code class="language-php">
+// DANGEREUX : A EVITER ABSOLUMENT
+$requete = "select * from employe where servempl=" . $_POST['service'];
+</code>
+    </pre>
+                                            <p>La technique ci-dessus rend la base vulnérable aux attaques de type "injection SQL". L'injection SQL consiste à faire exécuter des requêtes SQL imprévues par le SGBDR, ce qui peut conduire à de graves problèmes de sécurité.</p>
+                                            <p>
+                                                <img src="images/acces-bd/sql_injection.png" alt="" />
+                                            </p>
+                                            <p>Ce risque de sécurité n'existe pas lorsqu'on utilise des requêtes préparées,</p>
+                                            <p>
+                                                <strong>Note</strong> : ici, pas besoin de "nettoyer" la variable <code>$_POST['service']</code> reçue du formulaire comme nous l'avions fait dans le chapitre précédent. L'appel à <code>htmlspecialchars</code> désactive l'exécution de code JavaScript mais ne présente aucun intérêt dans le cas de données utilisées dans des requêtes SQL.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../dist/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../dist/js/popper.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+</body>
+</html>

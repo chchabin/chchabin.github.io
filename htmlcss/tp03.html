@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="fr">
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+        <title>TP03 HTML</title>
+
+    </head>
+    <body>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">HTML CSS</a>
+			<div class="collapse navbar-collapse" id="tp03">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#Exercice1">Exercice 1</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Exercice2">Exercice 2</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Exercice3">Exercice 3</a></li>
+				</ul>
+			</div>
+
+		</nav>>
+        <div class="container">
+
+                <h1>TP03 - Exercices applicatifs</h1>
+				<hr class="my-4">
+           <a href ="../download/TP03rapport.pdf" target="_blank">Format du rapport à télécharger</a>
+		    <p><mark>Dans l'enregistrement du rapport vous devez mettre votre nom après le numéro du TP, par exemple TP03gates.pdf</mark></p>
+            <section id="Exercice1">
+               <h2>Exercice 1 - Créer un menu flexible</h2> 
+			   <h3>Bloc de travail</h3>
+                <p>Créer une page HTML en ajoutant le code suivant :</p>
+                <pre>
+   &lt;nav&gt;
+      &lt;ul class="nav"&gt;
+        &lt;li&gt;
+          &lt;a href="#presentation"&gt;Accueil&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="#services"&gt;Nos services&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="#contacts"&gt;Nous contacter&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="#plan"&gt;Plan d&#39;accès&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="#quiSommesNous"&gt;Qui sommes-nous ?&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/nav&gt;
+				</pre>
+				 <p>Utilisez une nouvelle page css et ajouter le code suivant et en le commentant :</p>
+                <pre>
+		/************* Gestion de la présentation (layout) *************/
+		/* Positionnement en ligne des li */
+	.nav{
+	  display: flex;
+	  flex-direction: row;/* */
+	  flex-wrap: wrap;/* */
+	  justify-content: flex-start;/*  */
+	  align-items: stretch;/* */
+	}
+	.nav a{
+		display: block;/* */
+	}
+
+		/************* Gestion des styles *************/
+	.nav{
+		list-style-type : none;/*  */
+		margin: 0;
+		padding: 0;
+		background: #00c7f0; 
+	}
+	.nav li a{
+		text-decoration: none;/*   */
+		padding: 1em;/*   */
+		color: white;
+		text-transform: uppercase;/*  */
+		letter-spacing: .09em;/*  */
+	}
+	.nav a:hover {
+		background: #00b7f5;/*   */
+	}
+				</pre>
+				<p>En dessous de nav rajoutez le code suivant :</p>
+				<pre>
+	&lt;div class="container"&gt;
+		&lt;section id="presentation"&gt;
+			&lt;header class="header item"&gt;Accueil&lt;/header&gt;		
+		&lt;section&gt;
+		&lt;section id="quiSommesNous"&gt;
+			&lt;nav class="menuLeft item"&gt;Qui sommes-nous ?&lt;/nav&gt;  
+		&lt;section&gt;   
+		&lt;section id="services"&gt;
+			&lt;section class="content item"&gt;Nos services&lt;/section&gt;   
+		&lt;/section&gt;
+		&lt;section id="plan"&gt;
+			&lt;footer class="footer item"&gt;plan&lt;/footer&gt;	
+		&lt;section&gt;
+		 &lt;section id="contacts"&gt;
+			&lt;header class="header item"&gt;contacts&lt;/header&gt; 	
+		&lt;/section&gt;
+	&lt;/div&gt;			
+				</pre>
+			<ol>
+				<li>Rajoutez le css à partir du TP précédent, ajoutez une hauteur de 200px aux blocs.</li>
+				<li>Expliquez à quoi correspond un identifiant.</li>
+				<li>Que permettent les identifiants ici ?</li>
+				<li>Ajouter cette partie dans le rapport.</li>
+			</ol>
+				
+            </section>
+            <section id="Exercice2">
+                <h2>Exercice 2 - Créer un formulaire flexible</h2>
+                <h3>Bloc de travail</h3>
+                <p>Créer une page HTML en ajoutant le code suivant :</p>
+                <pre>
+  &lt;div class="container"&gt;
+  &lt;form  action="mailto:adresse@email.tld" method="post"&gt;
+    &lt;ul class="flex-form"&gt;
+      &lt;li&gt;
+        &lt;label for="nom"&gt;Nom&lt;/label&gt;
+        &lt;input type="text" id="nom" placeholder="Entrez votre nom ici"&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;label for="prenom"&gt;Prénom&lt;/label&gt;
+        &lt;input type="text" id="prenom" placeholder="Entrez votre prénom ici"&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;label for="email"&gt;Email&lt;/label&gt;
+        &lt;input type="email" id="email" placeholder="Entrez votre email ici"&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;label for="telephone"&gt;Téléphone&lt;/label&gt;
+        &lt;input type="tel" id="telephone" placeholder="Entrez votre téléphone ici"&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;label for="message"&gt;Message&lt;/label&gt;
+        &lt;textarea rows="6" id="message" placeholder="Entrez votre message ici"&gt;&lt;/textarea&gt;
+      &lt;/li&gt;     
+      &lt;li&gt;
+        &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+ 
+                </pre>
+				<ol>
+				<li>Quel est le rôle de la balise &lt;form&gt; ?</li>
+				<li>Que fait la propriété action ?</li>
+				<li>Quel est le rôle de l'instruction mailto ?</li>
+				<li>Quel est la différence entre la balise  &lt;label&gt; et la balise  &lt;input&gt; ?</li>
+				</ol>
+                <p>Utilisez une nouvelle page css et ajouter le code suivant :</p>
+                <pre>
+	/************* Gestion de la présentation (layout) *************/
+.flex-form li{
+	display: flex;
+	flex-wrap: wrap; /* */	
+	justify-content: flex-start;/*  */
+	align-items: center;/*  */
+}
+	/* la taille du label va de 120 à 220px */
+.flex-form > li > label {
+	flex-grow: 1;/*  */
+	flex-shrink: 0;/*  */
+	flex-basis:120px;/*  */	 
+	max-width: 220px;/*  */	
+}
+/* la taille de la saisie est de 220px la taille totale de la ligne est de 340px*/
+.flex-form > li > label + *{
+	flex-grow: 1;/*  */
+	flex-shrink: 0;/* */
+	flex-basis:220px;/*  */	
+}
+	/************* Gestion des styles *************/
+body {
+  background: #f2f2f2;
+}	
+.flex-form li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;/*  */
+  letter-spacing: .09em;/*  */
+  border-radius: 2px;/*  */
+  cursor: pointer;/* */
+}
+.flex-form li {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+                </pre>
+				<ol>
+					<li>Que fait le sélecteur .flex-form > li > label ?</li>
+					<li>Que fait le sélecteur * ?</li>
+					<li>Que fait le sélecteur .flex-form > li > label + * ?</li>
+					<li>Que fait le sélecteur .flex-form li button ?</li>
+					<li>A quoi correspond la propriété flex-grow ?</li>
+					<li>A quoi correspond la propriété flex-shrink ?</li>
+					<li>A quoi correspond la propriété flex-basis ?</li>
+					<li>A quoi correspond la propriété cursor ?</li>
+				</ol>
+                
+            </section>
+            <section id="Exercice3">
+			 <h2>Exercice 3 - Conception d'une page produits</h2>
+                <h3>Bloc de travail</h3>
+                <p>Créer une page HTML en ajoutant le code suivant dans le body :</p>
+				<pre>
+				 &lt;!-- Partie Header --&gt;
+			&lt;nav class="product-filter"&gt;			
+			  &lt;h1&gt;Jackets&lt;/h1&gt;
+			  &lt;div class="sort"&gt;
+				&lt;div class="collection-sort"&gt;
+				  &lt;label&gt;Filter by:&lt;/label&gt;
+				  &lt;select&gt;
+					&lt;option value="/"&gt;All Jackets&lt;/option&gt;
+				  &lt;/select&gt;
+				&lt;/div&gt;
+				&lt;div class="collection-sort"&gt;
+				  &lt;label&gt;Sort by:&lt;/label&gt;
+				  &lt;select&gt;
+					&lt;option value="/"&gt;Featured&lt;/option&gt;
+				  &lt;/select&gt;
+				&lt;/div&gt;
+			  &lt;/div&gt;			  
+			&lt;/nav&gt; 
+				 &lt;!-- Partie produits --&gt;
+			&lt;section class="products"&gt;
+			  &lt;div class="product-card"&gt;
+				&lt;div class="product-image"&gt;
+				  &lt;img src="img/nature-q-c-70-70-9.jpg"&gt;
+				&lt;/div&gt;
+				&lt;div class="product-info"&gt;
+				  &lt;h5&gt;Winter Jacket&lt;/h5&gt;
+				  &lt;h6&gt;$99.99&lt;/h6&gt;
+				&lt;/div&gt;
+			  &lt;!-- d’autres produits --&gt;
+
+			&lt;/section&gt; 
+				</pre>
+			 <p>Utilisez une nouvelle page css et ajouter le code suivant :</p>
+				<pre>
+				/* Partie header */
+				.product-filter {
+				  display: flex;
+				}
+				.product-filter h1 {
+				  flex-grow: 1;/*  */
+				}
+				.sort {
+				  display: flex;/*  */
+				}
+				.collection-sort {
+				  display: flex;/*  */
+				  flex-direction: column;/*  */
+				}
+				</pre>			 
+            <p>Cette partie de code permet de gérer le conteneur .product-filter, le titre et les critères de tri (sort en anglais)</p>
+			<ol>
+				<li>Pourquoi  &lt;!-- Partie produits --&gt; ne s'affiche pas dans la page HTML ?</li>
+				<li>Que fait la partie .product-filter h1 ?</li>
+				<li>Comment se positionne la class sort ?</li>
+				<li>Dans la class .collection-sort que fait la propriété flex-direction ?</li>
+			</ol>
+			<p>A la suite de votre code css rajoutez celui qui suit.</p>
+			<pre>
+			/* Partie produits */
+				.products {
+				  display: flex;
+				  flex-wrap: wrap;
+				}
+				.product-card {
+				  padding: 2%;
+				  flex-grow: 1;
+				  flex-basis: 16%;/* 5 images x 20% =100% + padding 2% =20-4=16%*/
+				}
+				.product-image img {
+				  max-width: 100%; /*Pour nous assurer que les images seront bien adaptées à leur espace*/
+				}
+				.product-info {
+				  margin-top: auto;
+				  text-align: center;
+				}
+			</pre>
+			<p>L'instruction flex-basis permet de déterminer la taille du bloc produit que l'on souhaite donner,
+			afin de déterminer le nombre d'images que l'on souhaite avoir par ligne.</p>
+			<p>Si vous souhaitez avoir 5 images par lignes la taille du bloc est de 20% car 5*20% = 100% </p>
+			<p>Mais le bloc visible, celui de la class product-card est inclus dans le bloc de la class product. Si vous souhaitez avoir un padding de 2%, à droite et à gauche
+				la taille du bloc product-card devient donc de 20-2*2 = 16% </p>
+			<ol>
+				<li>Quelle est la valeur de flex-basis si je veux 10 images par lignes ave un padding à 1% ?</li>
+				<li>Pourquoi utiliser dans la class product-info la propriété text-align au lieu de justify-content ?</li>
+			</ol>
+			</section>
+            <section id="Exercice4">
+               
+            </section>
+        </div>
+    </body>
+</html>

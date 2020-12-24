@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title>Menu</title>
+	<link href="../dist/css/menu.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+  <h1>Le menu de base</h1>
+    <nav>
+	  <ul>
+		<li><a href="#">Accueil</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Livre d'or</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Admin</a></li>
+	  </ul>
+	</nav>
+	<p>Le code HTML</p>
+	<pre>
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;News&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Livre d'or&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Admin&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+	</pre>
+	<p>Le code css</p>
+	<pre>
+		nav ul {
+		list-style-type : none; /* Car sinon les puces se placent n'importe où */
+		}
+		nav ul a {
+		text-decoration: none;/* Supprime les soulignements */
+		}
+		/* Je sélectionne les li du menu pour avoir une présentation horizontal */
+		nav ul {
+		display: flex;
+		}
+		/* Je sélectionne les li du menu pour avoir des espaces entre les li */
+		nav ul li {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 100%;
+		}
+	</pre>
+	<p>Il est possible aprés de changer : les designs, les couleurs etc...</p>
+	<nav class="deuse">
+	  <ul>
+		<li><a href="#">Accueil</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Livre d'or</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Admin</a></li>
+	  </ul>
+	</nav>
+	<h1>Un Menu plus design</h1>
+	<p>Le code css</p>
+	<pre>
+	.bmenu{
+    padding: 0px;
+    margin: 0 0 10px 0;
+    position: relative;
+}
+.bmenu li{
+    font-size: 50px;
+    display: block;
+}
+.bmenu li a{
+
+	display: block;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px #fff;
+	letter-spacing: 1px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bmenu:hover li a{
+	text-shadow: 0px 0px 5px #0d1a3a;
+}
+.bmenu li a:hover{
+	color: #fff;
+	text-shadow: 0px 0px 1px #fff;
+	padding-left: 10px;
+}
+	</pre>
+	
+	<ul class="bmenu">
+      <li>
+        <a href="#">Accueil</a>
+      </li>
+      <li>
+        <a href="#">News</a>
+      </li>
+      <li>
+        <a href="#">Livre d&#39;or</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">Admin</a>
+      </li>
+    </ul>
+	<p><a href="http://validator.w3.org/check?uri=referer">page xHTML valide</a> et
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS valide</a></p>
+  </body>
+</html>

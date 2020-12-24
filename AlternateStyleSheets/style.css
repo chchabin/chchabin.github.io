@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: Tahoma, sans-serif;
+}
+
+.image {
+	float: right;
+	padding: 10px;
+	border-left: 3px solid black;
+	margin-left: 10px;
+}
+
+#page_wrap {
+	width: 800px;
+	margin: 20px auto;
+}
+
+h1 {
+	text-transform: uppercase;
+	padding: 5px;
+	font-size: 18px;
+	border-bottom: 10px;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>Programmer avec C#</title>
+</head>
+<body>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <nav class="collapse bd-links" id="bd-docs-nav">
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp01_intro.html">
+                            I - Introduction au développement
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp02_basesLg.html">
+                            II - Les bases du langage
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#source">A - Anatomie d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#bloc">B - Définition d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#affiche">C - Affichage de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#comment">D - Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#indentation">E - l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#nommage">F - Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
+                            III - Programmer avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
+                            IV - Programmation objet avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h3"><a href="#1">1. Permutation de deux nombres</a></li>
+                    <li class="toc-entry toc-h3"><a href="#2">2. Permutation de trois nombres</a></li>
+                    <li class="toc-entry toc-h3"><a href="#3">3.	Maximum de deux nombres</a></li>
+                    <li class="toc-entry toc-h3"><a href="#4">4.	Maximum de trois nombres</a></li>
+                    <li class="toc-entry toc-h3"><a href="#5">5.	Encadrement</a></li>
+                    <li class="toc-entry toc-h3"><a href="#6">6.	Incrémentation</a></li>
+                    <li class="toc-entry toc-h3"><a href="#7">7.	Cumul</a></li>
+                    <li class="toc-entry toc-h3"><a href="#8">8.	Lire les colonnes d’un tableau</a></li>
+                    <li class="toc-entry toc-h3"><a href="#9">9.	Recherche du maximum dans un tableau</a></li>
+                    <li class="toc-entry toc-h3"><a href="#10">10.	Recherche d’un élément n dans un tableau</a></li>
+                </ul>
+            </div>
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <h1 class="bd-title" id="base">Scripts par cœur</h1>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Info</h4>
+                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+                </div>
+
+                <h2 id="1">1.	Permutation de deux nombres</h2>
+
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double </span> a,b,sauv;
+<span class="c">… 			//instanciation</span>
+sauv=a;
+a=b;
+b=sauv;
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="2">2.	Permutation de trois nombres</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double </span> a,b,c,sauv;
+<span class="c">… 			//instanciation</span>
+sauv=a;
+a=b;
+b=c;
+c=sauv;
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="3">3.	Maximum de deux nombres</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double </span> a,b,max;
+<span class="c">… 			//instanciation</span>
+max=a;
+<span class="nt">if</span> (b>max)
+{
+	max=b;
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="4">4.	Maximum de trois nombres</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double </span> a,b,c,max;
+<span class="c">… 			//instanciation</span>
+max=a;
+<span class="nt">if</span> (b>max)
+{
+	max=b;
+}
+<span class="nt">if</span> (c>max)
+{
+	max=c;
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="5">5.	Encadrement</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">
+<table class="table"><tr class="table-secondary"><td>[0,a[</td><td>[a,b[</td><td>[b,∞[</td></tr>
+<tr class="table-dark"><td>  x</td><td>  y</td><td>  z</td></tr></table>
+<span class="nt">double </span> a,b,val,x,y,z,result;
+<span class="c">… 			//instanciation</span>
+<span class="nt">if</span> (val &lt a)
+{ result=x ;}
+<span class="nt">else</span>
+{
+	<span class="nt">if</span>(val &lt b)
+	{ result=y ;}
+        <span class="nt">else</span>
+	{ result=z ;}
+
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="6">6.	Incrémentation</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double </span>i;
+i=0;
+<span class="nt">while</span> (i<10)
+{
+    i=i+1;
+    <span class="cp">Console</span>.WriteLine (<span class="s">"compteur classique i=i+1 "</span>+ i);
+    <span class="cp">Console</span>.WriteLine (<span class="s">"compteur simplifié i++ "</span>+ i++);
+}</code></pre></figure>
+                <h2 id="7">7.	Cumul</h2>
+                <h3>a.	Somme des 10 premiers nombres</h3>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double </span> cumul,i ;
+<span class="c">… 			//instanciation</span>
+cumul=0;
+<span class="nt">for</span>(<span class="nt">int</span> i=0;i< 10;i++)
+{
+    cumul=cumul+i;
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h3>b.	Produit des 10 premiers nombres en dehors de 0</h3>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double </span> cumul,i ;
+<span class="c">… 			//instanciation</span>
+cumul=1;
+<span class="nt">for</span>(<span class="nt">int</span> i=1;i< 10;i++)
+{
+    cumul=cumul * i;
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="8">8.	Lire les colonnes d’un tableau</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double[] </span>tab;<span class="c"> 			//tab est le tableau à parcourir</span>
+<span class="c">… 			//instanciation</span>
+<span class="nt">for</span>(<span class="nt">int</span> i=0;i < tab.Length;i++)
+{
+    <span class="cp">Console</span>.WriteLine (tab[i]);<span class="c">//affichage de la valeur de la colonne i</span>
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="9">9.	Recherche du maximum dans un tableau</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double[] </span>tab;<span class="c"> 			//tab est le tableau à parcourir</span>
+<span class="nt">double </span>i,taille,max ;
+<span class="c">… 			//instanciation</span>
+max = tab[0];<span class="c"> 		//initialisation de max</span>
+<span class="nt">for</span>(<span class="nt">int</span> i=1;i < tab.Length;i++)
+{
+    <span class="nt">if</span> (tab[i]>max)
+    {max=tab[i];}
+
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+                <h2 id="10">10.	Recherche d’un élément n dans un tableau</h2>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">double[] </span>tab;<span class="c"> 			//tab est le tableau à parcourir</span>
+<span class="nt">double </span>i,taille, valeurRecherchee;
+<span class="nt">bool</span> trouve;
+<span class="c">… 			//instanciation</span>
+i=0;
+trouve=false;
+<span class="nt">while</span>(trouve==false && i< tab.Length)
+{
+    <span class="nt">if</span> (tab[i]==n)
+    {trouve=true;}
+    i=i+1;<span class="c">			//compteur pour avancer dans la boucle</span>
+}
+<span class="c">… 			//récupération du résultat</span></code></pre></figure>
+
+                
+            </main>
+        </div>
+    </div>
+</body>
+</html>

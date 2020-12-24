@@ -1,0 +1,151 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Zen Coding</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../dist/css/bootstrap.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>        
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Emmet ou Zen Coding</h1>
+            </div> 
+            <h2>Choix d'éditeur</h2>
+            <pre>pour netbeans
+            Aller dans Tools puis plugin (traduire selon la langue choisie)
+            Choisir le plugin Emmet ou Zencoding</pre>
+            <h2>Liens</h2>
+            <a href="http://emmet.io/" class="" target="zen-coding">http://emmet.io/</a>
+            <p>site de Emmet avec la documentation</p>
+            <a href="https://code.google.com/p/zen-coding/" target="zen-coding">https://code.google.com/p/zen-coding/</a>
+            <p>pour netbeans (racourci <code>Ctrl+Alt+N</code>)</p>
+            <a href="http://plugins.netbeans.org/plugin/41792/zen-coding" target="zen-coding">http://plugins.netbeans.org/plugin/41792/zen-coding</a>
+            <p>Existe aussi mour notepad++</p>
+            <a href="http://www.nextofwindows.com/zen-coding-emmet/" target="zen-coding">http://www.nextofwindows.com/zen-coding-emmet/</a>
+            <h2>Propriétés à saisir</h2>
+            <ul>
+                <li>E<br />
+                    Nom de l'élément (<code>div</code>, <code>p</code>,<code>a</code>);</li>
+                <li>E#id<br />
+                    Elément avec id (<code>div#content</code>, <code>p#intro</code>, <code>span#error</code>);</li>
+                <li>E.class<br />
+                    Elément avec classes (<code>div.header</code>, <code>p.error.critial</code>). On peut aussi combiner les classes et les IDs : <code>div#content.column.width</code>;</li>            
+                <li>E&gt;N<br />
+                    Elément enfant (<code>div&gt;p</code>, <code>div#footer&gt;p&gt;span</code>);</li>
+                <li>E+N<br />
+                    Eléments frères (<code>h1+p</code>, <code>div#header+div#content+div#footer</code>);</li>
+                <li>E*N<br />
+                    Multiplication d'éléments (<code>ul#nav&gt;li*5&gt;a</code>);</li>
+                <li>E$*N<br />
+                    Item horodatés (<code>ul#nav&gt;li.item-$*5</code>);</li>
+                <li>E{N}<br />
+                    Données associées (<code>h2{mon Titre}</code>);</li>
+            </ul> 
+            <h1>Exemple Simple</h1>
+            <pre><code>div#content&gt;p.intro+ul&gt;li*3&gt;a
+</code></pre>
+            <pre><code>&lt;div id="content"&gt;
+    &lt;p class="intro"&gt;&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+            <h1>Exemple plus Complet</h1>
+            <pre>
+ div#container>(div.main_content>div.article*4>
+                    (a.cat)
+                    (div.article_body>(h2)(a.photo>img)(p.the_excerpt)(a.more_link))
+                    (ul.tags>li*3>a))
+                (div.aside>div.aside_block*3>h3)
+            </pre>
+            <pre>
+        &lt;div id="container"&gt;
+            &lt;div class="main_content"&gt;
+                &lt;div class="article"&gt;
+                    &lt;a href="" class="cat"&gt;&lt;/a&gt;
+                    &lt;div class="article_body"&gt;
+                        &lt;h2&gt;&lt;/h2&gt;
+                        &lt;a href="" class="photo"&gt;&lt;img src="" alt="" /&gt;&lt;/a&gt;
+                        &lt;p class="the_excerpt"&gt;&lt;/p&gt;
+                        &lt;a href="" class="more_link"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;ul class="tags"&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="article"&gt;
+                    &lt;a href="" class="cat"&gt;&lt;/a&gt;
+                    &lt;div class="article_body"&gt;
+                        &lt;h2&gt;&lt;/h2&gt;
+                        &lt;a href="" class="photo"&gt;&lt;img src="" alt="" /&gt;&lt;/a&gt;
+                        &lt;p class="the_excerpt"&gt;&lt;/p&gt;
+                        &lt;a href="" class="more_link"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;ul class="tags"&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="article"&gt;
+                    &lt;a href="" class="cat"&gt;&lt;/a&gt;
+                    &lt;div class="article_body"&gt;
+                        &lt;h2&gt;&lt;/h2&gt;
+                        &lt;a href="" class="photo"&gt;&lt;img src="" alt="" /&gt;&lt;/a&gt;
+                        &lt;p class="the_excerpt"&gt;&lt;/p&gt;
+                        &lt;a href="" class="more_link"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;ul class="tags"&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="article"&gt;
+                    &lt;a href="" class="cat"&gt;&lt;/a&gt;
+                    &lt;div class="article_body"&gt;
+                        &lt;h2&gt;&lt;/h2&gt;
+                        &lt;a href="" class="photo"&gt;&lt;img src="" alt="" /&gt;&lt;/a&gt;
+                        &lt;p class="the_excerpt"&gt;&lt;/p&gt;
+                        &lt;a href="" class="more_link"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;ul class="tags"&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="aside"&gt;
+                &lt;div class="aside_block"&gt;
+                    &lt;h3&gt;&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class="aside_block"&gt;
+                    &lt;h3&gt;&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class="aside_block"&gt;
+                    &lt;h3&gt;&lt;/h3&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+            </pre>
+            <h2>Que donne ?</h2>
+            <pre>html>head+body>h1+h2</pre>
+            <pre>html:5</pre>
+            <pre>a[href=#]</pre>
+            <pre>ul>li.item$*3</pre>
+        </div>
+    </body>
+</html>
+

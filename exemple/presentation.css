@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 16 juin 2015, 10:24:21
+    Author     : prof
+*/
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: #d8e0e5; }
+.card{
+    position: absolute;
+    overflow: hidden;
+    top: 30%;
+    left: 30%;
+    width: 370px;
+}
+.card__description {
+    position:absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    margin: 0;
+    background-color: #111;
+    background-color: rgba(0,4,0,0.80);
+    color: #B8B8B8;
+    transition: height 0.3s;
+}
+a:hover .card__description{
+    top:60%;
+}
+

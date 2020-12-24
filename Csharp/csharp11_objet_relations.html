@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>Les relations entre les classes</title>
+</head>
+<body>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link " href="csharp01_intro.html">
+                        I - Introduction au développement
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contentArt">B - L ’art et la manière de bien programmer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link " href="csharp02_basesLg.html">
+                        II - Les bases du langage
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#source">A - Anatomie d'un fichier source
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bloc">B - Définition d'un bloc de code
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#affiche">C - Affichage de texte
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#comment">D - Commentaires
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#indentation">E - l'indentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#nommage">F - Conventions de nommage
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link " href="csharp03_programmer-variables.html">
+                        III - Programmer avec C#
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="csharp03_programmer-variables.html"> A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp06_programmer_boucles.html">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link " href="csharp08_objet_overview.html">
+                        IV - Programmation objet avec C#
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="csharp08_objet_overview.html">L'approche Objet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp09_objet_creation.html">Création d'objet en C#
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp10_objet_concpets.html">Principaux concepts objets
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp11_objet_relations.html">Les relations entre les classes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h3"><a href="#1">Lecture des diagrammes de classes</a></li>
+                <li class="toc-entry toc-h3"><a href="#2">Dépendances entre les classes</a></li>
+                <li class="toc-entry toc-h3"><a href="#3">Multiplicité</a></li>
+                <li class="toc-entry toc-h3"><a href="#4">Les relations 1,1</a></li>
+                <li class="toc-entry toc-h3"><a href="#5">Les relations 1,n</a></li>
+                <li class="toc-entry toc-h3"><a href="#6">Les listes typées</a></li>
+                <li class="toc-entry toc-h3"><a href="#7">Boucle de parcours d’une liste</a></li>
+            </ul>
+        </div>
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="base">Les relations entre les classes</h1>
+            <p class="bd-lead">L'objectif de ce chapitre est de présenter les concepts essentiels de la programmation orientée objet.</p>
+
+            <article>
+                <h2 id="1">Lecture des diagrammes de classes</h2>
+                <cite><a href="https://docs.microsoft.com/fr-fr/visualstudio/modeling/uml-class-diagrams-reference?view=vs-2015">source microsoft</a></cite>
+                <p><img src="img/uml-classovreading.png" alt="resumeUML"></p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th><strong>Numéro</strong></th>
+                        <th><strong>Élément</strong></th>
+                        <th><strong>Description</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>Classe</strong></td>
+                        <td>Définition d'objets qui partagent des caractéristiques structurelles ou comportementales données.</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Classifieur</td>
+                        <td>Nom général d'une classe, d'une interface ou d'une énumération. Les composants, les cas d'usage et les acteurs sont également des classifieurs.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Contrôle Réduire / Développer</td>
+                        <td>Si vous ne pouvez pas voir les détails d'un classifieur, cliquez sur l'Expander dans la partie supérieure gauche du classifieur.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Attribut</strong></td>
+                        <td>Valeur typée attachée à chaque instance d'un classifieur.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Opération</strong></td>
+                        <td>Méthode ou fonction qui peut être exécutée par des instances d'un classifieur.</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>Association</strong></td>
+                        <td>Relation entre les membres de deux classifieurs.</td>
+                    </tr>
+                    <tr>
+                        <td>5a</td>
+                        <td><strong>Aggregation</strong></td>
+                        <td>Association représentant une relation de propriété partagée. La propriété <strong>Aggregation</strong> du propriétaire du rôle a sa valeur <strong>partagé</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td>5b</td>
+                        <td><strong>Composition</strong></td>
+                        <td>Association représentant une relation de partie entière. La propriété <strong>agrégation</strong> du propriétaire rôle a sa valeur <strong>Composée</strong></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>Nom de l’association</strong></td>
+                        <td>Nom d'une association.</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>Nom du rôle</strong></td>
+                        <td>Nom d'un rôle, autrement dit une extrémité d'une association. Peut être utilisé pour faire référence à l'objet associé. Dans l'illustration précédente, pour toute commande <code>O</code>, <code>O.ChosenMenu</code> est son Menu associé.
+                            <br>Chaque rôle possède ses propres propriétés, répertoriées sous les propriétés de l'association.</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><strong>Multiplicité</strong></td>
+                        <td>Indique combien des objets à cette extrémité peuvent être liés à chaque objet à l'autre extrémité. Dans l'exemple, chaque commande doit être liée à exactement un menu.
+                            <br><strong>\</strong>* signifie qu’il n’existe aucune limite supérieure au nombre de liens qui peuvent être apportées.</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><strong>Généralisation</strong></td>
+                        <td>Le <em>spécifique</em> classifieur hérite une partie de sa définition à partir de la <em>général</em> classifieur. Le classifieur général se trouve à l'extrémité flèchée du connecteur. Les attributs, associations et opérations sont hérités par le classifieur spécifique.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+            <h2 id="2">Dépendances entre les classes</h2>
+
+            <cite><a href="http://blog.algowin.fr/author/blogdotnet/">source James RAVAILLE</a></cite>
+            <p>En conception et programmation orientée objet, il existe différentes manières « d’associer » les classes entre elles :</p>
+            <img src="img/015-Conception-Dependances-entre-classes-1.png" alt="Dependances-entre-classes" />
+            <p><strong>L’association</strong><br />
+                L’association entre deux classes permet d’indiquer qu’une classe est en liaison avec une autre. Par exemple, si un client peut passer des commandes, alors il est nécessaire d’associer les classes Client et Commande, afin de pouvoir connaître les commandes d’un client et le client d’une commande.</p>
+            <p><strong>L’agrégation</strong><br />
+                L&rsquo;agrégation indique une relation d&rsquo;appartenance entre l&rsquo;agrégé et l&rsquo;agrégat. La destruction de l’agrégat en mémoire n’entraîne pas la suppression de l’agrégé. Par exemple, la voiture possède un moteur. Lorsque la voiture est détruite, alors le moteur peut être conservé pour être associé à une autre voiture.</p>
+            <p><strong>La composition</strong><br />
+                La relation étant plus forte, l&rsquo;agrégation indique une relation d&rsquo;appartenance forte entre l&rsquo;agrégé et l&rsquo;agrégat. La destruction l’agrégat en mémoire entraîne la suppression de l’agrégé. Par exemple, lorsque la voiture est détruite, le châssis l’est aussi.</p>
+            <p><strong>L’héritage</strong><br />
+                La classe héritée spécialise la classe de base. Une voiture est un véhicule particulier. La classe Voiture hérite de la classe Vehicule appelée classe de base. La classe Voiture peut proposer propriétés et services supplémentaires et redéfinir des membres de la classe Vehicule.</p>
+            </article>
+            <article>
+                <h2 id="3">Multiplicité</h2>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Définition</h4>
+                    <p> Définir le nombre d'instances de l'association pour une instance de la classe.</p>
+                </div>
+               <p>Il s'agit d'un nombre entier ou d'un intervalle de valeurs.</p>
+                <table class="table">
+                    <thead>
+                    <th>Cardinalié</th>
+                    <th>Sens</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Une et une seule instance (par défaut)</td>
+                    </tr>
+                    <tr>
+                        <td>0..1</td>
+                        <td>Zéro ou une instance</td>
+                    </tr>
+                    <tr>
+                        <td>m..n</td>
+                        <td>De m à n instance</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>De zéro à plusieurs instances</td>
+                    </tr>
+                    <tr>
+                        <td>1..*</td>
+                        <td>De 1 à plusieurs instances</td>
+                    </tr>
+                    <tr>
+                        <td>n</td>
+                        <td>Exactement n instances</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>En UML, elle est :</p>
+                <ul>
+                    <li>notée avec le rôle,</li>
+                    <li>par défaut 1 (non notée),</li>
+                    <li>sans précisions elle est bidirectionnelle.</li>
+
+                </ul>
+            </article>
+            <article>
+                <h2 id="4">Interprétation des modèles UML : les relations 1,1</h2>
+                <p>Prenons l'exemple d'une application qui enregistre les visites d'un cabinet de plusieurs médecins.
+                <br>Considérons le schéma UML suivant :</p>
+                <img src="img/relation11Uml.PNG" alt="Relation 1-1-UML">
+                <ul>
+                    <li>Un patient a eu 0 ou une visite</li>
+                    <li>une visite concerne un patient</li>
+                </ul>
+                <p>Ceci donne pour le modèle objet, la situation suivante :</p>
+                <img src="img/relation11.PNG" alt="Relation 1-1">
+                <p>A partir d'une instance de classe Visite, il est possible d'accéder à un patient. Par contre à partir d'une instance de classe patient rien ne permet de retrouver la visite qui a été effectuée</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Définition</h4>
+                    <p>Une association navigable dans un seul sens est une association unidirectionnelle.</p>
+                </div>
+                <p>Au niveau du code nous avons une référence Patient dans la référence Visite :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Visite</span>
+{
+    <span class="nt">private</span> <span class="cp">Patient</span> patient;
+    <span class="c">// ... </span>
+}</code></pre></figure>
+                <p>Pour réaliser ce lien (c.a.d. valoriser le champ privé patient dans la classe Visite), deux solutions :</p>
+                <ul>
+                    <li>A la construction d’une visite </li>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public Visite</span>(…,…,…, <span class="cp">Patient</span> p)
+{
+    <span class="nt">this</span>.patient = p;
+    <span class="c">// ... </span>
+}</code></pre></figure>
+                    <li>Avec un setter après la construction</li>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public void setPatient</span>(<span class="cp">Patient</span> p)
+{
+    <span class="nt">this</span>.patient = p;
+}</code></pre></figure>
+                </ul>
+            </article>
+            <article>
+                <h2 id="5">Interprétation des modèles UML : les relations 1,n</h2>
+                <p>Reprenons l'exemple d'une application qui enregistre les visites d'un cabinet de plusieurs médecins. Nous allons maintenant tenir compte du nombre de visites faites par un médecin.
+                    <br>Considérons le schéma UML suivant :</p>
+                <img src="img/relation1nUML.PNG" alt="Relation 1-n-uml">
+                <ul>
+                    <li>Un médecin a fait aucune ou plusieurs visites</li>
+                    <li>une visite concerne un médecin</li>
+                </ul>
+                <p>Ceci donne pour le modèle objet, la situation suivante :</p>
+                <img src="img/relation1n.PNG" alt="Relation 1-n">
+                <p>L'association est navigable du médecin vers les visites. Il y aura donc plusieurs références à Visite dans la classe Medecin, mais pas de référence à Medecin dans la classe Visite.
+                <br>L'attribut ajouté dans Medecin doit permettre de stocker un nombre quelconque d'instances de Visite.
+                <br>Deux solutions s'offrent à nous, soit les instances de Visites sont stockées dans un tableau, soit elles e sont dans une liste.</p>
+                <p>Le stockage dans un tableau :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Medecin</span>
+{
+    <span class="nt">private</span> <span class="cp">Visite</span>[] mesVisites = <span class="nt">new</span> <span class="cp">Visite</span>[100];
+    <span class="c">// ... </span>
+}</code></pre></figure>
+                <p>L'inconveniant du stockage dans un tableau c'est qu'il faut connaître à l'avance sa taille ou prévoir des modifications pour l'augmenter en cas de besoin.
+                <br>Voila pourquoi, on préférera la liste typée pour stocker les informations.
+                <br>Dans la déclaration, on spécifiera le nom de la classe des objets que contiendra la liste typée.</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Medecin</span>
+{
+    <span class="c">// Déclaration de la liste typée</span>
+    <span class="nt">private</span> <span class="cp">Liste</span>&lt;<span class="cp">Visite</span>&gt; mesVisites;
+    <span class="c">// ... </span>
+}</code></pre></figure>
+                <p>L'instanciation peut se faire n'importe où dans la classe, mais il est plus pratique de la faire dans le constructeur.</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public Medecin</span>(...,...,...)
+{
+    <span class="nt">this</span>.mesVisites = <span class="nt">new</span> <span class="cp">Liste</span>&lt;<span class="cp">Visite</span>&gt;();
+    <span class="c">// ... </span>
+}</code></pre></figure>
+
+            </article>
+            <article>
+                <h2 id="6">Les listes typées</h2>
+                <p>La liste typée fournit de nombreux services :</p>
+                <ul>
+                    <li>Retourner le nombre d’éléments : <code>Count</code> </li>
+                    <li>Ajout : méthode <code>Add</code></li>
+                    <li>Suppression d’un élément : <code>Remove</code></li>
+                    <li>Suppression d’un élément par son indice : <code>RemoveAt</code></li>
+                    <li>Suppression de tous les éléments : <code>Clear</code></li>
+                    <li>Insertion à un rang : <code>Insert</code> </li>
+                    <li>De nombreux autres services ...</li>
+                </ul>
+                <p>Pour ajouter un nouvel élément lorsque celui-ci est déjà construit :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public void ajouterVisite</span>(<span class="cp">Visite</span> v)
+{
+    <span class="nt">this</span>.mesVisites.Add(v);
+}</code></pre></figure>
+                <p>Pour ajouter un nouvel élément lorsque celui-ci n'est pas construit :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public void ajouterVisite</span>(...,...,...)
+{
+    <span class="cp">Visite</span> v = <span class="nt">new</span> <span class="cp">Visite</span>(...,...,...);
+    <span class="nt">this</span>.mesVisites.Add(v);
+}</code></pre></figure>
+            </article>
+            <article>
+                <h2 id="7">Boucle de parcours d’une liste</h2>
+                <p>On peut utiliser une boucle particulière dans le cas où on parcourt tous les éléments :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">foreach</span>(<span class="cp">Visite</span> v <span class="nt">in</span> <span class="nt">this</span>.mesVisites)
+{
+     <span class="cp">Console</span>.WriteLine (a.ToString());
+}</code></pre></figure>
+            </article>
+
+        </main>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,2027 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+
+    <title>Guide C#</title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1 class="display-4">Guide C#</h1>
+    <hr class="my-4">
+    <div class="accordion" id="titre">
+        <div class="card">
+            <div class="card-header" id="_1">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+                            data-target="#a0"
+                            aria-expanded="false" aria-controls="a0">
+                        I - Introduction au développement
+                    </button>
+                </h2>
+            </div>
+            <div id="a0" class="collapse" aria-labelledby="_1" data-parent="#titre">
+                <div class="card-body">
+                    <p>L'objectif de ce chapitre est de découvrir les notions fondamentales liées au développement.
+                        En particulier au developpement en langage C#</p>
+
+                    <div class="accordion" id="stitre">
+                        <div class="card">
+                            <div class="card-header" id="_s00">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#b0" aria-expanded="false" aria-controls="b0">
+                                        A - Qu'est ce qu'une machine ?
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="b0" class="collapse" aria-labelledby="_s00" data-parent="#stitre">
+                                <div class="card-body">
+                                    <p>Oubliez terminator ! La machine est un ensemble de composants électroniques.</p>
+                                    <img class="img-fluid" src="img/machine.PNG" alt="La machine">
+                                    <h5>La machine a des caractéristiques peu pratiques :</h5>
+                                    <ol>
+                                        <li>elle est muette : pour connaitre une information, elle doit poser une
+                                            question, le plus souvent à l'écran,
+                                        </li>
+                                        <li>elle est sourde : pour obtenir une information, elle doit analyser les
+                                            données saisie, le plus souvent au clavier,
+                                        </li>
+                                        <li>elle est limitée : elle ne peut que faire des calcul, à partir des
+                                            informations saisie et elle doit pouvoir les stocker,
+                                        </li>
+                                        <li>elle est muette : une fois ses calculs faits, elle devra les restituer, le
+                                            plus souvent à l'écran.
+                                        </li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s100">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#z0" aria-expanded="false" aria-controls="z0">
+                                        B - L ’art et la manière de bien programmer
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="z0" class="collapse" aria-labelledby="_s100" data-parent="#stitre">
+                                <div class="card-body">
+                                    <h5>Programmer, c ’est quoi ?</h5>
+                                    <ul>
+                                        <li>Utiliser un <strong>langage de programmation</strong>,</li>
+                                        <li>Donner des <strong>ordres</strong> clairs à l ’ordinateur,</li>
+                                        <li>Etre capable de <strong>structurer</strong> ces ordres.</li>
+                                    </ul>
+                                    <h5>Programmer c'est répondre à un besoin !</h5>
+                                    <ul>
+                                        <li><strong>Analyse</strong> des besoins et de l ’application à mettre en place,
+                                        </li>
+                                        <li><strong>Développement</strong> de l ’application,
+                                            <ul>
+                                                <li>Mise en œuvre des éventuelles bases de données,</li>
+                                                <li>Programmation,</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Déploiement</strong> et maintenance.</li>
+                                    </ul>
+                                    <h5>Avant de programmer...</h5>
+                                    <p>Donner des ordres à un ordinateur, c ’est :</p>
+                                    <ul>
+                                        <li>Utiliser un <strong>vocabulaire</strong> qu ’il comprend,</li>
+                                        <li>Respecter un certain ordre afin d ’aboutir au résultat souhaité.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_1AB">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#b1" aria-expanded="false" aria-controls="b1">
+                                        C - La culture et les bonnes pratiques
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="b1" class="collapse" aria-labelledby="_1Ab" data-parent="#stitre">
+                                <div class="card-body">
+                                    <div class="accordion" id="stitre2">
+                                        <div class="card">
+                                            <div class="card-header" id="_1Ba">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c8"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseThree">
+                                                        a - Garder des choses simples
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c8" class="collapse" aria-labelledby="_1Ba"
+                                                 data-parent="#stitre2">
+                                                <div class="card-body">
+                                                    <p>L'art du technicien, c'est chercher la simplicité. Plus c'est
+                                                        simple, plus c'est mignon.</p>
+                                                    <p>La simplicité s'exerce à deux niveaux :</p>
+                                                    <ul>
+                                                        <li>le niveau technique,</li>
+                                                        <li>le niveau de temps</li>
+                                                    </ul>
+                                                    <p>Que ce soit dans un cadre professionnel, scolaire ou personnelle,
+                                                        les journées ne font que 24 heures, et personne ne passe son
+                                                        temps à faire toujours et tout le temps la même chose</p>
+                                                    <p>Pour appréhender un problème, il faut le faire <strong>méthodiquement</strong>,
+                                                        partir du simple pour aller au plus compliqué.
+                                                        <br> En informatique et souvent dans d'autres domaines, un
+                                                        problème compliqué est une somme de problèmes simple.
+                                                        <br>Le tout est de faire une bonne analyse, c'est ce à quoi doit
+                                                        aboutir un débutant, avant de foncer tête bêche.</p>
+                                                    <h5>L'automatisation</h5>
+                                                    <div class="alert alert-warning" role="alert">
+                                                        <p>Il ne faut pas faire plus de <strong>3 fois</strong> la même
+                                                            chose.</p>
+                                                        <p>Si vous voyez quelque chose qui se répète, votre premier
+                                                            réflexe doit être de chercher à factoriser le code, parce
+                                                            que moins de code, c'est moins de bugs, et c'est un
+                                                            programme plus facile à comprendre.</p>
+                                                    </div>
+
+                                                    <p>Pour ne pas se répéter il faut automatiser les processus.</p>
+                                                    <p>Ceci est vrai :</p>
+                                                    <ul>
+                                                        <li>pour le code,</li>
+                                                        <li>pour des applications, comme votre <abbr
+                                                                title="Editeur de Développement Intégré"
+                                                                class="initialism">ide</abbr>, que ce soit visual
+                                                            studio, sublime text ...
+                                                        </li>
+                                                    </ul>
+                                                    <p> il est nécessaire d’identifier :</p>
+                                                    <ul>
+                                                        <li>les points de répétition,</li>
+                                                        <li>les points à faible valeur ajouté, qui peuvent êtres
+                                                            automatisés.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_1Bc">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c9"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseThree">
+                                                        b - La culture du savoir
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c9" class="collapse" aria-labelledby="_1Bc"
+                                                 data-parent="#stitre2">
+                                                <div class="card-body">
+                                                    <h5>Documentez vous</h5>
+                                                    <div class="alert alert-warning" role="alert">
+                                                        <p>Personne ne connait tout sur tout, même les professionnels
+                                                            les plus aguerris. Cela ne ce voit qu'à la <strong>télévision</strong>
+                                                            !</p>
+                                                    </div>
+                                                    <p>Voilà pourquoi, il faut <strong>toujours</strong> avoir une
+                                                        <strong>documentation avec soi</strong>. Peut importe qu'elle
+                                                        soit technique, de cours ou de notes.</p>
+                                                    <h5>Commentez votre code</h5>
+                                                    <p>Le code n'est pas quelque chose de fixe dans le temps, la
+                                                        technicité du programmeur évolue, ainsi que son analyse des
+                                                        problèmes. Ceci va donc influer sur sa façon de coder.</p>
+                                                    <p>Un code se butine, c'est à dire que son programmeur le fait
+                                                        évoluer, il le modifie, qu'il soit ou non débutant.</p>
+                                                    <p>De plus, le code n'est pas forcément destiné à une seule
+                                                        personne, la programmation est le plus souvent un travail
+                                                        d'équipe, et le code doit être "lisible" pour toute
+                                                        l'équipe.</p>
+                                                    <p>Commenter son code ce n'est pas commenter un boucle ou un si.
+                                                        C'est avant tout <strong>donnez les exemples</strong> qui
+                                                        illustrent les intentions du programmeur.</p>
+                                                    <h5>Tester son code</h5>
+                                                    <p>Le test simple consiste à prévoir tous les cas possibles auxquels
+                                                        sera soumis le code. C'est d'ailleurs ces cas qui servirons le
+                                                        plus souvent de commentaire.</p>
+                                                    <p>Lorsque les programmes sont plus long et plus complexes, le
+                                                        programmeur aura recours aux tests automatisés. Ils limiteront
+                                                        les erreurs.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_1Bd">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse" data-target="#c10"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseThree">
+                                                        d - La qualité
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="c10" class="collapse" aria-labelledby="_1Bd"
+                                                 data-parent="#stitre2">
+                                                <div class="card-body">
+                                                    <p>La qualité est quelque chose de subjectif. Elle varie en fonction
+                                                        de la perosnne concernée.
+                                                        <br>Elle sera différente selon que l'on soit : </p>
+                                                    <ul>
+                                                        <li>un débutant,</li>
+                                                        <li>un étudiant,</li>
+                                                        <li>un professeur,</li>
+                                                        <li>un développeur,</li>
+                                                        <li>un client.</li>
+                                                    </ul>
+                                                    <p>Il faut se donner des <strong>bonnes pratiques</strong> pour soi
+                                                        et ses collègues.</p>
+                                                    <p>Les bonnes pratiques sont souvent liées à une technologie ou un
+                                                        métier.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="_2">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+                            data-target="#a1"
+                            aria-expanded="false" aria-controls="a1">
+                        II - Les bases du langage
+                    </button>
+                </h2>
+            </div>
+            <div id="a1" class="collapse" aria-labelledby="_2" data-parent="#titre">
+                <div class="card-body">
+                    <p>L'objectif de ce chapitre est de découvrir les bases du langage C#.</p>
+                    <p>C# est une langage dit de "haut niveau". Il se positionne entre le C++, réputé complexe et Visual
+                        Basic.</p>
+                    <p>Le C# est souple, c'est-a-dire qu'il peut être exécuté sur la machine sur laquelle il se trouve
+                        ou bien transmis par l'intermédiaire du web pour s'exécuter sur un ordinateur distant.</p>
+                    <p>Le C# est aussi puissant que le C++, tant par la richesse de son langage que par sa vitesse
+                        d'exécution.</p>
+                    <p>Le C# est facile a utiliser, les commandes générant des erreurs en C++ ont été modifiées pour les
+                        rendre plus sures.</p>
+                    <p>Le C# est multi cibles, les programmes peuvent être définis pour s'exécuter en mode console,
+                        graphique, sur Pc, sur Pocket-Pc et même sur Linux grâce à mono et a Microsoft qui a fournit les
+                        sources de .net ( Projet Rotor ).</p>
+                    <p>C# est prêt pour Internet, c'est le pivot de la nouvelle stratégie Internet de Microsoft, nommée
+                        .NET.</p>
+                    <p>C# est sûr, comme tout langage destiné à une utilisation sur Internet il doit contenir les
+                        principes garantissant l'intégrité de la plateforme hôte.</p>
+                    <p>C# est véritablement orienté objet.</p>
+                    <div class="accordion" id="stitre3">
+                        <div class="card">
+                            <div class="card-header" id="_s3">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d0" aria-expanded="false" aria-controls="d0">
+                                        A - Anatomie d'un fichier source
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d0" class="collapse" aria-labelledby="_s3"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+
+                                    <p>Le code C# est écrit dans des fichiers source portant l'extension
+                                        <code>.cs</code>. Dans le cas d'un programme web celle-ci sera <code>.asp</code>
+                                    </p>
+
+                                    <p>Il est fortement conseillé d'adopter le jeu de caractères ANSI non étendu (sans
+                                        les caractères français). Tous les fichiers source doivent être encodés avec ce
+                                        jeu de caractères,seules les parties de texte peuvent contenir des caractères
+                                        français, voici un exemple ci-dessous.</p>
+                                    <pre>
+      <code>
+using System;
+namespace demonstration
+{
+    class HelloWorld {
+         static void Main() {
+             Console.WriteLine ("Hello, World");
+         }
+}
+</code> </pre>
+                                    <p>Voici les explications du code :</p>
+                                    <h5>Using System;</h5>
+                                    <p>Au début de chaque fichier de programme il faut mettre la directive <code>using</code> pour
+                                        spécifier au compilateur une liste de chemins de recherche implicites.</p>
+                                    <p>Par exemple, quand le compilateur rencontre la méthode
+                                        "<span class="cp">Console</span>.WriteLine (<span class="s">"Hello, World"</span>);",il s'aperçoit que son chemin n'est pas
+                                        défini explicitement. Il balaie alors les espaces de noms spécifiés dans les
+                                        <code>using</code> puis, une fois la méthode dénichée dans l'espace de nom <code>System</code>, il compile
+                                        le code.</p>
+                                    <h5>namespace demonstration</h5>
+                                    <p>Cette ligne facultative défini un espace de nom qui va contenir les classes qui
+                                        sont entre accolades dans notre exemple la classe bonjour. L'explication est la
+                                        même dans le principe que celle donnée au dessus, je vous laisse vous y
+                                        reporter.</p>
+                                    <h5>public class HelloWorld</h5>
+                                    <p>Une application C# est une collection de classes, une classe étant un ensemble de
+                                        données et de méthodes. Une méthode est un ensemble d'instructions appliquant un
+                                        traitement aux données de la classe, retournant ou non un résultat logique ou
+                                        typé (valeur numérique, chaîne de caractères, référence d'objet, etc.. . .)</p>
+                                    <p>C'est le mot clé <code>class</code> qui introduit la déclaration de la classe, suivi du nom de
+                                        la classe, d'une accolade ouvrante et d'une accolade fermante. Votre code sera
+                                        placé entre les deux accolades.</p>
+                                    <h5>static void Main()</h5>
+                                    <p>Cette méthode est la méthode principale ( main in english ) de votre programme
+                                        bonjour, c’est ici que vous placerez les actions a faire exécuter a C#.</p>
+                                    <p>Le mot-clef <code>public</code> signifie que la méthode est accessible au monde extérieur. Le
+                                        mot clé <code>static</code> indique au compilateur que la méthode Main est globale et que,
+                                        par conséquent, il est inutile d'instancier la classe pour pouvoir appeler la
+                                        méthode. Comme elle est statique, le compilateur prend son adresse comme point
+                                        d'entrée. De cette façon, l'environnement .NET sait par où commencer l'exécution
+                                        de l'application.</p>
+                                    <h5>Console.WriteLine("HelloWorld");</h5>
+                                    <p>Pour l'instant intéressons-nous à <code>WriteLine( )</code>, qui veut dire "écris ce que je te
+                                        donne sur une ligne de la console". C'est magnifique, vous savez faire écrire
+                                        une phrase ! Ne vous inquiétez pas après l'écriture viendront les calculs !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s4">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d1" aria-expanded="false" aria-controls="d1">
+                                        B - Définition d'un bloc de code
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d1" class="collapse" aria-labelledby="_s4"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <div class="alert alert-danger" role="alert">
+                                        <p>Les débutants ont tendance à copier le code avant de fermer les accolades, ce
+                                            qui induit des recherches inutile en déboguage</p>
+                                        <p><strong>Bonne pratique :</strong> avant de commencer à coder, soyez sûr que
+                                            toutes les accolades existe de façon à générer un programme vide sans
+                                            erreurs.</p>
+                                    </div>
+                                    <p>La partie de programme située entre deux accolades, une ouvrante et une fermante,
+                                        est appelée bloc.
+                                        Je conseille de prendre l'habitude de faire une tabulation après le retour à la
+                                        ligne qui suit l'accolade. Puis retirer cette tabulation après l'accolade
+                                        fermante du bloc.</p>
+                                    <pre>
+                                   {
+                                    Tabulation
+                                    Tout le code est frappé à cette hauteur
+                                    }
+                                    Retrait de la tabulation
+                                    Tout le code est frappé à cette hauteur
+                                    </pre>
+                                    <p>Cette méthode permet de contrôler la fermeture des accolades et de leurs
+                                        correspondances.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s5">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d2" aria-expanded="false" aria-controls="d2">
+                                        C - Affichage de texte
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d2" class="collapse" aria-labelledby="_s5"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>L'affichage de texte s'effectue grâce à la commande <code>Console.Write()</code>.
+                                    </p>
+                                    <pre>
+      <code>Console.WriteLine ("Hello, World");</code> </pre>
+                                    <p>Il existe en fait 2 méthodes d'affichage :</p>
+                                    <ul>
+                                        <li><code>Console.Write()</code> : affiche du texte et reste sur la même ligne,
+                                        </li>
+                                        <li><code>Console.WriteLine()</code> : affiche du texte et fait un saut de ligne
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s6">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d3" aria-expanded="false" aria-controls="d3">
+                                        D - Commentaires
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d3" class="collapse" aria-labelledby="_s6"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>Les commentaires doivent permettre à quelqu'un, de pouvoir lire et comprendre ce
+                                        qui se passe. Les commentaires sont indispensables à tout bon programme.</p>
+                                    <p>Il y a deux façons de placer des commentaires :</p>
+                                    <ul>
+                                        <li>soit en utilisant <code>/*Commentaire*/</code>, qui permet aussi un
+                                            commentaire sur plusieurs lignes,
+                                        </li>
+                                        <li>soit en utilisant <code>//</code>. Le reste de la ligne est un commentaire
+                                            où le commentaire se termine à la fin de la ligne.
+                                        </li>
+                                    </ul>
+                                    <p>Microsoft à introduit la génération automatique de documentation basée sur le
+                                        XML. Pour l'obtenir il suffit de saisir <code>///</code> devant chaque
+                                        déclaration de méthode</p>
+                                    <p>On obtient le code suivant :</p>
+                                    <pre>
+/// &ltsummary&gt
+/// Commentaire...
+/// &ltsummary&gt
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s7">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#d4" aria-expanded="false" aria-controls="d4">
+                                        E - l'indentation
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="d4" class="collapse" aria-labelledby="_s7"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <p>Revenons à notre exemple. Le code n'est pas, en totalité, positionné à droite. A
+                                        chaque nouveau bloc le code est décalé vers la droite. C'est ce qu'on appelle
+                                        l'indentation. Elle existe dans tous les langages, c'est un bonne pratique qui
+                                        rend le code plus lisible.</p>
+                                    <pre>
+using System;
+namespace demonstration
+{
+    class HelloWorld {
+         static void Main() {
+             Console.WriteLine ("Hello, World");
+         }
+} </pre>
+                                    <p><strong>Note</strong> : si avec des IDE comme Visual Studio l'indentation est
+                                        souvent automatique, préférez les <strong>tabulations</strong> à des espaces.
+                                    </p>
+                                    <p>Si vous souhaitez couper une expression les bonnes pratiques sont les suivantes
+                                        :</p>
+                                    <ul>
+                                        <li>faire un saut après une virgule,</li>
+                                        <li>faire un saut après un opérateur(un + par exemple)</li>
+                                        <li>aligner le début de la nouvelle ligne au même niveau que la précédent.</li>
+                                    </ul>
+                                    <p class="text-white bg-info">Exemple :</p>
+                                    <pre>
+longMethodCall(expr1, expr2,
+               expr3, expr4, expr5);
+                                    </pre>
+                                    <p class="text-white bg-info">Mauvais saut</p>
+                                    <pre>
+var = a * b / (c - g +
+      f) + 4 * z;
+                                    </pre>
+                                    <p class="text-white bg-info">Meilleure méthode</p>
+                                    <pre>
+var = a * b / (c - g + f) +
+      4 * z;
+                                    </pre>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s107">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#z4" aria-expanded="false" aria-controls="z4">
+                                        F - Conventions de nommage
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="z4" class="collapse" aria-labelledby="_s7"
+                                 data-parent="#stitre3">
+                                <div class="card-body">
+                                    <h5>La notation hongroise</h5>
+                                    <ul>
+                                        <li>On ajoute un préfixe à chaque variable pour indiquer son type.</li>
+                                        <li>Exemple : <code>btnRetour</code> pour bouton Retour</li>
+                                        <li>Toutefois les préfixes ne sont pas standardisés et on doit en inventer pour
+                                            les nouveaux types.
+                                        </li>
+                                        <li>Puisque C# est un langage fortement typé et que la hiérarchie de classes est
+                                            très stricte on ne suggère pas d’utiliser cette notation.
+                                        </li>
+                                    </ul>
+                                    <h5>La casse Pascal</h5>
+                                    <ul>
+                                        <li>La première lettre est en majuscule.</li>
+                                        <li>On sépare les mots en mettant leur première lettre en majuscule.</li>
+                                        <li>Exemple : <code>AfficherCustomer</code></li>
+                                        <li> Vous remarquerez que les espaces de noms et les classes de bases du
+                                            Framework respectent cette casse.
+                                        </li>
+                                    </ul>
+                                    <h5>La casse Camel</h5>
+                                    <ul>
+                                        <li>La première lettre est en minuscule.</li>
+                                        <li>On sépare les mots en mettant leur première lettre en majuscule.</li>
+                                        <li>Exemple : <code>testCompteur</code></li>
+                                    </ul>
+                                    <h5>La casse Majuscule</h5>
+                                    <ul>
+                                        <li>Toutes les lettres sont en majuscule pour les constante d'une ou deux
+                                            lettres
+                                        </li>
+                                        <li>Exemple : <code>PI</code></li>
+                                        <li>Si le nom est trop long, utilisez la casse Pascal</li>
+                                    </ul>
+                                    <p><strong>Note</strong> : Il est fortement déconseillé de séparer les mots par des
+                                        traits de soulignement (underscore) : <code>Afficher_Customer</code> est donc
+                                        déconseillé.</p>
+
+                                    <h5>Nommage des noms</h5>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Espaces de noms</th>
+                                            <th>On suggère d’utiliser le nom de la compagnie ou du produit en notation
+                                                Pascal.
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Variables</td>
+                                            <td>On utilise des noms en notation Camel.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Classes</td>
+                                            <td>On utilise un nom qui décrit les objets en notation Pascal.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Méthodes</td>
+                                            <td>On utilise un verbe qui décrit exactement ce que fait la méthode en
+                                                notation Pascal.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paramètres</td>
+                                            <td>On utilise des noms significatifs en notation Pascal.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Interfaces</td>
+                                            <td>On utilise des noms en notation Pascal précédés d’un I majuscule.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Membres</td>
+                                            <td>On utilise des noms en notation Camel.</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="_3">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+                            data-target="#a2"
+                            aria-expanded="false" aria-controls="a2">
+                        III - Programmer avec C#
+                    </button>
+                </h2>
+            </div>
+            <div id="a2" class="collapse" aria-labelledby="_3" data-parent="#titre">
+                <div class="card-body">
+                    <p>L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
+                        le langage C#.</p>
+                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+
+                    <div class="accordion" id="stitre4">
+                        <div class="card">
+                            <div class="card-header" id="_s8">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e0" aria-expanded="false" aria-controls="e0">
+                                        A - Variables
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e0" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+
+                                    <div class="accordion" id="sstitre4">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss13">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee0" aria-expanded="false"
+                                                            aria-controls="ee0">
+                                                        a - Définition d'une variable
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee0" class="collapse" aria-labelledby="_ss13"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>Une variable joue en C# le même rôle que dans tout autre langage
+                                                        : stocker une information.</p>
+                                                    <p>Vous pouvez vous représenter une variable comme étant une boîte
+                                                        dans laquelle on met quelque chose, c'est-à-dire qu’on écrit
+                                                        quelque chose, ou dont on « apprend » quelque chose,
+                                                        c'est-à-dire qu’on lit ce quelque chose</p>
+                                                    <p>Une variable ne peut contenir qu’une seule chose à la fois. Si
+                                                        vous mettez une seconde donnée dans une variable, la précédente
+                                                        est effacée. </p>
+                                                    <p>Le nom d’une variable est appelé identificateur.</p>
+                                                    <h5>Les types de variables</h5>
+                                                    <p>Les types ont souvent une assez grande importance dans un
+                                                        programme : ils permettent d'éviter un certain nombre de bugs,
+                                                        en vérifiant qu'on manipule toujours les données de manière
+                                                        correcte.
+                                                    </p>
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Catégorie</th>
+                                                            <th>Classe</th>
+                                                            <th>Description</th>
+                                                            <th>Version C#</th>
+                                                            <th>Exemple</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td>Entier</td>
+                                                            <td>Byte</td>
+                                                            <td>Entier non signé de 8-bit</td>
+                                                            <td>byte</td>
+                                                            <td>255</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>Int16</td>
+                                                            <td>Entier signé de 16-bit</td>
+                                                            <td>short</td>
+                                                            <td>-32768</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>Int32</td>
+                                                            <td>Entier signé de 32-bit</td>
+                                                            <td>int</td>
+                                                            <td>-2147483648</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>Int64</td>
+                                                            <td>Entier signé de 64-bit</td>
+                                                            <td>long</td>
+                                                            <td>-9 223 372 036 854 775 808</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Nombre flottants</td>
+                                                            <td>Single</td>
+                                                            <td>Nombre flottant avec une précision de 32-bit</td>
+                                                            <td>float</td>
+                                                            <td>+/- 1.5 x 10 exp -45</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>Double</td>
+                                                            <td>Nombre flottant avec une précision de 64-bit</td>
+                                                            <td>double</td>
+                                                            <td>+/- 1.7 X 103 exp 308</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Logique</td>
+                                                            <td>Boolean</td>
+                                                            <td>Valeur booléenne (true ou false).</td>
+                                                            <td>bool</td>
+                                                            <td>true</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Autre</td>
+                                                            <td>Char</td>
+                                                            <td>Caractère Unicode (16-bit)</td>
+                                                            <td>char</td>
+                                                            <td>'a'</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>Decimal</td>
+                                                            <td>Valeur décimale sur 128-bit</td>
+                                                            <td>decimal</td>
+                                                            <td>l.0 x 10 exp -28 à 7.9 x 10 exp 28</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>IntPtr</td>
+                                                            <td>Entier signé dont la taille dépend de la plateforme
+                                                                cible (32-bit ou 64-bit)
+                                                            </td>
+                                                            <td>IntPtr</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Classe</td>
+                                                            <td>Object</td>
+                                                            <td>La racine de la hiérarchie des objets</td>
+                                                            <td>object</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td></td>
+                                                            <td>String</td>
+                                                            <td>Chaîne de caractères Unicode immuable et de taille
+                                                                fixe
+                                                            </td>
+                                                            <td>string</td>
+                                                            <td>"azerty"</td>
+                                                        </tr>
+                                                    </table>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss14">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee1" aria-expanded="false"
+                                                            aria-controls="ee1">
+                                                        b - Déclarer et initialiser les variables
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee1" class="collapse" aria-labelledby="_ss14"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>Ce processus se passe en trois étapes :</p>
+                                                    <ol>
+                                                        <li>Choisir un type</li>
+                                                        <li>Donner un nom</li>
+                                                        <li>initialiser</li>
+                                                    </ol>
+                                                    <p>Exemple :</p>
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Choisir un type</th>
+                                                            <th>Donner un nom</th>
+                                                            <th>initialiser</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td>int</td>
+                                                            <td>nombreDeVisiteurs</td>
+                                                            <td>5000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>string</td>
+                                                            <td>ours</td>
+                                                            <td>Grizzly</td>
+                                                        </tr>
+                                                    </table>
+                                                    <code>int nombreDeVisiteurs = 5000;</code>
+                                                    <code>string ours = "Grizzly";</code>
+                                                    <h5>Déclarer et initialiser les chaînes de caractères </h5>
+                                                    <p>Exemple simple</p>
+                                                    <p><code>string s = "Hello World";</code> // Hello World</p>
+                                                    <p>Déclarer une chaîne entre guillemets</p>
+                                                    <p><code>string s = "\"Hello\"";</code> // "Hello"</p>
+                                                    <p>Gestion des caractères protégés</p>
+                                                    <p><code>string s = "Hello\nWorld";</code> // Hello World sur 2
+                                                        lignes</p>
+                                                    <p>Les chaînes @</p>
+                                                    <p><code>string s = “c:\\Docs\\Source\\a.txt";</code> //devient
+                                                        plutôt :</p>
+                                                    <p><code>string s = @“c:\Docs\Source\a.txt";</code></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss140">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee100" aria-expanded="false"
+                                                            aria-controls="ee100">
+                                                        c - Les caractères spéciaux
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee100" class="collapse" aria-labelledby="_ss140"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>Nous avons vu que pour faire un retour chariot, c'est-à-dire un
+                                                        retour à la ligne, nous pouvions utiliser
+                                                        <br>soit <code>Console.WriteLine</code>, mais le retour chariot
+                                                        n’a lieu qu’en fin de ligne obligatoirement,
+                                                        <br>soit \n que nous placions dans notre texte là où nous
+                                                        voulions faire un retour à la ligne. </p>
+                                                    <p>Les caractères spéciaux commencent tous par le caractère de
+                                                        suffixe <code>\</code>. Cela permet au compilateur de faire
+                                                        la différence par exemple entre <code>\n</code> et
+                                                        <code>n</code>.
+                                                        <br>Il existe environ une dizaine de caractères spéciaux dont
+                                                        voici les principaux : </p>
+                                                    <table class="table">
+                                                        <tr>
+                                                            <td>\n</td>
+                                                            <td>fait un retour chariot</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>\t</td>
+                                                            <td>fait une tabulation</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>\’</td>
+                                                            <td>permet de créer un caractère contenant la valeur du
+                                                                quote.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>\"</td>
+                                                            <td>affiche un guillemet.</td>
+                                                        </tr>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss141">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee101" aria-expanded="false"
+                                                            aria-controls="ee101">
+                                                        d - Saisie de variables
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee101" class="collapse" aria-labelledby="_ss141"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>La saisie des variables se fait grâce à l'instruction <code>Console.ReadLine()</code>.
+                                                    </p>
+                                                    <p>Ainsi le code <code>s = Console.Readine();</code> demande à
+                                                        l'utilisateur de saisir une variable qui sera stockée dans la
+                                                        variable s.</p>
+                                                    <div class="alert alert-danger" role="alert">
+                                                        Le problème c'est que <code>Console.ReadLine()</code> ne renvoie
+                                                        qu'un type string.
+                                                    </div>
+                                                    <p>Ainsi le code <code>int s = Console.Readine();</code> renverra une
+                                                        erreur.</p>
+                                                    <h5>Les conversions</h5>
+                                                    <p>Ici il ne s'agit pas de changer de religion :), mais de type</p>
+                                                    <p>Dans sa forme générale, la saisie d'un int au clavier s'écriera
+                                                        :</p>
+                                                    <p><code>string s = Console.Readine();</code></p>
+                                                    <p><code>int i = Convert.ToInt32(s);</code></p>
+                                                    <p>Dans sa forme abrégée nous aurons :</p>
+                                                    <p><code>int i = Convert.ToInt32(Console.Readine());</code></p>
+                                                    <p>Ceci s'applique intelligemment à toutes les conversions autres
+                                                        que string.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss142">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee102" aria-expanded="false"
+                                                            aria-controls="ee102">
+                                                        e - Opérations sur les nombres
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee102" class="collapse" aria-labelledby="_ss142"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>Les opérateurs de bases en programmation sont les mêmes que les
+                                                        opérateurs mathématiques que vous
+                                                        employez depuis votre plus tendre enfance, à savoir : </p>
+                                                    <ul>
+                                                        <li>l’opérateur + pour l’addition : additionne 2 entiers entre
+                                                            eux
+                                                        </li>
+                                                        <li>l’opérateur – pour la soustraction : soustrait 2 entiers
+                                                            entre eux
+                                                        </li>
+                                                        <li>l’opérateur * pour la multiplication : multiplie 2 entier
+                                                            entre eux
+                                                        </li>
+                                                        <li>l’opérateur / pour la division : divise le 1er entier par le
+                                                            2nd et tronque le résultat
+                                                        </li>
+                                                        <li>l’opérateur % qui permet de connaître le reste d’une
+                                                            division euclidienne (que vous n’avez probablement jamais
+                                                            vu)
+                                                        </li>
+                                                    </ul>
+                                                    <p>Exemple d’utilisation :</p>
+                                                    <p><code>int a = 2;</code></p>
+                                                    <p><code>int b = 3;</code></p>
+                                                    <p><code>int c = a + b;</code> //c = 5</p>
+                                                    <p><code>int d = c + 12;</code> //d = 17</p>
+                                                    <p><code>int e = a*b;</code> //e = 3*2 = 6</p>
+                                                    <p><code>int f = c%a;</code> //5%2 = 1 car 5 = 2*2 + 1</p>
+                                                    <p>Les Expressions sont évaluées en fonction de la précédence des
+                                                        opérateurs</p>
+                                                    <p><code>int a = 10;</code></p>
+                                                    <p><code>int b = 20;</code></p>
+                                                    <p><code>int c = 5;</code></p>
+                                                    <p><code>int g = a + b/c;</code> //g = 14</p>
+                                                    <p>Les parenthèses peuvent être utilisées pour contrôler l’ordre
+                                                        d’évaluation</p>
+                                                    <p><code>int g = (a + b)/c;</code> //g = 6</p>
+                                                    <p><code>int g = a + (b/c);</code> //g = 14</p>
+                                                    <h5>Les raccourcis</h5>
+                                                    <p>Il est ainsi possible d’affecter une variable et d’effectuer une
+                                                        opération en même temps (d’un point de vue uniquement visuel).
+                                                        <br> Ces opérateurs sont +=, -=, *=, /=, %=, ++ et --. </p>
+                                                    <p>Exemple d’utilisation :</p>
+                                                    <p><code>int i = 0;</code> //La variable doit avoir été initialisé
+                                                        au préalable.</p>
+                                                    <p><code>i += 12;</code> // i = i + 12;</p>
+                                                    <p><code>i -= 12;</code> // i = i – 12;</p>
+                                                    <p><code>i *= 5;</code> // i = i * 5;</p>
+                                                    <p><code>i /= 5;</code> // i = i / 5;</p>
+                                                    <p><code>i %= 2;</code> // i = i % 2;</p>
+                                                    <p><code>i++;</code> // i += 1; // i = i + 1;</p>
+                                                    <p><code>i--;</code> // i -= 1; // i = i – 1;</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss143">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee103" aria-expanded="false"
+                                                            aria-controls="ee103">
+                                                        f - Concaténation
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee103" class="collapse" aria-labelledby="_ss143"
+                                                 data-parent="#sstitre4">
+                                                <div class="card-body">
+                                                    <p>La concaténation est une opération visant à regrouper plusieurs
+                                                        chaînes de caractères entre elles. Elle s’effectue par
+                                                        l’intermédiaire de l’opérateur + et ne peut avoir lieu qu’entre
+                                                        types string.
+                                                        <br> Les autres opérateurs ne s’emploient pas sur les types
+                                                        string.
+                                                        <br> On peut se représenter une concaténation comme étant une
+                                                        opération mettant bout à bout les chaînes de
+                                                        caractères (ou string) entre elles. </p>
+                                                    <p>Exemple d’utilisation :</p>
+                                                    <p><code>string a = "Coucou,";</code></p>
+                                                    <p><code>string b = " c’est moi !";</code></p>
+                                                    <p><code>string c = a + b;</code> //c contient "Coucou, c’est moi !"
+                                                    </p>
+                                                    <p><code>Console.WriteLine("Vous avez entré : " + myString);</code>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s9">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e1" aria-expanded="false" aria-controls="e1">
+                                        B - Tests et conditions
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e1" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre5">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss15">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee2" aria-expanded="false"
+                                                            aria-controls="ee2">
+                                                        a - L'instruction <code>if</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee2" class="collapse" aria-labelledby="_ss15"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>Dans un programme, on souhaite fréquemment agir en fonction du
+                                                        résultat d'une condition. Les traitements à effectuer peuvent
+                                                        être différents selon que la condition soit vraie ou fausse. En
+                                                        C#, une alternative s'exprime grâce à l'instruction
+                                                        <code>if</code> éventuellement associée à une instruction <code>else</code>,.
+                                                        Elle permet de conditionner des traitements en fonction de
+                                                        certains critères. On parle parfois de branchement logique.
+                                                        Pendant l'exécution, les instructions exécutées seront
+                                                        différentes selon la valeur de la condition. Un seul des deux
+                                                        blocs d'instructions sera pris en compte.</p>
+                                                    <pre>
+if (condition vraie)
+{
+ instructions 1
+}
+else
+{
+ instructions 2
+}
+    </pre>
+                                                    <p>Il est possible de placer une instruction <code>if</code> à
+                                                        l'intérieur d'un bloc d'une autre instruction <code>if</code>.
+                                                        C'est ce qu'on appelle <strong>imbriquer des conditions</strong>.
+                                                        Attention à toujours bien refléter l'imbrication des blocs en
+                                                        décalant les instructions associées dans le code source : c'est
+                                                        ce qu'on appelle <strong>l'indentation</strong>.</p>
+                                                    <pre>
+if (condition 1)
+{
+ instructions 1
+}
+else
+{
+ if (condition 2)
+ {
+ instructions 2;
+ }
+ else
+ {
+ instructions 3;
+ }
+}
+    </pre>
+                                                    <p><strong>Remarque</strong> : Vous pouvez imbriquer autant de if,
+                                                        de else if, de else que vous le souhaitez, a priori, il n’y a
+                                                        pas de limite. Mais concrétement, il est compliqué de descendre
+                                                        au dessous de trois imbrications, en effet, le code devient peu
+                                                        lisible.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss16">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee3" aria-expanded="false"
+                                                            aria-controls="ee3">
+                                                        b - La notion de condition
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee3" class="collapse" aria-labelledby="_ss16"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>L'instruction <code>if</code> est associée à une condition. C'est
+                                                        une expression (une combinaison de variables, de valeurs et
+                                                        d'opérateurs) dont l'évaluation donne la valeur vraie (<code>true</code>)
+                                                        ou la valeur faux (<code>false</code>). On parle d'expression
+                                                        booléenne.</p>
+                                                    <p>Toute expression renvoyant une valeur booléenne peut être
+                                                        utilisée comme condition avec un <code>if</code>. C'est le cas
+                                                        des expressions utilisant des opérateurs de comparaison, dont
+                                                        voici la liste.</p>
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>Opérateur</th>
+                                                            <th>Signification</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td>==</td>
+                                                            <td>Egal à</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>!=</td>
+                                                            <td>Différent de</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&lt;</td>
+                                                            <td>Inférieur strictement</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&lt;=</td>
+                                                            <td>Inférieur ou égal</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&gt;</td>
+                                                            <td>Supérieur strictement</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&gt;=</td>
+                                                            <td>Supérieur ou égal</td>
+                                                        </tr>
+                                                    </table>
+                                                    <div class="alert alert-danger" role="alert">
+                                                        <p><strong>Note</strong> : la plupart des langages de
+                                                            programmation utilisent le symbole <code>=</code> pour
+                                                            symboliser l'affectation, et le symbole <code>==</code> pour
+                                                            l'égalité. Attention aux confusions avec le sens
+                                                            mathématique de l'opérateur <code>=</code>.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss17">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee4" aria-expanded="false"
+                                                            aria-controls="ee4">
+                                                        e - Les opérateurs logiques
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee4" class="collapse" aria-labelledby="_ss17"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>On peut définir des conditions plus complexes ("La valeur de X
+                                                        est entre 100 et 200") grâce aux opérateurs logiques. Ceux du
+                                                        langage C# sont les suivants : </p>
+                                                    <ul>
+                                                        <li><code>&amp;&amp;</code> (Et),</li>
+                                                        <li><code>||</code> (Ou),</li>
+                                                        <li><code>!</code> (Non),</li>
+                                                    </ul>
+                                                    <p>Plutôt que d'avoir des conditions complexes comme :</p>
+                                                    <pre>
+                                                        if (a == 5 && b == 2)
+                                                    </pre>
+                                                    <p>il est préférable d'imbriquer les <code>if</code> pour éviter une
+                                                        erreur d'analyse :</p>
+                                                    <pre>
+ if (a == 5)
+{
+ if (b == 2)
+ {
+ instructions 1
+ }
+}
+else
+{
+ instructions 2;
+}
+                                                    </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss18">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee5" aria-expanded="false"
+                                                            aria-controls="ee5">
+                                                        f - L'instruction <code>switch</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee5" class="collapse" aria-labelledby="_ss18"
+                                                 data-parent="#sstitre5">
+                                                <div class="card-body">
+                                                    <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc
+                                                        d'instructions parmi plusieurs possibles. Seul le bloc
+                                                        correspondant à la valeur testée sera pris en compte.</p>
+                                                    <pre>
+switch (/*variable*/)
+{
+ case /*valeur 1*/:
+ //instructions 1
+ break;
+ case /*valeur 2*/:
+ //instructions 2
+ break;
+ case /*valeur 3*/:
+ //instructions 3
+ break;
+ //etc.
+ default:
+ //instructions par défaut
+ break;
+}
+    </pre>
+                                                    <p>Il n'y a pas de limite au nombre de cas possibles. Le mot-clé
+                                                        <code>default</code>, à placer en fin de switch, est optionnel.
+                                                        Il sert souvent à gérer les cas d'erreurs.</p>
+                                                    <p>Les instructions <code>break;</code> dans les blocs
+                                                        <code>case</code> sont indispensables pour éviter de passer d'un
+                                                        bloc à un autre.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s10">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e2" aria-expanded="false" aria-controls="e2">
+                                        C - Tableaux
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e2" class="collapse" aria-labelledby="_s10" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre6">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss20">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee6" aria-expanded="false"
+                                                            aria-controls="ee6">
+                                                        a - Tableaux simples
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee6" class="collapse" aria-labelledby="_ss20"
+                                                 data-parent="#sstitre6">
+                                                <div class="card-body">
+                                                    <p>C# comme tout langage de programmation, permet de stocker des
+                                                        variables dans des tableaux. Un tableau est composé d’un
+                                                        <strong>nombre déterminé</strong> de variables de <strong>même
+                                                            type</strong> (primitif ou objet).</p>
+                                                    <p>Nous avions vu précédemment qu'une variable peut être représenter
+                                                        comme étant une boîte dans laquelle on met quelque chose, un
+                                                        tableau est aussi une variable, mais une boîte dans laquelle on
+                                                        met plusieurs choses</p>
+                                                    <pre>
+string [] tableaudechaines	 // tableaudechaines est donc un tableau contenant des chaînes de caractères
+int [] tableaudentier 	// tableaudentier est donc un tableau d’entier</pre>
+
+                                                    <p>Les crochets permettent de spécifier qu’il s’agit d’un tableau.
+                                                        Toutefois à ce niveau, les tableaux sont déclarés, mais non
+                                                        créés. En fait, ils n’existent pas concrètement en mémoire, vous
+                                                        venez de définir une entité virtuelle. Pour pouvoir les
+                                                        manipuler il faut donc les construire :</p>
+                                                    <pre>
+tableaudechaines= new string [100] ;
+tableaudentier= new int[6252]; </pre>
+
+                                                    <div class="alert alert-warning" role="alert">
+                                                        La taille du tableau est définie au moment de sa création et ne
+                                                        peut plus être changée par la suite. Si on manque de place dans
+                                                        un tableau il faut donc obligatoirement en créer un nouveau plus
+                                                        grand.
+                                                    </div>
+
+                                                    <p>Une fois créé, le tableau est vide, les cellules sont initialisée
+                                                        à :</p>
+                                                    <ul>
+                                                        <li><code>0</code> pour les tableaux de valeurs numériques,</li>
+                                                        <li><code>false</code> pour les booléens,</li>
+                                                        <li><code>null</code> pour les tableaux d'objets.</li>
+                                                    </ul>
+                                                    <p>L'accès aux cellules se fait en spécifiant un nombre entier (de
+                                                        type byte, char, short, ou int) <strong>indexé à partir de
+                                                            0</strong>.</p>
+                                                    <p class="text-white bg-info">Exemples divers :</p>
+                                                    <pre>
+tableaudentiers[0]=24; // on place 24 dans la première cellule.
+int i=8;
+tableaudentiers[1]=i ; // Maintenant la deuxième cellule a reçu 8.
+i=tableaudentier[0] ; // Maintenant i est à 24.
+tableaudechaine[6]="coucou" ; // Là je pense que vous avez compris !?    </pre>
+                                                    <p>Les valeurs d'un tableau peuvent être créées au moment de son
+                                                        instanciation, ce qui définira aussi sa dimension.</p>
+                                                    <p class="text-white bg-info">Exemple :</p>
+                                                    <pre>
+int[] tableau={1,2,3,7,6,4,9,4,8};
+string[] noms = { "Nicolas", "Jean", "Fabrice", "Michel", "Maxime" };</pre>
+                                                    <p><strong>Remarque importante</strong> : Les tableaux sont alloués
+                                                        dynamiquement. Leurs tailles peuvent donc être le résultat d'une
+                                                        expression.</p>
+                                                    <pre>
+personne [] famille; famille=new persone[2+nombreenfants];</pre>
+                                                    <p>Les tableaux sont traités en C# comme des types à part entière.
+                                                        Il est donc très facile de travailler avec. Par exemple, la
+                                                        méthode <code>Length</code> vous permettra de connaître la
+                                                        taille de votre tableau. </p>
+                                                    <p class="text-white bg-info">Exemple :</p>
+                                                    <pre>
+monTableau.Length; //renvoi un entier indiquant la taille du tableau </pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss21">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ee7" aria-expanded="false"
+                                                            aria-controls="ee7">
+                                                        b - Tableaux multidimensionnel
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ee7" class="collapse" aria-labelledby="_ss21"
+                                                 data-parent="#sstitre6">
+                                                <div class="card-body">
+                                                    <p>Il existe deux types de tableaux multidimensionnels : les
+                                                        matrices qui sont des tableaux comportant le même
+                                                        nombre de colonnes que de lignes et les autres tableaux dont on
+                                                        peut déterminer précisément la taille pour
+                                                        chaque ligne et pour chaque colonne. </p>
+                                                    <p class="text-white bg-info">Exemples :</p>
+                                                    <pre>
+int[,] tableauEntiers = new int[4,4]; //Une matrice 2D d'entiers à 4x4 cases
+char[,,,,] tableauCars = new char[20,20,20,20, 20];  //Une matrice 5D de 20x20x20x20x20 caractères</pre>
+
+                                                    <p>Le nombre de virgules entre les crochets indique si le tableau
+                                                        est bidimensionnel, tridimensionnel,
+                                                        quadridimensionnel, etc. A chaque virgule, une nouvelle
+                                                        dimension est créée.</p>
+                                                    <p>Si vous aviez le droit avec une matrice ou un tableau
+                                                        unidimensionnel de préciser la taille de chacune de
+                                                        leurs dimensions en même temps que leur déclaration, c’est bien
+                                                        parce que ces tableaux-ci sont des cas
+                                                        particuliers. Pour un tableau multidimensionnel « classique »,
+                                                        vous ne pouvez préciser la taille que de la 1ere
+                                                        dimension. Pour les autres dimensions, il faudra le faire plus
+                                                        loin dans le code. </p>
+                                                    <p class="text-white bg-info">Exemple :</p>
+                                                    <pre>
+int[][] tableauEntiers = new int[4][];
+tableauEntiers[0] = new int[10];
+tableauEntiers[1] = new int[5];
+tableauEntiers[2] = new int[4];
+tableauEntiers[3] = new int[7];</pre>
+                                                    <p>Ce tableau peut donc se représenter comme ceci en fin de compte
+                                                        : </p>
+                                                    <img class="img-fluid" src="img/tableauMultidimentionnel.PNG"
+                                                         alt="tableauMultidimentionnel">
+                                                    <div class="alert alert-danger" role="alert">
+                                                        Par contre il est interdit de faire :
+                                                        <pre>
+int[][] tableauEntiers = new int[4][4];</pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s11">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#e3" aria-expanded="false" aria-controls="e3">
+                                        D - Boucles
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e3" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre7">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss30">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff0" aria-expanded="false"
+                                                            aria-controls="ff0">
+                                                        a - Définition
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff0" class="collapse" aria-labelledby="_ss30"
+                                                 data-parent="#sstitre7">
+                                                <div class="card-body">
+                                                    <p>Les boucles sont des structures qui permettent d'exécuter
+                                                        plusieurs fois la même série d'instructions jusqu'à ce qu'une
+                                                        condition ne soit plus réalisée... On appelle parfois ces
+                                                        structures instructions répétitives ou bien itérations.
+                                                        La façon la plus commune de faire une boucle, est de créer un
+                                                        compteur (une variable qui s'incrémente, c'est-à-dire qui
+                                                        augmente de 1 à chaque tour de boucle) et de faire arrêter la
+                                                        boucle lorsque le compteur dépasse une certaine valeur. </p>
+                                                    <p>Une structure répétitive, également appelée structure itérative
+                                                        ou encore boucle, permet de répéter plusieurs fois l'exécution
+                                                        d'une ou plusieurs instructions. Le nombre de répétitions peut
+                                                        :</p>
+                                                    <ul>
+                                                        <li>être connu à l'avance.</li>
+                                                        <li>dépendre de l'évaluation d'une condition.</li>
+                                                    </ul>
+                                                    <p>A chaque répétition, les instructions contenues dans la boucle
+                                                        sont exécutées. C'est ce qu'on appelle un tour de boucle ou
+                                                        encore une itération.</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss32">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff2" aria-expanded="false"
+                                                            aria-controls="ff2">
+                                                        b - La boucle <code>for</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff2" class="collapse" aria-labelledby="_ss32"
+                                                 data-parent="#sstitre7">
+                                                <div class="card-body">
+                                                    <p>La boucle <code>for</code> permet de répéter un bloc
+                                                        d'instructions un nombre défini de fois et <strong> connu à
+                                                            l'avance</strong>.</p>
+                                                    <p>Dans sa syntaxe, il suffit de préciser </p>
+                                                    <ul>
+                                                        <li>le nom de la variable qui sert de compteur (et
+                                                            éventuellement sa valeur de départ,
+                                                        </li>
+                                                        <li>la condition sur la variable pour laquelle la boucle
+                                                            s'arrête (basiquement une condition qui teste si la valeur
+                                                            du compteurdépasse une limite)
+                                                        </li>
+                                                        <li>enfin une instruction qui incrémente (ou décrémente) le
+                                                            compteur.
+                                                        </li>
+                                                    </ul>
+                                                    <p class="text-white bg-info">Exemples :</p>
+                                                    <pre>
+for (int i=0; i<4; i++) {
+ Console.WriteLine(i);
+ } // 0 1 2 3     </pre>
+                                                    <p>Voici son fonctionnement :</p>
+                                                    <ul>
+                                                        <li>L'initialisation se produit une seule fois, au début de
+                                                            l'exécution (<code>int i=0</code>).
+                                                        </li>
+                                                        <li>La condition est évaluée avant chaque tour de boucle. Si
+                                                            elle est vraie, un nouveau tour de boucle est effectué.
+                                                            Sinon, la boucle est terminée (<code>i<4</code>).
+                                                        </li>
+                                                        <li>L'étape est réalisée après chaque tour de boucle
+                                                            (<code>i++</code>).
+                                                        </li>
+                                                    </ul>
+                                                    <p>La variable utilisée dans l'initialisation, la condition et
+                                                        l'étape est appelée le compteur de la boucle. Par convention,
+                                                        elle est souvent nommée <code>i</code>.</p>
+                                                    <p>Au niveau du <code>for</code> la trace de la boucle est la
+                                                        suivante :</p>
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>iteration</th>
+                                                            <th>valeur de i</th>
+                                                            <th>sortie de boucle</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>3</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>3</td>
+                                                            <td>true</td>
+                                                        </tr>
+                                                    </table>
+                                                    <p>A la sortie de la boucle la valeur de i est 3</p>
+                                                    <div class="alert alert-warning" role="alert">
+                                                        il faudra toujours vérifier que la boucle a bien une condition
+                                                        de sortie (i.e le compteur s'incrémente correctement)
+                                                    </div>
+                                                    <p>il faut bien compter le nombre de fois que l'on veut faire
+                                                        exécuter la boucle :</p>
+                                                    <pre>
+for(i=0;i<10;i++) exécute 10 fois la boucle (i de 0 à 9)
+for(i=0;i<=10;i++) exécute 11 fois la boucle (i de 0 à 10)
+for(i=1;i<10;i++) exécute 9 fois la boucle (i de 1 à 9)
+for(i=1;i<=10;i++) exécute 10 fois la boucle (i de 1 à 10)</pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss31">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff1" aria-expanded="false"
+                                                            aria-controls="ff1">
+                                                        c - La boucle <code>while</code>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff1" class="collapse" aria-labelledby="_ss31"
+                                                 data-parent="#sstitre7">
+                                                <div class="card-body">
+                                                    <p>La boucle <code>while</code> permet de répéter des instructions
+                                                        tant qu'une condition est vérifiée.</p>
+                                                    <p>Si au départ de la boucle la condition n'est pas remplie, le
+                                                        programme n'y rentre pas.</p>
+                                                    <p>La sortie de boucle dépend de l'évaluation de la condition.</p>
+                                                    <p class="text-white bg-info">Exemple :</p>
+                                                    <pre>
+const int fin=5;// ceci est une constante, mot clé const
+int somme=0;
+int i=0;
+while (i&lt;fin){
+    somme+=i;
+    i++;
+}
+Console.WriteLine("La somme vaut :" + somme);</pre>
+                                                    <p>Au niveau du <code>while</code> la trace de la boucle est la
+                                                        suivante :</p>
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>iteration</th>
+                                                            <th>valeur de i</th>
+                                                            <th>valeur de somme</th>
+                                                            <th>sortie de boucle</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>1</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>3</td>
+                                                            <td>6</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>4</td>
+                                                            <td>10</td>
+                                                            <td>false</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>5</td>
+                                                            <td>10</td>
+                                                            <td>true</td>
+                                                        </tr>
+                                                    </table>
+                                                    <p>Le compteur, la variable <code>i</code>, est à 5 ce qui ne
+                                                        remplit plus la condition est fait sortir le programme de la
+                                                        boucle</p>
+                                                    <p>La variable <code>somme</code> est appelée variable de cumul, car
+                                                        elle additone toute les valeurs de i rentrée dans la boucle,
+                                                        soit <code>0 + 1 + 2 + 3 + 4</code></p>
+                                                    <p>Avant chaque tour de boucle, la condition associée au
+                                                        <code>while</code> est évaluée :
+                                                        Si elle est vraie, les instructions du bloc <code>while</code>
+                                                        sont exécutées. Ensuite, la ligne du while est à nouveau
+                                                        exécutée et la condition vérifiée.
+                                                        Si elle est fausse, les instructions du bloc ne sont pas
+                                                        exécutées et le programme continue juste après le bloc <code>while</code>.
+                                                    </p>
+                                                    <div class="alert alert-danger" role="alert">
+                                                        <strong>Attention</strong> : il faut absolument que la condition
+                                                        de la boucle <code>while</code> puisse devenir fausse. Dans le
+                                                        cas contraire, on obtient une boucle infinie qui ne s'arrête
+                                                        jamais.
+                                                    </div>
+                                                    <h5>Boucles imbriquées</h5>
+                                                    <p>Il est possible de faire des boucles imbriquées. Elles
+                                                        nécessitent deux indices.</p>
+                                                    <p class="text-white bg-info">Exemple :</p>
+                                                    <pre>
+const int fin = 5;
+int i = 0;
+int j = 0;
+while (i < fin)
+{
+    Console.WriteLine("i"+i);
+    while (j < fin)
+    {
+        Console.WriteLine("j"+j);
+        j++;
+    }
+    j = 0;
+    i++;
+}  </pre>
+                                                    <p>Quand <code>i</code> s'incrémente une fois, <code>j</code>
+                                                        s'incrémente 5 fois.</p>
+                                                    <p>Une fois <code>j</code> incrémenté, il est initialisé à 0.</p>
+                                                    <p>Cela donne le tableau à double entrée suivant :</p>
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>i/j</th>
+                                                            <th>0</th>
+                                                            <th>1</th>
+                                                            <th>2</th>
+                                                            <th>3</th>
+                                                            <th>4</th>
+                                                        </tr>
+                                                        <thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <th>0</th>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>2</th>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>3</th>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>4</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>4</th>
+                                                            <td>0</td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>4</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <p>Plusieurs combinaisons sont possibles en fonction de
+                                                        <code>i</code> et <code>j</code>. Par exemple au lieu d'avoir la
+                                                        condition <code>i&lt;fin</code> nous pouvons avoir
+                                                        <code>i&lt;j</code>, en changeant des éléments du code de la
+                                                        boucle.</p>
+                                                    <p>Les boucles imbriquées ne sont pas réservées aux boucles <code>while</code>,
+                                                        elles peuvent aussi être appliquées à tous les types de boucle.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="_s12">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button"
+                                            data-toggle="collapse"
+                                            data-target="#e4" aria-expanded="false" aria-controls="e4">
+                                        E - Fonctions
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="e4" class="collapse" aria-labelledby="_s8" data-parent="#stitre4">
+                                <div class="card-body">
+                                    <div class="accordion" id="sstitre9">
+                                        <div class="card">
+                                            <div class="card-header" id="_ss34">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff5" aria-expanded="false"
+                                                            aria-controls="ff5">
+                                                        a - Utilisation de fonctions prédéfinies
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff5" class="collapse" aria-labelledby="_ss34"
+                                                 data-parent="#sstitre9">
+                                                <div class="card-body">
+                                                    <p>Une fonction est morceau de programme qui réalise un traitement
+                                                        précis et qui est appelé à partir du programme principal. Cela
+                                                        permet :</p>
+                                                    <ul>
+                                                        <li>de rendre le programme principal plus clair et plus
+                                                            simple,
+                                                        </li>
+                                                        <li>de factoriser du code, c’est à dire rendre le programme
+                                                            réutilisable plusieurs fois sans avoir à le réécrire,
+                                                        </li>
+                                                        <li>permet d’utiliser des codes dont on ne connait pas la
+                                                            structure mais dont on veut utiliser les fonctionnalités,
+                                                            comme les fonctions d’affichage et de saisie dans C#
+                                                        </li>
+                                                    </ul>
+                                                    <p>Le langage C# dispose d'une large biblothèque de fonctions
+                                                        prédéfinies. En voici quelques exemples :</p>
+                                                    <ul>
+                                                        <li><code>CompareTo</code> permet de comparer 2 chaines de
+                                                            caractères,
+                                                        </li>
+                                                        <li><code>ToUpper</code> met une chaine de caractère en
+                                                            majusule.
+                                                        </li>
+                                                    </ul>
+                                                    <p>L’appel de la fonction vise à utiliser les fonctionnalités du
+                                                        code et non pas à connaitre sa structure. Pour appeler la
+                                                        fonction il faut connaitre sa signature. Celle-ci nous renseigne
+                                                        sur les paramètres qu’elle doit utiliser et sur ce qu’elle va
+                                                        renvoyer. </p>
+
+                                                    <p class="text-white bg-info">Exemple :</p>
+                                                    <pre>
+string a;
+int b;
+a = Console.ReadLine(); //appel de la fonction saisir pas de paramètre renvoie un string
+b = Convert.ToDouble(a); //appel de la fonction de conversion 1 paramètre renvoie un double
+Console.WriteLine(b); //appel de la fonction d'écriture 1 paramètre ne renvoie rien (void) </pre>
+                                                    <div class="alert alert-success" role="alert">
+                                                        Pour résumer : une fonction
+                                                        <ol>
+                                                            <li>a un nom</li>
+                                                            <li>peut avoir des paramètres</li>
+                                                            <li>retourne une valeur d’un certain type</li>
+                                                            <li>peut avoir besoin de variables</li>
+                                                            <li>est composé d’instructions</li>
+                                                        </ol>
+                                                    </div>
+                                                    <p>Les fonctions fournies par le langage sont utilisées de façon
+                                                        très particulière pour la manipulation de chaîne. En effet, ces
+                                                        fonctions (appelées méthode de classe) sont toujours associées à
+                                                        la chaîne de caractères pour laquelle la manipulation sera
+                                                        effectuée.
+                                                        <br> La syntaxe est donc la suivante, si bien entendu il existe
+                                                        une variable de retour :</p>
+                                                    <div class="alert alert-success" role="alert">
+                                                        <p class="text-warning">méthode :</p>
+                                                        <p> variableRetour =
+                                                            nomVariableString.nomFonction([paramètres])</p>
+                                                        <p class="text-warning">fonction :</p>
+                                                        <p>variableRetour = nomFonction([paramètres])</p>
+                                                    </div>
+                                                    <p>Le <strong>retour</strong> de la fonction doit être soit :</p>
+                                                    <ul>
+                                                        <li>Affecté dans une variable du programme principal - <code>d =
+                                                            maximum(a, b, c);</code></li>
+                                                        <li>Envoyé à l’affichage - <code>Console.WriteLine(maximum(a, b,
+                                                            c));</code></li>
+                                                        <li>Intégré dans une autre fonction - <code>d = maximum(a,
+                                                            maximum(a, b, c), e);</code></li>
+                                                    </ul>
+                                                    <h5>Signature de fonction</h5>
+                                                    <p>Pour connaitre les paramètres et les types d’envoi, il faut
+                                                        connaitre les spécifications. On peut indiquer les <strong>spécifications</strong>
+                                                        de la fonction sous forme de tableau :</p>
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                        <tr>
+                                                            <th>nom</th>
+                                                            <th>Rôle</th>
+                                                            <th>Paramètres</th>
+                                                            <th>Valeur de retour<br></th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td>Maximum<br></td>
+                                                            <td>Retourne la valeur maximum entre 3 entiers</td>
+                                                            <td>Les 3 entiers</td>
+                                                            <td>La valeur du maximum<br></td>
+                                                        </tr>
+                                                    </table>
+                                                    <p>Elles peuvent aussi être indiquées sous forme d’instruction :</p>
+                                                    <img class="img-fluid" src="img/signatureFonction.PNG"
+                                                         alt="signatureFonction">
+                                                    <div class="alert alert-warning" role="alert">
+                                                        <p>Une fonction ne se déclare jamais, elle est
+                                                            <strong>appelée</strong>.</p>
+                                                        <p>L’utilisateur d’une fonction n’a pas à connaıtre le programme
+                                                            de la fonction ; seule la signature de la fonction le
+                                                            concerne.</p>
+                                                    </div>
+                                                    <div class="alert alert-danger" role="alert">
+                                                        <p>Il faut faire la différence entre les spécifications et
+                                                            l’appel de fonction.</p>
+                                                        <p>Les <strong>spécifications</strong> donnent le nombre de
+                                                            paramètres et leur type, ainsi que le type de retour s’il
+                                                            existe.</p>
+                                                        <p>L’appel de fonction ne prend en compte que les paramètres et
+                                                            <strong>jamais leur type</strong>. Si les paramètres ont des
+                                                            variables, il sera nécessaire de les <strong>déclarer avant
+                                                                l’appel</strong> de la fonction, comme dans l’exemple
+                                                            précédent.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="_ss35">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed" type="button"
+                                                            data-toggle="collapse"
+                                                            data-target="#ff6" aria-expanded="false"
+                                                            aria-controls="ff6">
+                                                        b - Ecriture de fonctions
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="ff6" class="collapse" aria-labelledby="_ss35"
+                                                 data-parent="#sstitre9">
+                                                <div class="card-body">
+                                                    <h5>Déclarer une fonction</h5>
+                                                    <p>La déclaration de fonction permet de spécifier à C# la signature
+                                                        de la fonction. Dans sa forme générale elle correspond à :</p>
+                                                    <div class="alert alert-success" role="alert">
+                                                        <p>Déclaration générale de fonction :</p>
+                                                        <pre>
+                                                        static type_retourné nom_Fonction([paramètres])
+                                                        {
+                                                            // Déclaration de variable(s)
+                                                            // Instructions
+                                                            return variable ou expression ;
+                                                        }
+                                                        </pre>
+                                                    </div>
+                                                    <p>Définition d’une fonction</p>
+                                                    <p> Les 6 étapes de définition</p>
+                                                    <ul>
+                                                        <li>Nom : un identificateur suffisamment explicite.</li>
+                                                        <li>Paramètres : la liste des paramètres d’entrée-sortie du
+                                                            programme.
+                                                        </li>
+                                                        <li>Préconditions : une liste d’expressions booléennes qui
+                                                            précisent les conditions d’utilisation des paramètres.
+                                                        </li>
+                                                        <li>Appel : des exemples d’utilisation du programme avec les
+                                                            résultats attendus (jeu de tests).
+                                                        </li>
+                                                        <li>Description : une phrase qui dit ce que fait le programme.
+                                                        </li>
+                                                        <li>Code : la séquence d’instructions nécessaires à la
+                                                            résolution du problème
+                                                        </li>
+                                                    </ul>
+                                                    <p>Cela donne concrètement :</p>
+                                                    <p class="text-white bg-info">Déclaration générale de fonction
+                                                        maximum :</p>
+                                                    <pre>
+static int maximum(int nb1, int nb2, int nb3)
+        {
+            int max = nb1;
+            if (nb2 > max) max = nb2;
+            if (nb3 > max) max = nb3;
+            return max;
+        </pre>
+                                                    <p class="text-white bg-info">Fonction principale :</p>
+                                                    <pre>
+int a, b, c, d;
+            a = 2;
+            b = 3;
+            c = 5;
+d = maximum(a, b, c);</pre>
+                                                    <div class="alert alert-warning" role="alert">
+                                                        <p>A chaque étape de la spécification, le code de la fonction
+                                                            doit <strong>toujours être exécutable</strong> même s’il ne
+                                                            donne pas encore le bon résultat.</p>
+                                                        <p>Le jeu de tests ne sera vérifié qu’une fois l’implémentation
+                                                            correctement définie.</p>
+                                                    </div>
+                                                    <p>Propriétés d’un programme</p>
+                                                    <ul>
+                                                        <li>Validité : aptitude à réaliser exactement la tâche pour
+                                                            laquelle il a été conçu.<p class="text-success">i.e.:
+                                                                L’implémentation de la fonction doit être conforme aux
+                                                                jeux de tests.</p></li>
+                                                        <li> Robustesse : aptitude à se protéger de conditions anormales
+                                                            d’utilisation.<p class="text-success">i.e.: La fonction doit
+                                                                vérifier impérativement ses préconditions.</p></li>
+                                                        <li> Réutilisabilité : aptitude à être réutilisé pour résoudre
+                                                            des taches équivalentes à celle pour laquelle il a été
+                                                            conçu.<p class="text-success">i.e. : La fonction doit être
+                                                                correctement paramétrée.</p></li>
+                                                    </ul>
+                                                    <h5>Variables publiques et privées</h5>
+                                                    <p>L’existence de fonctions pose le problème de la " durée de vie "
+                                                        des variables, ce qu’on appelle leur <strong>portée</strong>.
+                                                        Pour faire simple, une variable peut être déclarée :</p>
+                                                    <ul>
+                                                        <li>Comme privée, ou locale (c’est en général l’option par
+                                                            défaut). Cela signifie qu’une telle variable disparaît (et
+                                                            sa valeur avec) dès que prend fin la fonction dans laquelle
+                                                            elle a été créée.
+                                                        </li>
+                                                        <li>Comme publique, ou globale. Ce qui signifie qu’une telle
+                                                            variable est conservée intacte pour toute l’application,
+                                                            au-delà des ouvertures et fermetures de procédures.
+                                                        </li>
+                                                    </ul>
+                                                    <p>Comment choisir entre déclarer une variable en Public ou en Privé
+                                                        ? C’est très simple : <strong>les variables globales consomment
+                                                            énormément de ressources en mémoire</strong>. En
+                                                        conséquence, le principe qui doit présider au choix entre
+                                                        variables publiques et privées doit être celui de <strong>l’économie
+                                                            de moyens</strong> : on ne déclare comme publiques que les
+                                                        variables qui doivent absolument l’être. Et chaque fois que
+                                                        possible, lorsqu’on crée une fonction, on utilise le passage de
+                                                        paramètres par valeur plutôt que des variables publiques</p>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../dist/js/jquery-3.3.1.slim.min.js"></script>
+<script src="../dist/js/popper.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿.box {
+  position: relative;
+  background-color: red;
+  color: #FFF;
+  height: 250px;
+  border: 4px solid #7d2b27;
+}
+span {
+  display: block;
+  background-color: #4ba6a3;
+  width: 50px;
+  border: 2px solid #336663;
+}
+/*modifications exercice 1*/
+.box{
+	text-align:center;
+}
+span{	
+	margin: 0 auto;
+}
+/*modifications exercice 2*/
+.box2 {
+  position: relative;
+  background-color: red;
+  color: #FFF;
+  height: 250px;
+  border: 4px solid #7d2b27;
+  text-align: center;
+}
+.box-content {
+  display: block;
+  background-color: #4ba6a3;
+  width: 50px;
+  border: 2px solid #336663;
+  float: left;
+  margin: 0 auto;
+}
+.boxes{
+  display:inline-block; 
+}
+.box3 {
+  position: relative;
+  background-color: red;
+  color: #FFF;
+  height: 250px;
+  border: 4px solid #7d2b27;
+}
+
+.box-content8 {
+  display: inline;
+  background-color: #4ba6a3;
+  border: 2px solid #336663;
+  /*margin: 0 auto;*/
+}
+
+.box3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Page Produits</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="index,follow" />
+	<style>
+.product-filter {
+  display: flex;
+}
+.product-filter h1 {
+  flex-grow: 1;
+}
+.sort {
+  display: flex;
+}
+.collection-sort {
+  display: flex;
+  flex-direction: column;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-card {
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;/* 5 images x 20% =100% + padding 2% =20-4=16%*/
+}
+.product-image img {
+  max-width: 100%; /*Pour nous assurer que les images seront bien adaptées à leur espace*/
+}
+.product-info {
+  margin-top: auto;
+  text-align: center;
+}
+	</style>
+</head>
+
+<body>
+<nav class="product-filter">
+
+  <h1>Jackets</h1>
+
+  <div class="sort">
+
+    <div class="collection-sort">
+      <label>Filter by:</label>
+      <select>
+        <option value="/">All Jackets</option>
+      </select>
+    </div>
+
+    <div class="collection-sort">
+      <label>Sort by:</label>
+      <select>
+        <option value="/">Featured</option>
+      </select>
+    </div>
+
+  </div>
+
+</nav>  
+<section class="products">
+
+  <div class="product-card">
+    <div class="product-image">
+      <img src="../img/nature-q-c-70-70-9.jpg">
+    </div>
+    <div class="product-info">
+      <h5>Winter Jacket</h5>
+      <h6>$99.99</h6>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="product-image">
+      <img src="../img/nature-q-c-70-70-5.jpg">
+    </div>
+    <div class="product-info">
+      <h5>Green Jacket</h5>
+      <h6>$161.99</h6>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="product-image">
+      <img src="../img/nature-q-c-70-70-9.jpg">
+    </div>
+    <div class="product-info">
+      <h5>LA</h5>
+      <h6>$131.99</h6>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="../img/nature-q-c-70-70-9.jpg">
+    </div>
+    <div class="product-info">
+      <h5>LA</h5>
+      <h6>$131.99</h6>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="../img/nature-q-c-70-70-9.jpg">
+    </div>
+    <div class="product-info">
+      <h5>LA</h5>
+      <h6>$131.99</h6>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="../img/nature-q-c-70-70-9.jpg">
+    </div>
+    <div class="product-info">
+      <h5>LA</h5>
+      <h6>$131.99</h6>
+    </div>
+  </div>
+  <!-- d’autres produits -->
+
+</section> 
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>Programmer avec C#</title>
+</head>
+<body>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <nav class="collapse bd-links" id="bd-docs-nav">
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp01_intro.html">
+                            I - Introduction au développement
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp02_basesLg.html">
+                            II - Les bases du langage
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#source">A - Anatomie d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#bloc">B - Définition d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#affiche">C - Affichage de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#comment">D - Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#indentation">E - l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#nommage">F - Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
+                            III - Programmer avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
+                            IV - Programmation objet avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                </ul>
+            </div>
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <h1 class="bd-title" id="base">F - Les fichiers</h1>
+                    <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
+                        le langage C#.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Info</h4>
+                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+                </div>
+
+                    <p>En C#, la plupart des périphériques sont considérés comme des
+                        ﬂux entrants et sortants. Cela signiﬁe que si le ﬂux n’est pas mémorisé, les données transmises sont
+                        perdues (un peu comme une chaîne en direct : si vous êtes absent de l’écran, les informations sont
+                        perdues).</p>
+                <img class="img-fluid" src="img/buffer.PNG" alt="Le buffer">
+                <p>Comme la plupart des périphériques acceptent les entrées et les sorties, cela multiplie par deux les
+                    ﬂux et buffets à déclarer.</p>
+                <div class="bd-callout bd-callout-danger">
+                    <h4>ATTENTION</h4>
+                    <p> la lecture d’un ﬂux vide entraîne la génération d’une exception qui bloque l’exécution du programme.</p>
+                </div>
+                <p>Ainsi, la plupart du temps (et c’est aussi vrai en Java), il faudra ouvrir le ﬂux et ouvrir un buffer :</p>
+                <ol>
+                    <li>Ouvrir le ﬂux du ﬁchier</li>
+                    <li>Ouvrir le buffet du ﬂux du ﬁchier</li>
+                    <li>Lire/Écrire dans le buffer</li>
+                    <li>Fermer le buffer</li>
+                    <li>Fermer le ﬂux</li>
+                </ol>
+                <p>Code pour la lecture dans un fichier :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+<span class="nt">namespace</span> FileReadExample
+{
+
+    <span class="nt">class</span> <span class="cp">HelloWorld</span> {
+    <span class="nt">static</span> <span class="nt">void</span> Main() {
+        <span class="cp">FileStream</span> monFlux = null ; <span class="c">// Créer un objet flux (en direct)</span>
+        <span class="cp">StreamReader</span> reader = null; <span class="c">// Créer un objet lecteur de flux (bufferise)</span>
+        <span class="nt">string</span> fileContent = "";
+        <span class="nt">try</span>
+        {
+            <span class="c">// Ouverture</span>
+            monFlux = <span class="nt">new</span> <span class="cp">FileStream</span>(@"e:\test.txt",<span class="cp">FileMode</span>.Open);
+            reader = <span class="nt">new</span> <span class="cp">StreamReader</span>(monFlux, Encoding.UTF8);
+            <span class="c">// Lecture</span>
+            <span class="cp">Console</span>.WriteLine("Votre fichier contient : ");
+            fileContent = reader.ReadToEnd();
+            <span class="cp">Console</span>.WriteLine(fileContent)3
+        }
+        <span class="nt">catch</span> (Exception ex)
+        {
+            <span class="cp">Console</span>.WriteLine("Erreur de lecture !"+ex.Message);
+        }
+        <span class="nt">finally</span>
+        {
+            <span class="c">// Fermeture</span>
+            <span class="nt">if</span> (reader != <span class="nt">null</span>)
+            { reader.Dispose(); <span class="c">// Fermer le buffer (libère sa mémoire)</span>}
+            <span class="nt">if</span> (reader != <span class="nt">null</span>)
+            { monFlux.Dispose(); <span class="c">// Fermer le fichier (libère 1e canal)</span>}
+        }
+    }
+}</code></pre></figure>
+                <p>Code pour l'écriture dans un fichier :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+<span class="nt">namespace</span> FileReadExample
+{
+
+    <span class="nt">class</span> <span class="cp">HelloWorld</span> {
+    <span class="nt">static</span> <span class="nt">void</span> Main() {
+        <span class="cp">FileStream</span> monFlux = null ; <span class="c">// Créer un objet flux (en direct)</span>
+        <span class="cp">StreamWriter</span> writer = null; <span class="c">// Créer un objet lecteur de flux (bufferise)</span>
+        <span class="nt">string</span> fileContent = "";
+        <span class="nt">try</span>
+        {
+            <span class="c">// Ouverture pour ajouter une donnée</span>
+            monFlux = <span class="nt">new</span> <span class="cp">FileStream</span>(@"e:\test.txt",<span class="cp">FileMode</span>.Append);
+            <span class="nt">using</span> (writer = <span class="nt">new</span> <span class="cp">StreamWriter</span>(monFlux, Encoding.UTF8));)
+            {writer.WriteLine(<span class="nt">)"Ecriture d'une ligne"</span>; <span class="c">// Ecriture</span>}
+            <span class="cp">Console</span>.WriteLine("L'écriture s'est correctement réalisée ");
+        }
+        <span class="nt">catch</span> (Exception ex)
+        {
+            <span class="cp">Console</span>.WriteLine("Erreur de lecture !"+ex.Message);
+        }
+        <span class="nt">finally</span>
+        {
+            <span class="c">// Fermeture</span>
+            <span class="nt">if</span> (reader != <span class="nt">null</span>)
+            { writer.Dispose(); <span class="c">// Fermer le buffer (libère sa mémoire)</span>}
+            <span class="nt">if</span> (reader != <span class="nt">null</span>)
+            { monFlux.Dispose(); <span class="c">// Fermer le fichier (libère 1e canal)</span>}
+        }
+    }
+}</code></pre></figure>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <title>TP02 HTML</title>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">HTML CSS</a>
+    <div class="collapse navbar-collapse" id="tp02">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#Exercice1">Exercice 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Exercice2">Exercice 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Exercice3">Exercice 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Exercice4">Exercice 4</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Exercice5">Exercice 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Exercice6">Exercice 6</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Exercice7">Exercice applicatif</a></li>
+        </ul>
+    </div>
+
+</nav>
+<div class="container">
+    <h1>TP02 - La mise en pages </h1>
+    <hr class="my-4">
+    <a href="../download/TP02rapport.pdf" target="_blank">Format du rapport à télécharger</a>
+    <p>
+        <mark>Dans l'enregistrement du rapport vous devez mettre votre nom après le numéro du TP, par exemple
+            TP02gates.pdf
+        </mark>
+    </p>
+        <section id="Exercice1">
+            <h2>Introduction</h2>
+    <p>Comment changer le design (le template en HTML) d'une page sans changer les informations de la page HTML
+        <br>Voir le site de <a href="http://www.csszengarden.com/tr/francais/" target="_blank">zen garden</a> à cette
+        adresse
+    </p>
+    <p> La mise en page est quelque chose de difficile à dominer car il existe de nombreux formats de visionnement, du
+        smartphone au grand écran 4k.
+        Voilà pourquoi nous allons suivre quelques principes introductifs. Comme vu dans le TD 01 notre problème
+        principal est de centrer le bloc de texte sans centrer le texte.
+        Mais il faut tenir compte aussi des menus et des encarts publicitaires ou autres.
+        Pour ne pas mélanger les approches nous allons utiliser une technologie qui est récente mais aussi présente dans
+        tous les navigateurs.
+        On peut s'attendre à ce que les anciens navigateurs disparaissent à terme, car ils ne seront utilisés que sur
+        les PC.
+    </p>
+
+
+    <h2>Exercice 1 - Structure de la maquette </h2>
+    <p>Le format standard d'une age web peut etre presenté selon l'image ci-dessous</p>
+    <img src="../img/html5_structure.png" alt="layoutWeb"/>
+    <p>Avant le HTML 5 toutes les balises portaient le nom div.
+        Depuis ont été rajoutées les balises sémantiques que nous avons dans l'image</p>
+    <p>Expliquez dans votre rapport pour quelles fonctions sont utilisées ces balises.</p>
+    <p>Pour des écrans plus petit l'organisation change, comme le montre l'image suivante :</p>
+    <img src="../img/HolyGrailLayout.png" alt="layoutWebResponsive"/>
+    <p>Au regard de votre experience, Quelles critiques pourriez vous apporter à ce modéle ?</p>
+    <!-- le menu, la disparition d'éléments-->
+    </section>
+    <section id="Exercice2">
+        <h2>Exercice 2 - Comment mettre les éléments en ligne ?</h2>
+        <p>Dans codepen, créez une structure de pade HTML et copiez le code suivant dans le body.</p>
+        <pre>
+				&lt;div class="container"&gt;    
+					&lt;header class="header item"&gt;Header&lt;/header&gt;    
+					&lt;nav class="menuLeft item"&gt;Menu&lt;/nav&gt;    
+					&lt;section class="content item"&gt;Body&lt;/section&gt;   
+					&lt;footer class="footer item"&gt;Footer&lt;/footer&gt;
+				&lt;/div&gt;
+				</pre>
+        <p>Dans la page css ajoutez le code suivant :</p>
+        <pre>
+		/************* Gestion de la présentation (layout) *************/
+				   .container{ 				  
+					   display:flex;/*Ajoutez votre commentaire */
+					   flex-direction:row;/*   */
+				   }
+		/************* Gestion des styles *************/
+				   .container{ border:solid 2px red; }
+				   .item{  font-size:2em;  margin:5px;  padding:5px;  border:solid 2px black;  text-align:center;}
+				   .header{  background-color: #9900FF;}
+				   .menuLeft{  background-color: #00FFFF;}
+				   .content{ background-color:#DDDDDD;}
+				   .footer{ background-color:#FF00FF;}
+                </pre>
+        <ol>
+            <li>Dans le commentaire, expliquez à quoi correspond display:flex</li>
+            <li>En utilisant l'inspecteur de code expliquez le rôle de la class item.</li>
+            <li>Dans la propriété class du html, combien peut on détailler de classes ? Pourquoi ?</li>
+            <li>Sauegardez votre travail dans une page nommée TP02.html et une page css02.css</li>
+        </ol>
+
+    </section>
+    <section id="Exercice3">
+        <h2>Exercice 3 - Comment afficher les éléments en colonne ?</h2>
+        <p>Remplacer dans la propriété flex-direction roow par column, et vous obtiendrez un affichage en colonne</p>
+
+        <ol>
+            <li>Quelles sont les quatre valeurs de flex-direction et à quoi correspondent-elles ?</li>
+        </ol>
+    </section>
+    <section id="Exercice4">
+        <h2>Exercice 4 - Comment modifier l’ordre des éléments ?</h2>
+        <p>Nous souhaiterions avoir l'élément body qui s'affiche en premier comme le montre l'image suivante.</p>
+        <img src="../img/flexOrder.png" alt="order"/>
+        <p>Modifiez grâce à la propriété order les éléments header, menu, body, footer. </p>
+    </section>
+    <section id="Exercice5">
+        <h2>Exercice 5 - Comment gérer les sauts de ligne les éléments d’une ligne ?</h2>
+        <p>Modifiez la classe container de façon à obtenir les valeurs suivantes :</p>
+        <img src="../img/flexWrap.png" alt="wrap"/>
+        <ol>
+            <li>Que signifie wrapper ?</li>
+            <li>A quoi correspond la propriété flex-wrap ?</li>
+            <li>Quelles sont les valeurs quelles peuvent prendre et à quoi correspondent-elles ?</li>
+
+        </ol>
+    </section>
+    <section id="Exercice6">
+        <h2>Exercice 6 - Comment répartir l’espace entre les éléments ?</h2>
+        <p>Modifiez la classe container de façon à obtenir une taille du body deux fois plus grande que celle du menu
+            :</p>
+        <img src="../img/flexInteger.png" alt="inteher"/>
+        <ol>
+            <li>A quoi correspond la propriété flex:integer ?</li>
+            <li>Comment sont évaluées les proportions ?</li>
+
+        </ol>
+    </section>
+    <section id="Exercice7">
+        <h2>Exercice applicatif 1 - Template flexbox</h2>
+        <p>Nous allons modifier le code HTML de façon à obtenir le template suivant :</p>
+        <img src="../img/flexTemplate.png" alt="template"/>
+        <p>Vous sauvegarderez votre travail dans une page nommée TP02ExAppli avec une structure HTML et copiez le code
+            suivant dans le body.</p>
+        <pre>
+				&lt;div class="container"&gt;    
+					&lt;header class="header item"&gt;Header&lt;/header&gt;
+					&lt;div class="flexbody"&gt;
+						&lt;nav class="menuLeft item"&gt;Menu&lt;/nav&gt;    
+						&lt;section class="content item"&gt;&lt;p&gt;Body&lt;/p&gt;&lt;/section&gt;
+					&lt;/div&gt;
+					&lt;footer class="footer item"&gt;Footer&lt;/footer&gt;
+				&lt;/div&gt;
+				</pre>
+        <ol>
+            <li>A quoi correspond un template ?</li>
+            <li>Quelles modifications constatez vous par rapport à la version précédente ?</li>
+        </ol>
+        <p>Dans la page css ajoutez le code suivant :</p>
+        <pre>
+		/************* Gestion de la présentation (layout) *************/
+				.container{ 
+				   height:100vh;
+				   display:flex;/*Ajoutez votre commentaire */
+				   flex-direction:column;/*  */
+				}
+				.flexbody{  
+					flex-grow:1; /*  */  
+					display:flex; /*  */  
+					flex-direction:row; /*  */
+				}
+				.content{
+					flex-grow:1; /*  */ 
+					display:flex;/*  */
+					justify-content: center;/*  */
+					align-items:center;/*  */ 
+				}
+		/************* Gestion des styles *************/
+				   .container{ border:solid 2px red; }
+				   .item{  font-size:2em;  margin:5px;  padding:5px;  border:solid 2px black;  text-align:center;}
+				   .header{  background-color: #9900FF;}
+				   .menuLeft{  background-color: #00FFFF;}
+				   .content{ background-color:#DDDDDD;}
+				   .footer{ background-color:#FF00FF;}
+                </pre>
+        <ol>
+            <li>Pourquoi ajouter display:flex dans la class content ?</li>
+            <li>A quoi sert la propriété flex-grow ?</li>
+            <li>A quoi sert la propriété justify-content, quelles sont ses valeurs possibles ?</li>
+            <li>A quoi sert la propriété align-items, quelles sont ses valeurs possibles ?</li>
+            <li>Pourquoi le mot Body subit des modifications alors que Menu n'en subi pas ?</li>
+            <li>Donnez votre code css commenté ?</li>
+
+        </ol>
+    </section>
+
+</div>
+</body>
+</html>

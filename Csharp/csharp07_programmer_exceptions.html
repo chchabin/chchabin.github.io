@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>Programmer avec C#</title>
+</head>
+<body>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <nav class="collapse bd-links" id="bd-docs-nav">
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp01_intro.html">
+                            I - Introduction au développement
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp02_basesLg.html">
+                            II - Les bases du langage
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#source">A - Anatomie d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#bloc">B - Définition d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#affiche">C - Affichage de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#comment">D - Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#indentation">E - l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#nommage">F - Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
+                            III - Programmer avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
+                            IV - Programmation objet avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h3"><a href="#def">Principe et code</a></li>
+                    <li class="toc-entry toc-h3"><a href="#detail">Détail du fonctionnement</a></li>
+                    <li class="toc-entry toc-h3"><a href="#creer">Créer ses exceptions</a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                </ul>
+            </div>
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <h1 class="bd-title" id="base">G - Les exceptions</h1>
+                    <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
+                        le langage C#.</p>
+                <h2 id="def">Principe et code</h2>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Définition</h4>
+                    <p>Une exception est un évènement qui apparaît pendant le déroulement d'un programme et qui empêche la poursuite normale de son exécution.</p>
+                </div>
+                    <p>Autrement dit, une exception représente un problème qui survient dans un certain contexte :
+                        base de données inaccessible, mauvaise saisie utilisateur, fichier non trouvé... Comme son
+                        nom l'indique, une exception traduit un évènement exceptionnel et a priori imprévisible. Pour
+                        essayer de répondre à ce problème, le programmeur doit mettre en place un mécanisme de
+                        gestion des exceptions.</p>
+                <p> En général, les instructions susceptibles de poser de
+                    tels problèmes sont placées dans un bloc try-catch. Lorsque le problème se pose effectivement, le programmeur est censé l’avoir anticipé et avoir prévu dans la partie catch du bloc une manière de récupérer la situation,
+                    un ﬁlet de sûreté, aﬁn de reprendre le code à ce stade. Sans cela, le code s’interrompt en déclenchant juste
+                    l’exception. En présence du try-catch, le code continue et exécute le remède que le programmeur a prévu en
+                    réponse à ce problème. Un ensemble d’exceptions déjà répertoriées (comme le fameux NullPointerException
+                    « en Java ») existent dans les librairies associées aux différents langages de programmation et ne demandent
+                    alors qu’à être simplement « rattrapées ». En héritant de la classe Exception (comme dans le code ci-après),
+                    le programmeur peut créer ses propres classes d’exception, en accord avec la logique de son code et de
+                    manière à bénéﬁcier de ce mécanisme de gestion d’exceptions prêt-à-l’emploi. </p>
+
+                <p>Reprenons le code pour la lecture dans un fichier :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+<span class="nt">namespace</span> FileReadExample
+{
+
+    <span class="nt">class</span> <span class="cp">HelloWorld</span> {
+    <span class="nt">static</span> <span class="nt">void</span> Main() {
+        <span class="cp">FileStream</span> monFlux = null ;
+        <span class="cp">StreamReader</span> reader = null;
+        <span class="nt">string</span> fileContent = "";
+        <span class="nt">try</span>  <span class="c">// code susceptible de lever des exceptions</span>
+        {
+            <span class="nt">if</span> (reader != <span class="nt">null</span>)
+            { <span class="nt">throw new</span> <span class="cp">Exception</span> (<span class="s">"Le buffer n'est pas vide"</span>); }
+            monFlux = <span class="nt">new</span> <span class="cp">FileStream</span>(@"e:\test.txt",<span class="cp">FileMode</span>.Open);
+            reader = <span class="nt">new</span> <span class="cp">StreamReader</span>(monFlux, Encoding.UTF8);
+            <span class="c">// Lecture</span>
+            <span class="cp">Console</span>.WriteLine("Votre fichier contient : ");
+            fileContent = reader.ReadToEnd();
+            <span class="cp">Console</span>.WriteLine(fileContent)3
+        }
+        <span class="nt">catch</span> (Exception ex) <span class="c">// code de gestion de l'exception qui s'est produite dans le bloc try</span>
+        {
+            <span class="cp">Console</span>.WriteLine("Erreur de lecture !"+ex.Message);
+        }
+        <span class="nt">finally</span> <span class="c">// code qui sera executé sans ou avec une exception.</span>
+        {
+
+            <span class="nt">if</span> (reader != <span class="nt">null</span>)
+            { reader.Dispose(); }
+            <span class="nt">if</span> (reader != <span class="nt">null</span>)
+            { monFlux.Dispose();}
+        }
+    }
+}</code></pre></figure>
+
+                <h2 id="detail">Détail du fonctionnement des exceptions</h2>
+                <p>Une exception est un objet
+                    <br>Intéressons-nous à la partie du code précédent qui lève une exception
+                </p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">throw new</span> <span class="cp">Exception</span> (<span class="s">"Le buffer n'est pas vide"</span>);</code></pre></figure>
+                <p>On voit que l'exception est instanciée comme un objet classique grâce au mot-clé new ,
+                    puis levée (ou encore "jetée") grâce au mot-clé throw .</p>
+                <p>Analysons le contenu du bloc catch .</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine("Erreur de lecture !"+ex.Message);</code></pre></figure>
+                <p>On observe que la variable <code>e</code> utilisée est en réalité un objet, instance de la classe
+                    <span class="cp">Exception</span>. On constate que cette classe dispose (entre autres) d'une propriété C#
+                     nommée Message , qui renvoie le message véhiculé par l'exception.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Bonne pratique</h4>
+                    <p>L'usage des exceptions doit rester réservé aux cas exceptionnels, une méthode ne lève une exception qu'en dernier recours pour signaler qu'elle est incapable de continuer à s'exécuter normalement.</p>
+                </div>
+
+                <h2 id="creer">Créer ses exceptions</h2>
+                <p>La classe Exception propose également des méthodes comme ToString , qui renvoient
+                    des informations plus détaillées sur l'erreur.</p>
+                <p>Il est possible de dériver cette classe afin de créer nos propres classes d'exception</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">MonException</span>:<span class="cp">Exception</span>
+{
+    <span class="nt">public</span> MonException(<span class="nt">string</span> message):<span class="nt">base</span>(message) { }
+}</code></pre></figure>
+                <p>Elle pourra être appelée dans le programme :</p>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">throw new</span> <span class="cp">MonException</span> (<span class="s">"mon erreur"</span>);</code></pre></figure>
+                <p>En règle générale, on ne crée de nouvelles classes d'exception que dans les cas suivants :</p>
+                <ul>
+                    <li>on souhaite distinguer ses propres exceptions des exceptions standards.</li>
+                    <li>on a besoin de véhiculer dans les exceptions des données spécifiques au programme.</li>
+                </ul>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Remarque</h4>
+                    <p>Dans la plupart des situations courantes et pour des projets ne dépassant pas une certaine
+                    complexité, l'utilisation de la classe standard <span class="cp">Exception</span> suffit.</p>
+                </div>
+
+
+                <p>Il existe d'autres solutions que l'utilisation des exceptions pour gérer les erreurs qui peuvent
+                    se produirent durant l'exécution d'un programme. Cependant, les exceptions apportent de
+                    nombreux avantages. Le principal est qu'elles permettent de regrouper et de différencier le
+                    code de gestion des erreurs du code applicatif.</p>
+                <p>Sans utiliser d'exceptions, on est obligé de tester la réussite de chaque opération au fur et à mesure du déroulement.</p>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

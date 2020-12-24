@@ -1,0 +1,90 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+	<title>title</title>
+<style type="text/css">
+/* Decoration */
+
+body {
+	max-width: 1000px;
+	margin: auto;
+	padding: 1em;
+	background:lightblue;
+	color: #333;
+	font-size: 1.4em;
+	font-family: georgia, "trebuchet ms", arial, serif;
+}
+
+h1 {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	color: #345;
+	text-shadow: 1px 1px 1px #fff;
+}
+.commentaire{
+font-size: small;
+}
+
+/* 1- positionnement des 2 divs */
+form {
+	display: flex;
+	flex-direction: row;/*les éléments se suivent en ligne - valeur par defaut */
+	flex-wrap: nowrap;/* pas de retour à la ligne - valeur par defaut */
+	justify-content: flex-start;/* axe principal - axe horizontal - empilement dés le debut de l'axe */
+	align-items: stretch;/* axe secondaire - axe vertical - alignement étiré suivant cet axe - valeur par defaut */
+}
+div{
+	/* en utilisant flex les 3 propriétés sont intégrées ensembles*/
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis:50%;/* largeur totale imposée à chaque div */
+}
+.elmtform{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;/* pas de retour à la ligne */
+	justify-content: flex-start;/* axe principal - axe horizontal - empilement dés le debut de l'axe */
+	align-items: stretch;/* axe secondaire - axe vertical - alignement étiré suivant cet axe */
+}
+.saisietext{
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis:80%;/* largeur totale imposée à chaque div */
+}
+
+</style>
+</head>
+
+<body>
+<h1>Formulaire fluide</h1>
+
+<form action="destination.php">
+<!-- partie gauche du formulaire ***************** -->
+		<div class="elmtform">
+				<p>Vous :</p>
+				<p >
+						<label for="name">Nom : </label>
+						<input class="saisietext" type="text" id="name" autofocus>
+				</p>
+				<p>
+						<label for="prenom">Prénom : </label>
+						<input class="saisietext" type="prenom" id="prenom">
+				</p>
+				<p>
+						<label for="email">E-mail : </label>
+						<input class="saisietext" type="email" id="email">
+				</p>
+				<p class="commentaire">(ceci est un texte bidon de remplissage, juste pour étirer la hauteur de ce bloc de contenu) On aurait dit que j'ai lu toutes les conditions et les trucs écrits en tout petit dans les CGU et je n'ai même pas peur de cliquer sur le bouton "envoyer".</p>
+				<p>
+						<input type="submit" value="Envoyer">
+				</p>
+
+		</div>
+<!-- partie droite du formulaire ***************** -->
+		<div>
+				<p>Un commentaire ?</p>
+				<textarea name="" id="" cols="10" rows="5">Je suis un textarea dont la hauteur se calcule par rapport au bloc de contenu à ma gauche.</textarea>
+		</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <title>TP01 HTML</title>
+    </head>
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">HTML CSS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="tp01">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#prerequis">Prérequis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Exercice0">Exercice 0</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Exercice1">Exercice 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Exercice2">Exercice 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Exercice3">Exercice 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Exercice4">Exercice 4</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>Les Bases du <abbr title="HyperText Markup Language" class="initialism">HTML</abbr> et du <abbr title="Cascading Style Sheets" class="initialism">CSS</abbr></h1>
+            <hr class="my-4">
+            <a href ="../download/TP01rapport.pdf" target="_blank">Format du rapport à télécharger</a>
+            <p><mark>Dans l'enregistrement du rapport vous devez mettre votre nom après le numéro du TP, par exemple TP01gates.pdf</mark><p>
+            <p>Ecrire une page HTML et la présenter avec du CSS</p>
+            <blockquote>Ce TP fera l'objet d'un rapport qui sera déposé sur la plateforme (vous trouverez les définitions en cherchant sur votre moteur de recherche favori)</blockquote> 
+            <section id="prerequis">
+                <h2>Prérequis : faire une capture d'écran</h2>
+                <H3>Solution 1</H3>
+                <p>Utiliser l'outil capture d'écran sous windows</p>
+                <H3>Solution 2</H3>
+                <p>Utiliser la fonction imprime écran sur votre clavier</p>
+                <p>Utiliser l'outil paint sous windows, pour sélectionner  la partie qui vous intéresse</p>
+                <h2>Prérequis : Utiliser Notepad ++</h2>
+                <p>Ouvrir une page (si elle n'est pas vide)<br>
+                    <a href ="http://sourceforge.net/projects/notepad-plus/" target="_blank">Une petite vidéo sur notepad</a></p>
+                <p>Paramétrer Notepad  de la façon suivante</p>
+                <ol>
+                    <li>Encodage : Encoder en UTF-8 </li>
+                    <li>Langage : HTML </li>
+                    <li>Fichier : Enregistrer (Sur votre M:\) </li>
+                    <li>Exécution : Lancer avec Firefox (quand vous serez plus loin dans le TP) </li>
+                </ol>
+                <h2>Prérequis : Utiliser Codepen</h2>
+                <p>Copen est un site en ligne qui permet d'avoir simultanément le code et son résultat</p>
+
+                <p>il se trouve à cette  <a href ="http://sourceforge.net/projects/notepad-plus/" target="_blank">adresse</a>, il faut cliquer sur <mark>newpen</mark> pour le lancer.
+                </p>
+				<img src="../img/codepen.png" alt="codepen" />
+            </section>
+            <section id="Exercice0">
+                <h2>Exercice 0 - Structure du site</h2>
+                <p>Créer un site web statique est simple, il suffit de créer un répertoire au nom du site dans lequel sont insérés des fichiers html.
+                    <br>L'usage veut que le nom du premier fichier soit <mark>index.htm</mark>, de façon à identifier la page d'entrée du site.
+                    <br>Il est nécessaire d'organiser les fichiers pour faciliter la maintenance du site. 
+                    Ainsi à l'intérieur du répertoire il faut créer des sous répertoire en fonction des spécialités des fichiers. 
+                    <br>Par exemple un répertoire img contiendra tous les fichiers images, un répertoire download contiendra tous les fichiers pdf destinés au téléchargement.
+					Voici l'arborescence du site :
+                </p>
+                <img src="../img/arborescenceSite.png" alt="arborescenceSite" />
+                <p>Pour nos exercices, créez un répertoire TPsites, vous mettrez les pages dans le répertoire vues</p>
+                <H3>Rapport à faire</H3>
+                <p>Définir l'arborescence du site officemaster dans lequel nous aurons des répertoires pour les fichiers :</p>
+                <ul>
+                    <li>css</li>
+                    <li>images</li>
+                    <li>pdf à télecharger</li>
+                </ul>
+            </section>
+            <section id="Exercice1">
+                <h2>Exercice 1 - Structure de la page</h2>	
+					<p>Nous allons utiliser le site codepen dans la mesure où pour l'instant il est difficile d'utiliser notepad++</p>
+                <ol>
+                    <li>Créer une page TP01.html</li>
+                    <li>Écrire sur la page : Bravo voici une page sans balises</li>
+                    <li>Exécution : Lancer avec Firefox </li>
+                    <li>Avant Bravo écrire : &lt;title&gt;ma première page&lt;/title&gt;</li>
+                    <li>Exécution : Lancer avec Firefox</li>
+                    <li>Écrire dans le rapport ce que vous constatez</li>
+                    <li><a href ="http://validator.w3.org/#validate_by_upload" target="_blank">Cliquez sur ce lien et validez votre fichier</a></li>
+                    <li>Écrire dans le rapport ce que vous constatez</li>
+                    <li>Écrire  la page de cette façon
+                        <pre>
+			&lt;!DOCTYPE html&gt;
+			&lt;title&gt;ma première page&lt;/title&gt;
+			Bravo voici une page sans balises
+                        </pre>
+                    </li>
+                    <li><a href ="http://validator.w3.org/#validate_by_upload" target="_blank">Cliquez sur ce lien et validez votre fichier</a></li>
+                    <li>Écrire dans le rapport à quoi sert le DOCTYPE ? Quelles modifications ont été apportées dans la page index ?</li>
+                    <li>Définir ce qu'est une balise en html</li>
+                    <li>Écrire la page HTML de cette façon
+                        <pre>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                                &lt;head&gt;
+                                        &lt;title&gt;ma première page&lt;/title&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                        Bravo voici une page sans balises
+                                &lt;/body&gt;
+                        &lt;/html&gt;</pre>
+                    </li>
+                    <li><a href ="http://validator.w3.org/#validate_by_upload" target="_blank">Cliquez sur ce lien et validez votre fichier</a></li>
+                    <li>Écrire dans le rapport ce que vous constatez</li>
+                    <li>Quel est le rôle des balises html, head, body ?</li>
+                    <li>Quel est l'intérêt de cette nouvelle présentation</li>
+                    <li>Que signifie l'indentation en informatique ?</li>
+                    <li>Quel en est son intérêt ?</li>
+                </ol>
+            </section>
+            <section id="Exercice2">
+                <h2>Exercice 2 - Affichage avec les balises HTML</h2>             
+                <h3>Utiliser des balises HTML - la balise p</h3>
+                <p><mark>Modifier</mark> la page de cette façon :</p>
+                <pre>
+			&lt;p&gt;Bravo voici une page avec la balise p&lt;/p&gt;</pre>
+                <ol>
+                    <li><a href ="http://validator.w3.org/#validate_by_upload" target="_blank">Cliquez sur ce lien et validez votre fichier</a></li>
+                    <li>Quel est le rôle de la balise p ? (désactivez la balise du navigateur pour voire la différence)</li>
+                </ol>                    
+            </section>
+            <section id="Exercice3">
+                <h2>Exercice 3 - Améliorez la gestion des styles, l'utilisation du CSS</h2>
+                <p>Jusqu’à présent le texte est brut, il n’y a ni couleur, ni forme gras ou italique, toutes ces choses qui sont facilement obtenues avec un traitement de texte. 
+                    Si le HTML permet certaines mises en forme, il faut les bannir car il s’agit de pratiques anciennes.
+                    <br />Comment faire pour écrire la phrase en rouge ?
+                    <br /> Grâce au memento  <a href ="../download/memento_css21.pdf" target="_blank">css</a> donnez la structure d'une règle css.</p>                  
+
+                <h3> La bonne pratique : utiliser le CSS dans une autre page page</h3>
+                <p><mark>Ajoutez</mark> entre les balises HEAD de votre page  la ligne suivante :</p>
+                <pre>
+			&lt;link href="style.css" rel="stylesheet" media="screen"&gt;</pre>
+
+                <a href ="http://validator.w3.org/#validate_by_upload" target="_blank">Cliquez sur ce lien et validez votre fichier</a>
+                <ol>
+                    <li>Que signifie l'instruction href ?</li>
+                    <li>Que signifie l'instruction rel ?</li>
+                    <li>Que signifie l'instruction media ?</li>
+                </ol>
+                <h4>Mise en place de la page CSS</h4>
+                <ol>
+                    <li>Créez une nouvelle page style.css</li>
+                    <li>Encodage : Encoder en UTF-8 </li>
+                    <li>Langage : CSS </li>
+                    <li>Écrire sur la page le code css suivant :</li>
+                    <pre>
+							p {color: red;}</pre>
+                    <li>Fichier : Enregistrer dans le même répertoire que votre page HTML</li>			
+                    <li>Exécution : Lancer la page HTML avec Firefox</li>		
+                    <li><a href ="https://jigsaw.w3.org/css-validator/#validate_by_upload" target="_blank">Cliquez sur ce lien et validez votre fichier</a></li>
+                    <li>Écrire dans le rapport ce que vous constatez</li>
+                </ol>
+                <h4>Modifications</h4>
+                <p>Ajoutez dans la page html la phrase <mark>Voici mon titre H1</mark> et encadrer la de la balise h1<br>
+                    Afficher toutes les balises h1 en orange et les balises p en noire avec une fonte de 13</p>
+                <h4>Résumé</h4>
+                <p>A l'aide de la balise &lt;pre&gt;, affichez la structure html d'une page qui pointe sur un fichier css dont le nom est style.css</p>
+
+            </section>
+            <section id="Exercice4">
+                <h2>Exercice 4 - La mise en page et la gestion des styles avec des conteneurs</h2>
+                <p>Nous allons maintenant mettre notre code dans une boite. Cette technique facilite la mise en page et la gestion de style de votre page web<br>
+                Pour l'instant nous allons créer 3 boites :</p>
+                <ul>
+                    <li>Une boite titre</li>
+                    <li>Une boite texte pour encadrer du texte</li>
+                    <li>Une boite conteneur qui entoure les deux précédentes</li>
+                </ul>					
+                <p> Juste après le body vous écrirez :</p>
+                <pre>
+	&lt;p&gt;Bravo voici une page avec la balise p&lt;/p&gt;
+
+	&lt;div class="conteneur"&gt;
+				&lt;div class="titre"&gt;&lt;p&gt;Le titre du conteneur&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class="texte"&gt;
+					&lt;p&gt;Tout ce texte se trouve dans un conteneur,
+					Il peut être facilement orienté à droite ou à gauche, voir centré. Mais ce qui est le plus intéressant est son positionnement:
+					le texte peut avoir des marges à l'intérieur, mais le conteneur peut aussi avoir des marges avec les blocs qui l'environnement.
+					A l'intérieur du conteneur, il faut utiliser l'instruction padding pour positionner le texte. A l'extérieur du conteneur il faut utiliser le marging pour positionner le bloc.
+					Notre objectif ici est de centrer le bloc  en positionnant le texte à droite.
+					&lt;/p&gt;									
+				&lt;/div&gt;
+	&lt;/div&gt;
+                </pre>                   
+
+                <ol>
+                    <li>Écrire dans le rapport à quoi correspond le sélecteur class et comment il doit être écrit en css (aidez vous ci-besoin du mémento css)</li>
+                    <li>Mettre la couleur du paragraphe en rouge</li>
+                    <li>Mettre dans la page css<pre>.conteneur{}</pre><br>						
+                        Trouver comment mettre la couleur de fonds en noire</li>                        
+                    <li> Ajouter une largeur du conteneur de 60%</li>
+                    <li> Ajouter une marge auto, quel est son rôle ?</li>
+                    <li> Ajouter un padding de 10 pixel</li>
+                    <li> Entourez la div d'un bordure de 10 pixel en traits pleins de couleur gold<br>
+                        <mark class="mark">Pour cet exercice commentez chacune des lignes css à l'aide des caractères suivants /*expliquez le rôle de la ligne*/ </mark></li>
+                    <li> A l'aide de la partie Sélecteurs composés du mémento, ex1pliquez ce qui se passe lorsque l'on ajoute p à coté de .conteneur. Que signifie ancêtre ?</li>
+
+                </ol> 
+                <p>Pour la class titre :</p>
+                <ol>
+                    <li>Trouver comment mettre le titre en majuscule.</li>
+                    <li>Trouver comment avoir un espacement de .09em entre les lettres</li>
+                    <li>Trouver comment centrer le texte</li>
+                </ol>
+                <p>Pour la class texte :</p>
+                <ol>
+                    <li>Trouver comment justifier le texte</li>
+                </ol>
+                <mark class="mark">Rafraichissez à chaque fois la page pour voir les modifications</mark>
+                <H3>Rapport à faire</H3>
+                <p>Copiez le code, commenté, lié au css dans votre rapport.</p>
+
+            </section>
+        </div>
+    </body>
+</html>

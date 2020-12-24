@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.td.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism.css">
+    <title>TP06 Php</title>
+
+</head>
+<body>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="tp01htmlPhp.html">TP PHP</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link " href="tp01htmlPhp.html">
+                        TP01 - Affichage, déclaration de variables, tableaux
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="tp02htmlPhp.html">
+                        TP02 - Tableaux, Boucles, formulaires
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="tp03htmlPhp.html">
+                        TP03 - Tableaux Associatifs, Boucles foreach
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="tp04htmlPhp.html">
+                        TP04 - Pattern MVC
+                    </a>
+                </div>
+
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="tp05htmlPhp.html">
+                        TP05 - Pattern MVC, connexion à un SGBD
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="tp06htmlPhp.html">
+                        TP06 - Pattern MVC, Session
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#prerequis">Prérequis</a></li>
+                <li class="toc-entry toc-h2"><a href="#Exercice1">Exercice 1 - connexion à un SGBD</a></li>
+                <li class="toc-entry toc-h2"><a href="#Exercice2">Exercice 2 - Modification du contrôleur</a></li>
+                <li class="toc-entry toc-h2"><a href="#Exercice3">Exercice 3 - Création de la vue Produit</a></li>
+                <li class="toc-entry toc-h2"><a href="#"></a></li>
+            </ul>
+        </div>
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        <h1>TP06 - Pattern MVC, Session</h1>
+        <hr class="my-4">
+
+        <span class="fa fa-download" aria-hidden="true"></span>
+        <a href="../download/phpTP06rapport.pdf" target="_blank">Format du rapport à télécharger</a>
+        <br><span class="fa fa-question" aria-hidden="true"></span>
+        <a href="https://tutowebdesign.com/bien-demarrer-bootstrap-4.php" target="_blank">Bootstrap</a>
+        <br><span class="fa fa-question" aria-hidden="true"></span>
+        <a href="../download/AideMemoirePHP.pdf" target="_blank">Aide mémoire PHP</a>
+        <br><span class="fa fa-question" aria-hidden="true"></span>
+        <a href="http://boraklerouge.free.fr/PHP-AideMemoire/" target="_blank">Aide mémoire PHP</a>
+        <br><span class="fa fa-question" aria-hidden="true"></span>
+        <a href="https://tutowebdesign.com/flux-sortie-php.php" target="_blank">
+            les flux de sortie</a>
+        <br><span class="fa fa-question" aria-hidden="true"></span>
+        <a href="https://tutowebdesign.com/session-php.php" target="_blank">
+            Session</a>
+        <div class="bd-callout bd-callout-info">
+            <h4>Avant de commencer</h4>
+            <p>Créez un répertoire TP06</p>
+        </div>
+        <section id="prerequis">
+            <h2>Prérequis</h2>
+            <ol>
+            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_index.php:</li>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
+session_start();
+require_once 'TP05_m_PDO.php';
+require_once 'TP06_m_model.php';
+/*
+ * Gestion des routes
+ * index.php?uc=controleur&action=xxxx
+ */
+if(!isset($_REQUEST['uc']))
+    //l'url n'a pas d'information
+    $uc = 'accueil';
+else
+    $uc = $_REQUEST['uc'];
+
+$pdo = PdoTd::getPdoTd();
+
+/*
+* Affichage de la vue
+*/
+ob_start();
+//chargement du controleur
+//mise en cache de la vue fournie par le controleur
+switch($uc)
+{
+    case 'accueil':
+        {  include('TP04_v_accueil.php');break;}
+
+    default :
+        {  include('TP06_c_controleur.php');break;}
+}
+//liberation du cache dans une variable
+$contenu = ob_get_clean();
+$lang =!isset($_SESSION['lang'])?$menu01:$_SESSION['lang'];
+//chargement de la vue par defaut
+require 'TP06_v_gabarit.php';</code></pre></figure>
+            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_c_controleur.php:</li>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
+$action = $_REQUEST['action'];
+/**
+ * @var PdoTd $pdo
+ */
+switch($action)
+{
+    case 'accueil':
+        {
+            include('TP04_v_accueil.php');
+            break;
+        }
+    case 'produits' :
+        {
+
+            $lesCategories = $pdo->getLesCategories();
+
+            $lesProduits = $pdo->getLesProduits();
+         //   var_dump($lesProduits);
+            include('TP05_v_produits.php');
+            break;
+        }
+    case 'contact' :
+        {
+            include('TP04_v_form.php');
+            break;
+        }
+    case 'acces' :
+        {
+            include('TP04_v_construction.php');
+            break;
+        }
+    case 'fr' :
+        {
+            $_SESSION['lang']='';
+            $_SESSION['lang']=$menu01;
+            include('TP04_v_accueil.php');
+            break;
+        }
+    case 'en' :
+        {
+            $_SESSION['lang']='';
+            $_SESSION['lang']=$menu02;
+            include('TP04_v_accueil.php');
+            break;
+        }
+    case 'reponse' :
+        {
+            include('TP04_v_reponse.php');
+            break;
+        }
+    default :
+        {
+            include('TP04_v_404.php');
+            break;
+        }
+}</code></pre></figure>
+            <li><b>Quels sont les fichiers qui existent déjà et que vous devez rajouter ?</b></li>
+            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_v_gabarit.php:</li>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
+&lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
+
+    <span class="nt">&lt;title&gt;</span>&lt;?= basename(__File__) ?&gt;<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+        &lt;ul class="navbar-nav"&gt;
+            &lt;?php
+            foreach ($lang as $cle =&gt; $valeur):
+                if($lang[$cle]!='lang'): ?&gt;
+                &lt;li  class="nav-item"&gt;
+                    &lt;a class="nav-link" href="TP06_index.php?uc=controleur&action=&lt;?=$valeur;?&gt;"&gt;&lt;?php echo ucfirst($cle);?&gt;&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;?php else: ?&gt;
+            &lt;li class="nav-item dropdown"&gt;
+                &lt;a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"&gt;
+                    &lt;?php echo ucfirst($cle);?&gt;&lt;/a&gt;
+                &lt;div class="dropdown-menu"&gt;
+                    &lt;a class="dropdown-item" href="TP06_index.php?uc=controleur&action=fr"&gt;Français&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="TP06_index.php?uc=controleur&action=en"&gt;Anglais&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;?php endif;
+            endforeach;//fin de la boucle ?&gt;
+
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;?= $contenu; ?&gt;
+    &lt;!-- Optional JavaScript --&gt;
+    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
+<span class="nt">&lt;/body&gt;</span>
+&lt;/html&gt;</code></pre></figure>
+        <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_m_model.php:</li>
+        <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
+//Déclaration de variables
+$lang = array();
+$menu01 = ['accueil' =&gt; 'accueil',
+    'nos produits' =&gt; 'produits',
+    'nous contacter' =&gt; 'contact',
+    'plan d\'accés' =&gt; 'acces',
+    'qui sommes nous ?' =&gt; 'nous',
+    'langage' =&gt; 'lang'];
+$menu02 = ["home"=&gt; 'accueil',
+    "products"=&gt; 'produits',
+    "contacts us"=&gt; 'contact',
+    "find Us"=&gt; 'acces',
+    "about us" =&gt; 'nous',
+    "language" =&gt; 'lang'];
+$form01 = "Valider";
+$form02 = "Sign in";</code></pre></figure>
+            </ol>
+            <div class="bd-callout bd-callout-info">
+                <h4>Tests</h4>
+                <p>Lancez TP06_index.php pour voir si tout fonctionne.</p>
+            </div>
+        </section>
+        <section id="Exercice1">
+        <h2>Exercice 1 - connexion à un SGBD</h2>
+
+        <ol>
+            <li>Quels sont les fichiers qui ont disparu ?</li>
+            <li>Lorsque vous cliquez sur Nos produits que se passe-t-il au niveau du contrôleur ?</li>
+            <li>Quel est le type des variables $lesCategories et $lesProduits ? Pourquoi ?</li>
+        </ol>
+
+        </section>
+        <section id="Exercice2">
+        <h2>Exercice 2 - connexion à un SGBD</h2>
+
+        <ol>
+            <li>Pourquoi utiliser PDO pour se connecter à une base de données ?</li>
+            <li>Que signifie :: ?</li>
+            <li>Que signifie self ?</li>
+            <li>Que signifie -> ?</li>
+            <li>Que signifie query()?</li>
+            <li>Que signifie fetchAll() ?</li>
+        </ol>
+        </section>
+        <section id="Exercice3">
+        <h2>Exercice 3 - Modification du contrôleur</h2>
+
+        <ol>
+            <li>Où est déclarée la variable $pdo ?</li>
+            <li>Lorsque vous cliquez sur Nos produits que se passe-t-il au niveau du contrôleur ?</li>
+            <li>Quel est le type des variables $lesCategories et $lesProduits ? Pourquoi ?</li>
+        </ol>
+        </section>
+        <div class="text-right">
+            <a href="#" id ="backToTopBtn" class="well well-sm"><i class="fa fa-chevron-up"></i> </a>
+        </div>
+    </main>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.js" data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+
+</html>

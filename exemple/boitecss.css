@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 mai 2015, 19:59:24
+    Author     : prof
+*/
+.fill-height-or-more {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.fill-height-or-more > div {
+    // these are flex items
+
+    // flex: 1; same as:
+    // flex-grow: 1;
+    // flex-shrink: 1;
+    // flex-basis: auto;
+    // flex: 1 1 auto;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.some-area.fill-height-or-more > div {
+    padding: 1rem;    
+}
+.some-area.fill-height-or-more > div:nth-child(1) {
+    background: hsla(200, 50%, 60%, 1);
+}
+.some-area.fill-height-or-more > div:nth-child(2) {
+    background: hsla(200, 50%, 65%, 1);
+}	
+.some-area.fill-height-or-more > div:nth-child(3) {
+    background: hsla(200, 50%, 70%, 1);
+}
+.some-area.fill-height-or-more > div:nth-child(4) {
+    background: hsla(200, 50%, 75%, 1);
+}
+.some-area.fill-height-or-more > div:nth-child(5) {
+    background: hsla(200, 50%, 80%, 1);
+}
+.some-area.fill-height-or-more h1, h2 {
+    margin: 0 0 0.2rem 0;
+}
+.some-area.fill-height-or-more p {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+

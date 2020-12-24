@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>Approche Objet</title>
+</head>
+<body>
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link " href="csharp01_intro.html">
+                        I - Introduction au développement
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contentArt">B - L ’art et la manière de bien programmer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link " href="csharp02_basesLg.html">
+                        II - Les bases du langage
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#source">A - Anatomie d'un fichier source
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bloc">B - Définition d'un bloc de code
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#affiche">C - Affichage de texte
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#comment">D - Commentaires
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#indentation">E - l'indentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#nommage">F - Conventions de nommage
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link " href="csharp03_programmer-variables.html">
+                        III - Programmer avec C#
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="csharp03_programmer-variables.html"> A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp06_programmer_boucles.html">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link " href="csharp08_objet_overview.html">
+                        IV - Programmation objet avec C#
+                    </a>
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="csharp08_objet_overview.html">L'approche Objet
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp09_objet_creation.html">Création d'objet en C#
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp10_objet_concpets.html">Principaux concepts objets
+                            </a>
+                        </li>
+                        <li>
+                            <a href="csharp11_objet_relations.html">Les relations entre les classes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+
+                <li class="toc-entry toc-h3"><a href="#predef">a - Conception d'objet</a></li>
+                <li class="toc-entry toc-h3"><a href="#exemple">b - Exemple d'objet</a></li>
+                <li class="toc-entry toc-h3"><a href="#class">c - Un objet sans classe… n’a pas de classe</a></li>
+                <li class="toc-entry toc-h3"><a href="#encapsulation">d - Les classes et leur jardin secret</a></li>
+                <li class="toc-entry toc-h3"><a href="#"></a></li>
+            </ul>
+        </div>
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="base">L'approche Objet</h1>
+            <p class="bd-lead">L'objectif de ce chapitre est de découvrir ce qu'est la programmation orientée objet.</p>
+
+            <h2 id="predef">a - Conception d'objet</h2>
+                <p>La question est: De quoi parle t - on ?</p>
+                <p>Quelles sont les entités qui interviennent dans mon problème ?</p>
+                <p>exemple :<br>modéliser un logiciel de trafic routier<br>les entités sont :</p>
+                <ul>
+                    <li>les feux tricolores</li>
+                    <li>les carrefours</li>
+                    <li>les véhicules</li>
+                    <li>les agents de la circulation.</li>
+                </ul>
+                <p>Lorsqu'un feu tricolore passe au vert il
+                    envoie cette connaissance (= ce message) à
+                    l'agent posté à ce carrefour. L'agent prend
+                    une décision et en informe (envoi de
+                    messages) les chauffeurs des véhicules.</p>
+            <div class="bd-callout bd-callout-info">
+                <h4>Définition</h4>
+                <p>un objet se compose d'<b>informations</b> et d'<b>actions</b>. Les actions utilisent (et parfois modifient) les informations de l'objet.</p>
+            </div>
+            <ul>
+                <li>L'ensemble des informations d'un objet donné est appelée son état.</li>
+                <li>L'ensemble des actions applicables à un objet représente son comportement.</li>
+            </ul>
+            <div class="bd-callout bd-callout-info">
+                <h4>Remarque</h4>
+                <p>Les actions associées à un objet s'expriment généralement sous la forme de
+                verbes à l'infinitif (créditer, débiter).
+                </p>
+            </div>
+                    <p>Un objet est composé de 2 parties :</p>
+                <ul>
+                    <li>partie interface: opérations qu'on peut faire dessus (partie publique)</li>
+                    <li>partie interne (intime): données sensibles de l'objet (partie privée) Les utilisateurs (i.e. les éléments extérieurs) de l'objet ne voient que la partie interface.</li>
+                </ul>
+                <p>Ces entités doivent être indépendantes</p>
+
+            <h2 id="exemple">b - Exemple d'objet</h2>
+                <p>La renault R21 bleue immatriculée 2245 CDV 75 de mon chef de service est un objet</p>
+                <figure class="highlight"><pre>objet R21_de_mon_chef
+genre : <span class="na">Renault</span>
+immatriculation : <span class="na">2245 CDV 75</span>
+NbPlaces : <span class="na">5</span>
+propriétaire: <span class="na">chef de service</span>
+<span class="c">s_arreter()
+avancer()</span>>
+fin objet</pre></figure>
+                <p>Un autre objet serait ma clio immatriculée 4357 NBG 93</p>
+                <figure class="highlight"><pre>objet ma_Corsa
+genre : <span class="na">Opel</span>
+immatriculation : <span class="na">4357 NBG 93</span>
+NbPlaces : <span class="na">4</span>
+propriétaire: <span class="na">Moi - même</span>
+<span class="c">s_arreter()
+avancer()</span>>
+fin objet</pre></figure>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Remarque</h4>
+                <p>Les objets ne diffèrent que par leurs attributs (en bleu ici).</p>
+            </div>
+            <p>Différentes instances de la même classe :</p>
+            <ul>
+                <li>contiennent des attributs au valeur différente</li>
+                <li>partagent un même comportement</li>
+            </ul>
+            <h2 id="class">c - Un objet sans classe… n’a pas de classe</h2>
+
+                <div class="bd-callout bd-callout-info">
+                    <h4>Définition</h4>
+                    <p>Modèle décrivant le contenu et le comportement des futurs objets de la classe.</p>
+                </div>
+                <p><b>Le contenu</b> correspond aux attributs dans lesquels sont stockées les méthodes</p>
+                <p><b>le comportement</b> correspond aux méthodes (l'autre nom pour les fonctions dans les classes)</p>
+                <h5>Représentation UML de la classe</h5>
+                    <img class="img-fluid" src="img/classUml.PNG" alt="Classe UML">
+                <h5>Exemple de classe</h5>
+                    <p>la classe des véhicules, la classe des camions, des automobiles.</p>
+                    <p>La classe des automobiles peut être décrite par :</p>
+                    <figure class="highlight"><pre>classe Automobile
+<span class="c">genre
+immatriculation
+NbPlaces
+propriétaire
+s_arreter()
+avancer()</span>>
+fin classe</pre></figure>
+
+            <h2 id="encapsulation">d - Les classes et leur jardin secret</h2>
+            <div class="bd-callout bd-callout-info">
+                <h4>Encapsulation</h4>
+            <p>L’encapsulation consiste à gérer la classe comme boite noire responsable de sa propre cohérence.</p>
+            </div>
+            <p> Pour y parvenir, il est possible de définir la visibilité de chacun des membres d’une classe.</p>
+            <p>Un membre peut être :</p>
+            <ul>
+                <li>public(+): visible par tous</li>
+                <li>private(-): visible uniquement des membres de la classe</li>
+                <li>protected(#) : utile lors de l’héritage</li>
+                <li>rien : (~) visibilité par défaut, uniquement au niveau package</li>
+            </ul>
+       </main>
+    </div>
+</div>
+
+</body>
+</html>
