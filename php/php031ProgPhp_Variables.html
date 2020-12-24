@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>PHP - Programmer avec PHP</title>
+    <script>
+        /*       window.ga = window.ga || function () {
+                   (ga.q = ga.q || []).push(arguments)
+               };
+               ga.l = +new Date;
+               ga('create', 'UA-146052-10', 'chchabin.free.fr');
+               ga('set', 'anonymizeIp', true);
+               ga('send', 'pageview');*/
+    </script>
+</head>
+<body>
+<a class="skippy sr-only sr-only-focusable" href="#content">
+    <span class="skippy-text">Skip to main content</span>
+</a>
+<!--        navbar-->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="php01Gintroduction.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--        Menu Gauche-->
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link " href="php01Gintroduction.html">
+                        I - Introduction au développement Web
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#foncweb">
+                                A - Le fonctionnement du Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#protocole-HTTP">
+                                B - Le protocole HTTP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                        II - Les bases du langage
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
+                        III - Programmer avec PHP
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="php031ProgPhp_Variables.html">A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php032ProgPhp_Tests.html">B - Tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php034ProgPhp_Boucles.html">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php041Transmission.html">
+                        IV - Transmettre des données entre des pages
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#superglobale">A - Notion de variable superglobale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionURL">B - Transmission via l'URL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionForm">C - Transmission via un formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionData">D - Transmission de données et sécurité
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionSession">E - Transmission via la session
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        V - Accéder à une base de données
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#sgbdIntro"> A - Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdConect">B - Connexion à la base de données
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+
+        </div>
+        <!--        Menu droite-->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#variablesDef">1 - Définition d'une variable</a></li>
+                <li class="toc-entry toc-h2"><a href="#variablesString">2 - Chaînes de caractères</a></li>
+                <li class="toc-entry toc-h2"><a href="#concatenation">3 - Concaténations</a></li>
+                <li class="toc-entry toc-h2"><a href="#operateurs">4 - Les opérateurs de calcul</a></li>
+                <li class="toc-entry toc-h2"><a href="#operateurscomb">5 - Les opérateurs d'affectation combiné</a></li>
+                <li class="toc-entry toc-h2"><a href="#operateurincr">6 - Les opérateurs d'incrémentation et décrémentation</a></li>
+                <li class="toc-entry toc-h2"><a href="#resume">7 - Résumé</a></li>
+            </ul>
+        </div>
+        <!--        Page de cours-->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="content">III - Programmer avec PHP</h1>
+            <p>L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec le
+                langage PHP. 
+
+            <h2 id="variables">A - Les variables</h2>
+            <section>
+                <h3 id="variablesDef">1 - Définition d'une variable</h3>
+                <article>
+                    <p>Une variable joue en PHP le même rôle que dans tout autre langage : stocker une information. Une
+                        variable PHP est définie par un nom qui commence obligatoirement par
+                        le symbole <code>$</code>.</p>
+                     
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php </span>$message = 'Bonjour Monde !';
+<span class="s">echo </span>$message;<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Typage dynamique</h4>
+                        <p>On remarque au passage que la variable <code>$message</code> n'a pas un type explicite comme
+                            <code>string</code> ou <code>int</code>. PHP n'impose pas au programmeur de définir les
+                    types des variables.</p>
+                    </div>
+                    <p>Les différents types dans PHP 
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Exemple</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>bool</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>ﬂoat</td>
+                            <td>3.2</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>32</td>
+                        </tr>
+
+                        <tr>
+                            <td>string</td>
+                            <td>"Bonjour"</td>
+                        </tr>
+                        <tr>
+                            <td>array</td>
+                            <td>$tab=(1,2,3)</td>
+                        </tr>
+                        <tr>
+                            <td>object</td>
+                            <td>$obj = new stdClass;</td>
+                        </tr>
+                        <tr>
+                            <td>callable</td>
+                            <td>call_user_func ('my_callback_function');</td>
+                        </tr>
+                        <tr>
+                            <td>iterable</td>
+                            <td>
+                                function foo ( iterable $iterable=[])
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ressource</td>
+                            <td>https://www.php.net/manual/fr/language.types.resource.php<br></td>
+                        </tr>
+                        <tr>
+                            <td>NULL</td>
+                            <td>
+                                $var = NULL ;
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>Après sa définition, une variable PHP est utilisable à n'importe quel endroit de la page, même
+                        dans un autre bloc de code. </p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php </span>$message = 'Bonjour Monde !';</span><span class="s">?&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Un titre<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Un sous-titre<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo </span>$message;<span class="s">?&gt;</span><span
+                                class="nt">&lt;/p&gt;</span></code></pre>
+                    </figure>
+                </article>
+                <h3 id="variablesString">2 - Chaînes de caractères</h3>
+                <article>
+                    <p>Les chaînes de caractères PHP sont délimitées par des guillemets doubles <code>"..."</code> ou
+                        par des guillemets simples <code>'...'</code>. Il est possible de concaténer (assembler)
+                        plusieurs chaînes de caractères au moyen du symbole <code>.</code>. 
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php echo</span> "Bonjour" <span
+                            class="s">.</span> " " <span class="s">.</span>  "Monde !";<span class="s">?&gt;</span>
+<span class="s">&lt;?php echo</span> 'Bonjour' <span class="s">.</span> ' ' <span class="s">.</span>  'Monde !';<span
+                                class="s">?&gt;</span>            </code></pre>
+                    </figure>
+
+                    <p>Chaque ligne ci-dessus affiche <code>Bonjour Monde !</code>. 
+                    <p>La différence entre guillemets simples et doubles apparaît lorsqu'on inclut une variable dans une
+                        chaîne de caractères. 
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php </span><span>$age = 39;</span>
+<span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo</span> "Vous avez $age ans";<span
+                                class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo</span> 'Vous avez $age ans';<span
+                                class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span></code></pre>
+                    </figure>
+                    <p><code>echo</code> affiche : 
+                    <ul>
+                        <li>Pour le premier <code>Vous avez 39 ans</code>,</li>
+                        <li>Pour le second <code>Vous avez $age ans</code></li>
+                    </ul>
+                    <p>Lorsqu'on utilise des guillemets doubles pour définir une chaîne de caractères, les variables
+                        sont interprétées (remplacées par leur valeur). Ce n'est pas le cas avec des guillemets
+                        simples. 
+                </article>
+                <h3 id="concatenation">3 - Concaténations</h3>
+                <article>
+                    <p>Il y a deux opérateurs de chaînes de caractères string. Le premier est l'opérateur de
+                        concaténation ('<code>.</code>'), qui retourne la concaténation de ses deux arguments. Le second
+                        est l'opérateur d'affectation concaténant (<code>.=</code>). 
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php </span>
+$a = "Bonjour ";
+$b = $a . "Monde !";<span class="c"> // $b contient "Bonjour Monde !"</span>
+
+$a = "Bonjour ";
+$a .= "Monde !"; <span class="c">// $a contient "Bonjour Monde !"</span></code></pre>
+                    </figure>
+
+                    <p>Comme le typage est dynamique, la concaténation fonctionnera également quand la variable
+                        contiendra des types scalaires 
+                </article>
+                <h3 id="operateurs">4 - Les opérateurs de calcul</h3>
+                <article>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s"></span>$testVariable = 1 + 1;  <span
+                            class="c">// assigne la valeur 2</span>
+$testVariable = 1 - 1;  <span class="c">// assigne la valeur 0</span>
+$testVariable = 2 * 2;  <span class="c">// assigne la valeur 4</span>
+$testVariable = 2 / 2;  <span class="c">// assigne la valeur 1</span>
+$testVariable = 5 % 3;  <span class="c">// assigne la valeur 2 le reste de la division</span></code></pre>
+                    </figure>
+                </article>
+                <h3 id="operateurscomb">5 - Les opérateurs d'affectation combiné</h3>
+                <article>
+                    <table class="table">
+                       <thead>
+                        <tr>
+                            <th>Opérateur</th>
+                            <th>Description</th>
+                            <th>Exemple</th>
+                            <th>Equivalence</th>
+                        </tr>
+                       </thead>
+                        <tbody>
+                        <tr>
+                            <td>+=</td>
+                            <td>Addition puis affectation</td>
+                            <td>$x += $y</td>
+                            <td>$x = $x + $y</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>Soustraction puis affectation</td>
+                            <td>$x -= $y</td>
+                            <td>$x = $x – $y</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>Multiplication puis affectation</td>
+                            <td>$x *= $y</td>
+                            <td>$x = $x * $y</td>
+                        </tr>
+                        <tr>
+                            <td>**=</td>
+                            <td>Puissance puis affectation</td>
+                            <td>$x**=2</td>
+                            <td>$x=($x)²</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>Division puis affectation</td>
+                            <td>$x /= $y</td>
+                            <td>$x = $x / $y</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>Modulo puis affectation</td>
+                            <td>$x %= $y</td>
+                            <td>$x = $x % $y</td>
+                        </tr>
+                        <tr>
+                            <td>.=</td>
+                            <td>Concaténation puis affectation</td>
+                            <td>$x .= $y</td>
+                            <td>$x = $x . $y</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <h3 id="operateurincr">6 - Les opérateurs d'incrémentation et décrémentation</h3>
+                <article>
+                    <table class="table">
+                     <thead>
+                        <tr>
+                            <th>Exemple</th>
+                            <th>Nom</th>
+                            <th>Résultat</th>
+                        </tr>
+                        </thead>
+
+                        <tbody class="tbody">
+                        <tr>
+                            <td>++$x</td>
+                            <td>Pre-incrémente</td>
+                            <td>
+                                Incrémente $x de 1, puis retourne $x.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>$x++</td>
+                            <td>Post-incrémente</td>
+                            <td>Retourne $x, puis incrémente $x de 1.</td>
+                        </tr>
+
+                        <tr>
+                            <td>--$x</td>
+                            <td>Pré-décrémente</td>
+                            <td>
+                                Décrémente $x de 1, puis retourne
+                                $x.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>$x--</td>
+                            <td>Post-décrémente</td>
+                            <td>
+                                Retourne $x, puis décrémente
+                                $x de 1.
+                            </td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+                </article>
+                <h3 id="resume">7 - Résumé</h3>
+                <article>
+                    <figure class="highlight"><pre><code class="language-php"
+                                                         data-lang="php">$var1 = 'PHP';          <span
+                            class="c">// assigne la valeur 'PHP' à $var1</span>
+$var2 = 5;              <span class="c">// assigne la valeur 5 à $var2</span>
+$var3 = $var2 + 1;      <span class="c">// assigne la valeur 6 à $var3</span>
+$var2 = $var1;          <span class="c">// assigne la valeur 'PHP' à $var2</span>
+$var3++;                <span class="c">// assigne la valeur 7 à $var3</span>
+<span class="s">echo</span> $var1;             <span class="c">// affiche 'PHP'</span>
+<span class="s">echo</span> $var2;             <span class="c">// affiche 'PHP'</span>
+<span class="s">echo</span> $var3;             <span class="c">// affiche '7'</span>
+<span class="s">echo</span> $var1 . ' rules!'; <span class="c">// affiche 'PHP rules!'</span>
+<span class="s">echo</span> '$var1 rules!';    <span class="c">// affiche '$var1 rules!'</span>
+<span class="s">echo</span> "$var1 rules!"     <span class="c">// affiche 'PHP rules!'</span></code></pre>
+                    </figure>
+                </article>
+            </section>
+        </main>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="../js/popper.min.js"></script>-->
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/docs.min.js"></script>
+</body>
+</html>

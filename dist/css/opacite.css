@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 oct. 2014, 18:50:12
+    Author     : prof
+*/
+.content{
+    width: 600px;
+    height:500px;
+    position: relative;
+    overflow: hidden;
+}
+.left{
+    float: left;
+    width: 300px;
+    height:500px;
+    margin-top: 20px;    
+}
+.right{
+    float: right;
+    width: 300px;
+    height:500px;
+    margin-top: 20px;    
+}
+.logocss3{
+    background: url(../img/nature-q-c-70-70-5.jpg)no-repeat;
+    width: 69px;
+    height:78px;
+    display:block;
+}
+.logocss3:hover{
+    opacity: 0.35;
+}
+.logo{
+    background: url(../img/nature-q-c-70-70-5.jpg)no-repeat;
+    width: 69px;
+    height:78px;
+    display:block;
+}
+.logo:hover{
+    background: url(../img/nature-q-c-70-70-9.jpg)no-repeat;
+}

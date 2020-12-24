@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>Programmer avec C#</title>
+</head>
+<body>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+        </a>
+
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                <nav class="collapse bd-links" id="bd-docs-nav">
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp01_intro.html">
+                            I - Introduction au développement
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp02_basesLg.html">
+                            II - Les bases du langage
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="#source">A - Anatomie d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#bloc">B - Définition d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#affiche">C - Affichage de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#comment">D - Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#indentation">E - l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#nommage">F - Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item active">
+                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
+                            III - Programmer avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd-toc-item ">
+                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
+                            IV - Programmation objet avec C#
+                        </a>
+                        <ul class="nav bd-sidenav">
+                            <li>
+                                <a href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+                <ul class="section-nav">
+                    <li class="toc-entry toc-h3"><a href="#def">a - Définition</a></li>
+                    <li class="toc-entry toc-h3"><a href="#for">b - La boucle <code>for</code></a></li>
+                    <li class="toc-entry toc-h3"><a href="#while">c - La boucle <code>while</code></a></li>
+                    <li class="toc-entry toc-h3"><a href="#imbrique">d - Les boucles imbriquées</a></li>
+                    <li class="toc-entry toc-h3"><a href="#remarques">e - Les compteurs et les cumuls</a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                    <li class="toc-entry toc-h3"><a href="#"></a></li>
+                </ul>
+            </div>
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                <h1 class="bd-title" id="base"> D - Boucles</h1>
+                    <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
+                        le langage C#.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Info</h4>
+                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+                </div>
+
+                <h2 id="def">a - Définition</h2>
+                    <p>Les boucles sont des structures qui permettent d'exécuter
+                        plusieurs fois la même série d'instructions jusqu'à ce qu'une
+                        condition ne soit plus réalisée... On appelle parfois ces
+                        structures instructions répétitives ou bien itérations.
+                        La façon la plus commune de faire une boucle, est de créer un
+                        compteur (une variable qui s'incrémente, c'est-à-dire qui
+                        augmente de 1 à chaque tour de boucle) et de faire arrêter la
+                        boucle lorsque le compteur dépasse une certaine valeur. </p>
+                    <p>Une structure répétitive, également appelée structure itérative
+                        ou encore boucle, permet de répéter plusieurs fois l'exécution
+                        d'une ou plusieurs instructions. Le nombre de répétitions peut
+                        :</p>
+                    <ul>
+                        <li>être connu à l'avance.</li>
+                        <li>dépendre de l'évaluation d'une condition.</li>
+                    </ul>
+                    <p>A chaque répétition, les instructions contenues dans la boucle
+                        sont exécutées. C'est ce qu'on appelle un tour de boucle ou
+                        encore une itération.</p>
+
+                <h2 id="for">b - La boucle <code>for</code></h2>
+                    <p>La boucle <code>for</code> permet de répéter un bloc
+                        d'instructions un nombre défini de fois et <strong> connu à
+                            l'avance</strong>.</p>
+                    <p>Dans sa syntaxe, il suffit de préciser </p>
+                    <ul>
+                        <li>le nom de la variable qui sert de compteur (et
+                            éventuellement sa valeur de départ,
+                        </li>
+                        <li>la condition sur la variable pour laquelle la boucle
+                            s'arrête (basiquement une condition qui teste si la valeur
+                            du compteur dépasse une limite)
+                        </li>
+                        <li>enfin une instruction qui incrémente (ou décrémente) le
+                            compteur.
+                        </li>
+                    </ul>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">for</span> (<span class="nt">int</span> i=0; i<4; i++) {
+ <span class="cp">Console</span>.WriteLine(i);
+ } <span class="c">// 0 1 2 3</span></code></pre></figure>
+
+                    <p>Voici son fonctionnement :</p>
+                    <ul>
+                        <li>L'initialisation se produit une seule fois, au début de
+                            l'exécution (<code>int i=0</code>).
+                        </li>
+                        <li>La condition est évaluée avant chaque tour de boucle. Si
+                            elle est vraie, un nouveau tour de boucle est effectué.
+                            Sinon, la boucle est terminée (<code>i<4</code>).
+                        </li>
+                        <li>L'étape est réalisée après chaque tour de boucle
+                            (<code>i++</code>).
+                        </li>
+                    </ul>
+                    <p>La variable utilisée dans l'initialisation, la condition et
+                        l'étape est appelée le compteur de la boucle. Par convention,
+                        elle est souvent nommée <code>i</code>.</p>
+                    <p>Au niveau du <code>for</code> la trace de la boucle est la
+                        suivante :</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>iteration</th>
+                            <th>valeur de i</th>
+                            <th>sortie de boucle</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>true</td>
+                        </tr>
+                    </table>
+                    <p>A la sortie de la boucle la valeur de i est 3</p>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4>Itérations</h4>
+                    <p>il faut bien compter le nombre de fois que l'on veut faire
+                        exécuter la boucle :</p>
+                    </div>
+                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">for</span>(i=0;i<10;i++) <span class="c">//exécute 10 fois la boucle (i de 0 à 9)</span>
+<span class="nt">for</span>(i=0;i<=10;i++) <span class="c">//exécute 11 fois la boucle (i de 0 à 10)</span>
+<span class="nt">for</span>(i=1;i<10;i++) <span class="c">//exécute 9 fois la boucle (i de 1 à 9)</span>
+<span class="nt">for</span>(i=1;i<=10;i++) <span class="c">//exécute 10 fois la boucle (i de 1 à 10)</span></code></pre></figure>
+
+                <h2 id="while">c - La boucle <code>while</code></h2>
+                    <p>La boucle <code>while</code> permet de répéter des instructions
+                        tant qu'une condition est vérifiée.</p>
+                    <p>Si au départ de la boucle la condition n'est pas remplie, le
+                        programme n'y rentre pas.</p>
+                    <p>La sortie de boucle dépend de l'évaluation de la condition.</p>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">const int</span> fin = 5; <span class="c">// ceci est une constante, mot clé const</span>
+    <span class="nt">int</span> somme = 0;   <span class="c">// variable de cumul</span>
+    <span class="nt">int</span> i = 0;       <span class="c">// variable de compteur</span>
+    <span class="nt">while</span> (i &lt; fin) {
+        somme += i ;    <span class="c">// raccourci de somme = somme + 1</span>
+        i++;            <span class="c">// raccourci de i = i + 1</span>
+     }
+    <span class="cp">Console</span>.WriteLine(<span class="s">"La somme vaut :"</span> + somme);</code></pre></figure>
+
+                    <p>Au niveau du <code>while</code> la trace de la boucle est la
+                        suivante :</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>iteration</th>
+                            <th>valeur de i</th>
+                            <th>valeur de somme</th>
+                            <th>sortie de boucle</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>10</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>10</td>
+                            <td>true</td>
+                        </tr>
+                    </table>
+                    <p>Le compteur, la variable <code>i</code>, est à 5 ce qui ne
+                        remplit plus la condition est fait sortir le programme de la
+                        boucle</p>
+                    <p>La variable <code>somme</code> est appelée variable de cumul, car
+                        elle additionne toute les valeurs de i rentrées dans la boucle,
+                        soit <code>0 + 1 + 2 + 3 + 4</code></p>
+                    <p>Avant chaque tour de boucle, la condition associée au
+                        <code>while</code> est évaluée :
+                        Si elle est vraie, les instructions du bloc <code>while</code>
+                        sont exécutées. Ensuite, la ligne du while est à nouveau
+                        exécutée et la condition vérifiée.
+                        Si elle est fausse, les instructions du bloc ne sont pas
+                        exécutées et le programme continue juste après le bloc <code>while</code>.
+                    </p>
+                    <div class="bd-callout bd-callout-danger">
+                        <h4>Attention</h4>
+                        Il faut absolument que la condition
+                        de la boucle <code>while</code> puisse devenir fausse. Dans le
+                        cas contraire, on obtient une boucle infinie qui ne s'arrête
+                        jamais.
+                    </div>
+
+                <h2 id="imbrique">d - Les boucles imbriquées</h2>
+                    <p>Il est possible de faire des boucles imbriquées. Elles
+                        nécessitent deux indices.</p>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">const int</span> fin = 5;
+<span class="nt">int</span> i = 0;
+<span class="nt">int</span> j = 0;
+<span class="nt">while</span> (i &lt; fin)
+{
+    <span class="cp">Console</span>.WriteLine(<span class="s">"i = "</span> + i);
+    <span class="nt">while</span> (j &lt; fin)
+        {
+            <span class="cp">Console</span>.WriteLine(<span class="s">"j = "</span> + j);
+            j++;
+        )
+    j = 0 ;
+    i++;
+ }</code></pre></figure>
+
+                    <p>Quand <code>i</code> s'incrémente une fois, <code>j</code>
+                        s'incrémente 5 fois.</p>
+                    <p>Une fois <code>j</code> incrémenté, il est initialisé à 0.</p>
+                    <p>Cela donne le tableau à double entrée suivant :</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>i/j</th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                        </tr>
+                        <thead>
+                        <tbody>
+                        <tr>
+                            <th>0</th>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>Plusieurs combinaisons sont possibles en fonction de
+                        <code>i</code> et <code>j</code>. Par exemple au lieu d'avoir la
+                        condition <code>i&lt;fin</code> nous pouvons avoir
+                        <code>i&lt;j</code>, en changeant des éléments du code de la
+                        boucle.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Info</h4>
+                    <p>Les boucles imbriquées ne sont pas réservées aux boucles, <code>while</code>
+                        elles peuvent aussi être appliquées à tous les types de boucle.
+                    </p>
+                </div>
+                <h2 id="remarques">e - Les compteurs et les cumuls</h2>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Le compteur</h4>
+                    <p>Les boucles permettent d'utiliser 2 techniques proches, qui leur sont spécifiques, le compteur et le cumul.
+                    Dans le cas du compteur, vous pouvez remarquer qu'il est déjà inscrit dans la structure de la boucle  <code>for</code>.
+                    Voyons une formulation dans la boucle <code>while</code> en reprenant notre exemple précédent :</p>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">const int</span> fin = 5; <span class="c">// ceci est une constante, mot clé const</span>
+    <span class="nt">int</span> i = 0;       <span class="c">// variable de compteur</span>
+    <span class="nt">while</span> (i &lt; fin) {
+        i++;            <span class="c">// raccourci de i = i + 1</span>
+    <span class="cp">Console</span>.WriteLine(<span class="s">"Le compteur vaut :"</span> + i);
+     }                </code></pre></figure>
+                    <p>Ce petit bout de code affichera :</p>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">Le compteur vaut : 1
+Le compteur vaut : 2
+Le compteur vaut : 3
+Le compteur vaut : 4
+Le compteur vaut : 5</code></pre></figure>
+                </div>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Le cumul</h4>
+                    <p>Pour le cumul utilisons, de nouveau, le code précédent dans une boucle, <code>while</code>
+                    </p>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">const int</span> fin = 5; <span class="c">// ceci est une constante, mot clé const</span>
+    <span class="nt">int</span> somme = 0;   <span class="c">// variable de cumul</span>
+    <span class="nt">int</span> i = 0;       <span class="c">// variable de compteur</span>
+    <span class="nt">while</span> (i &lt; fin) {
+        somme += i ;    <span class="c">// raccourci de somme = somme + 1</span>
+     }
+    <span class="cp">Console</span>.WriteLine(<span class="s">"La somme vaut :"</span> + somme);</code></pre></figure>
+                    <p>la boucle va permettre l'addition des valeurs de <code>i</code> comme le montre le tableau suivant :</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Variables</th>
+                            <th>i</th>
+                            <th>somme</th>
+                        </tr>
+                        <thead>
+                        <tbody>
+                        <tr>
+                            <th>Initialisation <br>avant itération</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Itération 1</th>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Itération 2</th>
+                            <td>1</td>
+                            <td>1 (0+1)</td>
+                        </tr>
+                        <tr>
+                            <th>Itération 3</th>
+                            <td>2</td>
+                            <td>3 (2+1)</td>
+                        </tr>
+                        <tr>
+                            <th>Itération 4</th>
+                            <td>3</td>
+                            <td>6 (3+3)</td>
+                        </tr>
+                        <tr>
+                            <th>Itération 5</th>
+                            <td>4</td>
+                            <td>10 (6+4)</td>
+                        </tr>
+                        <tr>
+                            <th>Valeurs <br>fin d'itération</th>
+                            <td>5</td>
+                            <td>10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>Ce petit bout de code affichera :</p>
+                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">La somme vaut : 10</code></pre></figure>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>PHP - transmettre des données</title>
+    <script>
+        /*        window.ga = window.ga || function () {
+                    (ga.q = ga.q || []).push(arguments)
+                };
+                ga.l = +new Date;
+                ga('create', 'UA-146052-10', 'chchabin.free.fr');
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');*/
+    </script>
+</head>
+<body>
+<a class="skippy sr-only sr-only-focusable" href="#content">
+    <span class="skippy-text">Skip to main content</span>
+</a>
+<!--        navbar-->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="php01Gintroduction.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--        Menu Gauche-->
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link " href="php01Gintroduction.html">
+                        I - Introduction au développement Web
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#foncweb">
+                                A - Le fonctionnement du Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#protocole-HTTP">
+                                B - Le protocole HTTP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                        II - Les bases du langage
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
+                        III - Programmer avec PHP
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#variables">A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tests">B - Tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableau">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#boucles">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#fonctions"> E - Les fonctions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="php041Transmission.html">
+                        IV - Transmettre des données entre des pages
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="php041Transmission.html">A - Notion de variable superglobale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php042Transmission.html">B - Notion de formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php043Transmission.html">C - <code>$_GET</code> et la transmission via l'URL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php044Transmission.html">D - <code>$_POST</code> et la transmission via un formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php045Transmission.html">E - <code>$_SESSION</code> et la transmission via la session
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php046Transmission.html">F - <code>htmlspecialchars</code> et la transmission de données
+                                et sécurité
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        V - Accéder à une base de données
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#sgbdIntro"> A - Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdConect">B - Connexion à la base de données
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--        Menu droite-->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h3"><a href="#transmissionFormRecup">1 - Récupération des données d'un formulaire</a></li>
+                <li class="toc-entry toc-h2"><a href="#transmissionFormChk">2 - Récupération à partir d'un <code>checkbox</code></a></li>
+                <li class="toc-entry toc-h2"><a href="#transmissionFormRadio">3 - Récupération à partir d'un <code>radio</code></a></li>
+                <li class="toc-entry toc-h2"><a href="#transmissionFormSelect">4 - Récupération à partir d'un <code>select</code></a></li>
+                <li class="toc-entry toc-h2"><a href="#transmissionFormFile">5 - Envoi de fichiers avec <code>file</code></a></li>
+                <li class="toc-entry toc-h2"><a href="#transmissionFormAidesaisie">6 - Aide à la saisie et validation <code>placeholder</code> et <code>required</code></a></li>
+                <li class="toc-entry toc-h2"><a href="#transmissionFormTypechamp">7 - Types de champs de saisie (rappel HTML)</a></li>
+            </ul>
+        </div>
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="content">IV - Transmettre des données entre des pages</h1>
+            <p class="bd-lead">L'objectif de ce chapitre est de connaître les différents moyens de faire passer des
+                informations d'une page PHP à l'autre, ce qui est un besoin fréquent lorsqu'on crée un site Web.</p>
+            <h2 id="transmissionForm">D - <code>$_POST</code> et la transmission via un formulaire</h2>
+            <section>
+                <p>Les formulaires sont le moyen le plus pratique pour le visiteur de transmettre des informations à un
+                    site. PHP est capable de récupérer les données saisies par vos visiteurs et de les traiter.</p>
+                <p>Cette nouvelle valeur <code>POST</code> de l'attribut de méthode indique au navigateur d'envoyer les
+                    variables de
+                    formulaire de manière invisible à la page demandée , plutôt que de les
+                    incorporer dans la chaîne de requête de l'URL.</p>
+
+                <h3 id="transmissionFormRecup">1 - Récupération des données d'un formulaire</h3>
+                <article>
+                    <p>A l'intérieur d'un formulaire, les balises HTML <code>&lt;input&gt;</code> permettent de définir
+                        des
+                        champs de saisie pour l'utilisateur.</p>
+                    <div class="bd-callout bd-callout-danger">
+                        <h4>N'oubliez pas l'attribut name</h4>
+                        <p>L'attribut <code>name</code> d'une balise <code>&lt;input&gt;</code> définit le nom de
+                            <strong>la variable</strong> qui contiendra la valeur saisie.</p>
+                        <h4>Il est essentiel dans le formulaire.</h4>
+                        <p>L'attribut <code>name</code> est une propriété qui se retrouve dans tous les éléments HTL que
+                            constituent un formulaire.</p>
+                    </div>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="c">⋮</span>
+<span class="nt">&lt;label </span><span class="na">for=</span><span class="s">"inputLogin"</span><span
+                                class="nt">&gt;</span>Entrez votre login :<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"text"</span><span
+                                class="na"> name=</span><span class="s">"login"</span><span class="na"> id=</span><span
+                                class="s">"inputLogin"</span><span class="na"> required</span><span
+                                class="nt">&gt;</span>
+
+<span class="nt">&lt;label </span><span class="na">for=</span><span class="s">"inputMdp"</span><span
+                                class="nt">&gt;</span>Entrez votre mot de passe :<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"password"</span><span
+                                class="na"> name=</span><span class="s">"password"</span><span
+                                class="na"> id=</span><span
+                                class="s">"inputMdp"</span><span class="na"> required</span><span class="nt">&gt;</span>
+<span class="c">⋮</span></code></pre>
+                    </figure>
+                    <p>Lorsque l'utilisateur soumet un formulaire, la ressource identifiée par l'attribut
+                        <code>action</code> de la balise <code>&lt;form&gt;</code> reçoit les données du formulaire et
+                        peut
+                        les traiter.</p>
+                    <p>Si le formulaire est soumis avec la méthode <code>POST</code>, les données envoyées via un
+                        formulaire
+                        sont ajoutées dans le corps de la requête HTTP et se retrouvent dans un tableau associatif nommé
+                        <code>$_POST</code> défini automatiquement par PHP.</p>
+                    <ul>
+                        <li>Les clés de ce tableau sont les noms des champs du formulaire (attributs <code>name</code>
+                            des
+                            balises <code>&lt;input&gt;</code> du formulaire).
+                        </li>
+                        <li>Les valeurs associées aux clés sont les données saisies par l'utilisateur dans chaque champ.
+                        </li>
+                    </ul>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="c">⋮</span>
+$login = <span class="s">$_POST</span>["login"];
+$mdp = <span class="s">$_POST</span>["password"]
+<span class="c">⋮</span></code></pre>
+                    </figure>
+                    <p>La variable peut aussi être un tableau, ce qui est d'ailleurs plus utile pour la traiter. Le
+                        tableau est mon_champ dans l'exemple suivant :</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="c">// ...</span>
+<span class="nt">&lt;label </span><span class="na">for=</span><span class="s">"inputLogin"</span><span
+                                class="nt">&gt;</span>Entrez votre login :<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"text"</span><span
+                                class="na"> name=</span><span class="s">"mon_champ[login]"</span><span
+                                class="na"> id=</span><span class="s">"inputLogin"</span><span
+                                class="na"> required</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;label </span><span class="na">for=</span><span class="s">"inputMdp"</span><span
+                                class="nt">&gt;</span>Entrez votre mot de passe :<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"password"</span><span
+                                class="na"> name=</span><span class="s">"mon_champ[password]"</span><span
+                                class="na"> id=</span><span class="s">"inputMdp"</span><span
+                                class="na"> required</span><span class="nt">&gt;</span>
+<span class="c">// ...</span></code></pre>
+                    </figure>
+                    <p>Dans ce cas, La récupération des valeurs se fera par l'intermédiaire d'un tableau à double
+                        entrée.</p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">
+<span class="c">//Autre exemple récupération des zones de saisie dans une variable tableau </span>
+$login = <span class="s">$_REQUEST</span>['mon_champ']['login'];
+$mdp = <span class="s">$_REQUEST</span>['mon_champ']['password']
+<span class="c">⋮</span></code></pre>
+                    </figure>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Le tableau $_REQUEST</h4>
+                        <p>Pour récupérer les valeurs envoyées par le formulaire, il n'est pas nécessaire de specifier
+                            la même méthode que celle d'envoie, c'est-à-dire <code>POST</code> ou <code>GET</code>.
+                            <br> Le tableau associatif <code>$_REQUEST</code> récupérera les valeurs qu'elles soit
+                            envoyées par les méthodes <code>POST</code> ou <code>GET</code>. </p>
+                    </div>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Débogage avec var_dump</h4>
+                        <p>A des fins de débogage, on peut afficher le contenu de <code>$_POST</code> en ajoutant une
+                            instruction <code>var_dump($_POST)</code>.</p>
+                    </div>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4>L'auto appel</h4>
+                        <p>Rien n'empêche une page PHP intégrant un formulaire d'être définie comme cible de ce
+                            formulaire
+                            par l'attribut <code>action</code>
+                            (on parle parfois de <em>page ré-entrante</em>). Dans ce cas, cette page doit être capable
+                            aussi
+                            bien d'afficher le formulaire que de traiter ses données. On fait la distinction en testant
+                            le
+                            contenu de la variable
+                            <code>$_POST</code>, le plus souvent en début de page.</p>
+                        <p><strong>Attention</strong> : cette methode ne fait partie des bonnes pratiques, nous verrons
+                            avec
+                            le pattern MVC comment la contourner.</p>
+
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                                class="s">if</span>(<span class="s">isset</span>(<span class="s">$_POST</span>['login'] &amp;&amp; <span
+                                class="s">isset</span>(<span class="s">$_POST</span>['password']) {
+<span class="c">// Le formulaire a été soumis : récupération des informations </span>
+    $login = <span class="s">$_POST</span>["login"];
+    $mdp = <span class="s">$_POST</span>["password"]
+    <span class="c">⋮</span>
+<span class="s">else</span> {
+    <span class="c">// Le formulaire n'a pas été soumis </span>
+    <span class="c">⋮ </span>
+}
+<span class="c">// Code commun aux deux situations </span>
+<span class="c">⋮ </span></code></pre>
+                        </figure>
+                    </div>
+                </article>
+                <h3 id="transmissionFormChk">2 - Récupération à partir d'un <code>checkbox</code></h3>
+                <article>
+                    <p>Pour faire saisir une donnée n'ayant que deux valeurs possibles, on utilise une balise
+                        <code>&lt;input
+                            type="checkbox" ...&gt;</code>. L'attribut <code>checked</code>, s'il est présent,
+                        précise que
+                        la case est cochée par défaut.
+                    </p>
+                    <figure class="highlight">
+                    <pre><code class="language-php" data-lang="php"><span class="nt">&lt;input </span><span class="na">type=</span><span
+                            class="s">"checkbox"</span><span class="na"> name=</span><span
+                            class="s">"familier"</span><span class="na"> checked </span></span><span
+                            class="nt">&gt;</span>
+<span class="nt">&lt;input </span><span class="na">type=</span><span
+                                class="s">"checkbox"</span><span class="na"> name=</span><span
+                                class="s">"litteraire"</span><span
+                                class="nt">&gt;</span></code></pre>
+                    </figure>
+                    <p>Lors de la récupération des données du formulaire, on vérifie l'état de la case (cochée ou non) à
+                        l'aide de la fonction <code>isset</code>.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">if</span>(<span class="s">isset</span>(<span class="s">$_POST</span>['familier']) {
+    <span class="c">// La case est cochée </span>
+<span class="s">else</span> {
+    <span class="c">// La case est décochée </span>
+}</code></pre>
+                    </figure>
+                </article>
+                <h3 id="transmissionFormRadio">3 - Récupération à partir d'un <code>radio</code></h3>
+                <article>
+
+                    <p>Pour faire saisir un choix parmi plusieurs, on utilise des balises <code>&lt;input
+                        type="radio"
+                        ...&gt;</code> ayant la même valeur pour l'attribut <code>name</code>. On crée ainsi une
+                        série
+                        de boutons radios dont seul l'un pourra être sélectionné par l'utilisateur.
+                    </p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="nt">&lt;input </span><span class="na">type=</span><span
+                            class="s">"radio"</span><span
+                            class="na"> name=</span><span class="s">"civilite"</span><span
+                            class="na"> value=</span><span
+                            class="s">"1"</span><span class="na"> checked </span><span
+                            class="nt">&gt;</span>Mademoiselle<span class="nt">&lt;</span>br<span class="nt">&gt;</span>
+<span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"radio"</span><span
+                                class="na"> name=</span><span class="s">"civilite"</span><span
+                                class="na"> value=</span><span
+                                class="s">"2"</span><span class="nt">&gt;</span>Madame<span
+                                class="nt">&lt;</span>br<span
+                                class="nt">&gt;</span>
+<span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"radio"</span><span
+                                class="na"> name=</span><span class="s">"civilite"</span><span
+                                class="na"> value=</span><span
+                                class="s">"3"</span><span class="nt">&gt;</span>Monsieur<span
+                                class="nt">&lt;</span>br<span
+                                class="nt">&gt;</span></code></pre>
+                    </figure>
+                    <p>Lors de la récupération des données du formulaire, on examine la valeur du champ. Cette valeur
+                        correspond à l'attribut <code>value</code> du bouton sélectionné.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$message = 'Bonjour, ';
+<span class="s">switch</span> (<span class="s">$_POST</span>['civilite']) {
+    <span class="s">case</span> 1:
+        $message = $message . ' Mademoiselle.';
+        <span class="s">break</span>;
+    <span class="s">case</span> 2:
+        $message = $message . ' Madame.';
+        <span class="s">break</span>;
+    <span class="s">case</span> 3:
+        $message = $message . ' Monsieur.';
+        <span class="s">break</span>;</code></pre>
+                    </figure>
+                </article>
+                <h3 id="transmissionFormSelect">4 - Récupération à partir d'un <code>select</code></h3>
+                <article>
+                    <p>Une autre possibilité pour faire saisir un choix parmi plusieurs est de définir une liste
+                        déroulante grâce à une balise <code>&lt;select&gt;</code>. A l'intérieur de cette balise, on
+                        ajoute des choix possibles grâce à la balise <code>&lt;option&gt;</code>. L'attribut
+                        <code>size</code> de la balise <code>&lt;select&gt;</code> définit le nombre d'éléments
+                        affichés
+                        par la liste. L'élément sélectionné par défaut est indiqué par l'attribut
+                        <code>selected</code>.
+                    </p>
+
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="nt">&lt;select </span><span class="na">name=</span><span
+                            class="s">"catpro"</span><span
+                            class="na"> size=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;option </span><span class="na">value=</span><span class="s">"CP1"</span><span
+                                class="na"> selected</span><span class="nt">&gt;</span>Étudiant<span
+                                class="nt">&lt;</span>/option<span
+                                class="nt">&gt;</span>
+<span class="nt">&lt;option </span><span class="na">value=</span><span class="s">"CP2"</span><span
+                                class="nt">&gt;</span>Salarié<span class="nt">&lt;</span>/option<span
+                                class="nt">&gt;</span>
+<span class="nt">&lt;option </span><span class="na">value=</span><span class="s">"CP3"</span><span
+                                class="nt">&gt;</span>Cadre<span class="nt">&lt;</span>/option<span
+                                class="nt">&gt;</span>
+<span class="nt">&lt;/select&gt;</span></code></pre>
+                    </figure>
+                    <p>Lors de la récupération des données du formulaire, on examine la valeur du champ pour trouver
+                        l'élément qui a été sélectionné. Cette valeur correspond à l'attribut <code>value</code> de
+                        l'élément choisi.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$codecat = <span
+                            class="s">$_POST</span>["catpro"];
+<span class="s">if</span>($codecat == "CP1") $categorie = "Étudiant";
+<span class="s">elseif</span>($codecat == "CP2") $categorie = "Salarié";
+<span class="s">elseif</span>($codecat == "CP3") $categorie = "Cadre";</code></pre>
+                    </figure>
+                </article>
+                <h3 id="transmissionFormFile">5 - Envoi de fichiers avec <code>file</code></h3>
+                <article>
+                    <p>Les formulaires permettent également d'envoyer des fichiers. Pour faire choisir un fichier, on
+                        utilise une balise <code>&lt;input type="file" ... &gt;</code>. Il faut également ajouter
+                        l'attribut
+                        <code>enctype="multipart/form-data"</code> à la balise <code>&lt;form&gt;</code>.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="nt">&lt;form </span><span class="na">enctype=</span><span
+                            class="s">"multipart/form-data"</span><span class="na"> action=</span><span class="s">"login.php"</span><span
+                            class="na"> method=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+    <span class="c">...</span>
+    <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"file"</span><span
+                                class="na"> name=</span><span class="s">"image"</span><span class="nt">&gt;</span>
+    <span class="c">...</span>
+<span class="nt">&lt;/form&gt;</span></code></pre>
+                    </figure>
+                    <p>On retrouve les informations sur les fichiers envoyés dans un tableau associatif nommé
+                        <code>$_FILES</code>. Chaque fichier envoyé correspond à un élément de ce tableau, et est
+                        lui-même
+                        un tableau associatif contenant les informations sur le fichier : nom, type, taille, etc.</p>
+                    <p>Pour gérer le transfert du fichier vers le serveur, on utilise les fonctions PHP <code>is_uploaded_file</code>,
+                        <code>basename</code> et <code>move_uploaded_file</code>. Par exemple, le code suivant
+                        télécharge
+                        dans le répertoire <code>images/</code> du serveur le fichier choisi avec la balise <code>&lt;input&gt;</code>
+                        nommée <code>image</code>.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php">$tmpFile = <span
+                            class="s">$_FILES </span>['image']['tmp_name'];
+<span class="s">if</span>(<span class="s">is_uploaded_file</span>($tmpFile)) {
+    $image = <span class="s">basename</span>($_FILES['image']['name']);
+    $uploadedFile = "images/$image";
+    <span class="s">move_uploaded_file</span>(<span class="s">$_FILES</span>['image']['tmp_name'], $uploadedFile);
+<span class="nt">}</span></code></pre>
+                    </figure>
+                </article>
+                <h3 id="transmissionFormAidesaisie">6 - Aide à la saisie et validation <code>placeholder</code> et <code>required</code>
+                </h3>
+                <article>
+                    <p>Deux attributs des balises de saisie permettent d'aider l'utilisateur du formulaire dans sa
+                        saisie :</p>
+                    <ul>
+                        <li>
+                            <code>autofocus</code> (booléen) place le curseur de saisie sur le champ au chargement du
+                            formulaire.
+                        </li>
+                        <li>
+                            <code>placeholder</code> définit le contenu par défaut du champ.
+                        </li>
+                    </ul>
+                    <figure class="highlight">
+                    <pre><code class="language-php" data-lang="php"><span class="nt">&lt;input </span><span class="na">type=</span><span
+                            class="s">"email"</span><span class="na"> name=</span><span class="s">"courriel"</span><span
+                            class="na"> placeholder=</span><span class="s">"name@example.com"</span><span class="nt">&gt;</span></code></pre>
+                    </figure>
+                    <p>Il est également possible de rendre un champ obligatoire grâce à l'attribut booléen
+                        <code>required</code>.</p>
+                    <figure class="highlight">
+                    <pre><code class="language-php" data-lang="php"><span class="nt">&lt;input </span><span class="na">type=</span><span
+                            class="s">"email"</span><span class="na"> name=</span><span
+                            class="s">"courriel"</span> <span class="na"> placeholder=</span><span class="s">"name@example.com"</span><span
+                            class="na"> required </span><span class="nt">&gt;</span></code></pre>
+                    </figure>
+                    <p>Malgré tout, la validation finale des valeurs saisies dans un formulaire doit toujours se faire
+                        aussi
+                        côté serveur (par exemple avec PHP) pour des raisons de sécurité.</p>
+
+                </article>
+                <h3 id="transmissionFormTypechamp">7 - Types de champs de saisie (rappel HTML)</h3>
+                <article>
+                    <p>L'attribut <code>type</code> d'une balise <code>&lt;input&gt;</code> permet de préciser le type
+                        de
+                        donnée à saisir.</p>
+                    <p>La norme HTML5 a apporté de nouveaux types de champs comme <code>email</code>,
+                        <code>number</code> ou
+                        <code>date</code>.</p>
+                    <figure class="highlight">
+                    <pre><code class="language-php" data-lang="php"><span class="nt">&lt;input </span><span class="na">type=</span><span
+                            class="s">"email"</span><span class="na"> name=</span><span class="s">"courriel"</span><span
+                            class="nt">&gt;</span></code></pre>
+                    </figure>
+                    <p>Les navigateurs modernes interprètent ce type pour :</p>
+                    <ul>
+                        <li>Améliorer l'expérience utilisateur pendant la saisie (exemple : un calendrier déroulant pour
+                            un
+                            champ de type <code>date</code>).
+                        </li>
+                        <li>Valider la saisie avant envoi de la requête au serveur (exemple : vérification de la
+                            présence
+                            d'un <code>@</code> pour un champ de type <code>email</code>).
+                        </li>
+                    </ul>
+                    <p>Les principales balises sont :</p>
+                    <ul>
+                        <li>Pour faire saisir un texte court (une seule ligne), on utilise une balise <code>&lt;input
+                            type="text" ...&gt;</code>. On peut définir la valeur initiale du champ en ajout l'attribut
+                            <code>value</code>. L'attribut <code>size</code> permet de préciser la taille (nombre de
+                            caractères) du champ de saisie. L'attribut <code>id</code> permet de l'associer à un label,
+                            un
+                            texte de presentation.
+                        </li>
+                    </ul>
+                    <figure class="highlight">
+                    <pre><code class="language-php" data-lang="php"><span class="nt">&lt;input </span><span class="na">type=</span><span
+                            class="s">"text"</span><span class="na"> name=</span><span class="s">"prenom"</span><span
+                            class="na"> value=</span><span class="s">"Baptiste"</span><span class="na"> id=</span><span
+                            class="s">"inputLabel"</span><span class="na"> size=</span><span class="s">20</span><span
+                            class="nt">&gt;</span></code></pre>
+                    </figure>
+                    <ul>
+                        <li>Pour faire saisir un mot de passe, on utilise une balise <code>&lt;input type="password"
+                            ...&gt;</code>. Dans ce cas, le navigateur masque les caractères saisis par l'utilisateur.
+                        </li>
+                    </ul>
+                    <figure class="highlight">
+                    <pre><code class="language-php" data-lang="php"><span class="nt">&lt;input </span><span class="na">type=</span><span
+                            class="s">"password"</span><span class="na"> name=</span><span
+                            class="s">"password"</span><span class="na"> id=</span><span
+                            class="s">"inputMdp"</span><span class="na"> required</span><span
+                            class="nt">&gt;</span></code></pre>
+                    </figure>
+                    <ul>
+                        <li>Pour faire saisir un texte plus long (plusieurs lignes), on utilise une balise <code>&lt;textarea&gt;</code>.
+                            La balise fermante <code>&lt;/textarea&gt;</code> est obligatoire et l'éventuelle valeur
+                            initiale est ajoutée entre les balises ouvrante et fermante. L'attribut <code>rows</code>
+                            est
+                            utilisé pour préciser le nombre le lignes de la zone de saisie.
+                        </li>
+                    </ul>
+                    <figure class="highlight">
+                    <pre><code class="language-php" data-lang="php"><span class="nt">&lt;textarea </span><span
+                            class="na">name=</span><span class="s">"message"</span><span class="na"> rows=</span><span
+                            class="s">"6"</span><span class="nt">&gt;</span><span
+                            class="nt">&lt;/textarea&gt; </span></code></pre>
+                    </figure>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Plus d'information ?</h4>
+                        <p>Vous pouvez consulter la documentation complète de la balise <code>&lt;input&gt;</code> sur
+                            <a
+                                    target="_blank" href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input">cette
+                                page</a>.</p>
+                    </div>
+
+                </article>
+            </section>
+        </main>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="../js/popper.min.js"></script>-->
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/docs.min.js"></script>
+</body>
+</html>

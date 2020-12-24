@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>PHP - transmettre des données</title>
+    <script>
+        // window.ga = window.ga || function () {
+        //     (ga.q = ga.q || []).push(arguments)
+        // };
+        // ga.l = +new Date;
+        // ga('create', 'UA-146052-10', 'chchabin.free.fr');
+        // ga('set', 'anonymizeIp', true);
+        // ga('send', 'pageview');
+    </script>
+</head>
+<body>
+<a class="skippy sr-only sr-only-focusable" href="#content">
+    <span class="skippy-text">Skip to main content</span>
+</a>
+<!--        navbar-->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="php01Gintroduction.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--        Menu Gauche-->
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link " href="php01Gintroduction.html">
+                        I - Introduction au développement Web
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#foncweb">
+                                A - Le fonctionnement du Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#protocole-HTTP">
+                                B - Le protocole HTTP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                        II - Les bases du langage
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
+                        III - Programmer avec PHP
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#variables">A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tests">B - Tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableau">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#boucles">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#fonctions"> E - Les fonctions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php041Transmission.html">
+                        IV - Transmettre des données entre des pages
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#superglobale">A - Notion de variable superglobale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionURL">B - Transmission via l'URL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionForm">C - Transmission via un formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionData">D - Transmission de données et sécurité
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionSession">E - Transmission via la session
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        V - Accéder à une base de données
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="php05AccesSGBD_Introduction.html"> A - Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec <code>SELECT</code>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php05AccesSGBD_RqtSimple.html">D - <code>query</code> - Requêtes simples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php05AccesSGBD_RqtParam.html">E - <code>prepare</code> et <code>execute</code> - Requêtes avec paramètres
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec <code>INSERT</code>, <code>UPDATE</code>,
+                                <code>DELETE</code> et <code>exec</code>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!--        Menu droite-->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h3"><a href="#form1">1 - Première formulation</a></li>
+                <li class="toc-entry toc-h2"><a href="#form2">2 - Deuxième formulation</a></li>
+
+            </ul>
+        </div>
+        <!--        Page de cours-->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="content"> V - Accéder à une base de données</h1>
+
+            <h2 id="sgbdRequeteParam">E - <code>prepare</code> et <code>execute</code> - Requêtes avec paramètres
+            </h2>
+            <section>
+                <p>Lorsque la requête SQL à exécuter comporte des paramètres, il faut utiliser une technique
+                    différente.</p>
+                <h3 id="form1">1 - Première formulation</h3>
+                <article>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="c">// ...</span>
+<span class="c">// Préparation de la requête : le ? correspond au paramètre attendu</span>
+$req = $bdd-&gt;<span class="s">prepare</span>("<span class="cp">select</span> * <span
+                                class="cp">from</span> employe <span class="cp">where</span> servempl=?");
+
+<span class="c">// Exécution de la requête en lui passant le tableau des arguments</span>
+<span class="c">// (ici un seul élément : le code du service)</span>
+$req-&gt;<span class="s">execute</span>(<span class="s">$_POST</span>['service']);</code></pre>
+                    </figure>
+                    <p>Ce code source utilise ce qu'on appelle une <strong>requête préparée</strong>. Il s'agit d'une
+                        technique dans laquelle on définit d'abord le squelette de la requête (appel de la méthode
+                        <code>prepare</code>
+                        sur l'objet <code>$bdd</code>) en prévoyant ses différents paramètres, indiqués par des
+                        <code>?</code> dans le code SQL. Ensuite, on exécute la requête préparée (méthode
+                        <code>execute</code> sur l'objet <code>$req</code>). Lors de cet appel, on passe les paramètres
+                        nécessaires sous la forme d'un tableau.</p>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4>Avertissement</h4>
+                        <p>Le tableau des paramètres doit contenir autant d'élément qu'il y a de <code>?</code> dans la
+                            requête préparée. L'ordre doit également être respecté.</p>
+                    </div>
+                    <p>Outre le gain de temps lorsqu'une même requête est exécutée plusieurs fois avec des paramètres
+                        différents, l'utilisation d'une requête préparée évite de construire une requête SQL en y
+                        intégrant
+                        directement des données utilisateur.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="c">// ...</span>
+<span class="c">// DANGEREUX : A EVITER ABSOLUMENT</span>
+$req ="<span class="cp">select</span> * <span class="cp">from</span> employe <span
+                                class="cp">where</span> servempl=" <span class="s">.</span> <span
+                                class="s">$_POST</span>['service'];</code></pre>
+                    </figure>
+                </article>
+                <h3 id="form2">2 - Deuxième formulation</h3>
+                <article>
+                    <p>Dans cette formulation, le nom des variables est explicite, on ne met plus de <code>?</code>.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="c">// ...</span>
+<span class="c">// Préparation de la requête : le ? correspond au paramètre attendu</span>
+$req = $bdd-&gt;<span class="s">prepare</span>("<span class="cp">select</span> * <span
+                                class="cp">from</span> employe <span class="cp">where</span> servempl=<span class="s">:service</span>");
+
+<span class="c">// Passage des arguments</span>
+$req->bindParam(':service', <span class="s">$_POST</span>['service'], PDO::PARAM_STR);
+
+<span class="c">// PDO::PARAM_STR signifie que :service est de type string</span>
+
+<span class="c">// Exécution de la requête</span>
+$req-&gt;<span class="s">execute</span>();</code></pre>
+                    </figure>
+                    <p>La technique ci-dessus rend la base vulnérable aux attaques de type "injection SQL". L'injection
+                        SQL
+                        consiste à faire exécuter des requêtes SQL imprévues par le SGBDR, ce qui peut conduire à de
+                        graves
+                        problèmes de sécurité.</p>
+                    <p>
+                        <img src="images/acces-bd/sql_injection.png" alt=""/>
+                    </p>
+                    <p>Ce risque de sécurité n'existe pas lorsqu'on utilise des requêtes préparées,</p>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Note</h4>
+                        <p>Ici, pas besoin de "nettoyer" la variable <code>$_POST['service']</code> reçue du formulaire
+                            comme nous l'avions fait dans le chapitre précédent. L'appel à <code>htmlspecialchars</code>
+                            désactive l'exécution de code JavaScript mais ne présente aucun intérêt dans le cas de
+                            données
+                            utilisées dans des requêtes SQL.</p>
+                    </div>
+                </article>
+            </section>
+
+        </main>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="../js/popper.min.js"></script>-->
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/docs.min.js"></script>
+</body>
+</html>

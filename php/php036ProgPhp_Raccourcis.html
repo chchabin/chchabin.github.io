@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>PHP - Programmer avec PHP</title>
+    <script>
+        /*       window.ga = window.ga || function () {
+                   (ga.q = ga.q || []).push(arguments)
+               };
+               ga.l = +new Date;
+               ga('create', 'UA-146052-10', 'chchabin.free.fr');
+               ga('set', 'anonymizeIp', true);
+               ga('send', 'pageview');*/
+    </script>
+</head>
+<body>
+<a class="skippy sr-only sr-only-focusable" href="#content">
+    <span class="skippy-text">Skip to main content</span>
+</a>
+<!--        navbar-->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="php01Gintroduction.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--        Menu Gauche-->
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link " href="php01Gintroduction.html">
+                        I - Introduction au développement Web
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#foncweb">
+                                A - Le fonctionnement du Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#protocole-HTTP">
+                                B - Le protocole HTTP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                        II - Les bases du langage
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="php031ProgPhp_Variables.htm">
+                        III - Programmer avec PHP
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="php031ProgPhp_Variables.html">A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php032ProgPhp_Tests.html">B - Tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php034ProgPhp_Boucles.html">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php041Transmission.html">
+                        IV - Transmettre des données entre des pages
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#superglobale">A - Notion de variable superglobale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionURL">B - Transmission via l'URL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionForm">C - Transmission via un formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionData">D - Transmission de données et sécurité
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionSession">E - Transmission via la session
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        V - Accéder à une base de données
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#sgbdIntro"> A - Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdConect">B - Connexion à la base de données
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+
+        </div>
+        <!--        Menu droite-->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#operateurincr">1 - Les opérateurs d'incrémentation et décrémentation</a></li>
+                <li class="toc-entry toc-h2"><a href="#operateurscomb">2 - Les opérateurs d'affectation combiné</a></li>
+                <li class="toc-entry toc-h2"><a href="#ternaire">3 - L'opérateur ternaireé</a></li>
+                <li class="toc-entry toc-h2"><a href="#fusionNull">4 - L'opérateur de fusion Null</a></li>
+                <li class="toc-entry toc-h2"><a href="#codeabrege">5 - Le code abrégé</a></li>
+                <li class="toc-entry toc-h2"><a href="#syntxalter">6 - Les syntaxes alternatives</a></li>
+            </ul>
+        </div>
+        <!--        Page de cours-->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="content">III - Programmer avec PHP</h1>
+            <p>L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec le
+                langage PHP.</p>
+            <h2 id="fonctions"> F - Les raccourcis utiles</h2>
+            <section>
+                <p>Dans cette parties sont rassemblés tous les raccourcis que l'on peut utiliser pour la programmation,
+                    mais aussi pour la cohabitation avec les balises HTML, en particulier, dans le codage des vues</p>
+                <h3 id="operateurincr">1 - Les opérateurs d'incrémentation et décrémentation</h3>
+                <article>
+                    <p>Ces opérateurs ont déjà été vus dans le chapitre consacré aux variables, ici nous rappelons
+                        leur grande utilité.</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Exemple</th>
+                            <th>Nom</th>
+                            <th>Résultat</th>
+                        </tr>
+                        </thead>
+
+                        <tbody class="tbody">
+                        <tr>
+                            <td>++$x</td>
+                            <td>Pre-incrémente</td>
+                            <td>
+                                Incrémente $x de 1, puis retourne $x.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>$x++</td>
+                            <td>Post-incrémente</td>
+                            <td>Retourne $x, puis incrémente $x de 1.</td>
+                        </tr>
+
+                        <tr>
+                            <td>--$x</td>
+                            <td>Pré-décrémente</td>
+                            <td>
+                                Décrémente $x de 1, puis retourne
+                                $x.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>$x--</td>
+                            <td>Post-décrémente</td>
+                            <td>
+                                Retourne $x, puis décrémente
+                                $x de 1.
+                            </td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+                </article>
+                <h3 id="operateurscomb">2 - Les opérateurs d'affectation combiné</h3>
+                <article>
+                    <p>Ces opérateurs ont déjà été vus dans le chapitre consacré aux variables, ici nous rappelons
+                        leur grande utilité.</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Opérateur</th>
+                            <th>Description</th>
+                            <th>Exemple</th>
+                            <th>Equivalence</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>+=</td>
+                            <td>Addition puis affectation</td>
+                            <td>$x += $y</td>
+                            <td>$x = $x + $y</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>Soustraction puis affectation</td>
+                            <td>$x -= $y</td>
+                            <td>$x = $x – $y</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>Multiplication puis affectation</td>
+                            <td>$x *= $y</td>
+                            <td>$x = $x * $y</td>
+                        </tr>
+                        <tr>
+                            <td>**=</td>
+                            <td>Puissance puis affectation</td>
+                            <td>$x**=2</td>
+                            <td>$x=($x)²</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>Division puis affectation</td>
+                            <td>$x /= $y</td>
+                            <td>$x = $x / $y</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>Modulo puis affectation</td>
+                            <td>$x %= $y</td>
+                            <td>$x = $x % $y</td>
+                        </tr>
+                        <tr>
+                            <td>.=</td>
+                            <td>Concaténation puis affectation</td>
+                            <td>$x .= $y</td>
+                            <td>$x = $x . $y</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <h3 id="ternaire">3 - L'opérateur ternaire</h3>
+                <article>
+                    <p>La syntaxe est la suivante :</p>
+                    <figure class="highlight">
+                        <pre><code class="language-php" data-lang="php">$action = ($a &gt; $b) <span class="s">?</span> -1 <span
+                                class="s">:</span> 1;</code></pre>
+                    </figure>
+                    <p>La syntaxe ici semble étrange si vous ne l'avez pas rencontrée auparavant.
+                        Vous savez réellement ce qui se passe ici, mais vous ne l'avez pas vu exprimé de cette manière.
+                        Le code ici est une instruction if abrégée (ou ternaire) , et son exécution est identique à
+                        celle-ci: </p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">if</span>($a &gt; $b) {
+    <span class="na">return</span> -1;
+<span class="s">else</span> {
+    <span class="na">return</span> 1;
+}
+<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Définition</h4>
+                        <p>L'expression <code>(expr1) ? (expr2) : (expr3)</code> est évaluée à expr2 si expr1 est
+                            évaluée à TRUE, et expr3 si expr1 est évaluée à FALSE.
+                            <br>Il est possible d'<strong>omettre</strong> la partie centrale de l'opérateur ternaire.
+                            L'expression
+                            <code>expr1 ?: expr3</code> retourne expr1 si expr1 vaut TRUE, et expr3 sinon.</p>
+                    </div>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4>Empilage</h4>
+                        <p>Il est recommandé de ne pas "empiler" les expressions ternaires. Le comportement de PHP lors
+                            de l'utilisation de plus d'un opérateur ternaire dans une seule instruction n'est pas
+                            évident comparé à d'autres langages. En effet, antérieur à PHP 8.0.0, les expressions
+                            ternaires étaient évaluées de gauche à droite, au lieu de droite à gauche comme la plupart
+                            des autres langages de programmation.</p>
+                    </div>
+                </article>
+                <h3 id="fusionNull">4 - L'opérateur de fusion Null</h3>
+                <article>
+                    <p>La syntaxe est la suivante :</p>
+                    <figure class="highlight">
+                        <pre><code class="language-php" data-lang="php">$action = $a <span class="s">??</span> 'Cette variable n'est pas instanciée';</code></pre>
+                    </figure>
+                    <p>C'est une fonctionnalité intéressante introduite dans PHP 7. C'est un nom très déroutant, mais ce
+                        n'est en fait qu'un raccourci pour cela:</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">if</span>(isset($a)) {
+    <span class="na">return</span> $a;
+<span class="s">else</span> {
+    <span class="na">return</span> 'Cette variable n'est pas instanciée';
+}
+<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Sur le côté gauche de l' opérateur ?? se trouve la variable en cours de vérification, et sur la
+                        droite se trouve la sortie qui est utilisée si elle n'est pas définie. Dans le cas ci-dessus, si
+                        la variable <code>$a</code> est définie, il affichera le contenu de la variable. Si la variable
+                        n'est pas définie, affichera <code>variable not set</code> et, mieux encore, elle fonctionnera
+                        également avec des tableaux. </p>
+
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Définition</h4>
+                        <p>'expression <code>(expr1) ?? (expr2)</code> retourne expr2 si expr1 est <strong>NULL</strong>,
+                            et expr1 dans les autres cas.
+                            En particulier, cet opérateur n'émet pas de notice si la partie gauche n'existe pas,
+                            exactement
+                            comme <code>isset()</code>. Ceci est particulièrement utile pour les clés des tableaux..</p>
+                    </div>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Empilage</h4>
+                        <p>L'opérateur de fusion null permet une imbrication simple</p>
+                        <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                                class="s">&lt;?php</span>
+$foo = null;
+$bar = null;
+$baz = 1;
+$qux = 2;
+<span class="s">echo </span>$foo <span class="s">??</span> $bar <span class="s">??</span> $baz <span class="s">??</span> $qux; <span
+                                    class="c">// sortie 1</span></code></pre>
+                        </figure>
+                    </div>
+                </article>
+                <h3 id="codeabrege">5 - Le code abrégé</h3>
+                <article>
+                    <p>Le mixte balise HTML, code PHP peut être confus à lire. PHP propose des raccourcis
+                        intéressants.</p>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Utilisation de code abrégé</h4>
+                        <p>Dans les versions de PHP antérieures à la version 5.4, cette notation abrégée nécessitait
+                            l'activation d'un paramètre PHP assez rare, elle était donc déconseillée pour des raisons de
+                            compatibilité. L'utilisation de la notation abrégée peut avoir entraîné l'arrêt de votre
+                            code lors du passage d'un serveur sur lequel il était activé à un autre qui ne le faisait
+                            pas.
+                            <br> À partir de PHP 5.4 (donc n'importe quelle version que vous allez rencontrer de façon
+                            réaliste ces jours-ci), l'<code>echo</code> abrégé fonctionne quels que soient les
+                            paramètres PHP, vous pouvez donc l'utiliser en toute sécurité sans craindre qu'il ne
+                            fonctionne sur tous les serveurs.
+                        </p>
+
+                    </div>
+                    <p>Un autre outil intéressant proposé par PHP est un moyen abrégé d'appeler la commande -
+                        <code>echo</code> qui,
+                        est fréquemment utilisée. Nos déclarations echo ressemblent à
+                        ceci: </p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">echo </span>$variable;<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Au lieu de cela, vous pouvez utiliser ceci:</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?= </span>$variable;<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Cela fait exactement la même chose. <code>&lt;?=</code> signifie <code>echo</code> et vous donne
+                        un moyen légèrement plus court d'imprimer les variables.</p>
+                    <div class="bd-callout bd-callout-danger">
+                        <h4>Les limites de l'abrégé d'echo</h4>
+                        <p> Il y a cependant une limitation à cela:
+                            si vous
+                            utilisez <code>&lt;?=</code> , vous pouvez seulement afficher; vous ne pouvez pas inclure d'
+                            instructions <code>if</code>if , d' instructions <code>for</code>, etc., bien que vous
+                            puissiez utiliser la concaténation,
+                            et elle peut être suivie d'un appel de fonction.
+                        </p>
+                    </div>
+
+                </article>
+                <h3 id="syntxalter">6 - Les syntaxes alternatives</h3>
+                <article>
+                    <p>Le mixte balise HTML, code PHP peut être confus à lire. PHP propose des raccourcis
+                        intéressants.</p>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Syntaxe alternative</h4>
+                        <p>PHP propose une autre manière de rassembler des instructions à l'intérieur d'un bloc, pour
+                            les fonctions de contrôle <code>if</code>, <code>while</code>, <code>for</code>, <code>foreach</code>
+                            et <code>switch</code>. Dans chaque cas, le principe
+                            est de remplacer l'accolade d'ouverture par deux points (<code>:</code>) et l'accolade de
+                            fermeture par,
+                            respectivement, <code>endif;</code>, <code>endwhile;</code>, <code>endfor;</code>, <code>endforeach;</code>,
+                            ou <code>endswitch;</code>.
+                        </p>
+                    </div>
+                    <p>Il est courant d'utiliser une boucle <code>foreach</code> dans un modèle PHP pour afficher tour à
+                        tour chaque élément d'un tableau. Voici à quoi cela pourrait ressembler pour un tableau <code>$tab</code>
+                        :
+                    </p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">foreach</span>($tab <span class="s">as</span> $uneLigne ) {<span class="s">?&gt;</span>
+    ⋮ <span class="na">HTML</span>  <span class="c">code pour traiter chaque ligne</span>
+<span class="s">&lt;?php</span> } <span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Avec ce mélange de code PHP pour décrire la boucle <code>foreach</code> et de code HTML pour
+                        l'afficher, le
+                        code semble plutôt désordonné. Pour cette raison, il est courant d'utiliser une autre manière
+                        d'écrire la boucle lorsqu'elle est utilisée dans une vue</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">foreach</span>($tab <span class="s">as</span> $uneLigne ):<span class="s">?&gt;</span>
+    ⋮ <span class="na">HTML</span>  <span class="c">code pour traiter chaque ligne</span>
+<span class="s">&lt;?php</span> <span class="s">endforeach</span>;<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Les deux morceaux de code sont fonctionnellement identiques, mais ce dernier semble plus
+                        convivial lorsqu'il est mélangé avec du code HTML.
+                        <br>Nous aurions la même chose avec l'utilisation d'un <code>if</code> ou d'un
+                        <code>while</code> ou tout autre instruction concernée.
+                    </p>
+                </article>
+            </section>
+        </main>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="../js/popper.min.js"></script>-->
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/docs.min.js"></script>
+</body>
+</html>

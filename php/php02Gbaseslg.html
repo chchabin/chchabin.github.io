@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>PHP - bases du langage</title>
+    <script>
+/*        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-146052-10', 'chchabin.free.fr');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');*/
+    </script>
+</head>
+<body>
+<a class="skippy sr-only sr-only-focusable" href="#content">
+    <span class="skippy-text">Skip to main content</span>
+</a>
+<!--        navbar-->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="php01Gintroduction.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--        Menu Gauche-->
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link " href="php01Gintroduction.html">
+                        I - Introduction au développement Web
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#foncweb">
+                                A - Le fonctionnement du Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#protocole-HTTP">
+                                B - Le protocole HTTP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                        II - Les bases du langage
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
+                        III - Programmer avec PHP
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#variables">A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tests">B - Tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableau">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#boucles">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#fonctions"> E - Les fonctions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php041Transmission.html">
+                        IV - Transmettre des données entre des pages
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#superglobale">A - Notion de variable superglobale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionURL">B - Transmission via l'URL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionForm">C - Transmission via un formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionData">D - Transmission de données et sécurité
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionSession">E - Transmission via la session
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        V - Accéder à une base de données
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#sgbdIntro"> A - Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdConect">B - Connexion à la base de données
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!--        Menu droite-->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#anatomieFich">A - Anatomie d'un fichier source PHP</a></li>
+                <li class="toc-entry toc-h2"><a href="#defCode">B - Définition d'un bloc de code PHP</a></li>
+                <li class="toc-entry toc-h2"><a href="#affText">C - Affichage de texte</a></li>
+                <li class="toc-entry toc-h2"><a href="#quotes">D - Choisir les quotes</a></li>
+                <li class="toc-entry toc-h2"><a href="#comm">E - Commentaires</a>
+                <li class="toc-entry toc-h2"><a href="#include">F - <code>include</code> : Inclure des portions de page</a>
+                <li class="toc-entry toc-h2"><a href="#server">G - Configuration du serveur Web</a>
+                <li class="toc-entry toc-h2"><a href="#securep">H - Sécurisation avec les répertoire</a>
+                <li class="toc-entry toc-h2"><a href="#chemin">I - Je cherche mon chemin</a>
+                <li class="toc-entry toc-h2"><a href="#define">J - <code>define</code> et les constantes</a>
+            </ul>
+        </div>
+        <!--        Page de cours-->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="content">  II - Les bases du langage</h1>
+            <p class="bd-lead">L'objectif de ce chapitre est de découvrir les bases du langage PHP.</p>
+            <h2 id="anatomieFich">  A - Anatomie d'un fichier source PHP</h2>
+            <section>
+            <p>Le code PHP est écrit dans des fichiers source portant l'extension <code>.php</code>. Le plus souvent, un fichier source PHP contient un mélange de balises HTML et de code PHP. Au moment où un client demande ce fichier à un serveur Web, le code PHP est exécuté par le serveur pour produire dynamiquement une page Web.</p>
+            <p>
+                <img src="images/bases-langage/web_php_htmlcss.png" alt="" />
+            </p>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Attention</h4>
+                <p>Un fichier contenant du code PHP mais portant l'extension <code>.html</code> sera renvoyé directement par le serveur sans exécution du code PHP qu'il contient.</p>
+            </div>
+                <p>Il est fortement conseillé d'adopter le standard HTML5 ainsi que le jeu de caractères Unicode UTF-8 (sans BOM). Tous les fichiers source doivent être encodés avec ce jeu de caractères pour que les caractères accentués soient affichés correctement, et la structure HTML doit être identique à celle ci-dessous.</p>
+            <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
+    <span class="c">   ...</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">    ...</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+            <div class="bd-callout bd-callout-warning">
+               <h4>Mise en évidence de la syntaxe</h4>
+                <p>L'utilisation d'un éditeur avec coloration syntaxique permet de voir rapidement si quelque chose est une chaîne ou un code. Les chaînes seront affichées dans une couleur différente du code à traiter</p>
+
+            </div>
+            </section>
+            <h2 id="defCode">B - Définition d'un bloc de code PHP</h2>
+            <section>
+            <p>Dans un fichier source PHP, on définit une portion de code PHP grâce aux balises <code>&lt;?php</code> et <code>?&gt;</code>.
+                Il est possible de définir plusieurs blocs de code dans un même fichier source PHP.
+                A l'intérieur d'un bloc de code, on peut utiliser les fonctionnalités du langage.
+                Considérons le petit script suivant, que nous appellerons essai.php</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Ma première page PHP<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Affichons du texte avec PHP...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Ce titre est écrit directement en HTML<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Celui-ci contient une partie <span class="s">&lt;?php echo</span>'générée avec PHP';<span class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo</span>'Celui-là est entièrement généré avec PHP'<span class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+            <p>En l'exécutant, nous obtiendrons le résultat suivant :</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php">Affichons du texte avec PHP...
+Ce titre est écrit directement en HTML
+Celui-ci contient une partie générée avec PHP
+Celui-là est entièrement généré avec PHP
+</code></pre></figure>
+            <p>Les fichiers php peuvent ne contenir que du code php.
+                Considérons le petit script suivant, que nous appellerons essaiBis.php (notez la casse Camel !)</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
+<span class="s">echo</span>'Ce titre est écrit directement générée avec PHP';
+<span class="s">echo</span>'Celui-là est entièrement généré avec PHP';</code></pre></figure>
+            <p>En l'exécutant, nous obtiendrons le résultat suivant :</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php">Ce titre est écrit directement générée avec PHP
+Celui-là est entièrement généré avec PHP</code></pre></figure>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Attention</h4>
+                <p>Lorsque la balise php entour une seule ligne de code il n'est pas nécessaire de mettre un <code>;</code> à la fin de la ligne</p>
+                <p>Par contre, quand les lignes de code se suivent, il est nécessaire de terminer chaque lignes par un <code>;</code></p>
+            </div>
+            <div class="bd-callout bd-callout-info">
+                <h4>Fin de fichier</h4>
+                <p>Vous avez peut-être remarqué que le fichier ne se termine pas par un
+                    <code>?&gt;</code> pour correspondre à l'ouverture <code>&lt;?php</code> . Vous pouvez le mettre si vous le souhaitez vraiment, mais ce n'est pas nécessaire. Si un fichier PHP se termine par du code PHP, il n'est pas nécessaire d'indiquer où ce code se termine ; la fin du fichier le fait pour vous. Les grands cerveaux du monde PHP préfèrent généralement le laisser à la fin de fichiers comme celui-ci qui ne contiennent que du code PHP
+                </p>
+            </div>
+            </section>
+            <h2 id="affText">C - Affichage de texte</h2>
+            <section>
+            <p>L'affichage de texte s'effectue grâce à la commande <code>echo</code>.</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php echo</span>'Bonjour Monde !';<span class="s">?&gt;</span></code></pre></figure>
+
+            <p>On peut inclure des balises HTML dans le texte affiché par <code>echo</code>, ou bien inclure l'appel à <code>echo</code> dans des balises HTML. Ainsi, les deux appels suivants produisent exactement le même résultat.</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php echo</span>'<span class="nt">&lt;p&gt;</span>Bonjour Monde !<span class="nt">&lt;/p&gt;</span>';<span class="s">?&gt;</span>
+<span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo</span>'Bonjour Monde !';<span class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span></code></pre></figure>
+            <div class="bd-callout bd-callout-info">
+                <h4>Conseil</h4>
+            <p>Sauf cas particulier, on utilisera plutôt la seconde technique, qui préserve mieux la structure HTML de la page.</p>
+            </div>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Note</h4>
+                <p>Il existe une syntaxe plus concise pour afficher du texte. Le code PHP <code>&lt;?= 'Hello' ?&gt;</code> équivaut à <code>&lt;?php echo 'Hello'; ?&gt;</code>.</p>
+                </div>
+            </section>
+            <h2 id="quotes">D - Choisir les quotes</h2>
+            <section>
+            <p>
+                PHP prend en charge les simples quotes <code>'</code> et les doubles quotes <code>"</code> pour encapsuler les chaînes.
+                Dans la plupart des cas, ils sont interchangeables.
+                Les développeurs PHP ont tendance à privilégier les guillemets simples,
+                car nous traitons beaucoup de code HTML, qui a tendance à contenir beaucoup de guillemets doubles. Par exemple:</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">echo</span> '<span class="nt">&lt;a</span> href="http://www.sitepoint.com">Click here<span class="nt">&lt;/a&gt;</span>';</code></pre></figure>
+            <p>  Si des guillemets doubles étaient utilisés ici, nous aurions besoin de dire à PHP que le guillemet après href=  n'est pas la fin de la chaîne en plaçant un <code>\</code> devant lui (connu sous le nom de <code>caractère d'échappement</code> ) et de faire de même avec les guillemets que nous voulons réellement envoyer le navigateur dans le framework du HTML:</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">echo</span> "<span class="nt">&lt;a</span> href=<span class="s">\</span>"http://www.sitepoint.com<span class="s">\</span>">Click here<span class="nt">&lt;/a&gt;</span>";</code></pre></figure>
+            <p>  Pour cette raison, les développeurs PHP utilisent des guillemets simples, bien qu'il existe des différences entre les deux guillemets. Pour nos besoins, ils sont effectivement interchangeables.
+            </p>
+            <p>Vous verrez souvent qu'<code>echo</code> est codé avec des parenthèses entourant le nom du fichier,
+                comme s'il s'agissait d'une fonction include comme date ou, htmlspecialchars ce qui est loin d'être le cas.
+                les parenthèses, lorsqu'elles sont utilisées, ne servent qu'à compliquer l'expression du nom de fichier,
+                et sont donc à éviter.</p>
+            </section>
+            <h2 id="comm">E - Commentaires</h2>
+            <section>
+            <p>Les commentaires vous permettent de décrire ce que fait votre code. Ils insèrent un texte explicatif dans votre code - texte que l'interpréteur PHP les ignorera. A l'intérieur d'un bloc de code PHP, on peut ajouter des commentaires avec les symboles communs à de nombreux langages de programmation : </p>
+               <ul>
+                   <li><code>//</code> pour un commentaire sur une seule ligne;</li>
+                   <li><code>/* ... */</code> pour un commentaire sur plusieurs lignes.</li>
+               </ul>
+            <p>A l'extérieur d'un bloc PHP, on utilise la syntaxe HTML <code>&lt;!-- ... --&gt;</code> pour ajouter des commentaires.</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nt">&lt;h1&gt;</span>Affichons du texte avec PHP...<span class="nt">&lt;/h1&gt;</span>
+<span class="c">&lt;!-- un commentaire HTML --&gt;</span>
+<span class="c">...</span>
+<span class="nt">&lt;h3&gt;</span><span class="s">&lt;?php echo</span>'Celui-là est entièrement généré avec PHP'<span class="s">?&gt;</span><span class="nt">&lt;/h3&gt;</span>
+<span class="c">// un commentaire PHP ?&gt;</span></code></pre></figure>
+            </section>
+            <h2 id="include">F - Inclure des portions de page</h2>
+            <section>
+            <p>Les fichiers d'inclusion (également connus sous le nom d'includes)
+                contiennent des extraits de code PHP que vous pouvez charger dans vos autres scripts PHP au lieu d'avoir
+                à les retaper.
+                Un fichier PHP peut inclure le contenu d'un autre fichier grâce à l'instruction <code>include</code>.
+                </p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>include 'monfichier.php';<span class="s">?&gt;</span></code></pre></figure>
+            <p>Au moment de l'exécution, cette instruction sera remplacée par le contenu du fichier inclus.</p>
+            <p>Cette technique permet de centraliser le code des éléments communs à plusieurs fichiers PHP, comme par exemple des menus ou des pieds de page, pour éviter la duplication de code.</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Une page PHP modulaire<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h3&gt;</span><span class="s">&lt;?php </span>include 'header.php';<span class="s">?&gt;</span><span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;h3&gt;</span><span class="s">&lt;?php </span>include 'menu.php';<span class="s">?&gt;</span><span class="nt">&lt;/h3&gt;</span>
+    <span class="c">&lt;!-- ... (contenu spécifique) --&gt;</span>
+    <span class="nt">&lt;h3&gt;</span><span class="s">&lt;?php </span>include 'footer.php';<span class="s">?&gt;</span><span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+            <p>Vous verrez souvent qu'<code>include</code> est codé avec des parenthèses entourant le nom du fichier,
+                comme s'il s'agissait d'une fonction include comme date ou, htmlspecialchars ce qui est loin d'être le cas.
+                les parenthèses, lorsqu'elles sont utilisées, ne servent qu'à compliquer l'expression du nom de fichier,
+                et sont donc à éviter.
+                Vous pouvez considérer l'instruction include comme une sorte de copier-coller .
+                Vous obtiendrez le même résultat en ouvrant un fichier PHP, en copiant le contenu et en le collant,
+                en écrasant la ligne include.</p>
+            <div class="bd-callout bd-callout-info">
+            <h4>Les types d'inclusions</h4>
+            <p>L' instruction include que nous avons présenté jusqu'à présent n'est en fait qu'une des quatre instructions qui peuvent être utilisées pour inclure un autre fichier PHP dans un script en cours d'exécution:</p>
+            <ul>
+                <li>include</li>
+                <li>require</li>
+                <li>include_once</li>
+                <li>require_once</li>
+            </ul>
+            </div>
+            <p>La seule différence entre eux est ce qui se passe lorsque le fichier spécifié ne peut pas être inclus
+                (c'est-à-dire s'il n'existe pas ou si le serveur Web n'a pas la permission de le lire).
+                Avec <code>include</code>, un avertissement s'affiche et le script continue de s'exécuter.
+                Avec <code>require</code>, une erreur s'affiche et le script s'arrête.
+                (Dans les environnements de production, les avertissements et les erreurs sont généralement désactivés dans
+                <code>php.ini</code>. Dans de tels environnements, un échec d’<code>include</code> n'a aucun effet visible
+                (mis à part le manque de contenu qui aurait normalement été généré par l'inclusion fichier),
+                tandis qu'un échec de <code>require</code> entraîne l'arrêt de la page au point d'échec.
+                Lorsqu'un échec de <code>require</code> survient avant qu'un contenu ne soit envoyé au navigateur,
+                l'utilisateur malchanceux ne verra rien d'autre qu'une page vierge!)</p>
+            <p>En général, vous devez utiliser <code>require</code> chaque fois que votre application ne fonctionnerait
+                tout simplement pas sans le chargement du code requis.<span class="swatch-dark">
+                Cependant, je recommande d'utiliser <code>include</code> autant que possible.</span>
+                Même si le fichier de votre site ne peut pas se charger, par exemple, vous souhaiterez peut-être laisser le script
+                de votre page d'accueil continuer à se charger. Aucun contenu de la base de données ne s'affichera,
+                mais l'utilisateur pourra peut-être utiliser le lien Contactez-nous en bas de la page pour vous informer du problème!
+            </p>
+            <p><code>include_once</code> et <code>require_once</code> fonctionnent exactement comme <code>include</code> et
+                <code>require</code>, respectivement - mais si le fichier spécifié a déjà été inclus au moins une fois pour
+                la demande de page en cours (en utilisant l'une des quatre instructions décrites ici),
+                l'instruction sera ignorée. C'est pratique pour inclure des fichiers qui exécutent une tâche qui ne doit
+                être effectuée qu'une seule fois, comme la connexion à la base de données. </p>
+            <p><code>include_once</code> et <code>require_once</code> sont également utiles pour charger des bibliothèques de fonctions.
+            </p>
+            </section>
+            <h2 id="server">G - Configuration du serveur Web</h2>
+            <section>
+            <p>Les serveurs Web peuvent avoir différentes configurations et spécifier un fichier différent comme index de répertoire. Cependant, sur la plupart des serveurs Web <code>index.php</code> fonctionnera sans autre configuration.</p>
+            </section>
+            <h2 id="securep">H - Sécurisation avec les répertoires</h2>
+            <section>
+            <div class="bd-callout bd-callout-danger">
+                <h4>Problèmes de sécurité</h4>
+            <p>Il vaut mieux ne pas laisser les gens exécuter, via l'URL, le code d'une manière dont vous ne vous attendez pas.
+             En fonction de ce que fait la page, cela peut leur permettre de contourner les contrôles de sécurité
+             que vous avez en place et d'afficher le contenu auquel ils ne devraient pas avoir accès.</p>
+            </div>
+            <p>Par exemple, considérez le code suivant:</p>
+            <figure class="highlight"><pre><code class="language-php" data-lang="php">
+  <span class="nt">if</span><span class="c">(</span>$_POST<span class="c">[</span>'password'<span class="c">]</span> == 'secret'<span class="c">)</span> <span class="c">{</span>
+     <span class="nt">include</span> 'protected.html.php';
+    <span class="c">}</span></code></pre></figure>
+            <p>En regardant ce code, il semble que vous deviez soumettre un formulaire et taper secret   dans la zone de mot de passe pour voir le contenu protégé dans protected.html.php  . Cependant, si quelqu'un peut accéder directement à protected.html.php   et voir le contenu de la page, cela rend le contrôle de sécurité redondant. Il existe d'autres problèmes de sécurité potentiels introduits en rendant tous vos fichiers accessibles via une URL. Éviter de tels problèmes de sécurité est facile. Vous pouvez en fait inclure des fichiers d'un répertoire autre que le répertoire public.  </p>
+            <p>À partir de maintenant, nous n'écrirons les fichiers que dans le répertoire public auquel nous voulons que les utilisateurs puissent accéder directement à partir de leur navigateur Web. Le répertoire public contiendra tous les scripts PHP auxquels l'utilisateur doit accéder directement, ainsi que les images, les fichiers JavaScript et CSS requis par le navigateur.
+                Tous les fichiers référencés uniquement par une instruction include seront placés en dehors du répertoire public afin que les utilisateurs ne puissent pas y accéder directement.  </p>
+            </section>
+            <h2 id="chemin">I - Je cherche mon chemin</h2>
+            <section>
+            <div class="bd-callout bd-callout-info">
+                <h4>Le chemin absolu</h4>
+                <p>Un chemin, dans le jargon du net, est une adresse d'une ressource. (La ressource étant un document, une image, une musique ... bref un fichier en général, ou encore un dossier).
+
+                    Par exemple, sous linux, pour désigner un fichier nommé "inscrits.php" dans un dossier "Documents", lui-même contenu dans le dossier "home" :
+                </p>
+                <ul>
+                    <li>Sous Linux/MacOs, on notera : home/Documents/inscrits.php</li>
+                    <li>Sous Windows : C:\home\Documents\inscrits.php.</li>
+                </ul>
+            </div>
+            <p>Le début de chaine est le lecteur (C: sous Windows, mais cela n'existe pas sous Linux/MacOS) puis le (ou les) dossier(s) - ici il y en a 2 - puis le nom du fichier pour finir.
+            </p>
+            <p>N.B. : le caractère séparateur des noms de dossiers et des fichiers est le "slash" (symbole division) sous Linux ou MacOS : <code>/</code>. Sous Windows, c'est l'anti-slash (barre oblique inverse) : <code>\</code>.</p>
+            <div class="bd-callout bd-callout-info">
+                <h4>Le chemin relatif</h4>
+                <p>C'est une méthode interne au site qui permet de se rendre d'une ressource à l'autre en se promenant dans l'arborescence. (L'arborescence est l'ensemble des dossiers contenant des dossiers ou des fichiers). Cette méthode ne dépend pas du nom de domaine, il suffit juste d'indiquer la marche à suivre pour aller d'une origine à une destination. </p>
+                <ul>
+                    <li>inscrits.php : je cherche le fichier dans le repertoire courant</li>
+                    <li>archive/inscrits.php : je cherche le fichier dans le repertoire enfant</li>
+                    <li>../inscrits.php : je cherche le fichier dans le repertoire parent</li>
+                </ul>
+            </div>
+            <p>Bien que cette méthode fonctionne, elle n'est pas souhaitable car elle lie le code de votre site à la configuration de votre serveur Web. Idéalement, vous devriez être en mesure de déposer votre site Web basé sur PHP sur n'importe quel serveur Web compatible PHP et de le regarder fonctionner. Ceci est particulièrement important car de nombreux développeurs vont créer un site sur un serveur, puis le déployer publiquement sur un autre serveur. Cela n'est pas pratique si votre code fait référence à des lecteurs et des répertoires spécifiques à un serveur particulier. Même si vous n'avez le luxe de travailler sur un seul serveur, vous serez vous - même coups de pied si vous avez besoin de déplacer votre site vers un autre lecteur / répertoire sur ce serveur.</p>
+            <p>Une meilleure méthode consiste à utiliser un chemin relatif . Autrement dit, l'emplacement d'un fichier par rapport au fichier actuel. </p>
+            <p>Mais il y a un problème potentiel lorsque vous incluez des fichiers de cette manière. Les chemins relatifs sont relatifs au script qui a été exécuté, pas à chaque fichier.
+            Le répertoire de travail courant est défini au début du script et s'applique à toutes les instructions <code>include</code>, quel que soit le fichier dans lequel elles se trouvent. Pour rendre les choses encore plus confuses, il est possible de changer le répertoire de travail courant. </p>
+            <div class="bd-callout bd-callout-info">
+                <h4>L'utilisation des constantes PHP</h4>
+                <p>Pour surmonter cela, nous devons en fait utiliser des chemins relatifs. Heureusement, PHP fournit une constante appelée __DIR__ (c'est-à-dire deux traits de soulignement, avant et après le mot DIR ) qui contiendra toujours le chemin contenant le fichier courant. De plus la variable dirname correspondra à <code>../</code>. </p>
+                 <ul>
+                    <li>__DIR__.'inscrits.php' : je cherche le fichier dans le repertoire courant</li>
+                    <li>__DIR__.'archive/inscrits.php' : je cherche le fichier dans le repertoire enfant</li>
+                    <li>dirname(__DIR__).'inscrits.php' : je cherche le fichier dans le repertoire parent</li>
+                </ul>
+            </div>
+            <p>Cette approche fonctionnera sur n'importe quel serveur, car __DIR__ différera selon l'emplacement de stockage du fichier et ne dépendra pas du répertoire de travail actuel changeant </p>
+            <ul>
+                <li>Sous Linux/MacOs : __DIR__.'inscrits.php' == home/Documents/inscrits.php</li>
+                <li>Sous Windows : __DIR__.'inscrits.php' == C:\home\Documents\inscrits.php</li>
+            </ul>
+            </section>
+            <h2 id="define">J - <code>define</code> et les constantes</h2>
+            <section>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Conventions avec les constantes</h4>
+                    <p>Par convention, les constantes sont écrites en majuscules, les mots séparés par des traits de soulignement (underscore).
+                       Cette convention est presque universel dans tous les langages de programmation.</p>
+                </div>
+                <p>Exemple de noms de constante</p>
+                <ul>
+                    <li>LISTE_CATEGORIES</li>
+                    <li>EDITE_CATEGORIES </li>
+                </ul>
+                <p>Comme le conseille les bonnes pratiques de sécurité, votre fichier <code>index.php</code> devrait se trouver
+                    dans le répertoire Public, qui est un sous répertoire de la racine de votre site.
+                <br>Il devient fastidieux, d'écrire à chaque fois <code>dirname(__DIR__))</code>,
+                    PHP nous laisse la possibilité de créer nos propres constantes avec l'instruction <code>define</code>.
+                </p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>define</h4>
+                    <p>Il est possible de définir avec define() des constantes avec des noms réservés ou même invalide, où leur valeur peuvent (seulement) être récupérée.</p>
+                </div>
+                <p>Ainsi, nous pouvons définir une constante <code>ROOT</code> qui nous évitera de saisir à chaque fois la fonction <code>dirname(__DIR__))</code>.
+                    Cette instruction aura la forme suivante :
+                </p>
+                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
+<span class="s">define</span>('ROOT', dirname(__DIR__));
+                    </code></pre></figure>
+                <p>Nous pourrons l'utiliser facilement avec une instruction <code>include</code> :</p>
+                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
+<span class="s">include</span> ROOT.'monfichier.php';
+                    </code></pre></figure>
+                <p>Le "<code>.</code>" est un opérateur de concaténation : il assemble 2 chaines string.
+                    Nous voyons cet opérateur plus précisément dans la partie - Programmer avec PHP</p>
+            </section>
+        </main>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="../js/popper.min.js"></script>-->
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/docs.min.js"></script>
+</body>
+</html>

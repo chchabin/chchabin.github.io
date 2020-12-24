@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>PHP - Programmer avec PHP</title>
+    <script>
+        /*       window.ga = window.ga || function () {
+                   (ga.q = ga.q || []).push(arguments)
+               };
+               ga.l = +new Date;
+               ga('create', 'UA-146052-10', 'chchabin.free.fr');
+               ga('set', 'anonymizeIp', true);
+               ga('send', 'pageview');*/
+    </script>
+</head>
+<body>
+<a class="skippy sr-only sr-only-focusable" href="#content">
+    <span class="skippy-text">Skip to main content</span>
+</a>
+<!--        navbar-->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="php01Gintroduction.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--        Menu Gauche-->
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link " href="php01Gintroduction.html">
+                        I - Introduction au développement Web
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#foncweb">
+                                A - Le fonctionnement du Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#protocole-HTTP">
+                                B - Le protocole HTTP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                        II - Les bases du langage
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="php031ProgPhp_Variables.htm">
+                        III - Programmer avec PHP
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="php031ProgPhp_Variables.html">A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php032ProgPhp_Tests.html">B - Tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php034ProgPhp_Boucles.html">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php041Transmission.html">
+                        IV - Transmettre des données entre des pages
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#superglobale">A - Notion de variable superglobale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionURL">B - Transmission via l'URL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionForm">C - Transmission via un formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionData">D - Transmission de données et sécurité
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#transmissionSession">E - Transmission via la session
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        V - Accéder à une base de données
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#sgbdIntro"> A - Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdConect">B - Connexion à la base de données
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+
+        </div>
+        <!--        Menu droite-->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#testsIf">1 - L'instruction <code>if</code></a></li>
+                <li class="toc-entry toc-h2"><a href="#testsCondition">2 - La notion de condition</a></li>
+                <li class="toc-entry toc-h2"><a href="#testsOperateur">3 - Les opérateurs logiques</a></li>
+                <li class="toc-entry toc-h2"><a href="#testsSwitch">4 - L'instruction <code>switch</code></a></li>
+            </ul>
+        </div>
+        <!--        Page de cours-->
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="content">III - Programmer avec PHP</h1>
+            <p>L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec le
+                langage PHP.</p>
+            <h2 id="tests">B - Tests et conditions</h2>
+            <section>
+                <h3 id="testsIf">1 - L'instruction <code>if</code></h3>
+                <article>
+                    <p>Dans un programme, on souhaite fréquemment agir en fonction du résultat d'une condition. Les
+                        traitements à effectuer peuvent être différents selon que la condition soit vraie ou fausse. En
+                        PHP, une alternative s'exprime grâce à l'instruction <code>if</code> éventuellement associée à
+                        une instruction <code>else</code>,. Elle permet de conditionner des traitements en fonction de
+                        certains critères. On parle parfois de branchement logique. Pendant l'exécution, les
+                        instructions exécutées seront différentes selon la valeur de la condition. Un seul des deux
+                        blocs d'instructions sera pris en compte.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">if</span>($nb1 &gt; $nb2) {
+    <span class="c">// sera exécuté si $nb1 &gt; $nb2 </span>
+<span class="s">else</span> {
+    <span class="c">// sera exécuté si $nb1 &lt;= $nb2 </span>
+}
+<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Il est possible de placer une instruction <code>if</code> à l'intérieur d'un bloc d'une autre
+                        instruction <code>if</code>. C'est ce qu'on appelle <strong>imbriquer des conditions</strong>.
+                        Attention à toujours bien refléter l'imbrication des blocs en décalant les instructions
+                        associées dans le code source : c'est ce qu'on appelle <strong>l'indentation</strong>.</p>
+                    <p>Si la seule opération réalisée dans un bloc <code>else</code> est un <code>if</code>, on peut
+                        également employer l'instruction <code>elseif</code>, plus concise.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">if</span>($nb1 &gt; $nb2) {
+    <span class="c">// sera exécuté si $nb1 &gt; $nb2 </span>
+<span class="s">elseif</span> ($nb2 &gt; $nb1) {
+    <span class="c">// sera exécuté si  $nb1 &lt; $nb2 </span>
+}
+<span class="s">else</span> {
+    <span class="c">// sera exécuté si $nb1 = $nb2 </span>
+}
+<span class="s">?&gt;</span></code></pre>
+                    </figure>
+
+                    <p>Une autre syntaxe possible de l'instruction if est la suivante :</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">if</span>($nb1 &gt; $nb2) <span class="s">:</span>
+    <span class="c">// sera exécuté si $nb1 &gt; $nb2 </span>
+<span class="s">elseif</span> ($nb2 &gt; $nb1) <span class="s">:</span>
+    <span class="c">// sera exécuté si  $nb1 &lt; $nb2 </span>
+<span class="s">else</span> <span class="s">:</span>
+    <span class="c">// sera exécuté si $nb1 = $nb2 </span>
+<span class="s">endif</span>;
+<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Cette syntaxe, que l'on retrouve dans le code source de certains CMS, peut être pratique pour
+                        repérer plus facilement la fin des conditions (<code>endif;</code> au lieu de <code>}</code> )
+                        lorsque le code PHP englobe de grandes portions de code HTML.</p>
+                </article>
+                <h3 id="testsCondition">2 - La notion de condition</h3>
+                <article>
+                    <p>L'instruction <code>if</code> est associée à une condition. C'est une expression (une combinaison
+                        de variables, de valeurs et d'opérateurs) dont l'évaluation donne la valeur vraie
+                        (<code>true</code>) ou la valeur faux (<code>false</code>). On parle d'expression booléenne.</p>
+                    <p>Toute expression renvoyant une valeur booléenne peut être utilisée comme condition avec un <code>if</code>.
+                        C'est le cas des expressions utilisant des opérateurs de comparaison, dont voici la liste.</p>
+                    <table class="table">
+                        <tr>
+                            <th>Opérateur</th>
+                            <th>Signification</th>
+                        </tr>
+                        <tr>
+                            <td>==</td>
+                            <td>Egal à</td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>Différent de</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;</td>
+                            <td>Inférieur strictement</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;=</td>
+                            <td>Inférieur ou égal</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;</td>
+                            <td>Supérieur strictement</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;=</td>
+                            <td>Supérieur ou égal</td>
+                        </tr>
+                        <tr>
+                            <td>===</td>
+                            <td>Egal à et de même type</td>
+                        </tr>
+                        <tr>
+                            <td>!==</td>
+                            <td>true si Différent de ou pas de même type</td>
+                        </tr>
+                    </table>
+                    <div class="bd-callout bd-callout-danger">
+                        <h4>Attention</h4>
+                        <p>La plupart des langages de programmation utilisent le symbole <code>=</code> pour symboliser
+                            l'affectation, et le symbole <code>==</code> pour l'égalité. Attention aux confusions avec
+                            le sens mathématique de l'opérateur <code>=</code>.</p>
+                    </div>
+                    <div class="bd-callout bd-callout-danger">
+                        <h4>== : Utilisez le double-égal</h4>
+                        <p>N'oubliez pas de taper le double-égal (<code>==</code>). Une erreur courante parmi les
+                            programmeurs PHP débutants est de taper une condition comme celle-ci avec un seul signe
+                            égal: </p>
+                        <figure class="highlight">
+                            <pre><code class="language-php" data-lang="php"><span class="s">if</span>($roll = 6)  <span
+                                    class="c">// Missing equals sign!</span></code></pre>
+                        </figure>
+                        <p>Cette condition utilise l'opérateur d'affectation (<code>=</code>) au lieu de l'opérateur
+                            égal (<code>==</code>). Par conséquent, au lieu de comparer la valeur de $roll au nombre 6,
+                            il définira en fait la valeur de $roll à 6. </p>
+                        <p>Pour aggraver les choses, l' instruction if utilisera cette opération d'affectation comme une
+                            condition qu'elle considérera comme vraie, de sorte que le code conditionnel dans
+                            l'instruction if sera toujours exécuté, quelle que soit la valeur d'origine de $roll</p>
+                    </div>
+                </article>
+                <h3 id="testsOperateur">3 - Les opérateurs logiques</h3>
+                <article>
+                    <p>On peut définir des conditions plus complexes ("La valeur de X est entre 100 et 200") grâce aux
+                        opérateurs logiques. Ceux du langage PHP sont les suivants : </p>
+                    <ul>
+                        <li><code>&amp;&amp;</code> (Et),</li>
+                        <li><code>||</code> (Ou),</li>
+                        <li><code>!</code> (Non),</li>
+                        <li>il existe aussi <code>and</code> et <code>or</code>.</li>
+                    </ul>
+
+                    <p>Si <code>and</code> est utilisé avec <code>&amp;&amp;</code>, <code>&amp;&amp;</code> sera
+                        prioritaire. De même que <code>||</code> sera prioritaire sur <code>or</code>.
+                        Il existe aussi l'opérateur <code>xor</code> correspondant au Ou exclusif, c'est-à-dire qu'il
+                        vérifie qu'une des deux conditions qu'il sépare est vraie, mais pas les deux à la fois.</p>
+                </article>
+                <h3 id="testsSwitch">4 - L'instruction <code>switch</code></h3>
+                <article>
+                    <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc d'instructions parmi plusieurs
+                        possibles. Seul le bloc correspondant à la valeur testée sera pris en compte.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                            class="s">&lt;?php</span>
+<span class="s">switch</span> ($nombre) {
+    <span class="s">case</span> 1:
+        <span class="c">...</span>
+        <span class="s">break</span>;<span class="c"> // break force la sortie du switch</span>
+    <span class="s">case</span> 2:
+        <span class="c">...</span>
+        <span class="s">break</span>;
+    <span class="s">case</span> 3:
+        <span class="c">...</span>
+        <span class="s">break</span>;
+    <span class="s">default</span>:
+        <span class="c">...</span>
+        <span class="s">break</span>;
+<span class="s">?&gt;</span></code></pre>
+                    </figure>
+                    <p>Il n'y a pas de limite au nombre de cas possibles. Le mot-clé <code>default</code>, à placer en
+                        fin de switch, est optionnel. Il sert souvent à gérer les cas d'erreurs.</p>
+                    <p>Les instructions <code>break;</code> dans les blocs <code>case</code> sont indispensables pour
+                        éviter de passer d'un bloc à un autre.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="../js/popper.min.js"></script>-->
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/docs.min.js"></script>
+</body>
+</html>

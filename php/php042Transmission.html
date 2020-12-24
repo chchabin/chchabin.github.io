@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
+    <link href="../dist/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <title>PHP - transmettre des données</title>
+    <script>
+        /*        window.ga = window.ga || function () {
+                    (ga.q = ga.q || []).push(arguments)
+                };
+                ga.l = +new Date;
+                ga('create', 'UA-146052-10', 'chchabin.free.fr');
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview');*/
+    </script>
+</head>
+<body>
+<a class="skippy sr-only sr-only-focusable" href="#content">
+    <span class="skippy-text">Skip to main content</span>
+</a>
+<!--        navbar-->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item">
+                <a class="nav-link " href="php01Gintroduction.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html"
+                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <!--        Menu Gauche-->
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link " href="php01Gintroduction.html">
+                        I - Introduction au développement Web
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#foncweb">
+                                A - Le fonctionnement du Web
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#protocole-HTTP">
+                                B - Le protocole HTTP
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item ">
+                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                        II - Les bases du langage
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
+                        III - Programmer avec PHP
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#variables">A - Les variables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tests">B - Tests et conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tableau">C - Les tableaux
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#boucles">D - Les boucles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#fonctions"> E - Les fonctions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item active">
+                    <a class="bd-toc-link" href="php041Transmission.html">
+                        IV - Transmettre des données entre des pages
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="php041Transmission.html">A - Notion de variable superglobale
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php042Transmission.html">B - Notion de formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php043Transmission.html">C - <code>$_GET</code> et la transmission via l'URL
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php044Transmission.html">D - <code>$_POST</code> et la transmission via un formulaire
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php045Transmission.html">E - <code>$_SESSION</code> et la transmission via la session
+                            </a>
+                        </li>
+                        <li>
+                            <a href="php046Transmission.html">F - <code>htmlspecialchars</code> et la transmission de données
+                                et sécurité
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        V - Accéder à une base de données
+                    </a>
+
+                    <ul class="nav bd-sidenav">
+                        <li>
+                            <a href="#sgbdIntro"> A - Introduction
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdConect">B - Connexion à la base de données
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--        Menu droite-->
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h3"><a href="#transmissionFormCreat">1 - Création d'un formulaire</a></li>
+                <li class="toc-entry toc-h2"><a href="#transmissionChoixMethod">2 - GET ou POST </a></li>
+            </ul>
+        </div>
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            <h1 class="bd-title" id="content">IV - Transmettre des données entre des pages</h1>
+            <p class="bd-lead">L'objectif de ce chapitre est de connaître les différents moyens de faire passer des
+                informations d'une page PHP à l'autre, ce qui est un besoin fréquent lorsqu'on crée un site Web.</p>
+            <h2 id="formulaire">B - Notion de formulaire</h2>
+            <section>
+                <h3 id="transmissionFormCreat">1 - Création d'un formulaire</h3>
+                <article>
+
+                    <p>On ajoute un formulaire à une page Web grâce à la balise HTML <code>&lt;form&gt;</code>.</p>
+                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
+  <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Mon premier formulaire<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;form </span><span class="na">action=</span><span class="s">"login.php"</span><span class="na"> method=</span><span
+                                class="s">"post"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label </span><span class="na">for=</span><span class="s">"inputLogin"</span><span
+                                class="nt">&gt;</span>Entrez votre login :<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"text"</span><span class="na"> name=</span><span
+                                class="s">"login"</span><span class="na"> id=</span><span
+                                class="s">"inputLogin"</span><span
+                                class="na"> required</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;label </span><span class="na">for=</span><span class="s">"inputMdp"</span><span class="nt">&gt;</span>Entrez votre mot de passe :<span
+                                class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"password"</span><span
+                                class="na"> name=</span><span class="s">"password"</span><span
+                                class="na"> id=</span><span
+                                class="s">"inputMdp"</span><span class="na"> required</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;input </span><span class="na">type=</span><span class="s">"submit"</span><span class="na"> value=</span><span
+                                class="s">"Envoyer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre>
+                    </figure>
+                    <p>La balise HTML <code>&lt;form&gt;</code> possède deux attributs importants :</p>
+                    <ul>
+                        <li>
+                            <code>action</code> permet de définir l'URL cible qui traitera les informations soumises par
+                            le
+                            formulaire, lorsque l'utilisateur le validera en cliquant sur le bouton de type
+                            <code>submit</code> (ici "Envoyer").
+                        </li>
+                        <li>
+                            <code>method</code> permet de définir le type de requête HTTP utilisée pour envoyer les
+                            données à l'URL d'action. Ici, ce sera une requête <code>POST</code>, le cas le plus
+                            fréquent avec
+                            les formulaires, mais il est possible d'avoir une requête <code>GET</code>.
+                        </li>
+                    </ul>
+                    <p>A l'affichage nous obtiendrons :</p>
+                    <img class="highlight" src="images/transmettre-donnees/formulaire.png" alt=""/>
+                    <p>Sans css la mise en forme est un peu brute.</p>
+                </article>
+                <h3 id="transmissionChoixMethod">2 - GET ou POST ?</h3>
+                <article>
+                    <p>En règle générale, vous ne devez utiliser les formulaires <code>GET</code> quand rien ne change
+                        sur le serveur lorsque le formulaire est soumis : par exemple, lorsque vous demandez une liste
+                        de
+                        résultats de recherche.
+                        <br>Étant donné que les termes de recherche se trouvent dans l'URL, l'utilisateur peut
+                        ajouter la page de résultats de recherche à ses favoris et y revenir sans avoir à saisir à
+                        nouveau le terme de recherche.</p>
+                    <p>
+                        Mais si, après avoir soumis le formulaire, un fichier est supprimé, ou une base de données est
+                        mise à jour, ou encore un enregistrement est inséré, vous devez utiliser <code>POST</code>.
+                        <br>La raison principale en est que si un utilisateur marque la page
+                        (ou appuie sur back sur son navigateur), il ne déclenchera pas à nouveau la soumission du
+                        formulaire
+                        et créera potentiellement un enregistrement en double.
+                    </p>
+
+                </article>
+            </section>
+        </main>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
+<!--<script src="../js/popper.min.js"></script>-->
+<!--<script src="../js/bootstrap.min.js"></script>-->
+<script src="../js/docs.min.js"></script>
+</body>
+</html>
