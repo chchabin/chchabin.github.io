@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="../dist/4.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link href="../dist/css/docs.min.css" rel="stylesheet">
-	<link href="../dist/css/docs.perso.td.css" rel="stylesheet">
+	<link href="../dist/4.0/css/docs.min.css" rel="stylesheet">
+	<link href="../dist/4.0/css/docs.perso.td.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism.css">
 	<title>TP02 php</title>
 
@@ -94,7 +94,7 @@
 				</div>
 	<h2 id="tp02prerequis">Prérequis</h2>
 	<ol>
-	<li>Copiez le code suivant dans un fichier appelé TP02Entete.php :</li>
+	<li>Copiez le code suivant dans un fichier appelé TP02Entete.php :
 
 	<figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 //Déclaration de variables
@@ -113,8 +113,8 @@ $menu02 = ["home","services","contacts us","find Us","about us","language"]
 
     &lt;title&gt;&lt;?= basename(__File__) ?&gt;&lt;/title&gt;
 &lt;/head&gt;
-&lt;body&gt;</code></pre></figure>
-	<li>Copiez le code suivant dans un fichier appelé TP02Menu.php :</li>
+&lt;body&gt;</code></pre></figure></li>
+	<li>Copiez le code suivant dans un fichier appelé TP02Menu.php :
 	<figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
 	&lt;ul ="navbar-nav"&gt;
 		&lt;?php
@@ -126,16 +126,16 @@ for ($i= 0; $i &lt; count($lang); $i++) {
 		&lt;/li&gt;
 		&lt;?php     }//fin de la boucle ?&gt;
 		&lt;/ul&gt;
-&lt;/nav&gt;</code></pre></figure>
-		<li>Copiez le code suivant dans un fichier appelé TP02Pied.php :</li>
+&lt;/nav&gt;</code></pre></figure></li>
+		<li>Copiez le code suivant dans un fichier appelé TP02Pied.php :
 		<figure class="highlight"><pre><code class="language-html" data-lang="html">&lt;!-- Optional JavaScript --&gt;
 		&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
 		&lt;script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"&gt;&lt;/script&gt;
 		&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&gt;&lt;/script&gt;
 		&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
 	&lt;/body&gt;
-&lt;/html&gt;</code></pre></figure>
-	<li>Copiez le code suivant dans un fichier que vous allez appeler TP02Form.php :</li>
+&lt;/html&gt;</code></pre></figure></li>
+	<li>Copiez le code suivant dans un fichier que vous allez appeler TP02Form.php :
 			<figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 include'TP02Entete.php';
 include'TP02Menu.php';	<span class="no">?&gt;</span>
@@ -180,8 +180,8 @@ include'TP02Menu.php';	<span class="no">?&gt;</span>
 		&lt;button type="submit" class="btn btn-primary"&gt;<span class="no">&lt;?php</span> echo $form01;<span class="no">?&gt;</span>&lt;/button&gt;
 	&lt;/form&gt;
 &lt;/div&gt;
-&lt;?php 	include'TP02Pied.php';<span class="no">?&gt;</span></code></pre></figure>
-	<li>Copiez le code suivant dans un fichier que vous allez appeler TP02Reponse.php :</li>
+&lt;?php 	include'TP02Pied.php';<span class="no">?&gt;</span></code></pre></figure></li>
+	<li>Copiez le code suivant dans un fichier que vous allez appeler TP02Reponse.php :
 	<figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;!DOCTYPE html&gt;
 &lt;html lang="fr"&gt;
 &lt;head&gt;
@@ -198,7 +198,7 @@ include'TP02Menu.php';	<span class="no">?&gt;</span>
 	&lt;br&gt;&lt;?= $_REQUEST['mon_champ']['inputCp'];? &lt;?= $_REQUEST['mon_champ']['inputVille'];?>
 	&lt;p&gt; &lt;?php echo ($_REQUEST['mon_champ']['gridCheck'])? 'la newsletter sera envoyé tous les mois':'vous n\'êtes pas abonné à la newsletter'; ?>
 &lt;/body&gt;
-&lt;/html&gt;</code></pre></figure>
+&lt;/html&gt;</code></pre></figure></li>
 	</ol>
     <h2 id="tp02Ex1">Exercice 1 - Reformatage des pages php</h2>
     <ol>

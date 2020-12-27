@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/4.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.td.css" rel="stylesheet">
+    <link href="../dist/4.0/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/4.0/css/docs.perso.td.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism.css">
     <title>TP06 Php</title>
 
@@ -97,7 +97,7 @@
         <section id="prerequis">
             <h2>Prérequis</h2>
             <ol>
-            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_index.php:</li>
+            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_index.php:
             <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 session_start();
 require_once 'TP05_m_PDO.php';
@@ -132,8 +132,8 @@ switch($uc)
 $contenu = ob_get_clean();
 $lang =!isset($_SESSION['lang'])?$menu01:$_SESSION['lang'];
 //chargement de la vue par defaut
-require 'TP06_v_gabarit.php';</code></pre></figure>
-            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_c_controleur.php:</li>
+require 'TP06_v_gabarit.php';</code></pre></figure></li>
+            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_c_controleur.php:
             <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 $action = $_REQUEST['action'];
 /**
@@ -190,9 +190,9 @@ switch($action)
             include('TP04_v_404.php');
             break;
         }
-}</code></pre></figure>
+}</code></pre></figure></li>
             <li><b>Quels sont les fichiers qui existent déjà et que vous devez rajouter ?</b></li>
-            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_v_gabarit.php:</li>
+            <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_v_gabarit.php:
             <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
 &lt;head&gt;
@@ -236,8 +236,8 @@ switch($action)
     &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"&gt;&lt;/script&gt;
     &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"&gt;&lt;/script&gt;
 <span class="nt">&lt;/body&gt;</span>
-&lt;/html&gt;</code></pre></figure>
-        <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_m_model.php:</li>
+&lt;/html&gt;</code></pre></figure></li>
+        <li>Copiez le code suivant dans un fichier que vous allez appeler TP06_m_model.php:
         <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 //Déclaration de variables
 $lang = array();
@@ -254,7 +254,7 @@ $menu02 = ["home"=&gt; 'accueil',
     "about us" =&gt; 'nous',
     "language" =&gt; 'lang'];
 $form01 = "Valider";
-$form02 = "Sign in";</code></pre></figure>
+$form02 = "Sign in";</code></pre></figure></li>
             </ol>
             <div class="bd-callout bd-callout-info">
                 <h4>Tests</h4>

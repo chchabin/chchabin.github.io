@@ -3,149 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Les relations entre les classes</title>
 </head>
 <body>
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-    </a>
-
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <div class="collapse navbar-collapse" id="bdNavbar">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
             <li class="nav-item">
                 <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
             </li>
         </ul>
-    </div>
+        </div>
+    </nav>
 </header>
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp01_intro.html">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
                         I - Introduction au développement
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#contentMachine">A - Qu'est ce qu'une machine ?
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contentArt">B - L ’art et la manière de bien programmer
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp02_basesLg.html">
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start" data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
                         II - Les bases du langage
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#source">A - Anatomie d'un fichier source
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#bloc">B - Définition d'un bloc de code
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#affiche">C - Affichage de texte
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#comment">D - Commentaires
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#indentation">E - l'indentation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#nommage">F - Conventions de nommage
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                        III - Programmer avec C#
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="csharp03_programmer-variables.html"> A - Les variables
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp04_programmer_test.html">B - Les tests et conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp05_programmer_tableau.html">C - Les tableaux
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp06_programmer_boucles.html">D - Les boucles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp07_programmer_fonctions.html">E - Les fonctions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                        IV - Programmation objet avec C#
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="csharp08_objet_overview.html">L'approche Objet
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp09_objet_creation.html">Création d'objet en C#
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp11_objet_relations.html">Les relations entre les classes
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h3"><a href="#1">Lecture des diagrammes de classes</a></li>
-                <li class="toc-entry toc-h3"><a href="#2">Dépendances entre les classes</a></li>
-                <li class="toc-entry toc-h3"><a href="#3">Multiplicité</a></li>
-                <li class="toc-entry toc-h3"><a href="#4">Les relations 1,1</a></li>
-                <li class="toc-entry toc-h3"><a href="#5">Les relations 1,n</a></li>
-                <li class="toc-entry toc-h3"><a href="#6">Les listes typées</a></li>
-                <li class="toc-entry toc-h3"><a href="#7">Boucle de parcours d’une liste</a></li>
-            </ul>
-        </div>
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            <h1 class="bd-title" id="base">Les relations entre les classes</h1>
-            <p class="bd-lead">L'objectif de ce chapitre est de présenter les concepts essentiels de la programmation orientée objet.</p>
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
 
-            <article>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start" data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="false">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse" id="csharp03_programmer-variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start" data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="true" aria-current="true">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse show" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active" href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+        <main class="bd-main order-1">
+<!--            Titre-->
+            <div class="bd-intro ps-lg-4">
+                <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                    <h1 class="bd-title" id="base">Les relations entre les classes</h1>
+                </div>
+                <p class="bd-lead">L'objectif de ce chapitre est de présenter les concepts essentiels de la programmation orientée objet.</p>
+                </div>
+            <!--        Menu droite-->
+            <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+                <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+                <nav id="TableOfContents">
+                    <ul>
+                        <li><a href="#1">Lecture des diagrammes de classes</a></li>
+                        <li><a href="#2">Dépendances entre les classes</a></li>
+                        <li><a href="#3">Multiplicité</a></li>
+                        <li><a href="#4">Les relations 1,1</a></li>
+                        <li><a href="#5">Les relations 1,n</a></li>
+                        <li><a href="#6">Les listes typées</a></li>
+                        <li><a href="#7">Boucle de parcours d’une liste</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--            Docs-->
+            <div class="bd-content ps-lg-4">
                 <h2 id="1">Lecture des diagrammes de classes</h2>
+                <article>
                 <cite><a href="https://docs.microsoft.com/fr-fr/visualstudio/modeling/uml-class-diagrams-reference?view=vs-2015">source microsoft</a></cite>
                 <p><img src="img/uml-classovreading.png" alt="resumeUML"></p>
                 <table class="table">
@@ -217,7 +270,7 @@
                     <tr>
                         <td>9</td>
                         <td><strong>Généralisation</strong></td>
-                        <td>Le <em>spécifique</em> classifieur hérite une partie de sa définition à partir de la <em>général</em> classifieur. Le classifieur général se trouve à l'extrémité flèchée du connecteur. Les attributs, associations et opérations sont hérités par le classifieur spécifique.</td>
+                        <td>Le <em>spécifique</em> classifieur hérite une partie de sa définition à partir de la <em>général</em> classifieur. Le classifieur général se trouve à l'extrémité fléchée du connecteur. Les attributs, associations et opérations sont hérités par le classifieur spécifique.</td>
                     </tr>
                     </tbody>
                 </table>
@@ -246,8 +299,10 @@
                <p>Il s'agit d'un nombre entier ou d'un intervalle de valeurs.</p>
                 <table class="table">
                     <thead>
-                    <th>Cardinalié</th>
+                    <tr>
+                    <th>Cardinalité</th>
                     <th>Sens</th>
+                    </tr>
                     </thead>
                     <tbody>
                     <tr>
@@ -301,24 +356,24 @@
                     <p>Une association navigable dans un seul sens est une association unidirectionnelle.</p>
                 </div>
                 <p>Au niveau du code nous avons une référence Patient dans la référence Visite :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Visite</span>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Visite</span>
 {
     <span class="nt">private</span> <span class="cp">Patient</span> patient;
     <span class="c">// ... </span>
-}</code></pre></figure>
+}</code></pre></div>
                 <p>Pour réaliser ce lien (c.a.d. valoriser le champ privé patient dans la classe Visite), deux solutions :</p>
                 <ul>
-                    <li>A la construction d’une visite </li>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public Visite</span>(…,…,…, <span class="cp">Patient</span> p)
+                    <li>A la construction d’une visite
+                    <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public Visite</span>(…,…,…, <span class="cp">Patient</span> p)
 {
     <span class="nt">this</span>.patient = p;
     <span class="c">// ... </span>
-}</code></pre></figure>
-                    <li>Avec un setter après la construction</li>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public void setPatient</span>(<span class="cp">Patient</span> p)
+}</code></pre></div></li>
+                    <li>Avec un setter après la construction
+                    <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public void setPatient</span>(<span class="cp">Patient</span> p)
 {
     <span class="nt">this</span>.patient = p;
-}</code></pre></figure>
+}</code></pre></div></li>
                 </ul>
             </article>
             <article>
@@ -336,31 +391,32 @@
                 <br>L'attribut ajouté dans Medecin doit permettre de stocker un nombre quelconque d'instances de Visite.
                 <br>Deux solutions s'offrent à nous, soit les instances de Visites sont stockées dans un tableau, soit elles e sont dans une liste.</p>
                 <p>Le stockage dans un tableau :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Medecin</span>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Medecin</span>
 {
     <span class="nt">private</span> <span class="cp">Visite</span>[] mesVisites = <span class="nt">new</span> <span class="cp">Visite</span>[100];
     <span class="c">// ... </span>
-}</code></pre></figure>
-                <p>L'inconveniant du stockage dans un tableau c'est qu'il faut connaître à l'avance sa taille ou prévoir des modifications pour l'augmenter en cas de besoin.
-                <br>Voila pourquoi, on préférera la liste typée pour stocker les informations.
+}</code></pre></div>
+                <p>L'inconvénient du stockage dans un tableau c'est qu'il faut connaître à l'avance sa taille ou prévoir des modifications pour l'augmenter en cas de besoin.
+                <br>Voila pourquoi, on préférera la <strong>liste typée</strong> pour stocker les informations.
                 <br>Dans la déclaration, on spécifiera le nom de la classe des objets que contiendra la liste typée.</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Medecin</span>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public class</span> <span class="cp">Medecin</span>
 {
     <span class="c">// Déclaration de la liste typée</span>
     <span class="nt">private</span> <span class="cp">Liste</span>&lt;<span class="cp">Visite</span>&gt; mesVisites;
     <span class="c">// ... </span>
-}</code></pre></figure>
-                <p>L'instanciation peut se faire n'importe où dans la classe, mais il est plus pratique de la faire dans le constructeur.</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public Medecin</span>(...,...,...)
+}</code></pre></div>
+                <p>L'instanciation peut se faire n'importe où dans la classe, mais il est plus pratique de la faire dans le <code>constructeur</code>.</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public Medecin</span>(...,...,...)
 {
     <span class="nt">this</span>.mesVisites = <span class="nt">new</span> <span class="cp">Liste</span>&lt;<span class="cp">Visite</span>&gt;();
     <span class="c">// ... </span>
-}</code></pre></figure>
+}</code></pre></div>
 
             </article>
             <article>
                 <h2 id="6">Les listes typées</h2>
-                <p>La liste typée fournit de nombreux services :</p>
+                <p>La déclaration et l'instanciation des listes typées sont faites dans le paragraphe précédent.
+                 <br>La liste typée fournit de nombreux services :</p>
                 <ul>
                     <li>Retourner le nombre d’éléments : <code>Count</code> </li>
                     <li>Ajout : méthode <code>Add</code></li>
@@ -371,28 +427,31 @@
                     <li>De nombreux autres services ...</li>
                 </ul>
                 <p>Pour ajouter un nouvel élément lorsque celui-ci est déjà construit :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public void ajouterVisite</span>(<span class="cp">Visite</span> v)
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public void ajouterVisite</span>(<span class="cp">Visite</span> v)
 {
     <span class="nt">this</span>.mesVisites.Add(v);
-}</code></pre></figure>
+}</code></pre></div>
                 <p>Pour ajouter un nouvel élément lorsque celui-ci n'est pas construit :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">public void ajouterVisite</span>(...,...,...)
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public void ajouterVisite</span>(...,...,...)
 {
     <span class="cp">Visite</span> v = <span class="nt">new</span> <span class="cp">Visite</span>(...,...,...);
     <span class="nt">this</span>.mesVisites.Add(v);
-}</code></pre></figure>
+}</code></pre></div>
             </article>
             <article>
                 <h2 id="7">Boucle de parcours d’une liste</h2>
                 <p>On peut utiliser une boucle particulière dans le cas où on parcourt tous les éléments :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">foreach</span>(<span class="cp">Visite</span> v <span class="nt">in</span> <span class="nt">this</span>.mesVisites)
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">foreach</span>(<span class="cp">Visite</span> v <span class="nt">in</span> <span class="nt">this</span>.mesVisites)
 {
-     <span class="cp">Console</span>.WriteLine (a.ToString());
-}</code></pre></figure>
+     <span class="cp">Console</span>.WriteLine (v.ToString());
+}</code></pre></div>
+                <p>Ici, la boucle va lire chaque objet de la liste <code>mesVisites</code> et l'inclure dans l'objet <code>v</code>
+                pour en extraire la méthode <code>ToString</code></p>
             </article>
-
+            </div>
         </main>
-    </div>
 </div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

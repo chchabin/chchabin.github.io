@@ -7,7 +7,7 @@ and open the template in the editor.
     <head>
         <title>mon formulaire</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     </head>
     <body>
         <div class="container">

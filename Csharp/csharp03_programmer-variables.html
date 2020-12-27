@@ -3,438 +3,593 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Programmer avec C#</title>
 </head>
 <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <div class="collapse navbar-collapse" id="bdNavbar">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+            <li class="nav-item">
+                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
 
-        </a>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="true" aria-current="true">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse show" id="csharp03_programmer-variables">
 
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav bd-navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="false">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-        </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                <nav class="collapse bd-links" id="bd-docs-nav">
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp01_intro.html">
-                            I - Introduction au développement
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentArt">B - L ’art et la manière de bien programmer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp02_basesLg.html">
-                            II - Les bases du langage
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#source">A - Anatomie d'un fichier source
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#bloc">B - Définition d'un bloc de code
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#affiche">C - Affichage de texte
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#comment">D - Commentaires
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#indentation">E - l'indentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#nommage">F - Conventions de nommage
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item active">
-                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                            III - Programmer avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp03_programmer-variables.html"> A - Les variables
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp06_programmer_boucles.html">D - Les boucles
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                            IV - Programmation objet avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp08_objet_overview.html">L'approche Objet
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp09_objet_creation.html">Création d'objet en C#
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="base">A - Les variables</h1>
             </div>
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                    <li class="toc-entry toc-h3"><a href="#variablesDef">a - Définition d'une variable</a></li>
-                    <li class="toc-entry toc-h3"><a href="#variablesDecla">b - Déclarer et initialiser les variables</a></li>
-                    <li class="toc-entry toc-h3"><a href="#variablesSpe">c - Les caractères spéciaux</a></li>
-                    <li class="toc-entry toc-h3"><a href="#variablesSaisie">d - Saisie de variables</a></li>
-                    <li class="toc-entry toc-h3"><a href="#variablesOpe">e - Opérations sur les nombres</a></li>
-                    <li class="toc-entry toc-h3"><a href="#variablesConcat">f - Concaténation</a></li>
+            <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la
+                programmation avec
+                le langage C#.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#variablesDef">a - Définition d'une variable</a></li>
+                    <li><a href="#variablesDecla">b - Déclarer et initialiser les variables</a></li>
+                    <li><a href="#variablesSpe">c - Les caractères spéciaux</a></li>
+                    <li><a href="#variablesSaisie">d - Saisie de variables</a></li>
+                    <li><a href="#variablesOpe">e - Opérations sur les nombres</a></li>
+                    <li><a href="#variablesConcat">f - Concaténation</a></li>
 
                 </ul>
-            </div>
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-                <h1 class="bd-title" id="base">A - Les variables</h1>
-                    <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
-                        le langage C#.</p>
-                <div class="bd-callout bd-callout-info">
-                    <h4>Info</h4>
-                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
-                </div>
-
-                <h3 id="variablesDef">a - Définition d'une variable</h3>
-                    <p>Une variable joue en C# le même rôle que dans tout autre langage
-                        : stocker une information.</p>
-                    <p>Vous pouvez vous représenter une variable comme étant une boîte
-                        dans laquelle on met quelque chose, c'est-à-dire qu’on écrit
-                        quelque chose, ou dont on « apprend » quelque chose,
-                        c'est-à-dire qu’on lit ce quelque chose</p>
-                    <p>Une variable ne peut contenir qu’une seule chose à la fois. Si
-                        vous mettez une seconde donnée dans une variable, la précédente
-                        est effacée. </p>
-                    <p>Le nom d’une variable est appelé identificateur.</p>
-                    <h5>Les types de variables</h5>
-                    <p>Les types ont souvent une assez grande importance dans un
-                        programme : ils permettent d'éviter un certain nombre de bugs,
-                        en vérifiant qu'on manipule toujours les données de manière
-                        correcte.
-                    </p>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Représente</th>
-                        <th>Plage</th>
-                        <th>Valeur par défaut</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>bool</td>
-                        <td>bololéen</td>
-                        <td>True ou False</td>
-                        <td>False</td>
-                    </tr>
-                    <tr>
-                        <td>byte</td>
-                        <td>8 bits non signés</td>
-                        <td>0 à 255</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>char</td>
-                        <td>16 bits Unicode</td>
-                        <td>U +0000 à U +FFFF</td>
-                        <td>’\0’</td>
-                    </tr>
-                    <tr>
-                        <td>decimal</td>
-                        <td>128 bits</td>
-                        <td>-7.9 x 10<sup>28</sup> à +7.9 x 10<sup>28</sup></td>
-                        <td>0.0M</td>
-                    </tr>
-                    <tr>
-                        <td>double</td>
-                        <td>64 bits</td>
-                        <td>+/- 5 x 10<sup>324</sup> à +1.7*10<sup>308</sup></td>
-                        <td>0.0D</td>
-                    </tr>
-                    <tr>
-                        <td>ﬂoat</td>
-                        <td>32 bits</td>
-                        <td>3.4 x 10<sup>38</sup> à +3.4 x 10<sup>38</sup></td>
-                        <td>0.0F</td>
-                    </tr>
-                    <tr>
-                        <td>int</td>
-                        <td>32 bits signés</td>
-                        <td>2147483648 à +2147483647</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>long</td>
-                        <td>64 bits signés</td>
-                        <td>+/- 9223372036854775808 environ</td>
-                        <td>0L</td>
-                    </tr>
-                    <tr>
-                        <td>sbyte</td>
-                        <td>8 bits signés</td>
-                        <td>-128 à +127 (0x7F)</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>short</td>
-                        <td>16 bits signés</td>
-                        <td>32768 à +32767 (0X7FFF)</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>uint</td>
-                        <td>&nbsp;32 bits non signés</td>
-                        <td>0 à 4294967295 (0xFFFFFFFF)</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>ulong</td>
-                        <td>64 bits non signés</td>
-                        <td>0 à 18446744073709551615</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>ushort</td>
-                        <td>16 bits non singés</td>
-                        <td>0 à 65535</td>
-                        <td>0</td>
-                    </tr>
-                    </tbody></table>
-
-                <h3 id="variablesDecla">b - Déclarer et initialiser les variables</h3>
-                    <p>Ce processus se passe en trois étapes :</p>
-                    <ol>
-                        <li>Choisir un type</li>
-                        <li>Donner un nom</li>
-                        <li>initialiser</li>
-                    </ol>
-                    <p>Exemple :</p>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Choisir un type</th>
-                            <th>Donner un nom</th>
-                            <th>initialiser</th>
-                        </tr>
-                        </thead>
-                        <tr>
-                            <td>int</td>
-                            <td>nombreDeVisiteurs</td>
-                            <td>5000</td>
-                        </tr>
-                        <tr>
-                            <td>string</td>
-                            <td>ours</td>
-                            <td>Grizzly</td>
-                        </tr>
-                    </table>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> nombreDeVisiteurs = 5000;</code></pre></figure>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> ours = "Grizzly";</code></pre></figure>
-                    <h5>Déclarer et initialiser les chaînes de caractères </h5>
-                    <p>Exemple simple</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = "Hello World";</code>  <span class="c">// Hello World</span></code></pre></figure>
-                    <p>Déclarer une chaîne entre guillemets</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = "\"Hello\"";</code> <span class="c">// "Hello"</span></code></pre></figure>
-                    <p>Gestion des caractères protégés</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = "Hello\nWorld";</code> <span class="c">// Hello World sur 2 lignes</span></code></pre></figure>
-                    <p>Les chaînes @</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = “c:\\Docs\\Source\\a.txt";</code> <span class="c">//devient plutôt :</span></code></pre></figure>
-                        <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = @“c:\Docs\Source\a.txt";</code></pre></figure>
-
-                <h3 id="variablesSpe">c - Les caractères spéciaux</h3>
-                    <p>Nous avons vu que pour faire un retour chariot, c'est-à-dire un
-                        retour à la ligne, nous pouvions utiliser
-                        <br>soit <code><span class="cp">Console</span>.WriteLine</code>, mais le retour chariot
-                        n’a lieu qu’en fin de ligne obligatoirement,
-                        <br>soit \n que nous placions dans notre texte là où nous
-                        voulions faire un retour à la ligne. </p>
-                    <p>Les caractères spéciaux commencent tous par le caractère de
-                        suffixe <code>\</code>. Cela permet au compilateur de faire
-                        la différence par exemple entre <code>\n</code> et
-                        <code>n</code>.
-                        <br>Il existe environ une dizaine de caractères spéciaux dont
-                        voici les principaux : </p>
-                    <table class="table">
-                        <tr>
-                            <td>\n</td>
-                            <td>fait un retour chariot</td>
-                        </tr>
-                        <tr>
-                            <td>\t</td>
-                            <td>fait une tabulation</td>
-                        </tr>
-                        <tr>
-                            <td>\’</td>
-                            <td>permet de créer un caractère contenant la valeur du
-                                quote.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>\"</td>
-                            <td>affiche un guillemet.</td>
-                        </tr>
-                    </table>
-
-                <h3 id="variablesSaisie">d - Saisie de variables</h3>
-                    <p>La saisie des variables se fait grâce à l'instruction</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.ReadLine()</code></pre></figure>
-
-                    <p>Ainsi le code suivant demande à l'utilisateur de saisir une variable qui sera stockée dans la variable s.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">s = <span class="cp">Console</span>.Readine();</code></pre></figure>
-
-                    <div class="bd-callout bd-callout-warning">
-                        <h4>Le problème</h4>
-                        Le problème c'est que <span class="cp">Console</span>.ReadLine() ne renvoie
-                        qu'un type string.
-                    </div>
-                    <p>Ainsi ce code renverra une erreur.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> s = <span class="cp">Console</span>.Readine();</code></pre></figure>
-                    <h5>Les conversions</h5>
-                    <p>Ici il ne s'agit pas de changer de religion :), mais de type</p>
-                    <p>Dans sa forme générale, la saisie d'un int au clavier s'écriera
-                        :</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = <span class="cp">Console</span>.Readine();</code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> i = Convert.ToInt32(s);</code></pre></figure>
-                    <p>Dans sa forme abrégée nous aurons :</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> i = Convert.ToInt32(<span class="cp">Console</span>.Readine());</code></pre></figure>
-                    <div class="bd-callout bd-callout-info">
-                        <h4>Info</h4>
-                    <p>Ceci s'applique intelligemment à toutes les conversions autres
-                            que string.</p>
-                    </div>
-
-                <h3 id="variablesOpe">e - Opérations sur les nombres</h3>
-                    <p>Les opérateurs de bases en programmation sont les mêmes que les
-                        opérateurs mathématiques que vous
-                        employez depuis votre plus tendre enfance, à savoir : </p>
-                    <ul>
-                        <li>l’opérateur <code>+</code> pour l’addition : additionne 2 entiers entre
-                            eux
-                        </li>
-                        <li>l’opérateur <code>–</code> pour la soustraction : soustrait 2 entiers
-                            entre eux
-                        </li>
-                        <li>l’opérateur <code>*</code> pour la multiplication : multiplie 2 entier
-                            entre eux
-                        </li>
-                        <li>l’opérateur <code>/</code> pour la division : divise le 1er entier par le
-                            2nd et tronque le résultat
-                        </li>
-                        <li>l’opérateur <code>%</code> qui permet de connaître le reste d’une
-                            division euclidienne (que vous n’avez probablement jamais
-                            vu)
-                        </li>
-                    </ul>
-                    <p>Exemple d’utilisation :</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> a = 2;</code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> b = 3;</code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> c = a + b;<span class="c"> //c = 5</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> d = c + 12;<span class="c"> //d = 17</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> e = a*b;<span class="c"> //e = 3*2 = 6</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> f = c%a;<span class="c"> //5%2 = 1 car 5 = 2*2 + 1</span></code></pre></figure>
-                    <p>Les Expressions sont évaluées en fonction de la précédence des opérateurs</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> a = 10;</code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> b = 20;</code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> c = 5;</code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> g = a + b/c;<span class="c"> //g = 14</span></code></pre></figure>
-                    <p>Les parenthèses peuvent être utilisées pour contrôler l’ordre
-                        d’évaluation</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> g = (a + b)/c;<span class="c">//g = 6</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>int g = a + (b/c); //g = 14</span></code></pre></figure>
-                    <h5>Les raccourcis</h5>
-                    <p>Il est ainsi possible d’affecter une variable et d’effectuer une
-                        opération en même temps (d’un point de vue uniquement visuel).
-                        <br> Ces opérateurs sont <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>++</code> et <code>--</code>. </p>
-                    <p>Exemple d’utilisation :</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> i = 0;<span class="c"> //La variable doit avoir été initialisé au préalable.</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">i += 12;<span class="c"> // i = i + 12;</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">i -= 12;<span class="c"> // i = i – 12;</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">i *= 5;<span class="c"> // i = i * 5;</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">i /= 5;<span class="c"> // i = i / 5;</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">i %= 2;<span class="c"> // i = i % 2;</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">i++;<span class="c"> // i += 1; // i = i + 1;</span></code></pre></figure>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">i--;<span class="c"> // i -= 1; // i = i – 1;</span></code></pre></figure>
-
-                <h3 id="variablesConcat">f - Concaténation</h3>
-                <p>La concaténation est une opération visant à regrouper plusieurs
-                    chaînes de caractères entre elles. Elle s’effectue par
-                    l’intermédiaire de l’opérateur + et ne peut avoir lieu qu’entre
-                    types string.
-                    <br> Les autres opérateurs ne s’emploient pas sur les types
-                    string.
-                    <br> On peut se représenter une concaténation comme étant une
-                    opération mettant bout à bout les chaînes de
-                    caractères (ou string) entre elles. </p>
-                <p>Exemple d’utilisation :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> a = "Coucou,";</code></pre></figure>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> b = " c’est moi !";</code></pre></figure>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> c = a + b;<span class="c">//c contient "Coucou, c’est moi !"</span></code></pre></figure>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span></span>.WriteLine(<span class="s">"Vous avez entré : "</span> + myString);<span class="c">//Vous avez entré :  Coucou, c’est moi !</span></code></pre></figure>
-            </main>
+            </nav>
         </div>
-    </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="bd-callout bd-callout-info">
+                <h4>Info</h4>
+                <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+            </div>
+
+            <h3 id="variablesDef">a - Définition d'une variable</h3>
+            <p>Une variable joue en C# le même rôle que dans tout autre langage
+                : stocker une information.</p>
+            <p>Vous pouvez vous représenter une variable comme étant une boîte
+                dans laquelle on met quelque chose, c'est-à-dire qu’on écrit
+                quelque chose, ou dont on « apprend » quelque chose,
+                c'est-à-dire qu’on lit ce quelque chose</p>
+            <p>Une variable ne peut contenir qu’une seule chose à la fois. Si
+                vous mettez une seconde donnée dans une variable, la précédente
+                est effacée. </p>
+            <p>Le nom d’une variable est appelé identificateur.</p>
+            <h5>Les types de variables</h5>
+            <p>Les types ont souvent une assez grande importance dans un
+                programme : ils permettent d'éviter un certain nombre de bugs,
+                en vérifiant qu'on manipule toujours les données de manière
+                correcte.
+            </p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Représente</th>
+                    <th>Plage</th>
+                    <th>Valeur par défaut</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>bool</td>
+                    <td>bololéen</td>
+                    <td>True ou False</td>
+                    <td>False</td>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>8 bits non signés</td>
+                    <td>0 à 255</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>16 bits Unicode</td>
+                    <td>U +0000 à U +FFFF</td>
+                    <td>’\0’</td>
+                </tr>
+                <tr>
+                    <td>decimal</td>
+                    <td>128 bits</td>
+                    <td>-7.9 x 10<sup>28</sup> à +7.9 x 10<sup>28</sup></td>
+                    <td>0.0M</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>64 bits</td>
+                    <td>+/- 5 x 10<sup>324</sup> à +1.7*10<sup>308</sup></td>
+                    <td>0.0D</td>
+                </tr>
+                <tr>
+                    <td>ﬂoat</td>
+                    <td>32 bits</td>
+                    <td>3.4 x 10<sup>38</sup> à +3.4 x 10<sup>38</sup></td>
+                    <td>0.0F</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>32 bits signés</td>
+                    <td>2147483648 à +2147483647</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>64 bits signés</td>
+                    <td>+/- 9223372036854775808 environ</td>
+                    <td>0L</td>
+                </tr>
+                <tr>
+                    <td>sbyte</td>
+                    <td>8 bits signés</td>
+                    <td>-128 à +127 (0x7F)</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>16 bits signés</td>
+                    <td>32768 à +32767 (0X7FFF)</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>&nbsp;32 bits non signés</td>
+                    <td>0 à 4294967295 (0xFFFFFFFF)</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>64 bits non signés</td>
+                    <td>0 à 18446744073709551615</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>16 bits non singés</td>
+                    <td>0 à 65535</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h3 id="variablesDecla">b - Déclarer et initialiser les variables</h3>
+            <p>Ce processus se passe en trois étapes :</p>
+            <ol>
+                <li>Choisir un type</li>
+                <li>Donner un nom</li>
+                <li>initialiser</li>
+            </ol>
+            <p>Exemple :</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Choisir un type</th>
+                    <th>Donner un nom</th>
+                    <th>initialiser</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>int</td>
+                    <td>nombreDeVisiteurs</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>string</td>
+                    <td>ours</td>
+                    <td>Grizzly</td>
+                </tr>
+            </table>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> nombreDeVisiteurs = 5000;</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> ours = "Grizzly";</code></pre>
+            </div>
+            <h5>Déclarer et initialiser les chaînes de caractères </h5>
+            <p>Exemple simple</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = "Hello World";  <span
+                        class="c">// Hello World</span></code></pre>
+            </div>
+            <p>Déclarer une chaîne entre guillemets</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = "\"Hello\""; <span
+                        class="c">// "Hello"</span></code></pre>
+            </div>
+            <p>Gestion des caractères protégés</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = "Hello\nWorld"; <span
+                        class="c">// Hello World sur 2 lignes</span></code></pre>
+            </div>
+            <p>Les chaînes @</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = “c:\\Docs\\Source\\a.txt";<span
+                        class="c">//devient plutôt :</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = @“c:\Docs\Source\a.txt";</code></pre>
+            </div>
+
+            <h3 id="variablesSpe">c - Les caractères spéciaux</h3>
+            <p>Nous avons vu que pour faire un retour chariot, c'est-à-dire un
+                retour à la ligne, nous pouvions utiliser
+                <br>soit <code><span class="cp">Console</span>.WriteLine</code>, mais le retour chariot
+                n’a lieu qu’en fin de ligne obligatoirement,
+                <br>soit \n que nous placions dans notre texte là où nous
+                voulions faire un retour à la ligne. </p>
+            <p>Les caractères spéciaux commencent tous par le caractère de
+                suffixe <code>\</code>. Cela permet au compilateur de faire
+                la différence par exemple entre <code>\n</code> et
+                <code>n</code>.
+                <br>Il existe environ une dizaine de caractères spéciaux dont
+                voici les principaux : </p>
+            <table class="table">
+                <tr>
+                    <td>\n</td>
+                    <td>fait un retour chariot</td>
+                </tr>
+                <tr>
+                    <td>\t</td>
+                    <td>fait une tabulation</td>
+                </tr>
+                <tr>
+                    <td>\’</td>
+                    <td>permet de créer un caractère contenant la valeur du
+                        quote.
+                    </td>
+                </tr>
+                <tr>
+                    <td>\"</td>
+                    <td>affiche un guillemet.</td>
+                </tr>
+            </table>
+
+            <h3 id="variablesSaisie">d - Saisie de variables</h3>
+            <p>La saisie des variables se fait grâce à l'instruction</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.ReadLine()</code></pre>
+            </div>
+
+            <p>Ainsi le code suivant demande à l'utilisateur de saisir une variable qui sera stockée dans la variable
+                s.</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">s = <span class="cp">Console</span>.ReadLine();</code></pre>
+            </div>
+
+            <div class="bd-callout bd-callout-warning">
+                <h4>Le problème</h4>
+                Le problème c'est que <span class="cp">Console</span>.ReadLine() ne renvoie
+                qu'un type string.
+            </div>
+            <p>Ainsi ce code renverra une erreur.</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                        class="nt">int</span> s = <span class="cp">Console</span>.ReadLine();</code></pre>
+            </div>
+            <h5>Les conversions</h5>
+            <p>Ici il ne s'agit pas de changer de religion :), mais de type</p>
+            <p>Dans sa forme générale, la saisie d'un int au clavier s'écriera
+                :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> s = <span
+                        class="cp">Console</span>.ReadLine();</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> i = Convert.ToInt32(s);</code></pre>
+            </div>
+            <p>Dans sa forme abrégée nous aurons :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> i = Convert.ToInt32(<span
+                        class="cp">Console</span>.ReadLine());</code></pre>
+            </div>
+            <div class="bd-callout bd-callout-info">
+                <h4>Info</h4>
+                <p>Ceci s'applique intelligemment à toutes les conversions autres
+                    que string.</p>
+            </div>
+
+            <h3 id="variablesOpe">e - Opérations sur les nombres</h3>
+            <p>Les opérateurs de bases en programmation sont les mêmes que les
+                opérateurs mathématiques que vous
+                employez depuis votre plus tendre enfance, à savoir : </p>
+            <ul>
+                <li>l’opérateur <code>+</code> pour l’addition : additionne 2 entiers entre
+                    eux
+                </li>
+                <li>l’opérateur <code>–</code> pour la soustraction : soustrait 2 entiers
+                    entre eux
+                </li>
+                <li>l’opérateur <code>*</code> pour la multiplication : multiplie 2 entier
+                    entre eux
+                </li>
+                <li>l’opérateur <code>/</code> pour la division : divise le 1er entier par le
+                    2nd et tronque le résultat
+                </li>
+                <li>l’opérateur <code>%</code> qui permet de connaître le reste d’une
+                    division euclidienne (que vous n’avez probablement jamais
+                    vu)
+                </li>
+            </ul>
+            <p>Exemple d’utilisation :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> a = 2;</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> b = 3;</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> c = a + b;<span
+                        class="c"> //c = 5</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> d = c + 12;<span
+                        class="c"> //d = 17</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> e = a*b;<span
+                        class="c"> //e = 3*2 = 6</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> f = c%a;<span
+                        class="c"> //5%2 = 1 car 5 = 2*2 + 1</span></code></pre>
+            </div>
+            <p>Les Expressions sont évaluées en fonction de la précédence des opérateurs</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> a = 10;</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> b = 20;</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> c = 5;</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> g = a + b/c;<span
+                        class="c"> //g = 14</span></code></pre>
+            </div>
+            <p>Les parenthèses peuvent être utilisées pour contrôler l’ordre
+                d’évaluation</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> g = (a + b)/c;<span
+                        class="c">//g = 6</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>int g = a + (b/c); <span
+                        class="c">//g = 14</span></code></pre>
+            </div>
+            <h5>Les raccourcis</h5>
+            <p>Il est ainsi possible d’affecter une variable et d’effectuer une
+                opération en même temps (d’un point de vue uniquement visuel).
+                <br> Ces opérateurs sont <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>,
+                <code>%=</code>, <code>++</code> et <code>--</code>. </p>
+            <p>Exemple d’utilisation :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                        class="nt">int</span> i = 0;<span class="c"> //La variable doit avoir été initialisé au préalable.</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">i += 12;<span class="c"> // i = i + 12;</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">i -= 12;<span class="c"> // i = i – 12;</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">i *= 5;<span class="c"> // i = i * 5;</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">i /= 5;<span class="c"> // i = i / 5;</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">i %= 2;<span class="c"> // i = i % 2;</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">i++;<span class="c"> // i += 1; // i = i + 1;</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">i--;<span class="c"> // i -= 1; // i = i – 1;</span></code></pre>
+            </div>
+
+            <h3 id="variablesConcat">f - Concaténation</h3>
+            <p>La concaténation est une opération visant à regrouper plusieurs
+                chaînes de caractères entre elles. Elle s’effectue par
+                l’intermédiaire de l’opérateur + et ne peut avoir lieu qu’entre
+                types string.
+                <br> Les autres opérateurs ne s’emploient pas sur les types
+                string.
+                <br> On peut se représenter une concaténation comme étant une
+                opération mettant bout à bout les chaînes de
+                caractères (ou string) entre elles. </p>
+            <p>Exemple d’utilisation :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> a = "Coucou,";</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> b = " c’est moi !";</code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> c = a + b;<span
+                        class="c">//c contient "Coucou, c’est moi !"</span></code></pre>
+            </div>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine(<span
+                        class="s">"Vous avez entré : "</span> + myString);<span class="c">//Vous avez entré :  Coucou, c’est moi !</span></code></pre>
+            </div>
+        </div>
+    </main>
+
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/4.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.td.css" rel="stylesheet">
+    <link href="../dist/4.0/css/docs.min.css" rel="stylesheet">
+    <link href="../dist/4.0/css/docs.perso.td.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism.css">
     <title>TP05 Php</title>
 
@@ -112,7 +112,7 @@
             <section id="prerequis">
             <h2>Prérequis</h2>
                 <ol>
-                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_index.php:</li>
+                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_index.php:
                 <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
     require_once 'TP05_m_PDO.php';
     include('TP04_m_model.php');
@@ -137,8 +137,8 @@
             {
                 include('TP05_c_controleur.php');break;}
     }
-    include('TP02Pied.php') ;</code></pre></figure>
-                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_v_menu.php:</li>
+    include('TP02Pied.php') ;</code></pre></figure></li>
+                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_v_menu.php:
                 <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
     &lt;ul class="navbar-nav"&gt;
         &lt;?php
@@ -148,8 +148,8 @@
             &lt;/li&gt;
         &lt;?php endforeach;//fin de la boucle ?&gt;
     &lt;/ul&gt;
-&lt;/nav&gt;</code></pre></figure>
-                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_m_PDO.php:</li>
+&lt;/nav&gt;</code></pre></figure></li>
+                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_m_PDO.php:
                     <div class="bd-callout bd-callout-info">
                         <h4>Modifications</h4>
                         <p>Modifiez le user et le mot de passe en fonction de votre connexion</p>
@@ -219,8 +219,8 @@ class PdoTd
         return $lesLignes;
     }
 
-}</code></pre></figure>
-                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_c_controleur.php:</li>
+}</code></pre></figure></li>
+                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_c_controleur.php:
                 <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 $action = $_REQUEST['action'];
 /**
@@ -268,8 +268,8 @@ switch($action)
             include('TP04_v_404.php');
             break;
         }
-}</code></pre></figure>
-                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_v_produits.php:</li>
+}</code></pre></figure></li>
+                <li>Copiez le code suivant dans un fichier que vous allez appeler TP05_v_produits.php:
                 <figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;div class="container"&gt;
 &lt;?php foreach($lesCategories as $uneCategorie) : ?&gt;
         &lt;h2&gt;&lt;?= $uneCategorie['libelle']; ?&gt;&lt;/h2&gt;
@@ -290,7 +290,7 @@ switch($action)
     &lt;?php endforeach; ?&gt;
 &lt;/div&gt;
         &lt;?php endforeach; ?&gt;
-&lt;/div&gt;</code></pre></figure>
+&lt;/div&gt;</code></pre></figure></li>
              <li><b>Quels sont les fichiers qui existent déjà et que vous devez rajouter ?</b></li>
                 </ol>
                 <div class="bd-callout bd-callout-info">

@@ -4,175 +4,207 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<!--    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>PHP - bases du langage</title>
-    <script>
-/*        window.ga = window.ga || function () {
-            (ga.q = ga.q || []).push(arguments)
-        };
-        ga.l = +new Date;
-        ga('create', 'UA-146052-10', 'chchabin.free.fr');
-        ga('set', 'anonymizeIp', true);
-        ga('send', 'pageview');*/
-    </script>
+
 </head>
 <body>
-<a class="skippy sr-only sr-only-focusable" href="#content">
-    <span class="skippy-text">Skip to main content</span>
-</a>
+
 <!--        navbar-->
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-    </a>
-
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <div class="collapse navbar-collapse" id="bdNavbar">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
             <li class="nav-item">
-                <a class="nav-link " href="php01Gintroduction.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
+                <a class="nav-link " href="php01Gintroduction.html">Guide PHP</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="index.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+                <a class="nav-link active" href="index.html">Documentation</a>
             </li>
         </ul>
-    </div>
+        </div>
+    </nav>
 </header>
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <!--        Menu Gauche-->
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link " href="php01Gintroduction.html">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start" data-bs-toggle="collapse" data-bs-target="#php01Gintroduction" aria-expanded="false">
                         I - Introduction au développement Web
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#foncweb">
-                                A - Le fonctionnement du Web
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#protocole-HTTP">
-                                B - Le protocole HTTP
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                    </button>
+                    <div class="collapse" id="php01Gintroduction">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#foncweb">
+                                    A - Le fonctionnement du Web
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#protocole-HTTP">
+                                    B - Le protocole HTTP
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#siteDyn">C - L'évolution vers des sites dynamiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start" data-bs-toggle="collapse" data-bs-target="#php02Gbaseslg" aria-expanded="true" aria-current="true">
                         II - Les bases du langage
-                    </a>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
+                    </button>
+                    <div class="collapse show" id="php02Gbaseslg">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                        <li>    <a class="d-inline-flex align-items-center rounded active"
+                               href="php02Gbaseslg.html">Les bases du langage
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start" data-bs-toggle="collapse" data-bs-target="#php031ProgPhp_Variables" aria-expanded="false">
                         III - Programmer avec PHP
-                    </a>
+                    </button>
+                    <div class="collapse" id="php031ProgPhp_Variables">
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#variables">A - Les variables
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#tests">B - Tests et conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#tableau">C - Les tableaux
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#boucles">D - Les boucles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#fonctions"> E - Les fonctions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php041Transmission.html">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php031ProgPhp_Variables.html">A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php032ProgPhp_Tests.html">B - Tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php034ProgPhp_Boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start" data-bs-toggle="collapse" data-bs-target="#php041Transmission" aria-expanded="false">
                         IV - Transmettre des données entre des pages
-                    </a>
+                    </button>
+                    <div class="collapse" id="php041Transmission">
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#superglobale">A - Notion de variable superglobale
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionURL">B - Transmission via l'URL
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionForm">C - Transmission via un formulaire
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionData">D - Transmission de données et sécurité
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionSession">E - Transmission via la session
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php041Transmission.html">A - Notion de variable superglobale
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php042Transmission.html">B - Notion de formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php043Transmission.html">C - $_GET et la transmission via l'URL
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php044Transmission.html">D - $_POST et la transmission via un formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php045Transmission.html">E - $_SESSION et la transmission via la session
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php046Transmission.html">F - htmlspecialchars et la transmission de données
+                                    et sécurité
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start" data-bs-toggle="collapse" data-bs-target="#php05AccesSGBD_Introduction" aria-expanded="false">
                         V - Accéder à une base de données
-                    </a>
+                    </button>
+                    <div class="collapse" id="php05AccesSGBD_Introduction">
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#sgbdIntro"> A - Introduction
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sgbdConect">B - Connexion à la base de données
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>
-        <!--        Menu droite-->
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2"><a href="#anatomieFich">A - Anatomie d'un fichier source PHP</a></li>
-                <li class="toc-entry toc-h2"><a href="#defCode">B - Définition d'un bloc de code PHP</a></li>
-                <li class="toc-entry toc-h2"><a href="#affText">C - Affichage de texte</a></li>
-                <li class="toc-entry toc-h2"><a href="#quotes">D - Choisir les quotes</a></li>
-                <li class="toc-entry toc-h2"><a href="#comm">E - Commentaires</a>
-                <li class="toc-entry toc-h2"><a href="#include">F - <code>include</code> : Inclure des portions de page</a>
-                <li class="toc-entry toc-h2"><a href="#server">G - Configuration du serveur Web</a>
-                <li class="toc-entry toc-h2"><a href="#securep">H - Sécurisation avec les répertoire</a>
-                <li class="toc-entry toc-h2"><a href="#chemin">I - Je cherche mon chemin</a>
-                <li class="toc-entry toc-h2"><a href="#define">J - <code>define</code> et les constantes</a>
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php05AccesSGBD_Introduction.html"> A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec SELECT
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php05AccesSGBD_RqtSimple.html">D - query - Requêtes simples
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php05AccesSGBD_RqtParam.html">E - prepare et execute - Requêtes avec paramètres
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec INSERT, UPDATE,
+                                    DELETE et exec</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-        </div>
+        </nav>
+    </aside>
+
         <!--        Page de cours-->
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            <h1 class="bd-title" id="content">  II - Les bases du langage</h1>
+        <main class="bd-main order-1">
+<!--            Titre-->
+            <div class="bd-intro ps-lg-4">
+                <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                    <h1 class="bd-title" id="content">  II - Les bases du langage</h1>
+                </div>
             <p class="bd-lead">L'objectif de ce chapitre est de découvrir les bases du langage PHP.</p>
+                </div>
+                    <!--        Menu droite-->
+            <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+                <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+                <nav id="TableOfContents">
+                    <ul>
+                        <li><a href="#anatomieFich">A - Anatomie d'un fichier source PHP</a></li>
+                        <li><a href="#defCode">B - Définition d'un bloc de code PHP</a></li>
+                        <li><a href="#affText">C - Affichage de texte</a></li>
+                        <li><a href="#quotes">D - Choisir les quotes</a></li>
+                        <li><a href="#comm">E - Commentaires</a>
+                        <li><a href="#include">F - <code>include</code> : Inclure des portions de page</a>
+                        <li><a href="#server">G - Configuration du serveur Web</a>
+                        <li><a href="#securep">H - Sécurisation avec les répertoire</a>
+                        <li><a href="#chemin">I - Je cherche mon chemin</a>
+                        <li><a href="#define">J - <code>define</code> et les constantes</a>
+                    </ul>
+                </nav>
+            </div>
+            <!--            Docs-->
+            <div class="bd-content ps-lg-4">
             <h2 id="anatomieFich">  A - Anatomie d'un fichier source PHP</h2>
             <section>
             <p>Le code PHP est écrit dans des fichiers source portant l'extension <code>.php</code>. Le plus souvent, un fichier source PHP contient un mélange de balises HTML et de code PHP. Au moment où un client demande ce fichier à un serveur Web, le code PHP est exécuté par le serveur pour produire dynamiquement une page Web.</p>
@@ -184,7 +216,7 @@
                 <p>Un fichier contenant du code PHP mais portant l'extension <code>.html</code> sera renvoyé directement par le serveur sans exécution du code PHP qu'il contient.</p>
             </div>
                 <p>Il est fortement conseillé d'adopter le standard HTML5 ainsi que le jeu de caractères Unicode UTF-8 (sans BOM). Tous les fichiers source doivent être encodés avec ce jeu de caractères pour que les caractères accentués soient affichés correctement, et la structure HTML doit être identique à celle ci-dessous.</p>
-            <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+            <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
   <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
     <span class="c">   ...</span>
@@ -192,7 +224,7 @@
   <span class="nt">&lt;body&gt;</span>
     <span class="c">    ...</span>
   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
             <div class="bd-callout bd-callout-warning">
                <h4>Mise en évidence de la syntaxe</h4>
                 <p>L'utilisation d'un éditeur avec coloration syntaxique permet de voir rapidement si quelque chose est une chaîne ou un code. Les chaînes seront affichées dans une couleur différente du code à traiter</p>
@@ -205,7 +237,7 @@
                 Il est possible de définir plusieurs blocs de code dans un même fichier source PHP.
                 A l'intérieur d'un bloc de code, on peut utiliser les fonctionnalités du langage.
                 Considérons le petit script suivant, que nous appellerons essai.php</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
   <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;title&gt;</span>Ma première page PHP<span class="nt">&lt;/title&gt;</span>
@@ -216,21 +248,21 @@
     <span class="nt">&lt;p&gt;</span>Celui-ci contient une partie <span class="s">&lt;?php echo</span>'générée avec PHP';<span class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo</span>'Celui-là est entièrement généré avec PHP'<span class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
             <p>En l'exécutant, nous obtiendrons le résultat suivant :</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php">Affichons du texte avec PHP...
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">Affichons du texte avec PHP...
 Ce titre est écrit directement en HTML
 Celui-ci contient une partie générée avec PHP
 Celui-là est entièrement généré avec PHP
-</code></pre></figure>
+</code></pre></div>
             <p>Les fichiers php peuvent ne contenir que du code php.
                 Considérons le petit script suivant, que nous appellerons essaiBis.php (notez la casse Camel !)</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
 <span class="s">echo</span>'Ce titre est écrit directement générée avec PHP';
-<span class="s">echo</span>'Celui-là est entièrement généré avec PHP';</code></pre></figure>
+<span class="s">echo</span>'Celui-là est entièrement généré avec PHP';</code></pre></div>
             <p>En l'exécutant, nous obtiendrons le résultat suivant :</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php">Ce titre est écrit directement générée avec PHP
-Celui-là est entièrement généré avec PHP</code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">Ce titre est écrit directement générée avec PHP
+Celui-là est entièrement généré avec PHP</code></pre></div>
             <div class="bd-callout bd-callout-warning">
                 <h4>Attention</h4>
                 <p>Lorsque la balise php entour une seule ligne de code il n'est pas nécessaire de mettre un <code>;</code> à la fin de la ligne</p>
@@ -246,11 +278,11 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
             <h2 id="affText">C - Affichage de texte</h2>
             <section>
             <p>L'affichage de texte s'effectue grâce à la commande <code>echo</code>.</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php echo</span>'Bonjour Monde !';<span class="s">?&gt;</span></code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">&lt;?php echo</span>'Bonjour Monde !';<span class="s">?&gt;</span></code></pre></div>
 
             <p>On peut inclure des balises HTML dans le texte affiché par <code>echo</code>, ou bien inclure l'appel à <code>echo</code> dans des balises HTML. Ainsi, les deux appels suivants produisent exactement le même résultat.</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php echo</span>'<span class="nt">&lt;p&gt;</span>Bonjour Monde !<span class="nt">&lt;/p&gt;</span>';<span class="s">?&gt;</span>
-<span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo</span>'Bonjour Monde !';<span class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span></code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">&lt;?php echo</span>'<span class="nt">&lt;p&gt;</span>Bonjour Monde !<span class="nt">&lt;/p&gt;</span>';<span class="s">?&gt;</span>
+<span class="nt">&lt;p&gt;</span><span class="s">&lt;?php echo</span>'Bonjour Monde !';<span class="s">?&gt;</span><span class="nt">&lt;/p&gt;</span></code></pre></div>
             <div class="bd-callout bd-callout-info">
                 <h4>Conseil</h4>
             <p>Sauf cas particulier, on utilisera plutôt la seconde technique, qui préserve mieux la structure HTML de la page.</p>
@@ -267,9 +299,9 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                 Dans la plupart des cas, ils sont interchangeables.
                 Les développeurs PHP ont tendance à privilégier les guillemets simples,
                 car nous traitons beaucoup de code HTML, qui a tendance à contenir beaucoup de guillemets doubles. Par exemple:</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">echo</span> '<span class="nt">&lt;a</span> href="http://www.sitepoint.com">Click here<span class="nt">&lt;/a&gt;</span>';</code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">echo</span> '<span class="nt">&lt;a</span> href="http://www.sitepoint.com">Click here<span class="nt">&lt;/a&gt;</span>';</code></pre></div>
             <p>  Si des guillemets doubles étaient utilisés ici, nous aurions besoin de dire à PHP que le guillemet après href=  n'est pas la fin de la chaîne en plaçant un <code>\</code> devant lui (connu sous le nom de <code>caractère d'échappement</code> ) et de faire de même avec les guillemets que nous voulons réellement envoyer le navigateur dans le framework du HTML:</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">echo</span> "<span class="nt">&lt;a</span> href=<span class="s">\</span>"http://www.sitepoint.com<span class="s">\</span>">Click here<span class="nt">&lt;/a&gt;</span>";</code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">echo</span> "<span class="nt">&lt;a</span> href=<span class="s">\</span>"http://www.sitepoint.com<span class="s">\</span>">Click here<span class="nt">&lt;/a&gt;</span>";</code></pre></div>
             <p>  Pour cette raison, les développeurs PHP utilisent des guillemets simples, bien qu'il existe des différences entre les deux guillemets. Pour nos besoins, ils sont effectivement interchangeables.
             </p>
             <p>Vous verrez souvent qu'<code>echo</code> est codé avec des parenthèses entourant le nom du fichier,
@@ -285,11 +317,11 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                    <li><code>/* ... */</code> pour un commentaire sur plusieurs lignes.</li>
                </ul>
             <p>A l'extérieur d'un bloc PHP, on utilise la syntaxe HTML <code>&lt;!-- ... --&gt;</code> pour ajouter des commentaires.</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nt">&lt;h1&gt;</span>Affichons du texte avec PHP...<span class="nt">&lt;/h1&gt;</span>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="nt">&lt;h1&gt;</span>Affichons du texte avec PHP...<span class="nt">&lt;/h1&gt;</span>
 <span class="c">&lt;!-- un commentaire HTML --&gt;</span>
 <span class="c">...</span>
 <span class="nt">&lt;h3&gt;</span><span class="s">&lt;?php echo</span>'Celui-là est entièrement généré avec PHP'<span class="s">?&gt;</span><span class="nt">&lt;/h3&gt;</span>
-<span class="c">// un commentaire PHP ?&gt;</span></code></pre></figure>
+<span class="c">// un commentaire PHP ?&gt;</span></code></pre></div>
             </section>
             <h2 id="include">F - Inclure des portions de page</h2>
             <section>
@@ -298,10 +330,10 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                 à les retaper.
                 Un fichier PHP peut inclure le contenu d'un autre fichier grâce à l'instruction <code>include</code>.
                 </p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>include 'monfichier.php';<span class="s">?&gt;</span></code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>include 'monfichier.php';<span class="s">?&gt;</span></code></pre></div>
             <p>Au moment de l'exécution, cette instruction sera remplacée par le contenu du fichier inclus.</p>
             <p>Cette technique permet de centraliser le code des éléments communs à plusieurs fichiers PHP, comme par exemple des menus ou des pieds de page, pour éviter la duplication de code.</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;!doctype html&gt;</span>
   <span class="nt">&lt;head </span><span class="na">lang=</span><span class="s">"fr"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta </span><span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;title&gt;</span>Une page PHP modulaire<span class="nt">&lt;/title&gt;</span>
@@ -312,7 +344,7 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
     <span class="c">&lt;!-- ... (contenu spécifique) --&gt;</span>
     <span class="nt">&lt;h3&gt;</span><span class="s">&lt;?php </span>include 'footer.php';<span class="s">?&gt;</span><span class="nt">&lt;/h3&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
             <p>Vous verrez souvent qu'<code>include</code> est codé avec des parenthèses entourant le nom du fichier,
                 comme s'il s'agissait d'une fonction include comme date ou, htmlspecialchars ce qui est loin d'être le cas.
                 les parenthèses, lorsqu'elles sont utilisées, ne servent qu'à compliquer l'expression du nom de fichier,
@@ -329,7 +361,7 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                 <li>include_once</li>
                 <li>require_once</li>
             </ul>
-            </div>
+        </div>
             <p>La seule différence entre eux est ce qui se passe lorsque le fichier spécifié ne peut pas être inclus
                 (c'est-à-dire s'il n'existe pas ou si le serveur Web n'a pas la permission de le lire).
                 Avec <code>include</code>, un avertissement s'affiche et le script continue de s'exécuter.
@@ -368,10 +400,10 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
              que vous avez en place et d'afficher le contenu auquel ils ne devraient pas avoir accès.</p>
             </div>
             <p>Par exemple, considérez le code suivant:</p>
-            <figure class="highlight"><pre><code class="language-php" data-lang="php">
+            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">
   <span class="nt">if</span><span class="c">(</span>$_POST<span class="c">[</span>'password'<span class="c">]</span> == 'secret'<span class="c">)</span> <span class="c">{</span>
      <span class="nt">include</span> 'protected.html.php';
-    <span class="c">}</span></code></pre></figure>
+    <span class="c">}</span></code></pre></div>
             <p>En regardant ce code, il semble que vous deviez soumettre un formulaire et taper secret   dans la zone de mot de passe pour voir le contenu protégé dans protected.html.php  . Cependant, si quelqu'un peut accéder directement à protected.html.php   et voir le contenu de la page, cela rend le contrôle de sécurité redondant. Il existe d'autres problèmes de sécurité potentiels introduits en rendant tous vos fichiers accessibles via une URL. Éviter de tels problèmes de sécurité est facile. Vous pouvez en fait inclure des fichiers d'un répertoire autre que le répertoire public.  </p>
             <p>À partir de maintenant, nous n'écrirons les fichiers que dans le répertoire public auquel nous voulons que les utilisateurs puissent accéder directement à partir de leur navigateur Web. Le répertoire public contiendra tous les scripts PHP auxquels l'utilisateur doit accéder directement, ainsi que les images, les fichiers JavaScript et CSS requis par le navigateur.
                 Tous les fichiers référencés uniquement par une instruction include seront placés en dehors du répertoire public afin que les utilisateurs ne puissent pas y accéder directement.  </p>
@@ -387,8 +419,9 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                 <ul>
                     <li>Sous Linux/MacOs, on notera : home/Documents/inscrits.php</li>
                     <li>Sous Windows : C:\home\Documents\inscrits.php.</li>
-                </ul>
-            </div>
+        </ul>
+
+        </div>
             <p>Le début de chaine est le lecteur (C: sous Windows, mais cela n'existe pas sous Linux/MacOS) puis le (ou les) dossier(s) - ici il y en a 2 - puis le nom du fichier pour finir.
             </p>
             <p>N.B. : le caractère séparateur des noms de dossiers et des fichiers est le "slash" (symbole division) sous Linux ou MacOS : <code>/</code>. Sous Windows, c'est l'anti-slash (barre oblique inverse) : <code>\</code>.</p>
@@ -399,8 +432,9 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                     <li>inscrits.php : je cherche le fichier dans le repertoire courant</li>
                     <li>archive/inscrits.php : je cherche le fichier dans le repertoire enfant</li>
                     <li>../inscrits.php : je cherche le fichier dans le repertoire parent</li>
-                </ul>
-            </div>
+        </ul>
+        </div>
+
             <p>Bien que cette méthode fonctionne, elle n'est pas souhaitable car elle lie le code de votre site à la configuration de votre serveur Web. Idéalement, vous devriez être en mesure de déposer votre site Web basé sur PHP sur n'importe quel serveur Web compatible PHP et de le regarder fonctionner. Ceci est particulièrement important car de nombreux développeurs vont créer un site sur un serveur, puis le déployer publiquement sur un autre serveur. Cela n'est pas pratique si votre code fait référence à des lecteurs et des répertoires spécifiques à un serveur particulier. Même si vous n'avez le luxe de travailler sur un seul serveur, vous serez vous - même coups de pied si vous avez besoin de déplacer votre site vers un autre lecteur / répertoire sur ce serveur.</p>
             <p>Une meilleure méthode consiste à utiliser un chemin relatif . Autrement dit, l'emplacement d'un fichier par rapport au fichier actuel. </p>
             <p>Mais il y a un problème potentiel lorsque vous incluez des fichiers de cette manière. Les chemins relatifs sont relatifs au script qui a été exécuté, pas à chaque fichier.
@@ -412,8 +446,9 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                     <li>__DIR__.'inscrits.php' : je cherche le fichier dans le repertoire courant</li>
                     <li>__DIR__.'archive/inscrits.php' : je cherche le fichier dans le repertoire enfant</li>
                     <li>dirname(__DIR__).'inscrits.php' : je cherche le fichier dans le repertoire parent</li>
-                </ul>
-            </div>
+        </ul>
+        </div>
+
             <p>Cette approche fonctionnera sur n'importe quel serveur, car __DIR__ différera selon l'emplacement de stockage du fichier et ne dépendra pas du répertoire de travail actuel changeant </p>
             <ul>
                 <li>Sous Linux/MacOs : __DIR__.'inscrits.php' == home/Documents/inscrits.php</li>
@@ -444,26 +479,20 @@ Celui-là est entièrement généré avec PHP</code></pre></figure>
                 <p>Ainsi, nous pouvons définir une constante <code>ROOT</code> qui nous évitera de saisir à chaque fois la fonction <code>dirname(__DIR__))</code>.
                     Cette instruction aura la forme suivante :
                 </p>
-                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
+                <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
 <span class="s">define</span>('ROOT', dirname(__DIR__));
-                    </code></pre></figure>
+                    </code></pre></div>
                 <p>Nous pourrons l'utiliser facilement avec une instruction <code>include</code> :</p>
-                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
+                <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
 <span class="s">include</span> ROOT.'monfichier.php';
-                    </code></pre></figure>
+                    </code></pre></div>
                 <p>Le "<code>.</code>" est un opérateur de concaténation : il assemble 2 chaines string.
                     Nous voyons cet opérateur plus précisément dans la partie - Programmer avec PHP</p>
             </section>
+            </div>
         </main>
-    </div>
 </div>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
-<!--<script src="../js/popper.min.js"></script>-->
-<!--<script src="../js/bootstrap.min.js"></script>-->
-<script src="../js/docs.min.js"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

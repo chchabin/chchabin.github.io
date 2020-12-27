@@ -3,401 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Les bases du langage</title>
 </head>
 <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-        </a>
-
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav bd-navbar-nav flex-row">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
                 <li class="nav-item">
                     <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
                 </li>
             </ul>
         </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                <nav class="collapse bd-links" id="bd-docs-nav">
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp01_intro.html">
-                            I - Introduction au développement
-                        </a>
-                        <ul class="nav bd-sidenav">
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
                             <li>
-                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
                                 </a>
                             </li>
                             <li>
-                                <a href="#contentArt">B - L ’art et la manière de bien programmer
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
                                 </a>
                             </li>
                             <li>
-                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item active">
-                        <a class="bd-toc-link " href="csharp02_basesLg.html">
-                            II - Les bases du langage
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#source">A - Anatomie d'un fichier source
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#bloc">B - Définition d'un bloc de code
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#affiche">C - Affichage de texte
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#comment">D - Commentaires
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#indentation">E - l'indentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#nommage">F - Conventions de nommage
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                            III - Programmer avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="true" aria-current="true">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse show" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
                             <li>
-                                <a href="csharp03_programmer-variables.html"> A - Les variables
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp06_programmer_boucles.html">D - Les boucles
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                            IV - Programmation objet avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp08_objet_overview.html">L'approche Objet
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp09_objet_creation.html">Création d'objet en C#
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
                                 </a>
                             </li>
                         </ul>
                     </div>
-                </nav>
-            </div>
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                </ul>
-            </div>
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="false">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse" id="csharp03_programmer-variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="false">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
                 <h1 class="bd-title" id="base">II - Les bases du langage</h1>
-                    <p class="bd-lead">L'objectif de ce chapitre est de découvrir les bases des langages de programmation et en particulier du C#.</p>
-                    <p>C# est une langage dit de "haut niveau". Il se positionne entre le C++, réputé complexe et Visual
-                        Basic.</p>
-                    <p>Le C# est souple, c'est-a-dire qu'il peut être exécuté sur la machine sur laquelle il se trouve
-                        ou bien transmis par l'intermédiaire du web pour s'exécuter sur un ordinateur distant.</p>
-                    <p>Le C# est aussi puissant que le C++, tant par la richesse de son langage que par sa vitesse
-                        d'exécution.</p>
-                    <p>Le C# est facile a utiliser, les commandes générant des erreurs en C++ ont été modifiées pour les
-                        rendre plus sures.</p>
-                    <p>Le C# est multi cibles, les programmes peuvent être définis pour s'exécuter en mode console,
-                        graphique, sur Pc, sur Pocket-Pc et même sur Linux grâce à mono et a Microsoft qui a fournit les
-                        sources de .net ( Projet Rotor ).</p>
-                    <p>C# est prêt pour Internet, c'est le pivot de la nouvelle stratégie Internet de Microsoft, nommée
-                        .NET.</p>
-                    <p>C# est sûr, comme tout langage destiné à une utilisation sur Internet il doit contenir les
-                        principes garantissant l'intégrité de la plateforme hôte.</p>
-                    <p>C# est véritablement orienté objet.</p>
+            </div>
+            <p class="bd-lead">L'objectif de ce chapitre est de découvrir les bases des langages de programmation et en
+                particulier du C#.</p>
+            <p>C# est une langage dit de "haut niveau". Il se positionne entre le C++, réputé complexe et Visual
+                Basic.</p>
+            <p>Le C# est souple, c'est-a-dire qu'il peut être exécuté sur la machine sur laquelle il se trouve
+                ou bien transmis par l'intermédiaire du web pour s'exécuter sur un ordinateur distant.</p>
+            <p>Le C# est aussi puissant que le C++, tant par la richesse de son langage que par sa vitesse
+                d'exécution.</p>
+            <p>Le C# est facile a utiliser, les commandes générant des erreurs en C++ ont été modifiées pour les
+                rendre plus sures.</p>
+            <p>Le C# est multi cibles, les programmes peuvent être définis pour s'exécuter en mode console,
+                graphique, sur Pc, sur Pocket-Pc et même sur Linux grâce à mono et a Microsoft qui a fournit les
+                sources de .net ( Projet Rotor ).</p>
+            <p>C# est prêt pour Internet, c'est le pivot de la nouvelle stratégie Internet de Microsoft, nommée
+                .NET.</p>
+            <p>C# est sûr, comme tout langage destiné à une utilisation sur Internet il doit contenir les
+                principes garantissant l'intégrité de la plateforme hôte.</p>
+            <p>C# est véritablement orienté objet.</p>
+        </div>
+        <!--            Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="source">A - Anatomie d'un fichier source</h2>
+            <p>Le code C# est écrit dans des fichiers source portant l'extension
+                <code>.cs</code>. Dans le cas d'un programme web celle-ci sera <code>.asp</code>
+            </p>
 
-                <h2 id="source">A - Anatomie d'un fichier source</h2>
-                    <p>Le code C# est écrit dans des fichiers source portant l'extension
-                        <code>.cs</code>. Dans le cas d'un programme web celle-ci sera <code>.asp</code>
-                    </p>
-
-                    <p>Il est fortement conseillé d'adopter le jeu de caractères ANSI non étendu (sans
-                        les caractères français). Tous les fichiers source doivent être encodés avec ce
-                        jeu de caractères,seules les parties de texte peuvent contenir des caractères
-                        français, voici un exemple ci-dessous.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <p>Il est fortement conseillé d'adopter le jeu de caractères ANSI non étendu (sans
+                les caractères français). Tous les fichiers source doivent être encodés avec ce
+                jeu de caractères,seules les parties de texte peuvent contenir des caractères
+                français, voici un exemple ci-dessous.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">class</span> <span class="cp">HelloWorld</span> {
              <span class="nt">static</span> <span class="nt">void</span> Main() {
                  <span class="cp">Console</span>.WriteLine (<span class="s">"Hello, World"</span>);
              }
-    }</code></pre></figure>
-                    <p>Voici les explications du code :</p>
-                    <h5>Using System;</h5>
-                    <p>Au début de chaque fichier de programme il faut mettre la directive <code>using</code> pour
-                        spécifier au compilateur une liste de chemins de recherche implicites.</p>
-                    <p>Par exemple, quand le compilateur rencontre la méthode
-                        "<span class="cp">Console</span>.WriteLine (<span class="s">"Hello, World"</span>);",il s'aperçoit que son chemin n'est pas
-                        défini explicitement. Il balaie alors les espaces de noms spécifiés dans les
-                        <code>using</code> puis, une fois la méthode dénichée dans l'espace de nom <code>System</code>, il compile
-                        le code.</p>
-                    <h5>namespace demonstration</h5>
-                    <p>Cette ligne facultative défini un espace de nom qui va contenir les classes qui
-                        sont entre accolades dans notre exemple la classe bonjour. L'explication est la
-                        même dans le principe que celle donnée au dessus, je vous laisse vous y
-                        reporter.</p>
-                    <h5>public class HelloWorld</h5>
-                    <p>Une application C# est une collection de classes, une classe étant un ensemble de
-                        données et de méthodes. Une méthode est un ensemble d'instructions appliquant un
-                        traitement aux données de la classe, retournant ou non un résultat logique ou
-                        typé (valeur numérique, chaîne de caractères, référence d'objet, etc.. . .)</p>
-                    <p>C'est le mot clé <code>class</code> qui introduit la déclaration de la classe, suivi du nom de
-                        la classe, d'une accolade ouvrante et d'une accolade fermante. Votre code sera
-                        placé entre les deux accolades.</p>
-                    <h5>static void Main()</h5>
-                    <p>Cette méthode est la méthode principale ( main in english ) de votre programme
-                        bonjour, c’est ici que vous placerez les actions a faire exécuter a C#.</p>
-                    <p>Le mot-clef <code>public</code> signifie que la méthode est accessible au monde extérieur. Le
-                        mot clé <code>static</code> indique au compilateur que la méthode Main est globale et que,
-                        par conséquent, il est inutile d'instancier la classe pour pouvoir appeler la
-                        méthode. Comme elle est statique, le compilateur prend son adresse comme point
-                        d'entrée. De cette façon, l'environnement .NET sait par où commencer l'exécution
-                        de l'application.</p>
-                    <h5>Console.WriteLine("HelloWorld");</h5>
-                    <p>Pour l'instant intéressons-nous à <code>WriteLine( )</code>, qui veut dire "écris ce que je te
-                        donne sur une ligne de la console". C'est magnifique, vous savez faire écrire
-                        une phrase ! Ne vous inquiétez pas après l'écriture viendront les calculs !</p>
-                    <div class="bd-callout bd-callout-danger">
-                        <h4>Attention !</h4>
-                        <p> Les instructions se terminent par un point-virgule (; ) comme une phrase en français se
-                            termine par un point.</p>
-                    </div>
+    }</code></pre>
+            </div>
+            <p>Voici les explications du code :</p>
+            <h5>Using System;</h5>
+            <p>Au début de chaque fichier de programme il faut mettre la directive <code>using</code> pour
+                spécifier au compilateur une liste de chemins de recherche implicites.</p>
+            <p>Par exemple, quand le compilateur rencontre la méthode
+                "<span class="cp">Console</span>.WriteLine (<span class="s">"Hello, World"</span>);",il s'aperçoit que
+                son chemin n'est pas
+                défini explicitement. Il balaie alors les espaces de noms spécifiés dans les
+                <code>using</code> puis, une fois la méthode dénichée dans l'espace de nom <code>System</code>, il
+                compile
+                le code.</p>
+            <h5>namespace demonstration</h5>
+            <p>Cette ligne facultative défini un espace de nom qui va contenir les classes qui
+                sont entre accolades dans notre exemple la classe bonjour. L'explication est la
+                même dans le principe que celle donnée au dessus, je vous laisse vous y
+                reporter.</p>
+            <h5>public class HelloWorld</h5>
+            <p>Une application C# est une collection de classes, une classe étant un ensemble de
+                données et de méthodes. Une méthode est un ensemble d'instructions appliquant un
+                traitement aux données de la classe, retournant ou non un résultat logique ou
+                typé (valeur numérique, chaîne de caractères, référence d'objet, etc.. . .)</p>
+            <p>C'est le mot clé <code>class</code> qui introduit la déclaration de la classe, suivi du nom de
+                la classe, d'une accolade ouvrante et d'une accolade fermante. Votre code sera
+                placé entre les deux accolades.</p>
+            <h5>static void Main()</h5>
+            <p>Cette méthode est la méthode principale ( main in english ) de votre programme
+                bonjour, c’est ici que vous placerez les actions a faire exécuter a C#.</p>
+            <p>Le mot-clef <code>public</code> signifie que la méthode est accessible au monde extérieur. Le
+                mot clé <code>static</code> indique au compilateur que la méthode Main est globale et que,
+                par conséquent, il est inutile d'instancier la classe pour pouvoir appeler la
+                méthode. Comme elle est statique, le compilateur prend son adresse comme point
+                d'entrée. De cette façon, l'environnement .NET sait par où commencer l'exécution
+                de l'application.</p>
+            <h5>Console.WriteLine("HelloWorld");</h5>
+            <p>Pour l'instant intéressons-nous à <code>WriteLine( )</code>, qui veut dire "écris ce que je te
+                donne sur une ligne de la console". C'est magnifique, vous savez faire écrire
+                une phrase ! Ne vous inquiétez pas après l'écriture viendront les calculs !</p>
+            <div class="bd-callout bd-callout-danger">
+                <h4>Attention !</h4>
+                <p> Les instructions se terminent par un point-virgule (; ) comme une phrase en français se
+                    termine par un point.</p>
+            </div>
 
-                <h2 id="bloc">B - Définition d'un bloc de code</h2>
-<!--                   <div class="alert alert-danger" role="alert">-->
-                        <div class="bd-callout bd-callout-danger">
-                            <h4>Attention !</h4>
-                        <p>Les débutants ont tendance à copier le code avant de fermer les accolades, ce
-                            qui induit des recherches inutiles en déboguage</p>
-                        <p><strong>Bonne pratique :</strong> avant de commencer à coder, soyez sûr que
-                            toutes les accolades existent de façon à générer un programme vide sans
-                            erreurs.</p>
-                    </div>
-                    <p>La partie de programme située entre deux accolades, une ouvrante et une fermante,
-                        est appelée bloc.
-                        Je conseille de prendre l'habitude de faire une tabulation après le retour à la
-                        ligne qui suit l'accolade. Puis retirer cette tabulation après l'accolade
-                        fermante du bloc.</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">{
+            <h2 id="bloc">B - Définition d'un bloc de code</h2>
+            <!--                   <div class="alert alert-danger" role="alert">-->
+            <div class="bd-callout bd-callout-danger">
+                <h4>Attention !</h4>
+                <p>Les débutants ont tendance à copier le code avant de fermer les accolades, ce
+                    qui induit des recherches inutiles en débogage</p>
+                <p><strong>Bonne pratique :</strong> avant de commencer à coder, soyez sûr que
+                    toutes les accolades existent de façon à générer un programme vide sans
+                    erreurs.</p>
+            </div>
+            <p>La partie de programme située entre deux accolades, une ouvrante et une fermante,
+                est appelée bloc.
+                Je conseille de prendre l'habitude de faire une tabulation après le retour à la
+                ligne qui suit l'accolade. Puis retirer cette tabulation après l'accolade
+                fermante du bloc.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">{
     <span class="c">Faire une tabulation</span>
     <span class="c">Tout le code est frappé à cette hauteur</span>
 }
 <span class="c">Retrait de la tabulation</span>
-<span class="c">Tout le code est frappé à cette hauteur</span></code></pre></figure>
+<span class="c">Tout le code est frappé à cette hauteur</span></code></pre>
+            </div>
 
-                    <p>Cette méthode permet de contrôler la fermeture des accolades et de leurs
-                        correspondances.</p>
+            <p>Cette méthode permet de contrôler la fermeture des accolades et de leurs
+                correspondances.</p>
 
 
-                <h2 id="affiche">C - Affichage de texte</h2>
-                    <p>L'affichage de texte s'effectue grâce à la commande <code>Console.Write()</code>.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine (<span class="s">"Hello, World"</span>);</code></pre></figure>
-                    <p>Il existe en fait 2 méthodes d'affichage :</p>
-                    <ul>
-                        <li><code>Console.Write()</code> : affiche du texte et reste sur la même ligne,
-                        </li>
-                        <li><code>Console.WriteLine()</code> : affiche du texte et fait un saut de ligne
-                        </li>
-                    </ul>
+            <h2 id="affiche">C - Affichage de texte</h2>
+            <p>L'affichage de texte s'effectue grâce à la commande <code>Console.Write()</code>.</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine (<span
+                        class="s">"Hello, World"</span>);</code></pre>
+            </div>
+            <p>Il existe en fait 2 méthodes d'affichage :</p>
+            <ul>
+                <li><code>Console.Write()</code> : affiche du texte et reste sur la même ligne,
+                </li>
+                <li><code>Console.WriteLine()</code> : affiche du texte et fait un saut de ligne
+                </li>
+            </ul>
 
-                <h2 id="comment">D - Commentaires</h2>
-                    <p>Les commentaires doivent permettre à quelqu'un, de pouvoir lire et comprendre ce
-                        qui se passe. Les commentaires sont indispensables à tout bon programme.</p>
-                    <p>Il y a deux façons de placer des commentaires :</p>
-                    <ul>
-                        <li>soit en utilisant <code>/*Commentaire*/</code>, qui permet aussi un
-                            commentaire sur plusieurs lignes,
-                        </li>
-                        <li>soit en utilisant <code>//</code>. Le reste de la ligne est un commentaire
-                            où le commentaire se termine à la fin de la ligne.
-                        </li>
-                    </ul>
-                    <p>Microsoft à introduit la génération automatique de documentation basée sur le
-                        XML. Pour l'obtenir il suffit de saisir <code>///</code> devant chaque
-                        déclaration de méthode</p>
-                    <p>On obtient le code suivant :</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c">/// &ltsummary&gt
+            <h2 id="comment">D - Commentaires</h2>
+            <p>Les commentaires doivent permettre à quelqu'un, de pouvoir lire et comprendre ce
+                qui se passe. Les commentaires sont indispensables à tout bon programme.</p>
+            <p>Il y a deux façons de placer des commentaires :</p>
+            <ul>
+                <li>soit en utilisant <code>/*Commentaire*/</code>, qui permet aussi un
+                    commentaire sur plusieurs lignes,
+                </li>
+                <li>soit en utilisant <code>//</code>. Le reste de la ligne est un commentaire
+                    où le commentaire se termine à la fin de la ligne.
+                </li>
+            </ul>
+            <p>Microsoft à introduit la génération automatique de documentation basée sur le
+                XML. Pour l'obtenir il suffit de saisir <code>///</code> devant chaque
+                déclaration de méthode</p>
+            <p>On obtient le code suivant :</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="c">/// &ltsummary&gt
 /// Commentaire ...
 /// &ltsummary&gt
-                </span></code></pre></figure>
+                </span></code></pre>
+            </div>
 
-                <h2 id="indentation">E - l'indentation</h2>
-                    <p>Revenons à notre exemple. Le code n'est pas, en totalité, positionné à droite. A
-                        chaque nouveau bloc le code est décalé vers la droite. C'est ce qu'on appelle
-                        l'indentation. Elle existe dans tous les langages, c'est un bonne pratique qui
-                        rend le code plus lisible.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <h2 id="indentation">E - l'indentation</h2>
+            <p>Revenons à notre exemple. Le code n'est pas, en totalité, positionné à droite. A
+                chaque nouveau bloc le code est décalé vers la droite. C'est ce qu'on appelle
+                l'indentation. Elle existe dans tous les langages, c'est un bonne pratique qui
+                rend le code plus lisible.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">class</span> <span class="cp">HelloWorld</span> {
              <span class="nt">static</span> <span class="nt">void</span> Main() {
                  <span class="cp">Console</span>.WriteLine (<span class="s">"Hello, World"</span>);
              }
-    }</code></pre></figure>
-                    <div class="bd-callout bd-callout-info">
-                        <h4>Note</h4>
-                        <p>Si avec des IDE comme Visual Studio l'indentation est
-                            souvent automatique, préférez les <strong>tabulations</strong> à des espaces.
-                        </p>
-                    </div>
-                    <p>Si vous souhaitez couper une expression les bonnes pratiques sont les suivantes
-                        :</p>
-                    <ul>
-                        <li>faire un saut après une virgule,</li>
-                        <li>faire un saut après un opérateur(un + par exemple)</li>
-                        <li>aligner le début de la nouvelle ligne au même niveau que la précédent.</li>
-                    </ul>
+    }</code></pre>
+            </div>
+            <div class="bd-callout bd-callout-info">
+                <h4>Note</h4>
+                <p>Si avec des IDE comme Visual Studio l'indentation est
+                    souvent automatique, préférez les <strong>tabulations</strong> à des espaces.
+                </p>
+            </div>
+            <p>Si vous souhaitez couper une expression les bonnes pratiques sont les suivantes
+                :</p>
+            <ul>
+                <li>faire un saut après une virgule,</li>
+                <li>faire un saut après un opérateur(un + par exemple)</li>
+                <li>aligner le début de la nouvelle ligne au même niveau que la précédent.</li>
+            </ul>
 
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c">longMethodCall(expr1, expr2,
-                   expr3, expr4, expr5);</span></code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="c">longMethodCall(expr1, expr2,
+                   expr3, expr4, expr5);</span></code></pre>
+            </div>
 
-                    <p>Mauvais saut</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c">var = a * b / (c - g +
-                   f) + 4 * z;</span></code></pre></figure>
+            <p>Mauvais saut</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="c">var = a * b / (c - g +
+                   f) + 4 * z;</span></code></pre>
+            </div>
 
-                    <p >Meilleure méthode</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="c">var = a * b / (c - g +f) +
-                    4 * z;</span></code></pre></figure>
+            <p>Meilleure méthode</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="c">var = a * b / (c - g +f) +
+                    4 * z;</span></code></pre>
+            </div>
 
-                <h2 id="nommage">F - Conventions de nommage</h2>
-                    <h5>La notation hongroise</h5>
-                    <ul>
-                        <li>On ajoute un préfixe à chaque variable pour indiquer son type.</li>
-                        <li>Exemple : <code>btnRetour</code> pour bouton Retour</li>
-                        <li>Toutefois les préfixes ne sont pas standardisés et on doit en inventer pour
-                            les nouveaux types.
-                        </li>
-                        <li>Puisque C# est un langage fortement typé et que la hiérarchie de classes est
-                            très stricte on ne suggère pas d’utiliser cette notation.
-                        </li>
-                    </ul>
-                    <h5>La casse Pascal</h5>
-                    <ul>
-                        <li>La première lettre est en majuscule.</li>
-                        <li>On sépare les mots en mettant leur première lettre en majuscule.</li>
-                        <li>Exemple : <code>AfficherCustomer</code></li>
-                        <li> Vous remarquerez que les espaces de noms et les classes de bases du
-                            Framework respectent cette casse.
-                        </li>
-                    </ul>
-                    <h5>La casse Camel</h5>
-                    <ul>
-                        <li>La première lettre est en minuscule.</li>
-                        <li>On sépare les mots en mettant leur première lettre en majuscule.</li>
-                        <li>Exemple : <code>testCompteur</code></li>
-                    </ul>
-                    <h5>La casse Majuscule</h5>
-                    <ul>
-                        <li>Toutes les lettres sont en majuscule pour les constante d'une ou deux
-                            lettres
-                        </li>
-                        <li>Exemple : <code>PI</code></li>
-                        <li>Si le nom est trop long, utilisez la casse Pascal</li>
-                    </ul>
-                <div class="bd-callout bd-callout-info">
-                    <h4>Note</h4>
-                    <p>Il est fortement déconseillé de séparer les mots par des
-                        traits de soulignement (underscore) : <code>Afficher_Customer</code> est donc
-                        déconseillé.</p>
-                </div>
-                    <h5>Nommage des noms</h5>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Espaces de noms</th>
-                            <th>On suggère d’utiliser le nom de la compagnie ou du produit en notation
-                                Pascal.
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Variables</td>
-                            <td>On utilise des noms en notation Camel.</td>
-                        </tr>
-                        <tr>
-                            <td>Classes</td>
-                            <td>On utilise un nom qui décrit les objets en notation Pascal.</td>
-                        </tr>
-                        <tr>
-                            <td>Méthodes</td>
-                            <td>On utilise un verbe qui décrit exactement ce que fait la méthode en
-                                notation Pascal.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Paramètres</td>
-                            <td>On utilise des noms significatifs en notation Pascal.</td>
-                        </tr>
-                        <tr>
-                            <td>Interfaces</td>
-                            <td>On utilise des noms en notation Pascal précédés d’un I majuscule.</td>
-                        </tr>
-                        <tr>
-                            <td>Membres</td>
-                            <td>On utilise des noms en notation Camel.</td>
-                        </tr>
-                        </tbody>
-                    </table>
-            </main>
+            <h2 id="nommage">F - Conventions de nommage</h2>
+            <h5>La notation hongroise</h5>
+            <ul>
+                <li>On ajoute un préfixe à chaque variable pour indiquer son type.</li>
+                <li>Exemple : <code>btnRetour</code> pour bouton Retour</li>
+                <li>Toutefois les préfixes ne sont pas standardisés et on doit en inventer pour
+                    les nouveaux types.
+                </li>
+                <li>Puisque C# est un langage fortement typé et que la hiérarchie de classes est
+                    très stricte on ne suggère pas d’utiliser cette notation.
+                </li>
+            </ul>
+            <h5>La casse Pascal</h5>
+            <ul>
+                <li>La première lettre est en majuscule.</li>
+                <li>On sépare les mots en mettant leur première lettre en majuscule.</li>
+                <li>Exemple : <code>AfficherCustomer</code></li>
+                <li> Vous remarquerez que les espaces de noms et les classes de bases du
+                    Framework respectent cette casse.
+                </li>
+            </ul>
+            <h5>La casse Camel</h5>
+            <ul>
+                <li>La première lettre est en minuscule.</li>
+                <li>On sépare les mots en mettant leur première lettre en majuscule.</li>
+                <li>Exemple : <code>testCompteur</code></li>
+            </ul>
+            <h5>La casse Majuscule</h5>
+            <ul>
+                <li>Toutes les lettres sont en majuscule pour les constante d'une ou deux
+                    lettres
+                </li>
+                <li>Exemple : <code>PI</code></li>
+                <li>Si le nom est trop long, utilisez la casse Pascal</li>
+            </ul>
+            <div class="bd-callout bd-callout-info">
+                <h4>Note</h4>
+                <p>Il est fortement déconseillé de séparer les mots par des
+                    traits de soulignement (underscore) : <code>Afficher_Customer</code> est donc
+                    déconseillé.</p>
+            </div>
+            <h5>Nommage des noms</h5>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Espaces de noms</th>
+                    <th>On suggère d’utiliser le nom de la compagnie ou du produit en notation
+                        Pascal.
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Variables</td>
+                    <td>On utilise des noms en notation Camel.</td>
+                </tr>
+                <tr>
+                    <td>Classes</td>
+                    <td>On utilise un nom qui décrit les objets en notation Pascal.</td>
+                </tr>
+                <tr>
+                    <td>Méthodes</td>
+                    <td>On utilise un verbe qui décrit exactement ce que fait la méthode en
+                        notation Pascal.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Paramètres</td>
+                    <td>On utilise des noms significatifs en notation Pascal.</td>
+                </tr>
+                <tr>
+                    <td>Interfaces</td>
+                    <td>On utilise des noms en notation Pascal précédés d’un I majuscule.</td>
+                </tr>
+                <tr>
+                    <td>Membres</td>
+                    <td>On utilise des noms en notation Camel.</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
+    </main>
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

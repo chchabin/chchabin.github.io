@@ -3,220 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Introduction au développement</title>
 </head>
 <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-        </a>
-
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav bd-navbar-nav flex-row">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
                 <li class="nav-item">
                     <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
                 </li>
             </ul>
         </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                <nav class="collapse bd-links" id="bd-docs-nav">
-                    <div class="bd-toc-item active">
-                        <a class="bd-toc-link " href="csharp01_intro.html">
-                            I - Introduction au développement
-                        </a>
-                        <ul class="nav bd-sidenav">
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="true"
+                            aria-current="true">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse show" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
                             <li>
-                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
+                                <a class="d-inline-flex align-items-center rounded "
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
                                 </a>
                             </li>
                             <li>
-                                <a href="#contentArt">B - L ’art et la manière de bien programmer
+                                <a class="d-inline-flex align-items-center rounded "
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
                                 </a>
                             </li>
                             <li>
-                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp02_basesLg.html">
-                            II - Les bases du langage
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#source">A - Anatomie d'un fichier source
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#bloc">B - Définition d'un bloc de code
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#affiche">C - Affichage de texte
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#comment">D - Commentaires
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#indentation">E - l'indentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#nommage">F - Conventions de nommage
+                                <a class="d-inline-flex align-items-center rounded "
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                            III - Programmer avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
                             <li>
-                                <a href="csharp03_programmer-variables.html"> A - Les variables
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp06_programmer_boucles.html">D - Les boucles
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
                                 </a>
                             </li>
                             <li>
-                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                            IV - Programmation objet avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp08_objet_overview.html">L'approche Objet
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp09_objet_creation.html">Création d'objet en C#
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
                                 </a>
                             </li>
                         </ul>
                     </div>
-                </nav>
-            </div>
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                    <li class="toc-entry toc-h3"><a href="#contentArtProg">a - Principe de programmation</a></li>
-                    <li class="toc-entry toc-h3"><a href="#contentArtLg">b - Les langages de programmation</a></li>
-                    <li class="toc-entry toc-h3"><a href="#contentBonnesPSimple">a - Garder des choses simples</a></li>
-                    <li class="toc-entry toc-h3"><a href="#contentBonnesPSavoir">b - La culture du savoir</a></li>
-                    <li class="toc-entry toc-h3"><a href="#contentBonnesPQualite">c - La qualité</a></li>
-                </ul>
-            </div>
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="false">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse" id="csharp03_programmer-variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="false">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
                 <h1 class="bd-title" id="content"> I - Introduction au développement</h1>
-                <p class="bd-lead">L'objectif de ce chapitre est de découvrir les notions fondamentales liées au développement.
-                    En particulier au développement en langage C#</p>
+            </div>
+            <p class="bd-lead">L'objectif de ce chapitre est de découvrir les notions fondamentales liées au
+                développement.
+                En particulier au développement en langage C#</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#contentArtProg">a - Principe de programmation</a></li>
+                    <li><a href="#contentArtLg">b - Les langages de programmation</a></li>
+                    <li><a href="#contentBonnesPSimple">a - Garder des choses simples</a></li>
+                    <li><a href="#contentBonnesPSavoir">b - La culture du savoir</a></li>
+                    <li><a href="#contentBonnesPQualite">c - La qualité</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="contentMachine">A - Qu'est ce qu'une machine ?</h2>
+            <p>Oubliez terminator ! La machine est un ensemble de composants électroniques.</p>
+            <img class="img-fluid" src="img/machine.PNG" alt="La machine">
+            <h5>La machine a des caractéristiques peu pratiques :</h5>
+            <ol>
+                <li>elle est muette : pour connaitre une information, elle doit poser une
+                    question, le plus souvent à l'écran,
+                </li>
+                <li>elle est sourde : pour obtenir une information, elle doit analyser les
+                    données saisie, le plus souvent au clavier,
+                </li>
+                <li>elle est limitée : elle ne peut que faire des calcul, à partir des
+                    informations saisie et elle doit pouvoir les stocker,
+                </li>
+                <li>elle est muette : une fois ses calculs faits, elle devra les restituer, le
+                    plus souvent à l'écran.
+                </li>
+            </ol>
 
-                <h2  id="contentMachine">A - Qu'est ce qu'une machine ?</h2>
-                    <p>Oubliez terminator ! La machine est un ensemble de composants électroniques.</p>
-                    <img class="img-fluid" src="img/machine.PNG" alt="La machine">
-                    <h5>La machine a des caractéristiques peu pratiques :</h5>
-                    <ol>
-                    <li>elle est muette : pour connaitre une information, elle doit poser une
-                        question, le plus souvent à l'écran,
-                    </li>
-                    <li>elle est sourde : pour obtenir une information, elle doit analyser les
-                        données saisie, le plus souvent au clavier,
-                    </li>
-                    <li>elle est limitée : elle ne peut que faire des calcul, à partir des
-                        informations saisie et elle doit pouvoir les stocker,
-                    </li>
-                    <li>elle est muette : une fois ses calculs faits, elle devra les restituer, le
-                        plus souvent à l'écran.
-                    </li>
-                </ol>
+            <h2 id="contentArt">B - L ’art et la manière de bien programmer</h2>
+            <h3 id="contentArtProg">a - Principe de programmation</h3>
+            <h5>Programmer, c ’est quoi ?</h5>
+            <ul>
+                <li>Utiliser un <strong>langage de programmation</strong>,</li>
+                <li>Donner des <strong>ordres</strong> clairs à l ’ordinateur,</li>
+                <li>Etre capable de <strong>structurer</strong> ces ordres.</li>
+            </ul>
+            <h5>Programmer c'est répondre à un besoin !</h5>
+            <ul>
+                <li><strong>Analyse</strong> des besoins et de l ’application à mettre en place,
+                </li>
+                <li><strong>Développement</strong> de l ’application,
+                    <ul>
+                        <li>Mise en œuvre des éventuelles bases de données,</li>
+                        <li>Programmation,</li>
+                    </ul>
+                </li>
+                <li><strong>Déploiement</strong> et maintenance.</li>
+            </ul>
+            <h5>Avant de programmer...</h5>
+            <p>Donner des ordres à un ordinateur, c ’est :</p>
+            <ul>
+                <li>Utiliser un <strong>vocabulaire</strong> qu ’il comprend,</li>
+                <li>Respecter un certain ordre afin d ’aboutir au résultat souhaité.</li>
+            </ul>
 
-                <h2 id="contentArt">B - L ’art et la manière de bien programmer</h2>
-                    <h3 id="contentArtProg">a - Principe de programmation</h3>
-                        <h5>Programmer, c ’est quoi ?</h5>
-                        <ul>
-                            <li>Utiliser un <strong>langage de programmation</strong>,</li>
-                            <li>Donner des <strong>ordres</strong> clairs à l ’ordinateur,</li>
-                            <li>Etre capable de <strong>structurer</strong> ces ordres.</li>
-                        </ul>
-                        <h5>Programmer c'est répondre à un besoin !</h5>
-                        <ul>
-                            <li><strong>Analyse</strong> des besoins et de l ’application à mettre en place,
-                            </li>
-                            <li><strong>Développement</strong> de l ’application,
-                                <ul>
-                                    <li>Mise en œuvre des éventuelles bases de données,</li>
-                                    <li>Programmation,</li>
-                                </ul>
-                            </li>
-                            <li><strong>Déploiement</strong> et maintenance.</li>
-                        </ul>
-                        <h5>Avant de programmer...</h5>
-                        <p>Donner des ordres à un ordinateur, c ’est :</p>
-                        <ul>
-                            <li>Utiliser un <strong>vocabulaire</strong> qu ’il comprend,</li>
-                            <li>Respecter un certain ordre afin d ’aboutir au résultat souhaité.</li>
-                        </ul>
+            <h3 id="contentArtLg">b - Les langages de programmation</h3>
+            <p>Il existe plusieurs langages de programmation, certains sont propres à une technologie, d’autres
+                n’existent plus tandis que de nouveaux langages naissent pour répondre à de nouveaux besoins.</p>
+            <h5>Le Langage Machine</h5>
+            <p>Il s’agit du langage le plus proche du binaire. Le microprocesseur ne peut comprendre que des codes
+                binaires mais les programmeurs préfèrent des mots.</p>
+            <p>Le langage machine utilise des codes binaires, est l’assembleur utilise donc un dictionnaire dans lequel
+                chaque mot correspond à un code binaire compréhensible par le processeur.</p>
+            <div class="highlight">
+                <pre><code class="language-csharp" data-lang="csharp">MOV EAX, OXOlOZO3O4 A101020304</code></pre>
+            </div>
+            <p>Si c’est le langage le plus rapide, il a comme inconvénient que chaque processeur utilise ses propres
+                codes (EAX est un registre sur les processeurs Intel, qui n’existe pas sur ARM, Motorola, ...)</p>
 
-                    <h3 id="contentArtLg">b - Les langages de programmation</h3>
-                        <p>Il existe plusieurs langages de programmation, certains sont propres à une technologie, d’autres
-                            n’existent plus tandis que de nouveaux langages naissent pour répondre à de nouveaux besoins.</p>
-                        <h5>Le Langage Machine</h5>
-                            <p>Il s’agit du langage le plus proche du binaire. Le microprocesseur ne peut comprendre que des codes
-                                binaires mais les programmeurs préfèrent des mots.</p>
-                            <p>Le langage machine utilise des codes binaires, est l’assembleur utilise donc un dictionnaire dans lequel
-                                chaque mot correspond à un code binaire compréhensible par le processeur.</p>
-                            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">MOV EAX, OXOlOZO3O4 A101020304</code></pre></figure>
-                           <p>Si c’est le langage le plus rapide, il a comme inconvénient que chaque processeur utilise ses propres
-                               codes (EAX est un registre sur les processeurs Intel, qui n’existe pas sur ARM, Motorola, ...)</p>
+            <h5>Les Langages Compilés</h5>
 
-                        <h5>Les Langages Compilés</h5>
-
-                            <p>Pour éviter l’inconvénient de devoir taper plusieurs codes pour faire le même programme sur
-                            plusieurs processeurs, sont apparus les langages compilés.</p>
-                            <p>Le langage de développement utilise des instructions proches des mots humains (en anglais) : for, if,
-                                else, print, etc.</p>
-                            <p>Exemple de programme en Delphi (Pascal)</p>
-                            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">procedure TForm1.Draw();
+            <p>Pour éviter l’inconvénient de devoir taper plusieurs codes pour faire le même programme sur
+                plusieurs processeurs, sont apparus les langages compilés.</p>
+            <p>Le langage de développement utilise des instructions proches des mots humains (en anglais) : for, if,
+                else, print, etc.</p>
+            <p>Exemple de programme en Delphi (Pascal)</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">procedure TForm1.Draw();
 var
     i, j, k: Integer;
 begin
@@ -226,117 +285,126 @@ begin
                 k:=tab_int[i,j];
                 img_screen.Canvas.Draw(i*100,j*100,tab_img[k].Picture.Ghaphic);
             end;
-end;</code></pre></figure>
+end;</code></pre>
+            </div>
 
-                            <p>Il faut ensuite utiliser un programme appelé compilateur, qui va traduire ces instructions en code
-                            machine. Il est donc évident qu’il faut créer autant de compilateur qu’il existe de processeur. Pour le
-                                développeur, c’est transparent (c’est la société qui vend les compilateurs qui fait le travail).</p>
-                            <p>Il reste cependant un inconvénient : chaque machine utilise du matériel différent (résolution d’écran
-                            différente, emplacement mémoire différent, etc) et il reste difficile de créer un programme compatible
-                                avec plusieurs architectures.</p>
-                <p>Dans un langage compilé, le compilateur génére un nouveau fichier qui sera autonome, c'est-à-dire qui n'aura plus besoin d'un programme autre que lui pour s'exécuter; on dit d'ailleurs que ce fichier est exécutable.
-                    le programme est directement exécuté sur l'ordinateur, donc il sera en général plus rapide que le même programme dans un langage interprété.</p>
+            <p>Il faut ensuite utiliser un programme appelé compilateur, qui va traduire ces instructions en code
+                machine. Il est donc évident qu’il faut créer autant de compilateur qu’il existe de processeur. Pour le
+                développeur, c’est transparent (c’est la société qui vend les compilateurs qui fait le travail).</p>
+            <p>Il reste cependant un inconvénient : chaque machine utilise du matériel différent (résolution d’écran
+                différente, emplacement mémoire différent, etc) et il reste difficile de créer un programme compatible
+                avec plusieurs architectures.</p>
+            <p>Dans un langage compilé, le compilateur génère un nouveau fichier qui sera autonome, c'est-à-dire qui
+                n'aura
+                plus besoin d'un programme autre que lui pour s'exécuter; on dit d'ailleurs que ce fichier est
+                exécutable.
+                le programme est directement exécuté sur l'ordinateur, donc il sera en général plus rapide que le même
+                programme dans un langage interprété.</p>
 
-                         <h5>Les langages interprétés.</h5>
-                <p>L'interprétation du code source est un processus « pas à pas » : l'interpréteur va exécuter les lignes du code une par une, en décidant à chaque étape ce qu'il va faire ensuite.
-                <br>L'interpréteur se trouve le plus souvent dans le navigateur. Il execute les langages comme php, javacript, phyton ...</p>
+            <h5>Les langages interprétés.</h5>
+            <p>L'interprétation du code source est un processus « pas à pas » : l'interpréteur va exécuter les lignes du
+                code une par une, en décidant à chaque étape ce qu'il va faire ensuite.
+                <br>L'interpréteur se trouve le plus souvent dans le navigateur. Il execute les langages comme php,
+                javascript, phyton ...</p>
 
-                <h2 id="contentBonnesP"> C - La culture et les bonnes pratiques</h2>
+            <h2 id="contentBonnesP"> C - La culture et les bonnes pratiques</h2>
 
-                    <h3 id="contentBonnesPSimple">a - Garder des choses simples</h3>
-                        <p>L'art du technicien, c'est chercher la simplicité. Plus c'est
-                            simple, plus c'est mignon.</p>
-                        <p>La simplicité s'exerce à deux niveaux :</p>
-                        <ul>
-                            <li>le niveau technique,</li>
-                            <li>le niveau de temps</li>
-                        </ul>
-                        <p>Que ce soit dans un cadre professionnel, scolaire ou personnelle,
-                            les journées ne font que 24 heures, et personne ne passe son
-                            temps à faire toujours et tout le temps la même chose</p>
-                        <p>Pour appréhender un problème, il faut le faire <strong>méthodiquement</strong>,
-                            partir du simple pour aller au plus compliqué.
-                            <br> En informatique et souvent dans d'autres domaines, un
-                            problème compliqué est une somme de problèmes simple.
-                            <br>Le tout est de faire une bonne analyse, c'est ce à quoi doit
-                            aboutir un débutant, avant de foncer tête bêche.</p>
-                        <h5>L'automatisation</h5>
-                        <div class="bd-callout bd-callout-warning">
-                            <h4>Répétition</h4>
-                            <p>Il ne faut pas faire plus de <strong>3 fois</strong> la même
-                                chose.</p>
-                            <p>Si vous voyez quelque chose qui se répète, votre premier
-                                réflexe doit être de chercher à factoriser le code, parce
-                                que moins de code, c'est moins de bugs, et c'est un
-                                programme plus facile à comprendre.</p>
-                        </div>
+            <h3 id="contentBonnesPSimple">a - Garder des choses simples</h3>
+            <p>L'art du technicien, c'est chercher la simplicité. Plus c'est
+                simple, plus c'est mignon.</p>
+            <p>La simplicité s'exerce à deux niveaux :</p>
+            <ul>
+                <li>le niveau technique,</li>
+                <li>le niveau de temps</li>
+            </ul>
+            <p>Que ce soit dans un cadre professionnel, scolaire ou personnelle,
+                les journées ne font que 24 heures, et personne ne passe son
+                temps à faire toujours et tout le temps la même chose</p>
+            <p>Pour appréhender un problème, il faut le faire <strong>méthodiquement</strong>,
+                partir du simple pour aller au plus compliqué.
+                <br> En informatique et souvent dans d'autres domaines, un
+                problème compliqué est une somme de problèmes simple.
+                <br>Le tout est de faire une bonne analyse, c'est ce à quoi doit
+                aboutir un débutant, avant de foncer tête bêche.</p>
+            <h5>L'automatisation</h5>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Répétition</h4>
+                <p>Il ne faut pas faire plus de <strong>3 fois</strong> la même
+                    chose.</p>
+                <p>Si vous voyez quelque chose qui se répète, votre premier
+                    réflexe doit être de chercher à factoriser le code, parce
+                    que moins de code, c'est moins de bugs, et c'est un
+                    programme plus facile à comprendre.</p>
+            </div>
 
-                        <p>Pour ne pas se répéter il faut automatiser les processus.</p>
-                        <p>Ceci est vrai :</p>
-                        <ul>
-                            <li>pour le code,</li>
-                            <li>pour des applications, comme votre <abbr
-                                    title="Editeur de Développement Intégré"
-                                    class="initialism">ide</abbr>, que ce soit visual
-                                studio, sublime text ...
-                            </li>
-                        </ul>
-                        <p> il est nécessaire d’identifier :</p>
-                        <ul>
-                            <li>les points de répétition,</li>
-                            <li>les points à faible valeur ajouté, qui peuvent êtres
-                                automatisés.
-                            </li>
-                        </ul>
+            <p>Pour ne pas se répéter il faut automatiser les processus.</p>
+            <p>Ceci est vrai :</p>
+            <ul>
+                <li>pour le code,</li>
+                <li>pour des applications, comme votre <abbr
+                        title="Editeur de Développement Intégré"
+                        class="initialism">ide</abbr>, que ce soit visual
+                    studio, sublime text ...
+                </li>
+            </ul>
+            <p> il est nécessaire d’identifier :</p>
+            <ul>
+                <li>les points de répétition,</li>
+                <li>les points à faible valeur ajouté, qui peuvent êtres
+                    automatisés.
+                </li>
+            </ul>
 
-                    <h3 id="contentBonnesPSavoir">b - La culture du savoir</h3>
-                        <h5>Documentez vous</h5>
-                        <div class="bd-callout bd-callout-warning">
-                        <h4>Super Hero</h4>
-                            <p>Personne ne connait tout sur tout, même les professionnels
-                                les plus aguerris. Cela ne se voit qu'à la <strong>télévision</strong>f!</p>
-                        </div>
-                        <p>Voilà pourquoi, il faut <strong>toujours</strong> avoir une
-                            <strong>documentation avec soi</strong>. Peut importe qu'elle
-                            soit technique, de cours ou de notes.</p>
-                        <h5>Commentez votre code</h5>
-                        <p>Le code n'est pas quelque chose de fixe dans le temps, la
-                            technicité du programmeur évolue, ainsi que son analyse des
-                            problèmes. Ceci va donc influer sur sa façon de coder.</p>
-                        <p>Un code se butine, c'est à dire que son programmeur le fait
-                            évoluer, il le modifie, qu'il soit ou non débutant.</p>
-                        <p>De plus, le code n'est pas forcément destiné à une seule
-                            personne, la programmation est le plus souvent un travail
-                            d'équipe, et le code doit être "lisible" pour toute
-                            l'équipe.</p>
-                        <p>Commenter son code ce n'est pas commenter un boucle ou un si.
-                            C'est avant tout <strong>donnez les exemples</strong> qui
-                            illustrent les intentions du programmeur.</p>
-                        <h5>Tester son code</h5>
-                        <p>Le test simple consiste à prévoir tous les cas possibles auxquels
-                            sera soumis le code. C'est d'ailleurs ces cas qui servirons le
-                            plus souvent de commentaire.</p>
-                        <p>Lorsque les programmes sont plus long et plus complexes, le
-                            programmeur aura recours aux tests automatisés. Ils limiteront
-                            les erreurs.</p>
+            <h3 id="contentBonnesPSavoir">b - La culture du savoir</h3>
+            <h5>Documentez vous</h5>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Super Hero</h4>
+                <p>Personne ne connait tout sur tout, même les professionnels
+                    les plus aguerris. Cela ne se voit qu'à la <strong>télévision</strong>f!</p>
+            </div>
+            <p>Voilà pourquoi, il faut <strong>toujours</strong> avoir une
+                <strong>documentation avec soi</strong>. Peut importe qu'elle
+                soit technique, de cours ou de notes.</p>
+            <h5>Commentez votre code</h5>
+            <p>Le code n'est pas quelque chose de fixe dans le temps, la
+                technicité du programmeur évolue, ainsi que son analyse des
+                problèmes. Ceci va donc influer sur sa façon de coder.</p>
+            <p>Un code se butine, c'est à dire que son programmeur le fait
+                évoluer, il le modifie, qu'il soit ou non débutant.</p>
+            <p>De plus, le code n'est pas forcément destiné à une seule
+                personne, la programmation est le plus souvent un travail
+                d'équipe, et le code doit être "lisible" pour toute
+                l'équipe.</p>
+            <p>Commenter son code ce n'est pas commenter un boucle ou un si.
+                C'est avant tout <strong>donnez les exemples</strong> qui
+                illustrent les intentions du programmeur.</p>
+            <h5>Tester son code</h5>
+            <p>Le test simple consiste à prévoir tous les cas possibles auxquels
+                sera soumis le code. C'est d'ailleurs ces cas qui servirons le
+                plus souvent de commentaire.</p>
+            <p>Lorsque les programmes sont plus long et plus complexes, le
+                programmeur aura recours aux tests automatisés. Ils limiteront
+                les erreurs.</p>
 
-                    <h3 id="contentBonnesPQualite">c - La qualité</h3>
-                        <p>La qualité est quelque chose de subjectif. Elle varie en fonction
-                            de la personne concernée.
-                            <br>Elle sera différente selon que l'on soit : </p>
-                        <ul>
-                            <li>un débutant,</li>
-                            <li>un étudiant,</li>
-                            <li>un professeur,</li>
-                            <li>un développeur,</li>
-                            <li>un client.</li>
-                        </ul>
-                        <p>Il faut se donner des <strong>bonnes pratiques</strong> pour soi
-                            et ses collègues.</p>
-                        <p>Les bonnes pratiques sont souvent liées à une technologie ou un
-                            métier.</p>
-            </main>
+            <h3 id="contentBonnesPQualite">c - La qualité</h3>
+            <p>La qualité est quelque chose de subjectif. Elle varie en fonction
+                de la personne concernée.
+                <br>Elle sera différente selon que l'on soit : </p>
+            <ul>
+                <li>un débutant,</li>
+                <li>un étudiant,</li>
+                <li>un professeur,</li>
+                <li>un développeur,</li>
+                <li>un client.</li>
+            </ul>
+            <p>Il faut se donner des <strong>bonnes pratiques</strong> pour soi
+                et ses collègues.</p>
+            <p>Les bonnes pratiques sont souvent liées à une technologie ou un
+                métier.</p>
         </div>
-    </div>
+    </main>
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

@@ -3,176 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Création d'objet</title>
 </head>
 <body>
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-    </a>
-
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
-            </li>
-        </ul>
-    </div>
-</header>
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp01_intro.html">
-                        I - Introduction au développement
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#contentMachine">A - Qu'est ce qu'une machine ?
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contentArt">B - L ’art et la manière de bien programmer
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp02_basesLg.html">
-                        II - Les bases du langage
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#source">A - Anatomie d'un fichier source
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#bloc">B - Définition d'un bloc de code
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#affiche">C - Affichage de texte
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#comment">D - Commentaires
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#indentation">E - l'indentation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#nommage">F - Conventions de nommage
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                        III - Programmer avec C#
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="csharp03_programmer-variables.html"> A - Les variables
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp04_programmer_test.html">B - Les tests et conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp05_programmer_tableau.html">C - Les tableaux
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp06_programmer_boucles.html">D - Les boucles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp07_programmer_fonctions.html">E - Les fonctions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                        IV - Programmation objet avec C#
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="csharp08_objet_overview.html">L'approche Objet
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp09_objet_creation.html">Création d'objet en C#
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp11_objet_relations.html">Les relations entre les classes
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h3"><a href="#predef">a - Constructeur</a></li>
-                <li class="toc-entry toc-h3"><a href="#this">b - Autoréférence : le mot-clé this</a></li>
-                <li class="toc-entry toc-h3"><a href="#ACCESSEURS">b - Accesseurs</a></li>
-                <li class="toc-entry toc-h3"><a href="#MUTATEURS">c - Mutateurs</a></li>
-                <li class="toc-entry toc-h3"><a href="#overide">d - Redéfinition de ToString</a></li>
-                <li class="toc-entry toc-h3"><a href="#"></a></li>
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                </li>
             </ul>
         </div>
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            <h1 class="bd-title" id="base">Principaux concepts objets</h1>
-            <p class="bd-lead">L'objectif de ce chapitre est de présenter les concepts essentiels de la programmation orientée objet.</p>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="false">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse" id="csharp03_programmer-variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="true" aria-current="true">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse show" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="base">Principaux concepts objets</h1>
+            </div>
+            <p class="bd-lead">L'objectif de ce chapitre est de présenter les concepts essentiels de la programmation
+                orientée objet.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#predef">a - Constructeur</a></li>
+                    <li><a href="#this">b - Autoréférence : le mot-clé this</a></li>
+                    <li><a href="#ACCESSEURS">b - Accesseurs</a></li>
+                    <li><a href="#MUTATEURS">c - Mutateurs</a></li>
+                    <li><a href="#override">d - Redéfinition de ToString</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
             <div class="bd-callout bd-callout-warning">
                 <h4>Bonnes pratiques</h4>
                 <ul>
                     <li>
-                        Maintenir les données privées.</p>
+                        Maintenir les données privées.
                     </li>
                     <li>
-                        Initialiser toujours les données.</p>
+                        Initialiser toujours les données.
                     </li>
                     <li>
-                        Ne fournissez de méthodes d&#39;accès que si cela est nécessaire.</p>
+                        Ne fournissez de méthodes d&#39;accès que si cela est nécessaire.
                     </li>
                     <li>
-                        Utilisez les conventions standards pour nommer classes et méthodes. Un nom de classe doit comporter un substantif : <i>Client, ClientPrivilegie</i>... Les méthodes doivent avoir un nom signifiant, commencer par une lettre minuscule; les méthodes d&#39;accès doivent commencer par<b> Get</b> ( <i>GetNom()</i> ) et les méthodes d&#39;altération par <b>Set</b> ( <i>SetNom()</i> ).</p>
+                        Utilisez les conventions standards pour nommer classes et méthodes. Un nom de classe doit
+                        comporter un substantif : <i>Client, ClientPrivilegie</i>... Les méthodes doivent avoir un nom
+                        signifiant, commencer par une lettre minuscule; les méthodes d&#39;accès doivent commencer
+                        par<b> Get</b> ( <i>GetNom()</i> ) et les méthodes d&#39;altération par <b>Set</b> (
+                        <i>SetNom()</i> ).
                     </li>
                     <li>
-                        Ne faites jouer à la méthode main que le rôle d&#39;instanciation d&#39;objets.</p>
+                        Ne faites jouer à la méthode main que le rôle d&#39;instanciation d&#39;objets.
                     </li>
                 </ul>
             </div>
             <h2 id="predef">a - Constructeur</h2>
             <div class="bd-callout bd-callout-info">
-                    <h4>Classe : Definition</h4>
-                <p>le constructeur est une méthode spécifique dont le rôle est de construire un objet, le plus souvent en initialisant ses attributs.</p>
+                <h4>Classe : Definition</h4>
+                <p>le constructeur est une méthode spécifique dont le rôle est de construire un objet, le plus souvent
+                    en initialisant ses attributs.</p>
             </div>
             <p>Le constructeur sans argument et les constructeurs paramétriques sont
                 <b> OPTIONNELS</b>. De toute façon, un constructeur par défaut est fourni par C# en tenant
                 compte des initialisions explicites et en fournissant des initialisations implicites pour tous les
                 autres variables d’instance.</p>
             <p>Il est possible d'avoir plusieurs constructeur pour une classe</p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">public class</span> <span class="cp">Exemple</span> {
@@ -185,7 +256,8 @@
                 <span class="cp">this</span>.x = 1;
                 <span class="cp">this</span>.y = 4;
             }
-            <span class="nt">public </span>Exemple(<span class="nt">int</span> _x,<span class="nt">int</span> _y){   <span class="c">// constructeur paramétrique </span>
+            <span class="nt">public </span>Exemple(<span class="nt">int</span> _x,<span
+                        class="nt">int</span> _y){   <span class="c">// constructeur paramétrique </span>
             {
                 <span class="cp">this</span>.x = _x;
                 <span class="cp">this</span>.y = _y;
@@ -199,22 +271,28 @@
                 <span class="c">// ...........code de P2</span>
             }
          }
-    }</code></pre></figure>
-            <p>L'utilisation d'un constructeur se fait au moment de l'instanciation de l'objet (opérateur <span class="nt">new </span> ), en passant en paramètres les futures valeurs des attributs de l'objet créé (s'il y en a).
+    }</code></pre>
+            </div>
+            <p>L'utilisation d'un constructeur se fait au moment de l'instanciation de l'objet (opérateur <span
+                    class="nt">new </span> ), en passant en paramètres les futures valeurs des attributs de l'objet créé
+                (s'il y en a).
             </p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
 <span class="nt">namespace</span> demonstration
 {
     <span class="nt">class</span> <span class="cp">HelloWorld</span> {
     <span class="nt">static</span> <span class="nt">void</span> Main() {
 
     <span class="cp">Exemple</span> ex1; <span class="c">// --déclaration d'un nouvel objet</span>
-    ex1 = <span class="nt">new </span><span class="cp">Exemple</span>();<span class="c">// --instanciation de cet objet</span>
+    ex1 = <span class="nt">new </span><span class="cp">Exemple</span>();<span
+                        class="c">// --instanciation de cet objet</span>
 
     <span class="c">// --autre forme plus compacte</span>
     <span class="cp">Exemple</span> ex2 = <span class="nt">new </span><span class="cp">Exemple</span>(20,30);
     }
-}</code></pre></figure>
+}</code></pre>
+            </div>
             <div class="bd-callout bd-callout-danger">
                 <h4>ATTENTION</h4>
                 <p>1 - Le constructeur doit porter le même nom que la classe.</p>
@@ -224,14 +302,17 @@
             <h2 id="this">b - Autoréférence : le mot-clé this </h2>
             <div class="bd-callout bd-callout-info">
                 <h4>Definition</h4>
-                <p>A l'intérieur d'une méthode, le mot-clé this permet d'accéder à l'instance (l'objet) sur lequel la méthode est appelée</p>
+                <p>A l'intérieur d'une méthode, le mot-clé this permet d'accéder à l'instance (l'objet) sur lequel la
+                    méthode est appelée</p>
             </div>
-            <p>Aucune variable ne peut être utilisée sans être une variable d’instance ou une variable locale déclarée dans ce bloc ou un bloc supérieur.</p>
-            <p>Lorsqu’il y a conflit de nom entre une variable locale et une variable d’instance, la
+            <p>Aucune variable ne peut être utilisée sans être une variable d’instance ou une variable locale déclarée
+                dans ce bloc ou un bloc supérieur.</p>
+            <p>Lorsqu'il y a conflit de nom entre une variable locale et une variable d’instance, la
                 variable locale l’emporte et masque la variable d’instance. Pour contourner le masquage et
                 utiliser la variable d’instance, il faut utiliser le mot clef this qui désigne l’instance courante :</p>
-                <p>this.variable_dinstance </p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <p>this.variable_dinstance </p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">public class</span> <span class="cp">Exemple</span> {
@@ -259,15 +340,18 @@
                 <span class="cp">this</span>.y = y; <span class="c">// la variable d'instance passe de la valeur 4 à la valeur 3 </span>
             }
          }
-    }</code></pre></figure>
+    }</code></pre>
+            </div>
             <h2 id="ACCESSEURS">c - Accesseurs</h2>
             <div class="bd-callout bd-callout-info">
                 <h4>Definition</h4>
-                <p>Un accesseur est une méthode le plus souvent publique qui permet d'accéder à un attribut privé, en lecture</p>
+                <p>Un accesseur est une méthode le plus souvent publique qui permet d'accéder à un attribut privé, en
+                    lecture</p>
             </div>
             <p>En anglais, ils commencent par le mot clé get.</p>
             <p>Voilà pourquoi on les appelle aussi des getters</p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">public class</span> <span class="cp">Exemple</span> {
@@ -299,16 +383,19 @@
                 <span class="cp">this</span>.y = y;
             }
          }
-    }</code></pre></figure>
+    }</code></pre>
+            </div>
 
             <h2 id="MUTATEURS">d - Mutateurs</h2>
             <div class="bd-callout bd-callout-info">
                 <h4>Definition</h4>
-                <p>Un mutateur est une méthode le plus souvent publique qui permet d'accéder à un attribut privé, en écriture</p>
+                <p>Un mutateur est une méthode le plus souvent publique qui permet d'accéder à un attribut privé, en
+                    écriture</p>
             </div>
             <p>En anglais, ils commencent par le mot clé set.</p>
             <p>Voilà pourquoi on les appelle aussi des setters</p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">public class</span> <span class="cp">Exemple</span> {
@@ -344,15 +431,17 @@
                 <span class="cp">this</span>.y = y;
             }
          }
-    }</code></pre></figure>
+    }</code></pre>
+            </div>
 
-            <h2 id="overide">d - Redéfinition de ToString</h2>
+            <h2 id="override">d - Redéfinition de ToString</h2>
             <div class="bd-callout bd-callout-info">
-            <h4>Definition</h4>
-            <p>La méthode ToString permet de décrire un objet sous la forme d'une chaînede caractères.</p>
-        </div>
-            <p>Le mot clé <code>override</code> permet de redefinir une méthod de la classe <code>Object</code></p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+                <h4>Definition</h4>
+                <p>La méthode ToString permet de décrire un objet sous la forme d'une chaîne de caractères.</p>
+            </div>
+            <p>Le mot clé <code>override</code> permet de redéfinir une méthode de la classe <code>Object</code></p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">public class</span> <span class="cp">Exemple</span> {
@@ -389,12 +478,15 @@
             }
             <span class="nt">public override string</span> ToString( ) <span class="c">// Réécriture de la méthode ToString</span>
             {
-                <span class="cp">return</span> <span class="s">"les valeurs initiales sont "</span> + <span class="cp">this</span>.x + "et" <span class="cp">this</span>.y;
+                <span class="cp">return</span> <span class="s">"les valeurs initiales sont "</span> + <span class="cp">this</span>.x + "et" <span
+                        class="cp">this</span>.y;
             }
          }
-                    }</code></pre></figure>
+                    }</code></pre>
+            </div>
             <p>L'appel de la méthode ToString se fera de la façon suivante :</p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
 <span class="nt">namespace</span> demonstration
 {
     <span class="nt">class</span> <span class="cp">HelloWorld</span> {
@@ -405,11 +497,14 @@
 
     <span class="cp">Console</span>.WriteLine(ex2.ToString());
     }
-}</code></pre></figure>
+}</code></pre>
+            </div>
             <p>et affichera :</p>
             <p><code>les valeurs initiales sont 20 et 30</code></p>
-        </main>
-    </div>
+        </div>
+    </main>
 </div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

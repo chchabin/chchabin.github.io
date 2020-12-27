@@ -1,0 +1,391 @@
+.swatch-blue {
+    color: #fff;
+    background-color: #007bff
+}
+
+.swatch-indigo {
+    color: #fff;
+    background-color: #6610f2
+}
+
+.swatch-purple {
+    color: #fff;
+    background-color: #6f42c1
+}
+
+.swatch-pink {
+    color: #fff;
+    background-color: #e83e8c
+}
+
+.swatch-red {
+    color: #fff;
+    background-color: #dc3545
+}
+
+.swatch-orange {
+    color: #212529;
+    background-color: #fd7e14
+}
+
+.swatch-yellow {
+    color: #212529;
+    background-color: #ffc107
+}
+
+.swatch-green {
+    color: #fff;
+    background-color: #28a745
+}
+
+.swatch-teal {
+    color: #fff;
+    background-color: #20c997
+}
+
+.swatch-cyan {
+    color: #fff;
+    background-color: #17a2b8
+}
+
+.swatch-white {
+    color: #212529;
+    background-color: #fff
+}
+
+.swatch-gray {
+    color: #fff;
+    background-color: #6c757d
+}
+
+.swatch-gray-dark {
+    color: #fff;
+    background-color: #343a40
+}
+
+.swatch-primary {
+    color: #fff;
+    background-color: #007bff
+}
+
+.swatch-secondary {
+    color: #fff;
+    background-color: #6c757d
+}
+
+.swatch-success {
+    color: #fff;
+    background-color: #28a745
+}
+
+.swatch-info {
+    color: #fff;
+    background-color: #17a2b8
+}
+
+.swatch-warning {
+    color: #212529;
+    background-color: #ffc107
+}
+
+.swatch-danger {
+    color: #fff;
+    background-color: #dc3545
+}
+
+.swatch-light {
+    color: #212529;
+    background-color: #f8f9fa
+}
+
+.swatch-dark {
+    color: #fff;
+    background-color: #343a40
+}
+
+.swatch-100 {
+    color: #212529;
+    background-color: #f8f9fa
+}
+
+.swatch-200 {
+    color: #212529;
+    background-color: #e9ecef
+}
+
+.swatch-300 {
+    color: #212529;
+    background-color: #dee2e6
+}
+
+.swatch-400 {
+    color: #212529;
+    background-color: #ced4da
+}
+
+.swatch-500 {
+    color: #212529;
+    background-color: #adb5bd
+}
+
+.swatch-600 {
+    color: #fff;
+    background-color: #6c757d
+}
+
+.swatch-700 {
+    color: #fff;
+    background-color: #495057
+}
+
+.swatch-800 {
+    color: #fff;
+    background-color: #343a40
+}
+
+.swatch-900 {
+    color: #fff;
+    background-color: #212529
+}
+.hll {
+    background-color: #ffc
+}
+
+.c {
+    color: #999
+}
+
+.k {
+    color: #069
+}
+
+.o {
+    color: #555
+}
+
+.cm {
+    color: #999
+}
+
+.cp {
+    color: #099
+}
+
+.c1 {
+    color: #999
+}
+
+.cs {
+    color: #999
+}
+
+.gd {
+    background-color: #fcc;
+    border: 1px solid #c00
+}
+
+.ge {
+    font-style: italic
+}
+
+.gr {
+    color: red
+}
+
+.gh {
+    color: #030
+}
+
+.gi {
+    background-color: #cfc;
+    border: 1px solid #0c0
+}
+
+.go {
+    color: #aaa
+}
+
+.gp {
+    color: #009
+}
+
+.gu {
+    color: #030
+}
+
+.gt {
+    color: #9c6
+}
+
+.kc {
+    color: #069
+}
+
+.kd {
+    color: #069
+}
+
+.kn {
+    color: #069
+}
+
+.kp {
+    color: #069
+}
+
+.kr {
+    color: #069
+}
+
+.kt {
+    color: #078
+}
+
+.m {
+    color: #f60
+}
+
+.s {
+    color: #d44950
+}
+
+.na {
+    color: #4f9fcf
+}
+
+.nb {
+    color: #366
+}
+
+.nc {
+    color: #0a8
+}
+
+.no {
+    color: #360
+}
+
+.nd {
+    color: #99f
+}
+
+.ni {
+    color: #999
+}
+
+.ne {
+    color: #c00
+}
+
+.nf {
+    color: #c0f
+}
+
+.nl {
+    color: #99f
+}
+
+.nn {
+    color: #0cf
+}
+
+.nt {
+    color: #2f6f9f
+}
+
+.nv {
+    color: #033
+}
+
+.ow {
+    color: #000
+}
+
+.w {
+    color: #bbb
+}
+
+.mf {
+    color: #f60
+}
+
+.mh {
+    color: #f60
+}
+
+.mi {
+    color: #f60
+}
+
+.mo {
+    color: #f60
+}
+
+.sb {
+    color: #c30
+}
+
+.sc {
+    color: #c30
+}
+
+.sd {
+    font-style: italic;
+    color: #c30
+}
+
+.s2 {
+    color: #c30
+}
+
+.se {
+    color: #c30
+}
+
+.sh {
+    color: #c30
+}
+
+.si {
+    color: #a00
+}
+
+.sx {
+    color: #c30
+}
+
+.sr {
+    color: #3aa
+}
+
+.s1 {
+    color: #c30
+}
+
+.ss {
+    color: #fc3
+}
+
+.bp {
+    color: #366
+}
+
+.vc {
+    color: #033
+}
+
+.vg {
+    color: #033
+}
+
+.vi {
+    color: #033
+}
+
+.il {
+    color: #f60
+}
+
+.css .nt + .nt, .css .o, .css .o + .nt {
+    color: #999
+}

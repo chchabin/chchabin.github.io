@@ -4,231 +4,278 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>PHP - transmettre des données</title>
-    <script>
-        // window.ga = window.ga || function () {
-        //     (ga.q = ga.q || []).push(arguments)
-        // };
-        // ga.l = +new Date;
-        // ga('create', 'UA-146052-10', 'chchabin.free.fr');
-        // ga('set', 'anonymizeIp', true);
-        // ga('send', 'pageview');
-    </script>
+
 </head>
 <body>
-<a class="skippy sr-only sr-only-focusable" href="#content">
-    <span class="skippy-text">Skip to main content</span>
-</a>
+
 <!--        navbar-->
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-    </a>
-
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link " href="php01Gintroduction.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
-            </li>
-        </ul>
-    </div>
-</header>
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <!--        Menu Gauche-->
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link " href="php01Gintroduction.html">
-                        I - Introduction au développement Web
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#foncweb">
-                                A - Le fonctionnement du Web
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#protocole-HTTP">
-                                B - Le protocole HTTP
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link" href="php02Gbaseslg.html">
-                        II - Les bases du langage
-                    </a>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
-                        III - Programmer avec PHP
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#variables">A - Les variables
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#tests">B - Tests et conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#tableau">C - Les tableaux
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#boucles">D - Les boucles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#fonctions"> E - Les fonctions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php041Transmission.html">
-                        IV - Transmettre des données entre des pages
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#superglobale">A - Notion de variable superglobale
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionURL">B - Transmission via l'URL
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionForm">C - Transmission via un formulaire
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionData">D - Transmission de données et sécurité
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionSession">E - Transmission via la session
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
-                        V - Accéder à une base de données
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="php05AccesSGBD_Introduction.html"> A - Introduction
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec <code>SELECT</code>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php05AccesSGBD_RqtSimple.html">D - <code>query</code> - Requêtes simples
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php05AccesSGBD_RqtParam.html">E - <code>prepare</code> et <code>execute</code> - Requêtes avec paramètres
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec <code>INSERT</code>, <code>UPDATE</code>,
-                                <code>DELETE</code> et <code>exec</code>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>
-        <!--        Menu droite-->
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h3"><a href="#insert">1 - <code>INSERT</code></a></li>
-                <li class="toc-entry toc-h2"><a href="#update">2 - <code>UPDATE</code></a></li>
-                <li class="toc-entry toc-h2"><a href="#delete">3 - <code>DELETE</code></a></li>
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="php01Gintroduction.html">Guide PHP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Documentation</a>
+                </li>
             </ul>
         </div>
-        <!--        Page de cours-->
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            <h1 class="bd-title" id="content"> V - Accéder à une base de données</h1>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#php01Gintroduction" aria-expanded="false">
+                        I - Introduction au développement Web
+                    </button>
+                    <div class="collapse" id="php01Gintroduction">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#foncweb">
+                                    A - Le fonctionnement du Web
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#protocole-HTTP">
+                                    B - Le protocole HTTP
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#siteDyn">C - L'évolution vers des sites dynamiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php02Gbaseslg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="php02Gbaseslg">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php02Gbaseslg.html">Les bases du langage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php031ProgPhp_Variables" aria-expanded="false">
+                        III - Programmer avec PHP
+                    </button>
+                    <div class="collapse" id="php031ProgPhp_Variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php031ProgPhp_Variables.html">A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php032ProgPhp_Tests.html">B - Tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php034ProgPhp_Boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php041Transmission" aria-expanded="false">
+                        IV - Transmettre des données entre des pages
+                    </button>
+                    <div class="collapse" id="php041Transmission">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php041Transmission.html">A - Notion de variable superglobale
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php042Transmission.html">B - Notion de formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php043Transmission.html">C - $_GET et la transmission via l'URL
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php044Transmission.html">D - $_POST et la transmission via un formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php045Transmission.html">E - $_SESSION et la transmission via la session
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php046Transmission.html">F - htmlspecialchars et la transmission de données
+                                    et sécurité
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php05AccesSGBD_Introduction" aria-expanded="true"
+                            aria-current="true">
+                        V - Accéder à une base de données
+                    </button>
+                    <div class="collapse show" id="php05AccesSGBD_Introduction">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Introduction.html"> A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec SELECT
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtSimple.html">D - query - Requêtes simples
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtParam.html">E - prepare et execute - Requêtes avec paramètres
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec INSERT, UPDATE,
+                                    DELETE et exec</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="content"> V - Accéder à une base de données</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#insert">1 - <code>INSERT</code></a></li>
+                    <li><a href="#update">2 - <code>UPDATE</code></a></li>
+                    <li><a href="#delete">3 - <code>DELETE</code></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
             <h2 id="sgbdInsertUpdate">F - Le cas particulier avec <code>INSERT</code>, <code>UPDATE</code>,
                 <code>DELETE</code> et <code>exec</code></h2>
             <section>
                 <h3 id="insert">1 - <code>INSERT</code></h3>
                 <article>
-                <div class="bd-callout bd-callout-info">
-                    <h4>Les deux types d'INSERT</h4>
-                    <p>Je profite de cette opportunité pour vous rafraîchir la mémoire sur les deux types de
-                        syntaxe de requête. Ils font tous deux exactement le même travail et ont le même résultat,
-                        c'est donc à vous que vous utilisez, et cela se résume principalement à des préférences
-                        personnelles plutôt qu'à une raison pratique.</p>
-                </div>
-                <h5>a - Première forme d'INSERT</h5>
-                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
-                        class="c">// première forme</span>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Les deux types d'INSERT</h4>
+                        <p>Je profite de cette opportunité pour vous rafraîchir la mémoire sur les deux types de
+                            syntaxe de requête. Ils font tous deux exactement le même travail et ont le même résultat,
+                            c'est donc à vous que vous utilisez, et cela se résume principalement à des préférences
+                            personnelles plutôt qu'à une raison pratique.</p>
+                    </div>
+                    <h5>a - Première forme d'INSERT</h5>
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
+                            class="c">// première forme</span>
 <span class="s">INSERT INTO</span> `employe` <span class="s">SET</span>
     `id` = 1,
     `name` = 'Annie Matteur',
     `email` = 'annie.matteur@libre.com';</code></pre>
-                </figure>
-                <p>Ici l'insertion se fait comme dans un tableau php</p>
-                <h5>b - Deuxième forme d'INSERT</h5>
-                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
-                        class="c">// deuxième forme</span>
+                    </div>
+                    <p>Ici l'insertion se fait comme dans un tableau php</p>
+                    <h5>b - Deuxième forme d'INSERT</h5>
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
+                            class="c">// deuxième forme</span>
 <span class="s">INSERT INTO</span> `employe` (`id`, `name`, `email`)
 <span class="s">VALUES</span>(1,'Annie Matteur','annie.matteur@libre.com');  </code></pre>
-                </figure>
-                <p>Cette formulation est plus classique, elle est acceptée par toutes les bases de données.
-                    Pour insérer plusieurs valeurs, il suffit d'enchainer les données comme ceci : </p>
-                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
-                        class="c">// deuxième forme</span>
+                    </div>
+                    <p>Cette formulation est plus classique, elle est acceptée par toutes les bases de données.
+                        Pour insérer plusieurs valeurs, il suffit d'enchainer les données comme ceci : </p>
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
+                            class="c">// deuxième forme</span>
 <span class="s">INSERT INTO</span> `employe` (`id`, `name`, `email`)
 <span class="s">VALUES</span>  (1,'Annie Matteur','annie.matteur@libre.com'),
         (2,'Henri Golant','henri.golant@libre.com')
                     </code></pre>
-                </figure>
-                <h5>c - Et le PDO ?</h5>
+                    </div>
+                    <h5>c - Et le PDO ?</h5>
                     <p>Il est plus pratique d'ajouter l'instruction <code>exec</code> plutôt que <code>query</code>,
                         car dans ce cas PDO renvoie le nombre de lignes ajoutée. Elle donne une information
                         supplémentaire, utile, en cas de problèmes. On aura alors :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="c">// ...</span>
 $requete = "<span class="s">INSERT INTO</span> `employe` (`id`, `name`, `email`)
 <span class="s">VALUES</span>  (1,'Annie Matteur','annie.matteur@libre.com'),
         (2,'Henri Golant','henri.golant@libre.com')";
 $resultat = $bdd-&gt;<span class="s">exec</span>($requete);</code></pre>
-                    </figure>
+                    </div>
                     <p>Nous devrions avoir dans ce cas 2 dans <code>$resultat</code>.
                         <br>Avec une requête paramétrée nous aurions :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="c">// ...</span>
 $requete = $bdd-&gt;<span class="s">prepare</span>("<span class="s">INSERT INTO</span> `employe` (`id`, `name`, `email`)
 <span class="s">VALUES</span>  (:id,:nom,:mel);
@@ -240,14 +287,14 @@ $requete->bindParam(':mel', $mel, PDO::PARAM_STR);
 $id=1;
 $nom='Annie Matteur';
 $mel='annie.matteur@libre.com';
-$requete-&gt;<span class="s">exec</span>();
+$requete-&gt;<span class="s">execute</span>();
 
 <span class="c">// ... Insertion du deuxième jeu</span>
 $id=2;
 $nom='Henri Golan';
 $mel='henri.golant@libre.com';
-$requete-&gt;<span class="s">exec</span>();</code></pre>
-                    </figure>
+$requete-&gt;<span class="s">execute</span>();</code></pre>
+                    </div>
                     <p>La structure est plus lourde, mais plus sécurisée.
                         <br> <code> PDO::PARAM_STR</code> dit à MYSQL que le type envoyé est <code>string</code>.
                         L'analogie
@@ -262,48 +309,50 @@ $requete-&gt;<span class="s">exec</span>();</code></pre>
                         <code>UPDATE</code>. Cette commande contient des éléments des commandes <code>SELECT</code> et
                         <code>INSERT</code>, car la commande sélectionne à la fois les entrées à modifier et définit les
                         valeurs de colonne. La forme générale de la commande <code>UPDATE</code> est la suivante: </p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="s">UPDATE</span> table
 <span class="s">SET</span> NomColonne = Nouvelle condition
 <span class="s">WHERE</span> condition;</code></pre>
-                    </figure>
+                    </div>
                     <p>Par exemple nous aurons :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="s">UPDATE</span> `employe`
 <span class="s">SET</span> `name` = 'Jérémie Macoulotte'
 <span class="s">WHERE</span> `id` = 1;</code></pre>
-                    </figure>
+                    </div>
                     <h5>Et le PDO ?</h5>
                     <p>Comme pour le <code>Insert</code> il faudra faire appel à la fonction <code>exec</code> pour
                         vérifier que la ligne est bien ajoutée.</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="c">// ...</span>
 $requete = "<span class="s">UPDATE</span> `employe`
 <span class="s">SET</span> `name` = 'Jérémie Macoulotte'
 <span class="s">WHERE</span> `id` = 1";
 $resultat = $bdd-&gt;<span class="s">exec</span>($requete);</code></pre>
-                    </figure>
+                    </div>
                     <p>Avec une requête paramétrée nous aurions :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="c">// ...</span>
 $requete = $bdd-&gt;<span class="s">prepare</span>("<span class="s">UPDATE</span> `employe`
 <span class="s">SET</span> `name` = 'Jérémie Macoulotte'
 <span class="s">WHERE</span> `id` = :id");
 $requete-&gt;bindParam(':id', 1);
-$requete-&gt;<span class="s">exec</span>();</code></pre>
-                    </figure>
+$requete-&gt;<span class="s">execute</span>();</code></pre>
+                    </div>
                 </article>
                 <h3 id="delete">3 - <code>DELETE</code></h3>
                 <article>
                     <p>La suppression d'entrées avec le SQL est dangereusement facile. Voici la syntaxe de la commande
                         :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">DELETE FROM</span> table
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
+                            class="s">DELETE FROM</span> table
 <span class="s">WHERE</span> condition;</code></pre>
-                    </figure>
+                    </div>
                     <p>Par exemple nous aurons :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="s">DELETE FROM</span> `employe`
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
+                            class="s">DELETE FROM</span> `employe`
 <span class="s">WHERE</span> `name` = 'Laure Dinateur';</code></pre>
-                    </figure>
+                    </div>
                     <div class="bd-callout bd-callout-danger">
                         <h4>WHERE est facultatif</h4>
                         <p>Croyez-le ou non, la clause <code>WHERE</code> de la commande <code>UPDATE</code> et <code>DELETE</code>
@@ -315,38 +364,26 @@ $requete-&gt;<span class="s">exec</span>();</code></pre>
                     <h5>Et le PDO ?</h5>
                     <p>Comme pour le <code>Insert</code> il faudra faire appel à la fonction <code>exec</code> pour
                         vérifier que la ligne est bien ajoutée.</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="c">// ...</span>
 $requete = "<span class="s">DELETE FROM</span> `employe`
 <span class="s">WHERE</span> `name` = 'Laure Dinateur';
 $resultat = $bdd-&gt;<span class="s">exec</span>($requete);</code></pre>
-                    </figure>
+                    </div>
                     <p>Avec une requête paramétrée nous aurions :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="c">// ...</span>
 $requete = $bdd-&gt;<span class="s">prepare</span>("<span class="s">DELETE FROM</span> `employe`
 <span class="s">WHERE</span> `name` = :name");
 $requete-&gt;bindParam(':name', 'Laure Dinateur');
-$requete-&gt;<span class="s">exec</span>();</code></pre>
-                    </figure>
+$requete-&gt;<span class="s">execute</span>();</code></pre>
+                    </div>
                 </article>
             </section>
-     </main>
-    </div>
+        </div>
+    </main>
 </div>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
-<!--<script src="../js/popper.min.js"></script>-->
-<!--<script src="../js/bootstrap.min.js"></script>-->
-<script src="../js/docs.min.js"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

@@ -3,152 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Création d'objet</title>
 </head>
 <body>
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-    </a>
-
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
-            </li>
-        </ul>
-    </div>
-</header>
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp01_intro.html">
-                        I - Introduction au développement
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#contentMachine">A - Qu'est ce qu'une machine ?
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contentArt">B - L ’art et la manière de bien programmer
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp02_basesLg.html">
-                        II - Les bases du langage
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#source">A - Anatomie d'un fichier source
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#bloc">B - Définition d'un bloc de code
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#affiche">C - Affichage de texte
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#comment">D - Commentaires
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#indentation">E - l'indentation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#nommage">F - Conventions de nommage
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                        III - Programmer avec C#
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="csharp03_programmer-variables.html"> A - Les variables
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp04_programmer_test.html">B - Les tests et conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp05_programmer_tableau.html">C - Les tableaux
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp06_programmer_boucles.html">D - Les boucles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp07_programmer_fonctions.html">E - Les fonctions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                        IV - Programmation objet avec C#
-                    </a>
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="csharp08_objet_overview.html">L'approche Objet
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp09_objet_creation.html">Création d'objet en C#
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                            </a>
-                        </li>
-                        <li>
-                            <a href="csharp11_objet_relations.html">Les relations entre les classes
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h3"><a href="#predef">a - Structure d'une classe.</a></li>
-                <li class="toc-entry toc-h3"><a href="#objetDeclare">b - Déclaration et instanciation d'un objet</a></li>
-                <li class="toc-entry toc-h3"><a href="#"></a></li>
-                <li class="toc-entry toc-h3"><a href="#"></a></li>
-                <li class="toc-entry toc-h3"><a href="#"></a></li>
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                </li>
             </ul>
         </div>
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            <h1 class="bd-title" id="base">Création d'objet en C#</h1>
-            <p class="bd-lead">L'objectif de ce chapitre est de découvrir comment coder la programmation orientée objet.</p>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
 
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="false">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse" id="csharp03_programmer-variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="true" aria-current="true">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse show" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="base">Création d'objet en C#</h1>
+            </div>
+            <p class="bd-lead">L'objectif de ce chapitre est de découvrir comment coder la programmation orientée
+                objet.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#predef">a - Structure d'une classe.</a></li>
+                    <li><a href="#objetDeclare">b - Déclaration et instanciation d'un objet</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
             <h2 id="predef">a - Structure d'une classe.</h2>
             <div class="bd-callout bd-callout-info">
-                    <h4>Classe : Definition</h4>
+                <h4>Classe : Definition</h4>
                 <p>Une classe permet de définir un nouveau type, d'instancier des objets, d'appeler les services sur cet
                     objet.</p>
             </div>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">public class</span> <span class="cp">Exemple</span> {
@@ -165,7 +230,8 @@
                 <span class="c">// ...........code de P2</span>
              }
          }
-    }</code></pre></figure>
+    }</code></pre>
+            </div>
             <p>La définition d'une classe commence par le mot-clé <code>class</code> . On trouve ensuite la définition
                 des champs (attributs) et des méthodes de la classe. Les méthodes
                 utilisent (et modifient) les valeurs des attributs.
@@ -195,7 +261,8 @@
             <h2 id="objetDeclare">b - Déclaration et instanciation d'un objet</h2>
             <p>Une classe C# peut être considérée comme un nouveau type dans le
                 programme et donc des variables d'objets peuvent être déclarées selon ce nouveau "type"</p>
-            <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">using</span> System;
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">using</span> System;
     <span class="nt">namespace</span> demonstration
     {
         <span class="nt">class</span> <span class="cp">HelloWorld</span> {
@@ -210,23 +277,28 @@
                 <span class="c">// ...</span>
                 <span class="c">// il n'y a pas de limite au nombre d'objets que l'on peut créer</span>
              }
-    }</code></pre></figure>
+    }</code></pre>
+            </div>
             <p>La déclaration permet de créer une nouvelle variable, appelée ex1 dans
                 l'exemple ci-dessus. A ce stade, aucune réservation de mémoire n'a eu lieu pour cet objet. Il
                 est donc inutilisable.</p>
             <p>Le type de la variable ex1 est <span class="cp">Exemple</span> : le type d'un objet est sa classe.</p>
             <p>L'instanciation utilise l'opérateur <span class="nt">new </span>, qui permet de réserver une zone mémoire
-                spécifique pour l'objet. On dit que l'objet est instancié par l'opérateur <span class="nt">new </span>. Sans cette étape
+                spécifique pour l'objet. On dit que l'objet est instancié par l'opérateur <span class="nt">new </span>.
+                Sans cette étape
                 indispensable, l'objet déclaré ne peut pas être utilisé.
             </p>
             <div class="bd-callout bd-callout-danger">
                 <h4>ne pas confondre instanciation et initialisation </h4>
-                <p><span class="s">Instancier</span>, c'est créer un nouvel objet (opérateur <span class="nt">new </span> )</p>
-                <p><span class="s">Initialiser</span>, c'est donner une valeur initiale à quelque chose (opérateur <code>=</code> )</p>
+                <p><span class="s">Instancier</span>, c'est créer un nouvel objet (opérateur <span
+                        class="nt">new </span> )</p>
+                <p><span class="s">Initialiser</span>, c'est donner une valeur initiale à quelque chose (opérateur
+                    <code>=</code> )</p>
             </div>
-
-        </main>
-    </div>
+        </div>
+    </main>
 </div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

@@ -7,6 +7,5 @@ include 'TP03Menu.php'; ?>
         <hr class="my-4">
         <p>Nous allons utiliser différentes techniques pour améliorer la programmation de ce site.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </div>
 </div>
 <?php include 'TP02Pied.php'; ?>

@@ -4,176 +4,232 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>PHP - Programmer avec PHP</title>
-    <script>
-        /*       window.ga = window.ga || function () {
-                   (ga.q = ga.q || []).push(arguments)
-               };
-               ga.l = +new Date;
-               ga('create', 'UA-146052-10', 'chchabin.free.fr');
-               ga('set', 'anonymizeIp', true);
-               ga('send', 'pageview');*/
-    </script>
+
 </head>
 <body>
-<a class="skippy sr-only sr-only-focusable" href="#content">
-    <span class="skippy-text">Skip to main content</span>
-</a>
+
 <!--        navbar-->
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-    </a>
-
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link " href="php01Gintroduction.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
-            </li>
-        </ul>
-    </div>
-</header>
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <!--        Menu Gauche-->
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link " href="php01Gintroduction.html">
-                        I - Introduction au développement Web
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#foncweb">
-                                A - Le fonctionnement du Web
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#protocole-HTTP">
-                                B - Le protocole HTTP
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link" href="php02Gbaseslg.html">
-                        II - Les bases du langage
-                    </a>
-                </div>
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link" href="php031ProgPhp_Variables.htm">
-                        III - Programmer avec PHP
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="php031ProgPhp_Variables.html">A - Les variables
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php032ProgPhp_Tests.html">B - Tests et conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php033ProgPhp_Tableaux.html">C - Les tableaux
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php034ProgPhp_Boucles.html">D - Les boucles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php035ProgPhp_Fonctions.html"> E - Les fonctions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php041Transmission.html">
-                        IV - Transmettre des données entre des pages
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#superglobale">A - Notion de variable superglobale
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionURL">B - Transmission via l'URL
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionForm">C - Transmission via un formulaire
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionData">D - Transmission de données et sécurité
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#transmissionSession">E - Transmission via la session
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
-                        V - Accéder à une base de données
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#sgbdIntro"> A - Introduction
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sgbdConect">B - Connexion à la base de données
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-            </nav>
-
-        </div>
-        <!--        Menu droite-->
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-            <ul class="section-nav">
-                <li class="toc-entry toc-h2"><a href="#testsIf">1 - L'instruction <code>if</code></a></li>
-                <li class="toc-entry toc-h2"><a href="#testsCondition">2 - La notion de condition</a></li>
-                <li class="toc-entry toc-h2"><a href="#testsOperateur">3 - Les opérateurs logiques</a></li>
-                <li class="toc-entry toc-h2"><a href="#testsSwitch">4 - L'instruction <code>switch</code></a></li>
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="php01Gintroduction.html">Guide PHP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Documentation</a>
+                </li>
             </ul>
         </div>
-        <!--        Page de cours-->
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            <h1 class="bd-title" id="content">III - Programmer avec PHP</h1>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#php01Gintroduction" aria-expanded="false">
+                        I - Introduction au développement Web
+                    </button>
+                    <div class="collapse" id="php01Gintroduction">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#foncweb">
+                                    A - Le fonctionnement du Web
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#protocole-HTTP">
+                                    B - Le protocole HTTP
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#siteDyn">C - L'évolution vers des sites dynamiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php02Gbaseslg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="php02Gbaseslg">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php02Gbaseslg.html">Les bases du langage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php031ProgPhp_Variables" aria-expanded="true"
+                            aria-current="true">
+                        III - Programmer avec PHP
+                    </button>
+                    <div class="collapse show" id="php031ProgPhp_Variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php031ProgPhp_Variables.html">A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="php032ProgPhp_Tests.html">B - Tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php034ProgPhp_Boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php041Transmission" aria-expanded="false">
+                        IV - Transmettre des données entre des pages
+                    </button>
+                    <div class="collapse" id="php041Transmission">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php041Transmission.html">A - Notion de variable superglobale
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php042Transmission.html">B - Notion de formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php043Transmission.html">C - $_GET et la transmission via l'URL
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php044Transmission.html">D - $_POST et la transmission via un formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php045Transmission.html">E - $_SESSION et la transmission via la session
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php046Transmission.html">F - htmlspecialchars et la transmission de données
+                                    et sécurité
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php05AccesSGBD_Introduction"
+                            aria-expanded="false">
+                        V - Accéder à une base de données
+                    </button>
+                    <div class="collapse" id="php05AccesSGBD_Introduction">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Introduction.html"> A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec SELECT
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtSimple.html">D - query - Requêtes simples
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtParam.html">E - prepare et execute - Requêtes avec paramètres
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec INSERT, UPDATE,
+                                    DELETE et exec</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="content">III - Programmer avec PHP</h1>
+            </div>
             <p>L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec le
                 langage PHP.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#testsIf">1 - L'instruction <code>if</code></a></li>
+                    <li><a href="#testsCondition">2 - La notion de condition</a></li>
+                    <li><a href="#testsOperateur">3 - Les opérateurs logiques</a></li>
+                    <li><a href="#testsSwitch">4 - L'instruction <code>switch</code></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
             <h2 id="tests">B - Tests et conditions</h2>
             <section>
                 <h3 id="testsIf">1 - L'instruction <code>if</code></h3>
@@ -185,7 +241,7 @@
                         certains critères. On parle parfois de branchement logique. Pendant l'exécution, les
                         instructions exécutées seront différentes selon la valeur de la condition. Un seul des deux
                         blocs d'instructions sera pris en compte.</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="s">&lt;?php</span>
 <span class="s">if</span>($nb1 &gt; $nb2) {
     <span class="c">// sera exécuté si $nb1 &gt; $nb2 </span>
@@ -193,14 +249,14 @@
     <span class="c">// sera exécuté si $nb1 &lt;= $nb2 </span>
 }
 <span class="s">?&gt;</span></code></pre>
-                    </figure>
+                    </div>
                     <p>Il est possible de placer une instruction <code>if</code> à l'intérieur d'un bloc d'une autre
                         instruction <code>if</code>. C'est ce qu'on appelle <strong>imbriquer des conditions</strong>.
                         Attention à toujours bien refléter l'imbrication des blocs en décalant les instructions
                         associées dans le code source : c'est ce qu'on appelle <strong>l'indentation</strong>.</p>
                     <p>Si la seule opération réalisée dans un bloc <code>else</code> est un <code>if</code>, on peut
                         également employer l'instruction <code>elseif</code>, plus concise.</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="s">&lt;?php</span>
 <span class="s">if</span>($nb1 &gt; $nb2) {
     <span class="c">// sera exécuté si $nb1 &gt; $nb2 </span>
@@ -211,10 +267,10 @@
     <span class="c">// sera exécuté si $nb1 = $nb2 </span>
 }
 <span class="s">?&gt;</span></code></pre>
-                    </figure>
+                    </div>
 
                     <p>Une autre syntaxe possible de l'instruction if est la suivante :</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="s">&lt;?php</span>
 <span class="s">if</span>($nb1 &gt; $nb2) <span class="s">:</span>
     <span class="c">// sera exécuté si $nb1 &gt; $nb2 </span>
@@ -224,7 +280,7 @@
     <span class="c">// sera exécuté si $nb1 = $nb2 </span>
 <span class="s">endif</span>;
 <span class="s">?&gt;</span></code></pre>
-                    </figure>
+                    </div>
                     <p>Cette syntaxe, que l'on retrouve dans le code source de certains CMS, peut être pratique pour
                         repérer plus facilement la fin des conditions (<code>endif;</code> au lieu de <code>}</code> )
                         lorsque le code PHP englobe de grandes portions de code HTML.</p>
@@ -285,10 +341,10 @@
                         <p>N'oubliez pas de taper le double-égal (<code>==</code>). Une erreur courante parmi les
                             programmeurs PHP débutants est de taper une condition comme celle-ci avec un seul signe
                             égal: </p>
-                        <figure class="highlight">
+                        <div class="highlight">
                             <pre><code class="language-php" data-lang="php"><span class="s">if</span>($roll = 6)  <span
                                     class="c">// Missing equals sign!</span></code></pre>
-                        </figure>
+                        </div>
                         <p>Cette condition utilise l'opérateur d'affectation (<code>=</code>) au lieu de l'opérateur
                             égal (<code>==</code>). Par conséquent, au lieu de comparer la valeur de $roll au nombre 6,
                             il définira en fait la valeur de $roll à 6. </p>
@@ -317,7 +373,7 @@
                 <article>
                     <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc d'instructions parmi plusieurs
                         possibles. Seul le bloc correspondant à la valeur testée sera pris en compte.</p>
-                    <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                    <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                             class="s">&lt;?php</span>
 <span class="s">switch</span> ($nombre) {
     <span class="s">case</span> 1:
@@ -333,29 +389,17 @@
         <span class="c">...</span>
         <span class="s">break</span>;
 <span class="s">?&gt;</span></code></pre>
-                    </figure>
+                    </div>
                     <p>Il n'y a pas de limite au nombre de cas possibles. Le mot-clé <code>default</code>, à placer en
                         fin de switch, est optionnel. Il sert souvent à gérer les cas d'erreurs.</p>
                     <p>Les instructions <code>break;</code> dans les blocs <code>case</code> sont indispensables pour
                         éviter de passer d'un bloc à un autre.</p>
                 </article>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
 </div>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
-<!--<script src="../js/popper.min.js"></script>-->
-<!--<script src="../js/bootstrap.min.js"></script>-->
-<script src="../js/docs.min.js"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

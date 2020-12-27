@@ -3,188 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Programmer avec C#</title>
 </head>
 <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <div class="collapse navbar-collapse" id="bdNavbar">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+            <li class="nav-item">
+                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
 
-        </a>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="true" aria-current="true">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse show" id="csharp03_programmer-variables">
 
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav bd-navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="false">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-        </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                <nav class="collapse bd-links" id="bd-docs-nav">
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp01_intro.html">
-                            I - Introduction au développement
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentArt">B - L ’art et la manière de bien programmer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp02_basesLg.html">
-                            II - Les bases du langage
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#source">A - Anatomie d'un fichier source
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#bloc">B - Définition d'un bloc de code
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#affiche">C - Affichage de texte
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#comment">D - Commentaires
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#indentation">E - l'indentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#nommage">F - Conventions de nommage
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item active">
-                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                            III - Programmer avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp03_programmer-variables.html"> A - Les variables
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp06_programmer_boucles.html">D - Les boucles
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                            IV - Programmation objet avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp08_objet_overview.html">L'approche Objet
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp09_objet_creation.html">Création d'objet en C#
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                    <li class="toc-entry toc-h3"><a href="#testIf">a - L'instruction <code>if</code></a></li>
-                    <li class="toc-entry toc-h3"><a href="#testCdt">b - La notion de condition</a></li>
-                    <li class="toc-entry toc-h3"><a href="#testLog">c - Les opérateurs logiques</a></li>
-                    <li class="toc-entry toc-h3"><a href="#testSwitch">d - L'instruction <code>switch</code></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                </ul>
-            </div>
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
                 <h1 class="bd-title" id="base">B - Tests et conditions</h1>
-                    <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
-                        le langage C#.</p>
-                <div class="bd-callout bd-callout-info">
-                    <h4>Info</h4>
-                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
-                </div>
+            </div>
+            <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la
+                programmation avec
+                le langage C#.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#testIf">a - L'instruction <code>if</code></a></li>
+                    <li><a href="#testCdt">b - La notion de condition</a></li>
+                    <li><a href="#testLog">c - Les opérateurs logiques</a></li>
+                    <li><a href="#testSwitch">d - L'instruction <code>switch</code></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
 
-                <h3 id="testIf">a - L'instruction <code>if</code></h3>
-                    <p>Dans un programme, on souhaite fréquemment agir en fonction du
-                        résultat d'une condition. Les traitements à effectuer peuvent
-                        être différents selon que la condition soit vraie ou fausse. En
-                        C#, une alternative s'exprime grâce à l'instruction
-                        <code>if</code> éventuellement associée à une instruction <code>else</code>,.
-                        Elle permet de conditionner des traitements en fonction de
-                        certains critères. On parle parfois de branchement logique.
-                        Pendant l'exécution, les instructions exécutées seront
-                        différentes selon la valeur de la condition. Un seul des deux
-                        blocs d'instructions sera pris en compte.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">if</span>(condition vraie)
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="bd-callout bd-callout-info">
+                <h4>Info</h4>
+                <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+            </div>
+
+            <h3 id="testIf">a - L'instruction <code>if</code></h3>
+            <p>Dans un programme, on souhaite fréquemment agir en fonction du
+                résultat d'une condition. Les traitements à effectuer peuvent
+                être différents selon que la condition soit vraie ou fausse. En
+                C#, une alternative s'exprime grâce à l'instruction
+                <code>if</code> éventuellement associée à une instruction <code>else</code>,.
+                Elle permet de conditionner des traitements en fonction de
+                certains critères. On parle parfois de branchement logique.
+                Pendant l'exécution, les instructions exécutées seront
+                différentes selon la valeur de la condition. Un seul des deux
+                blocs d'instructions sera pris en compte.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">if</span>(condition vraie)
     {
         <span class="c">//instructions 1</span>
     }
     <span class="nt">else</span>
     {
          <span class="c">//instructions 2</span>
-    }</code></pre></figure>
-                    <p>Il est possible de placer une instruction <code>if</code> à
-                        l'intérieur d'un bloc d'une autre instruction <code>if</code>.
-                        C'est ce qu'on appelle <strong>imbriquer des conditions</strong>.
-                        Attention à toujours bien refléter l'imbrication des blocs en
-                        décalant les instructions associées dans le code source : c'est
-                        ce qu'on appelle <strong>l'indentation</strong>.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">if</span>(condition 1)
+    }</code></pre>
+            </div>
+            <p>Il est possible de placer une instruction <code>if</code> à
+                l'intérieur d'un bloc d'une autre instruction <code>if</code>.
+                C'est ce qu'on appelle <strong>imbriquer des conditions</strong>.
+                Attention à toujours bien refléter l'imbrication des blocs en
+                décalant les instructions associées dans le code source : c'est
+                ce qu'on appelle <strong>l'indentation</strong>.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">if</span>(condition 1)
     {
         <span class="c">//instructions 1</span>
     }
@@ -198,82 +259,86 @@
         {
             <span class="c">//instructions 3</span>
         }
-    }</code></pre></figure>
-                    <div class="bd-callout bd-callout-info">
-                        <h4>Remarque</h4>
-                    <p> Vous pouvez imbriquer autant de if,
-                        de else if, de else que vous le souhaitez, a priori, il n’y a
-                        pas de limite. Mais concrétement, il est compliqué de descendre
-                        au dessous de <b>3</b> imbrications, en effet, le code devient peu
-                        lisible.</p>
-                    </div>
+    }</code></pre>
+            </div>
+            <div class="bd-callout bd-callout-info">
+                <h4>Remarque</h4>
+                <p> Vous pouvez imbriquer autant de if,
+                    de else if, de else que vous le souhaitez, a priori, il n’y a
+                    pas de limite. Mais concrètement, il est compliqué de descendre
+                    au dessous de <b>3</b> imbrications, en effet, le code devient peu
+                    lisible.</p>
+            </div>
 
-                <h3 id="testCdt">b - La notion de condition</h3>
-                    <p>L'instruction <code>if</code> est associée à une condition. C'est
-                        une expression (une combinaison de variables, de valeurs et
-                        d'opérateurs) dont l'évaluation donne la valeur vraie (<code>true</code>)
-                        ou la valeur faux (<code>false</code>). On parle d'expression
-                        booléenne.</p>
-                    <p>Toute expression renvoyant une valeur booléenne peut être
-                        utilisée comme condition avec un <code>if</code>. C'est le cas
-                        des expressions utilisant des opérateurs de comparaison, dont
-                        voici la liste.</p>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Opérateur</th>
-                            <th>Signification</th>
-                        </tr>
-                        </thead>
-                        <tr>
-                            <td>==</td>
-                            <td>Egal à</td>
-                        </tr>
-                        <tr>
-                            <td>!=</td>
-                            <td>Différent de</td>
-                        </tr>
-                        <tr>
-                            <td>&lt;</td>
-                            <td>Inférieur strictement</td>
-                        </tr>
-                        <tr>
-                            <td>&lt;=</td>
-                            <td>Inférieur ou égal</td>
-                        </tr>
-                        <tr>
-                            <td>&gt;</td>
-                            <td>Supérieur strictement</td>
-                        </tr>
-                        <tr>
-                            <td>&gt;=</td>
-                            <td>Supérieur ou égal</td>
-                        </tr>
-                    </table>
-                    <div class="bd-callout bd-callout-danger">
-                    <h4>Attention !</h4>
-                    <p>La plupart des langages de
-                        programmation utilisent le symbole <code>=</code> pour
-                        symboliser l'affectation, et le symbole <code>==</code> pour
-                        l'égalité. </p>
-                    <p>Attention aux confusions avec le sens
-                        mathématique de l'opérateur <code>=</code>.
-                </div>
+            <h3 id="testCdt">b - La notion de condition</h3>
+            <p>L'instruction <code>if</code> est associée à une condition. C'est
+                une expression (une combinaison de variables, de valeurs et
+                d'opérateurs) dont l'évaluation donne la valeur vraie (<code>true</code>)
+                ou la valeur faux (<code>false</code>). On parle d'expression
+                booléenne.</p>
+            <p>Toute expression renvoyant une valeur booléenne peut être
+                utilisée comme condition avec un <code>if</code>. C'est le cas
+                des expressions utilisant des opérateurs de comparaison, dont
+                voici la liste.</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Opérateur</th>
+                    <th>Signification</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>==</td>
+                    <td>Egal à</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>Différent de</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>Inférieur strictement</td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>Inférieur ou égal</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>Supérieur strictement</td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>Supérieur ou égal</td>
+                </tr>
+            </table>
+            <div class="bd-callout bd-callout-danger">
+                <h4>Attention !</h4>
+                <p>La plupart des langages de
+                    programmation utilisent le symbole <code>=</code> pour
+                    symboliser l'affectation, et le symbole <code>==</code> pour
+                    l'égalité. </p>
+                <p>Attention aux confusions avec le sens
+                    mathématique de l'opérateur <code>=</code>.
+            </div>
 
-                <h3 id="testLog">c - Les opérateurs logiques</h3>
-                    <p>On peut définir des conditions plus complexes ("La valeur de X
-                        est entre 100 et 200") grâce aux opérateurs logiques. Ceux du
-                        langage C# sont les suivants : </p>
-                    <ul>
-                        <li><code>&amp;&amp;</code> (Et),</li>
-                        <li><code>||</code> (Ou),</li>
-                        <li><code>!</code> (Non),</li>
-                    </ul>
-                    <p>Plutôt que d'avoir des conditions complexes comme :</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">if</span>(a == 5 && b == 2)</code></pre></figure>
-                    <p>il est préférable d'imbriquer les <code>if</code> pour éviter une
-                        erreur d'analyse :</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">if</span>(a == 5)
+            <h3 id="testLog">c - Les opérateurs logiques</h3>
+            <p>On peut définir des conditions plus complexes ("La valeur de X
+                est entre 100 et 200") grâce aux opérateurs logiques. Ceux du
+                langage C# sont les suivants : </p>
+            <ul>
+                <li><code>&amp;&amp;</code> (Et),</li>
+                <li><code>||</code> (Ou),</li>
+                <li><code>!</code> (Non),</li>
+            </ul>
+            <p>Plutôt que d'avoir des conditions complexes comme :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">if</span>(a == 5 && b == 2)</code></pre>
+            </div>
+            <p>il est préférable d'imbriquer les <code>if</code> pour éviter une
+                erreur d'analyse :</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">if</span>(a == 5)
 {
     <span class="nt">if</span>(b == 2)
     {
@@ -283,13 +348,15 @@
 <span class="nt">else</span>
 {
      <span class="c">//instructions 2</span>
-}</code></pre></figure>
+}</code></pre>
+            </div>
 
-                <h3 id="testSwitch">d - L'instruction <code>switch</code></h3>
-                    <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc
-                        d'instructions parmi plusieurs possibles. Seul le bloc
-                        correspondant à la valeur testée sera pris en compte.</p>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">switch</span>(<span class="c">/*variable*/</span>)
+            <h3 id="testSwitch">d - L'instruction <code>switch</code></h3>
+            <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc
+                d'instructions parmi plusieurs possibles. Seul le bloc
+                correspondant à la valeur testée sera pris en compte.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">switch</span>(<span class="c">/*variable*/</span>)
 {
     <span class="nt">case</span> (<span class="c">/*valeur 1*/</span>):
         <span class="c">//instructions 1</span>
@@ -303,15 +370,18 @@
     <span class="nt">default</span>:
             <span class="c">//instructions par défaut</span>
             <span class="nt">break</span>;
-}</code></pre></figure>
-                    <p>Il n'y a pas de limite au nombre de cas possibles. Le mot-clé
-                        <code>default</code>, à placer en fin de switch, est optionnel.
-                        Il sert souvent à gérer les cas d'erreurs.</p>
-                    <p>Les instructions <code>break;</code> dans les blocs
-                        <code>case</code> sont indispensables pour éviter de passer d'un
-                        bloc à un autre.</p>
-            </main>
+}</code></pre>
+            </div>
+            <p>Il n'y a pas de limite au nombre de cas possibles. Le mot-clé
+                <code>default</code>, à placer en fin de switch, est optionnel.
+                Il sert souvent à gérer les cas d'erreurs.</p>
+            <p>Les instructions <code>break;</code> dans les blocs
+                <code>case</code> sont indispensables pour éviter de passer d'un
+                bloc à un autre.</p>
         </div>
-    </div>
+    </main>
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

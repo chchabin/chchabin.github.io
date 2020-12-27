@@ -3,266 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Programmer avec C#</title>
 </head>
 <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <div class="collapse navbar-collapse" id="bdNavbar">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+            <li class="nav-item">
+                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
 
-        </a>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="true" aria-current="true">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse show" id="csharp03_programmer-variables">
 
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav bd-navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="false">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-        </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                <nav class="collapse bd-links" id="bd-docs-nav">
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp01_intro.html">
-                            I - Introduction au développement
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentArt">B - L ’art et la manière de bien programmer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp02_basesLg.html">
-                            II - Les bases du langage
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#source">A - Anatomie d'un fichier source
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#bloc">B - Définition d'un bloc de code
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#affiche">C - Affichage de texte
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#comment">D - Commentaires
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#indentation">E - l'indentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#nommage">F - Conventions de nommage
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item active">
-                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                            III - Programmer avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp03_programmer-variables.html"> A - Les variables
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp06_programmer_boucles.html">D - Les boucles
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                            IV - Programmation objet avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp08_objet_overview.html">L'approche Objet
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp09_objet_creation.html">Création d'objet en C#
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                    <li class="toc-entry toc-h2"><a href="#tableauxsimples">a - Les tableaux simples</a></li>
-                    <li class="toc-entry toc-h2"><a href="#tableauxmultid">b - Tableaux multidimensionnel</a></li>
-                    <li class="toc-entry toc-h2"><a href="#"></a></li>
-                    <li class="toc-entry toc-h2"><a href="#"></a></li>
-                    <li class="toc-entry toc-h2"><a href="#"></a></li>
-                </ul>
-            </div>
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
                 <h1 class="bd-title" id="base"> C - Les tableaux</h1>
-                    <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
-                        le langage C#.</p>
-                <div class="bd-callout bd-callout-info">
-                    <h4>Info</h4>
-                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
-                </div>
+            </div>
+            <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la
+                programmation avec
+                le langage C#.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#tableauxsimples">a - Les tableaux simples</a></li>
+                    <li><a href="#tableauxmultid">b - Tableaux multidimensionnel</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
 
-                <h2 id="tableauxsimples">a - Les tableaux simples</h2>
-                    <p>C# comme tout langage de programmation, permet de stocker des
-                        variables dans des tableaux. Un tableau est composé d’un
-                        <strong>nombre déterminé</strong> de variables de <strong>même
-                            type</strong> (primitif ou objet).</p>
-                    <p>Nous avions vu précédemment qu'une variable peut être représenter
-                        comme étant une boîte dans laquelle on met quelque chose, un
-                        tableau est aussi une variable, mais une boîte dans laquelle on
-                        met plusieurs choses</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>[] tableaudentier <span class="c">// tableaudentier est donc un tableau d’entier</span>
-<span class="nt">string</span>[] tableaudechaines <span class="c">// tableaudechaines est donc un tableau contenant des chaînes de caractères</span></code></pre></figure>
-                    <p>Les crochets permettent de spécifier qu’il s’agit d’un tableau.
-                        Toutefois à ce niveau, les tableaux sont déclarés, mais non
-                        créés. En fait, ils n’existent pas concrètement en mémoire, vous
-                        venez de définir une entité virtuelle. Pour pouvoir les
-                        manipuler il faut donc les construire :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">tableaudentier = <span class="nt">new int</span>[625];
-tableaudechaines = <span class="nt">new string</span>[100];</code></pre></figure>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="bd-callout bd-callout-info">
+                <h4>Info</h4>
+                <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+            </div>
 
-                <div class="bd-callout bd-callout-warning">
-                    <h4>Remarque</h4>
-                        La taille du tableau est définie au moment de sa création et ne
-                        peut plus être changée par la suite. Si on manque de place dans
-                        un tableau il faut donc obligatoirement en créer un nouveau plus
-                        grand.
-                    </div>
+            <h2 id="tableauxsimples">a - Les tableaux simples</h2>
+            <p>C# comme tout langage de programmation, permet de stocker des
+                variables dans des tableaux. Un tableau est composé d’un
+                <strong>nombre déterminé</strong> de variables de <strong>même
+                    type</strong> (primitif ou objet).</p>
+            <p>Nous avions vu précédemment qu'une variable peut être représenter
+                comme étant une boîte dans laquelle on met quelque chose, un
+                tableau est aussi une variable, mais une boîte dans laquelle on
+                met plusieurs choses</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">int</span>[] tableaudentier <span class="c">// tableaudentier est donc un tableau d’entier</span>
+<span class="nt">string</span>[] tableaudechaines <span class="c">// tableaudechaines est donc un tableau contenant des chaînes de caractères</span></code></pre>
+            </div>
+            <p>Les crochets permettent de spécifier qu’il s’agit d’un tableau.
+                Toutefois à ce niveau, les tableaux sont déclarés, mais non
+                créés. En fait, ils n’existent pas concrètement en mémoire, vous
+                venez de définir une entité virtuelle. Pour pouvoir les
+                manipuler il faut donc les construire :</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">tableaudentier = <span
+                    class="nt">new int</span>[625];
+tableaudechaines = <span class="nt">new string</span>[100];</code></pre>
+            </div>
 
-                    <p>Une fois créé, le tableau est vide, les cellules sont initialisée
-                        à :</p>
-                    <ul>
-                        <li><code>0</code> pour les tableaux de valeurs numériques,</li>
-                        <li><code>false</code> pour les booléens,</li>
-                        <li><code>null</code> pour les tableaux d'objets.</li>
-                    </ul>
-                    <p>L'accès aux cellules se fait en spécifiant un nombre entier (de
-                        type byte, char, short, ou int) <strong>indexé à partir de
-                            0</strong>.</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">tableaudentiers[0]=24; <span class="c">// on place 24 dans la première cellule.</span>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Remarque</h4>
+                La taille du tableau est définie au moment de sa création et ne
+                peut plus être changée par la suite. Si on manque de place dans
+                un tableau il faut donc obligatoirement en créer un nouveau plus
+                grand.
+            </div>
+
+            <p>Une fois créé, le tableau est vide, les cellules sont initialisée
+                à :</p>
+            <ul>
+                <li><code>0</code> pour les tableaux de valeurs numériques,</li>
+                <li><code>false</code> pour les booléens,</li>
+                <li><code>null</code> pour les tableaux d'objets.</li>
+            </ul>
+            <p>L'accès aux cellules se fait en spécifiant un nombre entier (de
+                type byte, char, short, ou int) <strong>indexé à partir de
+                    0</strong>.</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">tableaudentiers[0]=24; <span
+                    class="c">// on place 24 dans la première cellule.</span>
 <span class="nt">int</span> i=8;
 tableaudentiers[1]=i ; <span class="c">// Maintenant la deuxième cellule a reçu 8.</span>
 i=tableaudentier[0] ; <span class="c">// Maintenant i est à 24.</span>
-tableaudechaine[6]=<span class="s">"coucou"</span> ; <span class="c">// Là je pense que vous avez compris !?</span></code></pre></figure>
-                    <p>Les valeurs d'un tableau peuvent être créées au moment de son
-                        instanciation, ce qui définira aussi sa dimension.</p>
+tableaudechaine[6]=<span class="s">"coucou"</span> ; <span
+                        class="c">// Là je pense que vous avez compris !?</span></code></pre>
+            </div>
+            <p>Les valeurs d'un tableau peuvent être créées au moment de son
+                instanciation, ce qui définira aussi sa dimension.</p>
 
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>[] tableaudentier={1,2,3,7,6,4,9,4,8};
-<span class="nt">string</span>[] tableaudechaines = { "Nicolas", "Jean", "Fabrice", "Michel", "Maxime" };</code></pre></figure>
-                <div class="bd-callout bd-callout-warning">
-                    <h4>Remarque importante</h4>
-                    <p>Les tableaux sont alloués
-                        dynamiquement. Leurs tailles peuvent donc être le résultat d'une
-                        expression.</p>
-                </div>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">personne[] famille;
-famille = <span class="nt">new</span> persone[2+nombreenfants];</code></pre></figure>
-                    <p>Les tableaux sont traités en C# comme des types à part entière.
-                        Il est donc très facile de travailler avec. Par exemple, la
-                        méthode <code>Length</code> vous permettra de connaître la
-                        taille de votre tableau. </p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">int</span>[] tableaudentier={1,2,3,7,6,4,9,4,8};
+<span class="nt">string</span>[] tableaudechaines = { "Nicolas", "Jean", "Fabrice", "Michel", "Maxime" };</code></pre>
+            </div>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Remarque importante</h4>
+                <p>Les tableaux sont alloués
+                    dynamiquement. Leurs tailles peuvent donc être le résultat d'une
+                    expression.</p>
+            </div>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">personne[] famille;
+famille = <span class="nt">new</span> personne[2+nombreenfants];</code></pre>
+            </div>
+            <p>Les tableaux sont traités en C# comme des types à part entière.
+                Il est donc très facile de travailler avec. Par exemple, la
+                méthode <code>Length</code> vous permettra de connaître la
+                taille de votre tableau. </p>
 
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">monTableau.Length; <span class="c">//renvoi un entier indiquant la taille du tableau</span></code></pre></figure>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp">monTableau.Length; <span class="c">//renvoi un entier indiquant la taille du tableau</span></code></pre>
+            </div>
 
-                <h2 id="tableauxmultid">b - Tableaux multidimensionnel</h2>
-                    <p>Il existe deux types de tableaux multidimensionnels : les
-                        matrices qui sont des tableaux comportant le même
-                        nombre de colonnes que de lignes et les autres tableaux dont on
-                        peut déterminer précisément la taille pour
-                        chaque ligne et pour chaque colonne. </p>
+            <h2 id="tableauxmultid">b - Tableaux multidimensionnel</h2>
+            <p>Il existe deux types de tableaux multidimensionnels : les
+                matrices qui sont des tableaux comportant le même
+                nombre de colonnes que de lignes et les autres tableaux dont on
+                peut déterminer précisément la taille pour
+                chaque ligne et pour chaque colonne. </p>
 
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>[,] tableauEntiers = <span class="nt">new int</span>[4,4]; <span class="c">//Une matrice 2D d'entiers à 4x4 cases</span>
-<span class="nt">char</span>[,,,,] tableauCars = <span class="nt">new char</span>[20,20,20,20, 20];   <span class="c">//Une matrice 5D de 20x20x20x20x20 caractères</span></code></pre></figure>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">int</span>[,] tableauEntiers = <span class="nt">new int</span>[4,4]; <span class="c">//Une matrice 2D d'entiers à 4x4 cases</span>
+<span class="nt">char</span>[,,,,] tableauCars = <span class="nt">new char</span>[20,20,20,20, 20];   <span class="c">//Une matrice 5D de 20x20x20x20x20 caractères</span></code></pre>
+            </div>
 
-                    <p>Le nombre de virgules entre les crochets indique si le tableau
-                        est bidimensionnel, tridimensionnel,
-                        quadridimensionnel, etc. A chaque virgule, une nouvelle
-                        dimension est créée.</p>
-                    <p>Si vous aviez le droit avec une matrice ou un tableau
-                        unidimensionnel de préciser la taille de chacune de
-                        leurs dimensions en même temps que leur déclaration, c’est bien
-                        parce que ces tableaux-ci sont des cas
-                        particuliers. Pour un tableau multidimensionnel « classique »,
-                        vous ne pouvez préciser la taille que de la 1ere
-                        dimension. Pour les autres dimensions, il faudra le faire plus
-                        loin dans le code. </p>
+            <p>Le nombre de virgules entre les crochets indique si le tableau
+                est bidimensionnel, tridimensionnel,
+                quadridimensionnel, etc. A chaque virgule, une nouvelle
+                dimension est créée.</p>
+            <p>Si vous aviez le droit avec une matrice ou un tableau
+                unidimensionnel de préciser la taille de chacune de
+                leurs dimensions en même temps que leur déclaration, c’est bien
+                parce que ces tableaux-ci sont des cas
+                particuliers. Pour un tableau multidimensionnel « classique »,
+                vous ne pouvez préciser la taille que de la 1ere
+                dimension. Pour les autres dimensions, il faudra le faire plus
+                loin dans le code. </p>
 
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>[][] tableauEntiers = <span class="nt">new int</span>[4][];
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">int</span>[][] tableauEntiers = <span class="nt">new int</span>[4][];
 tableauEntiers[0] = <span class="nt">new int</span>[10];
 tableauEntiers[1] = <span class="nt">new int</span>[5];
 tableauEntiers[2] = <span class="nt">new int</span>[4];
-tableauEntiers[3] = <span class="nt">new int</span>[7];</code></pre></figure>
-                    <p>Ce tableau peut donc se représenter comme ceci en fin de compte
-                        : </p>
-                    <img class="img-fluid" src="img/tableauMultidimentionnel.PNG"
-                         alt="tableauMultidimentionnel">
-                <div class="bd-callout bd-callout-danger">
-                    <h4>Interdiction</h4>
-                        Par contre il est interdit de faire :
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>[][] tableauEntiers = <span class="nt">new int</span>[4][4];</code></pre></figure>
-                    </div>
+tableauEntiers[3] = <span class="nt">new int</span>[7];</code></pre>
+            </div>
+            <p>Ce tableau peut donc se représenter comme ceci en fin de compte
+                : </p>
+            <img class="img-fluid" src="img/tableauMultidimentionnel.PNG"
+                 alt="tableauMultidimentionnel">
+            <div class="bd-callout bd-callout-danger">
+                <h4>Interdiction</h4>
+                Par contre il est interdit de faire :
+                <div class="highlight">
+                    <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span>[][] tableauEntiers = <span
+                            class="nt">new int</span>[4][4];</code></pre>
+                </div>
+            </div>
 
 
-
-
-
-
-
-            </main>
         </div>
-    </div>
+    </main>
+
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

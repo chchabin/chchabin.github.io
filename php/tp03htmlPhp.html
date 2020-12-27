@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="../dist/4.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link href="../dist/css/docs.min.css" rel="stylesheet">
-	<link href="../dist/css/docs.perso.td.css" rel="stylesheet">
+	<link href="../dist/4.0/css/docs.min.css" rel="stylesheet">
+	<link href="../dist/4.0/css/docs.perso.td.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/themes/prism.css">
 	<title>TP03 php</title>
 </head>
@@ -94,14 +94,14 @@
 		<section id="tp03prerequis">
 			<h2>Prérequis</h2>
 			<ol>
-			<li>Copiez le code suivant dans un fichier appelé TP03Entete.php :</li>
+			<li>Copiez le code suivant dans un fichier appelé TP03Entete.php :
 			<figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 //Déclaration de variables
 $lang = array();
 $menu01 = ['accueil' =&gt; 'TP03Accueil.php',
 	'nos services' =&gt; 'TP03Construction.php',
 	'nous contacter' =&gt; 'TP02Form.php',
-	'plan d\'accés' =&gt; 'TP03Construction.php',
+	'plan d\'accès' =&gt; 'TP03Construction.php',
 	'qui sommes nous ?' =&gt; 'TP03Construction.php',
 	'langage' =&gt; 'TP03Construction.php'];
 $menu02 = ["home", "services", "contacts us", "find Us", "about us", "language"];
@@ -122,8 +122,8 @@ $lang = $menu01;
 
 	<span class="nt">&lt;title&gt;</span>&lt;?= basename(__File__) ?&gt;<span class="nt">&lt;/title&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span></code></pre></figure>
-			<li>Copiez le code suivant dans un fichier appelé TP03Menu.php :</li>
+<span class="nt">&lt;body&gt;</span></code></pre></figure></li>
+			<li>Copiez le code suivant dans un fichier appelé TP03Menu.php :
 			<figure class="highlight"><pre><code class="language-php" data-lang="php">		&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
 	&lt;ul class="navbar-nav"&gt;
 &lt;?php foreach ($lang as $cle =&gt; $valeur): ?&gt;
@@ -132,8 +132,8 @@ $lang = $menu01;
 		&lt;/li&gt;
 		&lt;?php endforeach;//fin de la boucle ?&gt;
 	&lt;/ul&gt;
-&lt;/nav&gt;</code></pre></figure>
-			<li>Copiez le code suivant dans un fichier appelé TP03Accueil.php :</li>
+&lt;/nav&gt;</code></pre></figure></li>
+			<li>Copiez le code suivant dans un fichier appelé TP03Accueil.php :
 			<figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php include 'TP03Entete.php';
 include 'TP03Menu.php'; ?&gt;
 &lt;div class="container"&gt;
@@ -145,8 +145,8 @@ include 'TP03Menu.php'; ?&gt;
 				&lt;a class="btn btn-primary btn-lg" href="#" role="button"&gt;Learn more&lt;/a&gt;
 		 &lt;/div&gt;
 &lt;/div&gt;
-&lt;?php include 'TP02Pied.php'; ?&gt;</code></pre></figure>
-			<li>Copiez le code suivant dans un fichier appelé TP03Construction.php;</li>
+&lt;?php include 'TP02Pied.php'; ?&gt;</code></pre></figure></li>
+			<li>Copiez le code suivant dans un fichier appelé TP03Construction.php;
 			<figure class="highlight"><pre><code class="language-php" data-lang="php">&lt;?php
 include 'TP03Entete.php';
 include 'TP03Menu.php';
@@ -159,7 +159,7 @@ EOFILE;
 	&lt;img src="data:image/jpeg;base64,/9j/&lt;?= $jpgConstruction;?&gt;" class="img-fluid" alt="Responsive image"/&gt;
 
 &lt;/div&gt;
-&lt;?php include 'TP02Pied.php'; ?&gt;</code></pre></figure>
+&lt;?php include 'TP02Pied.php'; ?&gt;</code></pre></figure></li>
 			</ol>
 		</section>
 		<section id="tp03Exercice1">

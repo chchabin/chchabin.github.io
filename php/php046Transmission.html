@@ -4,169 +4,225 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--    <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">-->
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>PHP - transmettre des données</title>
-    <script>
-        /*        window.ga = window.ga || function () {
-                    (ga.q = ga.q || []).push(arguments)
-                };
-                ga.l = +new Date;
-                ga('create', 'UA-146052-10', 'chchabin.free.fr');
-                ga('set', 'anonymizeIp', true);
-                ga('send', 'pageview');*/
-    </script>
+
 </head>
 <body>
-<a class="skippy sr-only sr-only-focusable" href="#content">
-    <span class="skippy-text">Skip to main content</span>
-</a>
+
 <!--        navbar-->
-<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
-
-    </a>
-
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link " href="php01Gintroduction.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Guide PHP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html"
-                   onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
-            </li>
-        </ul>
-    </div>
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="php01Gintroduction.html">Guide PHP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
-<div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <!--        Menu Gauche-->
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            <nav class="collapse bd-links" id="bd-docs-nav">
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link " href="php01Gintroduction.html">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#php01Gintroduction" aria-expanded="false">
                         I - Introduction au développement Web
-                    </a>
-
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#foncweb">
-                                A - Le fonctionnement du Web
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#protocole-HTTP">
-                                B - Le protocole HTTP
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#siteDyn">C - L'évolution vers des sites dynamiques
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item ">
-                    <a class="bd-toc-link" href="php02Gbaseslg.html">
+                    </button>
+                    <div class="collapse" id="php01Gintroduction">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#foncweb">
+                                    A - Le fonctionnement du Web
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#protocole-HTTP">
+                                    B - Le protocole HTTP
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#siteDyn">C - L'évolution vers des sites dynamiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php02Gbaseslg" aria-expanded="false">
                         II - Les bases du langage
-                    </a>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php031ProgPhp_Variables.html">
+                    </button>
+                    <div class="collapse" id="php02Gbaseslg">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php02Gbaseslg.html">Les bases du langage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php031ProgPhp_Variables" aria-expanded="false">
                         III - Programmer avec PHP
-                    </a>
+                    </button>
+                    <div class="collapse" id="php031ProgPhp_Variables">
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#variables">A - Les variables
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#tests">B - Tests et conditions
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#tableau">C - Les tableaux
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#boucles">D - Les boucles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#fonctions"> E - Les fonctions
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item active">
-                    <a class="bd-toc-link" href="php041Transmission.html">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php031ProgPhp_Variables.html">A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php032ProgPhp_Tests.html">B - Tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php034ProgPhp_Boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php041Transmission" aria-expanded="true"
+                            aria-current="true">
                         IV - Transmettre des données entre des pages
-                    </a>
+                    </button>
+                    <div class="collapse show" id="php041Transmission">
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="php041Transmission.html">A - Notion de variable superglobale
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php042Transmission.html">B - Notion de formulaire
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php043Transmission.html">C - <code>$_GET</code> et la transmission via l'URL
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php044Transmission.html">D - <code>$_POST</code> et la transmission via un formulaire
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php045Transmission.html">E - <code>$_SESSION</code> et la transmission via la session
-                            </a>
-                        </li>
-                        <li>
-                            <a href="php046Transmission.html">F - <code>htmlspecialchars</code> et la transmission de données
-                                et sécurité
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bd-toc-item">
-                    <a class="bd-toc-link" href="php05AccesSGBD_Introduction.html">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php041Transmission.html">A - Notion de variable superglobale
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php042Transmission.html">B - Notion de formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php043Transmission.html">C - $_GET et la transmission via l'URL
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php044Transmission.html">D - $_POST et la transmission via un formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php045Transmission.html">E - $_SESSION et la transmission via la session
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="php046Transmission.html">F - htmlspecialchars et la transmission de données
+                                    et sécurité
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php05AccesSGBD_Introduction"
+                            aria-expanded="false">
                         V - Accéder à une base de données
-                    </a>
+                    </button>
+                    <div class="collapse" id="php05AccesSGBD_Introduction">
 
-                    <ul class="nav bd-sidenav">
-                        <li>
-                            <a href="#sgbdIntro"> A - Introduction
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sgbdConect">B - Connexion à la base de données
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#sgbdRequete">C - Exécution de requêtes SQL
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <!--        Menu droite-->
-        <div class="d-none d-xl-block col-xl-2 bd-toc">
-
-        </div>
-        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-            <h1 class="bd-title" id="content">IV - Transmettre des données entre des pages</h1>
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Introduction.html"> A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec SELECT
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtSimple.html">D - query - Requêtes simples
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtParam.html">E - prepare et execute - Requêtes avec paramètres
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec INSERT, UPDATE,
+                                    DELETE et exec</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="content">IV - Transmettre des données entre des pages</h1>
+            </div>
             <p class="bd-lead">L'objectif de ce chapitre est de connaître les différents moyens de faire passer des
                 informations d'une page PHP à l'autre, ce qui est un besoin fréquent lorsqu'on crée un site Web.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
             <h2 id="transmissionData">F - <code>htmlspecialchars</code> et la transmission de données et sécurité</h2>
             <section>
                 <p>Qu'elles soient issues de l'URL (<code>$_GET</code>) ou d'un formulaire (<code>$_POST</code>), il
@@ -188,11 +244,11 @@
                 </ul>
                 <p>Pour réaliser une injection de code JavaScript, un utilisateur va saisir un morceau de code
                     JavaScript au lieu d'une valeur "normale".</p>
-                <figure class="highlight">
+                <div class="highlight">
                     <pre><code class="language-php" data-lang="php"><span class="nt">&lt;script </span><span class="na">type=</span><span
                             class="s">"text/javascript"</span><span class="nt">&gt;</span>alert('Miaou !')<span
                             class="nt">&lt;/script&gt; </span></code></pre>
-                </figure>
+                </div>
                 <p>Si la valeur saisie est directement affichée par la page PHP, le résultat HTML généré contiendra un
                     script JavaScript imprévu qui sera exécuté par le navigateur client. Cela peut potentiellement
                     causer de gros problèmes de sécurité.</p>
@@ -204,7 +260,7 @@
                     Cela permet de désactiver l'exécution du code contenu dans des balises <code>&lt;script&gt;</code>.
                 </p>
                 <p>On peut intégrer l'appel à <code>htmlspecialchars</code> dans une fonction <code>escape</code>.</p>
-                <figure class="highlight"><pre><code class="language-php" data-lang="php"><span
+                <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span
                         class="s">&lt;?php</span>
 <span class="c">/**
  * Nettoie une valeur insérée dans une page HTML
@@ -219,32 +275,20 @@
     <span class="s">return htmlspecialchars</span>($valeur, ENT_QUOTES, 'UTF-8', false);
 }
 <span class="s">?&gt;</span></code></pre>
-                </figure>
+                </div>
                 <p>Il faut toujours penser à utiliser cette fonction lors de l'insertion de données externes dans une
                     page Web.</p>
-                <figure class="highlight"><pre><code class="language-php" data-lang="php">$prenom = <span class="s">$_GET</span>['prenom']
+                <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">$prenom = <span
+                        class="s">$_GET</span>['prenom']
 $nom = <span class="s">$_GET</span>['nom']
 <span class="s">echo</span>'Bienvenue ' <span class="s">.</span> <span class="s">escape</span>($prenom) <span class="s">.</span> ' ' <span
                             class="s">.</span> <span class="s">escape</span>($nom) <span class="s">.</span> ' !';               </code></pre>
-                </figure>
+                </div>
             </section>
-
-        </main>
-    </div>
+        </div>
+    </main>
 </div>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-<!--<script src="../js/jquery-3.3.1.slim.min.js"></script>-->
-<!--<script src="../js/popper.min.js"></script>-->
-<!--<script src="../js/bootstrap.min.js"></script>-->
-<script src="../js/docs.min.js"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

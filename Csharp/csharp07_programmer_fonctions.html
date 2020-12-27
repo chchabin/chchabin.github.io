@@ -3,375 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/bootstrap4-modif.css" rel="stylesheet" media="screen">
-    <link href="../dist/css/docs.min.css" rel="stylesheet">
-    <link href="../dist/css/docs.perso.css" rel="stylesheet">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+
     <title>Programmer avec C#</title>
 </head>
 <body>
-    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
-        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+  <div class="collapse navbar-collapse" id="bdNavbar">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+            <li class="nav-item">
+                <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#csharp01_intro" aria-expanded="false">
+                        I - Introduction au développement
+                    </button>
+                    <div class="collapse" id="csharp01_intro">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentMachine">A - Qu'est ce qu'une machine ?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentArt">B - L ’art et la manière de bien programmer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp01_intro.html#contentBonnesP"> C - La culture et les bonnes pratiques
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp02_basesLg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="csharp02_basesLg">
+                        <ul class="list-unstyled fw-normal pb-1 small">
 
-        </a>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#source">A - Anatomie
+                                    d'un fichier source
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#bloc">B - Définition
+                                    d'un bloc de code
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#affiche">C - Affichage
+                                    de texte
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#comment">D -
+                                    Commentaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#indentation">E -
+                                    l'indentation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp02_basesLg.html#nommage">F -
+                                    Conventions de nommage
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp03_programmer-variables" aria-expanded="true" aria-current="true">
+                        III - Programmer avec C#
+                    </button>
+                    <div class="collapse show" id="csharp03_programmer-variables">
 
-        <div class="navbar-nav-scroll">
-            <ul class="navbar-nav bd-navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link " href="csharp01_intro.html">Guide C#</a>
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp03_programmer-variables.html"> A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp04_programmer_test.html">B - Les tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp05_programmer_tableau.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp06_programmer_boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="csharp07_programmer_fonctions.html">E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_fichiers.html">F - Les fichiers
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp07_programmer_exceptions.html">G - Les exceptions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#csharp08_objet_overview" aria-expanded="false">
+                        IV - Programmation objet avec C#
+                    </button>
+                    <div class="collapse" id="csharp08_objet_overview">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp08_objet_overview.html">L'approche Objet
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp09_objet_creation.html">Création d'objet en C#
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp10_objet_concpets.html">Principaux concepts objets
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="csharp11_objet_relations.html">Les relations entre les classes
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-        </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                <nav class="collapse bd-links" id="bd-docs-nav">
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp01_intro.html">
-                            I - Introduction au développement
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#contentMachine">A - Qu'est ce qu'une machine ?
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentArt">B - L ’art et la manière de bien programmer
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contentBonnesP"> C - La culture et les bonnes pratiques
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp02_basesLg.html">
-                            II - Les bases du langage
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="#source">A - Anatomie d'un fichier source
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#bloc">B - Définition d'un bloc de code
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#affiche">C - Affichage de texte
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#comment">D - Commentaires
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#indentation">E - l'indentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#nommage">F - Conventions de nommage
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item active">
-                        <a class="bd-toc-link " href="csharp03_programmer-variables.html">
-                            III - Programmer avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp03_programmer-variables.html"> A - Les variables
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp04_programmer_test.html">B - Les tests et conditions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp05_programmer_tableau.html">C - Les tableaux
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp06_programmer_boucles.html">D - Les boucles
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fonctions.html">E - Les fonctions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_fichiers.html">F - Les fichiers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp07_programmer_exceptions.html">G - Les exceptions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bd-toc-item ">
-                        <a class="bd-toc-link " href="csharp08_objet_overview.html">
-                            IV - Programmation objet avec C#
-                        </a>
-                        <ul class="nav bd-sidenav">
-                            <li>
-                                <a href="csharp08_objet_overview.html">L'approche Objet
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp09_objet_creation.html">Création d'objet en C#
-                                </a>
-                            </li>
-                            <li>
-                                <a href="csharp10_objet_concpets.html">Principaux concepts objets
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <ul class="section-nav">
-                    <li class="toc-entry toc-h3"><a href="#predef">a - Utilisation de fonctions prédéfinies</a></li>
-                    <li class="toc-entry toc-h3"><a href="#ecriture">b - Ecriture de fonctions</a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                    <li class="toc-entry toc-h3"><a href="#"></a></li>
-                </ul>
-            </div>
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        </nav>
+    </aside>
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
                 <h1 class="bd-title" id="base"> E - Fonctions</h1>
-                    <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la programmation avec
-                        le langage C#.</p>
-                <div class="bd-callout bd-callout-info">
-                    <h4>Info</h4>
-                    <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
-                </div>
+            </div>
+            <p class="bd-lead">L'objectif de ce chapitre est de savoir utiliser les structures de bases de la
+                programmation avec
+                le langage C#.</p>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#predef">a - Utilisation de fonctions prédéfinies</a></li>
+                    <li><a href="#ecriture">b - Écriture de fonctions</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="bd-callout bd-callout-info">
+                <h4>Info</h4>
+                <p>Pour faciliter la compréhension du langage nous utiliserons le mode console.</p>
+            </div>
 
-                <h2 id="predef">a - Utilisation de fonctions prédéfinies</h2>
-                    <p>Une fonction est morceau de programme qui réalise un traitement
-                        précis et qui est appelé à partir du programme principal. Cela
-                        permet :</p>
-                    <ul>
-                        <li>de rendre le programme principal plus clair et plus
-                            simple,
-                        </li>
-                        <li>de factoriser du code, c’est à dire rendre le programme
-                            réutilisable plusieurs fois sans avoir à le réécrire,
-                        </li>
-                        <li>permet d’utiliser des codes dont on ne connait pas la
-                            structure mais dont on veut utiliser les fonctionnalités,
-                            comme les fonctions d’affichage et de saisie dans C#
-                        </li>
-                    </ul>
-                    <p>Le langage C# dispose d'une large biblothèque de fonctions
-                        prédéfinies. En voici quelques exemples :</p>
-                    <ul>
-                        <li><code>CompareTo</code> permet de comparer 2 chaines de
-                            caractères,
-                        </li>
-                        <li><code>ToUpper</code> met une chaine de caractère en
-                            majusule.
-                        </li>
-                    </ul>
-                    <p>L’appel de la fonction vise à utiliser les fonctionnalités du
-                        code et non pas à connaitre sa structure. Pour appeler la
-                        fonction il faut connaitre sa signature. Celle-ci nous renseigne
-                        sur les paramètres qu’elle doit utiliser et sur ce qu’elle va
-                        renvoyer. </p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> a;
+            <h2 id="predef">a - Utilisation de fonctions prédéfinies</h2>
+            <p>Une fonction est morceau de programme qui réalise un traitement
+                précis et qui est appelé à partir du programme principal. Cela
+                permet :</p>
+            <ul>
+                <li>de rendre le programme principal plus clair et plus
+                    simple,
+                </li>
+                <li>de factoriser du code, c’est à dire rendre le programme
+                    réutilisable plusieurs fois sans avoir à le réécrire,
+                </li>
+                <li>permet d’utiliser des codes dont on ne connait pas la
+                    structure mais dont on veut utiliser les fonctionnalités,
+                    comme les fonctions d’affichage et de saisie dans C#
+                </li>
+            </ul>
+            <p>Le langage C# dispose d'une large bibliothèque de fonctions
+                prédéfinies. En voici quelques exemples :</p>
+            <ul>
+                <li><code>CompareTo</code> permet de comparer 2 chaines de
+                    caractères,
+                </li>
+                <li><code>ToUpper</code> met une chaine de caractère en
+                    majuscule.
+                </li>
+            </ul>
+            <p>L’appel de la fonction vise à utiliser les fonctionnalités du
+                code et non pas à connaitre sa structure. Pour appeler la
+                fonction il faut connaitre sa signature. Celle-ci nous renseigne
+                sur les paramètres qu’elle doit utiliser et sur ce qu’elle va
+                renvoyer. </p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">string</span> a;
 <span class="nt">int</span> b;
 a = <span class="cp">Console</span>.ReadLine(); <span class="c">//appel de la fonction saisir pas de paramètre renvoie un string</span>
 b = <span class="cp">Convert</span>.ToDouble(a); <span class="c">//appel de la fonction de conversion 1 paramètre renvoie un double</span>
-<span class="cp">Console</span>.WriteLine(b); <span class="c">//appel de la fonction d'écriture 1 paramètre ne renvoie rien (void)</span></code></pre></figure>
+<span class="cp">Console</span>.WriteLine(b); <span class="c">//appel de la fonction d'écriture 1 paramètre ne renvoie rien (void)</span></code></pre>
+            </div>
 
-                <div class="bd-callout bd-callout-info">
-                    <h4>Pour résumer</h4>
-                    Une fonction :
-                        <ol>
-                            <li>a un nom</li>
-                            <li>peut avoir des paramètres</li>
-                            <li>retourne une valeur d’un certain type</li>
-                            <li>peut avoir besoin de variables</li>
-                            <li>est composé d’instructions</li>
-                        </ol>
-                    </div>
-                    <p>Les fonctions fournies par le langage sont utilisées de façon
-                        très particulière pour la manipulation de chaîne. En effet, ces
-                        fonctions (appelées méthode de classe) sont toujours associées à
-                        la chaîne de caractères pour laquelle la manipulation sera
-                        effectuée.
-                        <br> La syntaxe est donc la suivante, si bien entendu il existe
-                        une variable de retour :</p>
-                <div class="bd-callout bd-callout-info">
-                        <h4 class="text-warning">méthode :</h4>
-                        <p> variableRetour =
-                            nomVariableString.nomFonction([paramètres])</p>
-                </div>
-                <div class="bd-callout bd-callout-info">
-                    <h4 class="text-warning">fonction :</h4>
-                        <p>variableRetour = nomFonction([paramètres])</p>
-                    </div>
-                    <p>Le <strong>retour</strong> de la fonction doit être soit :</p>
-                    <ul>
-                        <li>Affecté dans une variable du programme principal - <code>d =
-                            maximum(a, b, c);</code></li>
-                        <li>Envoyé à l’affichage - <code>Console.WriteLine(maximum(a, b,
-                            c));</code></li>
-                        <li>Intégré dans une autre fonction - <code>d = maximum(a,
-                            maximum(a, b, c), e);</code></li>
-                    </ul>
-                    <h5>Signature de fonction</h5>
-                    <p>Pour connaitre les paramètres et les types d’envoi, il faut
-                        connaitre les spécifications. On peut indiquer les <strong>spécifications</strong>
-                        de la fonction sous forme de tableau :</p>
-                    <table class="table table-bordered">
-                        <thead class="thead-light">
-                        <tr>
-                            <th>nom</th>
-                            <th>Rôle</th>
-                            <th>Paramètres</th>
-                            <th>Valeur de retour<br></th>
-                        </tr>
-                        </thead>
-                        <tr>
-                            <td>Maximum<br></td>
-                            <td>Retourne la valeur maximum entre 3 entiers</td>
-                            <td>Les 3 entiers</td>
-                            <td>La valeur du maximum<br></td>
-                        </tr>
-                    </table>
-                    <p>Elles peuvent aussi être indiquées sous forme d’instruction :</p>
-                    <img class="img-fluid" src="img/signatureFonction.PNG"
-                         alt="signatureFonction">
-                    <div class="bd-callout bd-callout-warning">
-                        <h4>Différence</h4>
-                        <p>Une fonction ne se déclare jamais, elle est
-                            <strong>appelée</strong>.</p>
-                        <p>L’utilisateur d’une fonction n’a pas à connaitre le programme
-                            de la fonction ; seule la signature de la fonction le
-                            concerne.</p>
-                    </div>
-                <div class="bd-callout bd-callout-danger">
-                    <h4>Danger</h4>
-                    <p>Il faut faire la différence entre les spécifications et
-                        l’appel de fonction.</p>
-                    <p>Les <strong>spécifications</strong> donnent le nombre de
-                        paramètres et leur type, ainsi que le type de retour s’il
-                        existe.</p>
-                    <p>L’appel de fonction ne prend en compte que les paramètres et
-                        <strong>jamais leur type</strong>. Si les paramètres ont des
-                        variables, il sera nécessaire de les <strong>déclarer avant
-                            l’appel</strong> de la fonction, comme dans l’exemple
-                        précédent.</p>
-                </div>
+            <div class="bd-callout bd-callout-info">
+                <h4>Pour résumer</h4>
+                Une fonction :
+                <ol>
+                    <li>a un nom</li>
+                    <li>peut avoir des paramètres</li>
+                    <li>retourne une valeur d’un certain type</li>
+                    <li>peut avoir besoin de variables</li>
+                    <li>est composé d’instructions</li>
+                </ol>
+            </div>
+            <p>Les fonctions fournies par le langage sont utilisées de façon
+                très particulière pour la manipulation de chaîne. En effet, ces
+                fonctions (appelées méthode de classe) sont toujours associées à
+                la chaîne de caractères pour laquelle la manipulation sera
+                effectuée.
+                <br> La syntaxe est donc la suivante, si bien entendu il existe
+                une variable de retour :</p>
+            <div class="bd-callout bd-callout-info">
+                <h4 class="text-warning">méthode :</h4>
+                <p> variableRetour =
+                    nomVariableString.nomFonction([paramètres])</p>
+            </div>
+            <div class="bd-callout bd-callout-info">
+                <h4 class="text-warning">fonction :</h4>
+                <p>variableRetour = nomFonction([paramètres])</p>
+            </div>
+            <p>Le <strong>retour</strong> de la fonction doit être soit :</p>
+            <ul>
+                <li>Affecté dans une variable du programme principal - <code>d =
+                    maximum(a, b, c);</code></li>
+                <li>Envoyé à l’affichage - <code>Console.WriteLine(maximum(a, b,
+                    c));</code></li>
+                <li>Intégré dans une autre fonction - <code>d = maximum(a,
+                    maximum(a, b, c), e);</code></li>
+            </ul>
+            <h5>Signature de fonction</h5>
+            <p>Pour connaitre les paramètres et les types d’envoi, il faut
+                connaitre les spécifications. On peut indiquer les <strong>spécifications</strong>
+                de la fonction sous forme de tableau :</p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                <tr>
+                    <th>nom</th>
+                    <th>Rôle</th>
+                    <th>Paramètres</th>
+                    <th>Valeur de retour<br></th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>Maximum<br></td>
+                    <td>Retourne la valeur maximum entre 3 entiers</td>
+                    <td>Les 3 entiers</td>
+                    <td>La valeur du maximum<br></td>
+                </tr>
+            </table>
+            <p>Elles peuvent aussi être indiquées sous forme d’instruction :</p>
+            <img class="img-fluid" src="img/signatureFonction.PNG"
+                 alt="signatureFonction">
+            <div class="bd-callout bd-callout-warning">
+                <h4>Différence</h4>
+                <p>Une fonction ne se déclare jamais, elle est
+                    <strong>appelée</strong>.</p>
+                <p>L’utilisateur d’une fonction n’a pas à connaitre le programme
+                    de la fonction ; seule la signature de la fonction le
+                    concerne.</p>
+            </div>
+            <div class="bd-callout bd-callout-danger">
+                <h4>Danger</h4>
+                <p>Il faut faire la différence entre les spécifications et
+                    l’appel de fonction.</p>
+                <p>Les <strong>spécifications</strong> donnent le nombre de
+                    paramètres et leur type, ainsi que le type de retour s’il
+                    existe.</p>
+                <p>L’appel de fonction ne prend en compte que les paramètres et
+                    <strong>jamais leur type</strong>. Si les paramètres ont des
+                    variables, il sera nécessaire de les <strong>déclarer avant
+                        l’appel</strong> de la fonction, comme dans l’exemple
+                    précédent.</p>
+            </div>
 
-                <h2 id="ecriture"> b - Ecriture de fonctions</h2>
-               <p>La déclaration de fonction permet de spécifier à C# la signature
-                    de la fonction. Dans sa forme générale elle correspond à :</p>
-                <div class="bd-callout bd-callout-info">
-                    <h4>Déclaration générale de fonction :</h4>
-                    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">static</span> type_retourné nom_Fonction([paramètres])
+            <h2 id="ecriture"> b - Écriture de fonctions</h2>
+            <p>La déclaration de fonction permet de spécifier à C# la signature
+                de la fonction. Dans sa forme générale elle correspond à :</p>
+            <div class="bd-callout bd-callout-info">
+                <h4>Déclaration générale de fonction :</h4>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                        class="nt">static</span> type_retourné nom_Fonction([paramètres])
 {
     <span class="c">// Déclaration de variable(s)</span>
     <span class="c">// Instructions</span>
     <span class="nt">return</span> variable ou expression ;
-}</code></pre></figure>
+}</code></pre>
                 </div>
-                <div class="bd-callout bd-callout-info">
+            </div>
+            <div class="bd-callout bd-callout-info">
                 <h4>Définition d’une fonction</h4>
-                    <p> Les 6 étapes de définition</p>
-                    <ul>
-                        <li>Nom : un identificateur suffisamment explicite.</li>
-                        <li>Paramètres : la liste des paramètres d’entrée-sortie du
-                            programme.
-                        </li>
-                        <li>Préconditions : une liste d’expressions booléennes qui
-                            précisent les conditions d’utilisation des paramètres.
-                        </li>
-                        <li>Appel : des exemples d’utilisation du programme avec les
-                            résultats attendus (jeu de tests).
-                        </li>
-                        <li>Description : une phrase qui dit ce que fait le programme.
-                        </li>
-                        <li>Code : la séquence d’instructions nécessaires à la
-                            résolution du problème
-                        </li>
-                    </ul>
-                </div>
-                <p>Cela donne concrètement :</p>
-                <p>Déclaration générale de fonction maximum :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">static int</span> maximum(int nb1, int nb2, int nb3)
+                <p> Les 6 étapes de définition</p>
+                <ul>
+                    <li>Nom : un identificateur suffisamment explicite.</li>
+                    <li>Paramètres : la liste des paramètres d’entrée-sortie du
+                        programme.
+                    </li>
+                    <li>Préconditions : une liste d’expressions booléennes qui
+                        précisent les conditions d’utilisation des paramètres.
+                    </li>
+                    <li>Appel : des exemples d’utilisation du programme avec les
+                        résultats attendus (jeu de tests).
+                    </li>
+                    <li>Description : une phrase qui dit ce que fait le programme.
+                    </li>
+                    <li>Code : la séquence d’instructions nécessaires à la
+                        résolution du problème
+                    </li>
+                </ul>
+            </div>
+            <p>Cela donne concrètement :</p>
+            <p>Déclaration générale de fonction maximum :</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">static int</span> maximum(int nb1, int nb2, int nb3)
     {
         <span class="nt">int</span> max = nb1;
         <span class="nt">if</span> (nb2 > max) {max = nb2;}
         <span class="nt">if</span> (nb3 > max) {max = nb3;}
         <span class="nt">return</span> max;
-    }</code></pre></figure>
-                <p>Fonction principale :</p>
-                <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> a, b, c, d;
+    }</code></pre>
+            </div>
+            <p>Fonction principale :</p>
+            <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                    class="nt">int</span> a, b, c, d;
             a = 2;
             b = 3;
             c = 5;
-d = maximum(a, b, c);</code></pre></figure>
-                <div class="bd-callout bd-callout-warning">
-                    <h4>Bonnes pratiques</h4>
-                    <p>A chaque étape de la spécification, le code de la fonction
-                        doit <strong>toujours être exécutable</strong> même s’il ne
-                        donne pas encore le bon résultat.</p>
-                    <p>Le jeu de tests ne sera vérifié qu’une fois l’implémentation
-                        correctement définie.</p>
-                </div>
-                <p>Propriétés d’un programme</p>
-                <ul>
-                    <li>Validité : aptitude à réaliser exactement la tâche pour
-                        laquelle il a été conçu.<p class="text-success">i.e.:
-                            L’implémentation de la fonction doit être conforme aux
-                            jeux de tests.</p></li>
-                    <li> Robustesse : aptitude à se protéger de conditions anormales
-                        d’utilisation.<p class="text-success">i.e.: La fonction doit
-                            vérifier impérativement ses préconditions.</p></li>
-                    <li> Réutilisabilité : aptitude à être réutilisé pour résoudre
-                        des taches équivalentes à celle pour laquelle il a été
-                        conçu.<p class="text-success">i.e. : La fonction doit être
-                            correctement paramétrée.</p></li>
-                </ul>
-                <h5>Variables publiques et privées</h5>
-                <p>L’existence de fonctions pose le problème de la " durée de vie "
-                    des variables, ce qu’on appelle leur <strong>portée</strong>.
-                    Pour faire simple, une variable peut être déclarée :</p>
-                <ul>
-                    <li>Comme privée, ou locale (c’est en général l’option par
-                        défaut). Cela signifie qu’une telle variable disparaît (et
-                        sa valeur avec) dès que prend fin la fonction dans laquelle
-                        elle a été créée.
-                    </li>
-                    <li>Comme publique, ou globale. Ce qui signifie qu’une telle
-                        variable est conservée intacte pour toute l’application,
-                        au-delà des ouvertures et fermetures de procédures.
-                    </li>
-                </ul>
-                <p>Comment choisir entre déclarer une variable en Public ou en Privé
-                    ? C’est très simple : <strong>les variables globales consomment
-                        énormément de ressources en mémoire</strong>. En
-                    conséquence, le principe qui doit présider au choix entre
-                    variables publiques et privées doit être celui de <strong>l’économie
-                        de moyens</strong> : on ne déclare comme publiques que les
-                    variables qui doivent absolument l’être. Et chaque fois que
-                    possible, lorsqu’on crée une fonction, on utilise le passage de
-                    paramètres par valeur plutôt que des variables publiques</p>
-
-            </main>
+d = maximum(a, b, c);</code></pre>
+            </div>
+            <div class="bd-callout bd-callout-warning">
+                <h4>Bonnes pratiques</h4>
+                <p>A chaque étape de la spécification, le code de la fonction
+                    doit <strong>toujours être exécutable</strong> même s’il ne
+                    donne pas encore le bon résultat.</p>
+                <p>Le jeu de tests ne sera vérifié qu’une fois l’implémentation
+                    correctement définie.</p>
+            </div>
+            <p>Propriétés d’un programme</p>
+            <ul>
+                <li>Validité : aptitude à réaliser exactement la tâche pour
+                    laquelle il a été conçu.<p class="text-success">i.e.:
+                        L’implémentation de la fonction doit être conforme aux
+                        jeux de tests.</p></li>
+                <li> Robustesse : aptitude à se protéger de conditions anormales
+                    d’utilisation.<p class="text-success">i.e.: La fonction doit
+                        vérifier impérativement ses préconditions.</p></li>
+                <li> Réutilisabilité : aptitude à être réutilisé pour résoudre
+                    des taches équivalentes à celle pour laquelle il a été
+                    conçu.<p class="text-success">i.e. : La fonction doit être
+                        correctement paramétrée.</p></li>
+            </ul>
+            <h5>Variables publiques et privées</h5>
+            <p>L’existence de fonctions pose le problème de la " durée de vie "
+                des variables, ce qu’on appelle leur <strong>portée</strong>.
+                Pour faire simple, une variable peut être déclarée :</p>
+            <ul>
+                <li>Comme privée, ou locale (c’est en général l’option par
+                    défaut). Cela signifie qu’une telle variable disparaît (et
+                    sa valeur avec) dès que prend fin la fonction dans laquelle
+                    elle a été créée.
+                </li>
+                <li>Comme publique, ou globale. Ce qui signifie qu’une telle
+                    variable est conservée intacte pour toute l’application,
+                    au-delà des ouvertures et fermetures de procédures.
+                </li>
+            </ul>
+            <p>Comment choisir entre déclarer une variable en Public ou en Privé
+                ? C’est très simple : <strong>les variables globales consomment
+                    énormément de ressources en mémoire</strong>. En
+                conséquence, le principe qui doit présider au choix entre
+                variables publiques et privées doit être celui de <strong>l’économie
+                    de moyens</strong> : on ne déclare comme publiques que les
+                variables qui doivent absolument l’être. Et chaque fois que
+                possible, lorsqu'on crée une fonction, on utilise le passage de
+                paramètres par valeur plutôt que des variables publiques</p>
         </div>
-    </div>
+    </main>
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
 </body>
 </html>

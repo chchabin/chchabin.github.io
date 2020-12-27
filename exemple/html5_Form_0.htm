@@ -5,7 +5,6 @@
     <title>Formulaire HTML5</title>
     <style>
         body{
-          background-image: url(background.png);
           font-family: 'Open Sans',sans-serif;
           font-weight: 400;
           font-size: 13px;
@@ -15,9 +14,9 @@
           background-color: #F0DDDD;
           border-color: #e88;
           -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
-          -moz-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
-          -o-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
-          -ms-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
+          -moz-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+          -o-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+          -ms-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
           box-shadow:0 0 5px rgba(255, 0, 0, .8);
         }
 
@@ -104,7 +103,7 @@
       if (input.value != document.getElementById('email_addr').value) {
         input.setCustomValidity('Les deux adresses e-mail ne correspondent pas.');
       } else {
-        // le champ est valide : on réitialise le message d'erreur
+        // le champ est valide : on réinitialise le message d'erreur
         input.setCustomValidity('');
       }
     }
