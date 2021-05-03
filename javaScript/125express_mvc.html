@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Architecture MVC</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="false">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="true"
+                            aria-current="true">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse show" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">D - Express Architecture MVC</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#routes">1 - Création de la structure des routes</a></li>
+                    <li><a href="#vues">2 - Création de la structure des vues</a>
+                        <ul>
+                            <li><a href="#middleware">a - Création du middleware</a></li>
+                            <li><a href="#layout">b - création de la vue layout</a></li>
+                            <li><a href="#bandeau">c - création de la vue bandeau</a></li>
+                            <li><a href="#accueil">d - création de la vue accueil</a></li>
+                            <li><a href="#public">e - Mise en place de css et des images</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#ctrl">3 - Création du contrôleur</a>
+                        <ul>
+                            <li><a href="#ctrlfn">a - créer les fonctions du contrôleur</a></li>
+                            <li><a href="#ctrlroute">b - lier le contrôleur à la route</a></li>
+                            <li><a href="#ctrlvues">c - Création des vues</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="bd-callout bd-callout-info">
+                <h4 class="text-info">Création et accès à la page accueil (1/3)</h4>
+                <p>Vous allez récrire l'application <a href="../download/lafleur2013.zip">Lafleur</a>, initialement
+                    écrite enPHP, en javascript.</p>
+
+            </div>
+            <div class="bd-callout bd-callout-warning">
+                <h4 class="text-warning">Prérequis</h4>
+                <p>Vous devez : </p>
+                <ol>
+                    <li><i class="bi bi-folder"></i> créez un répertoire : node-lafleur,</li>
+                    <li><i class="bi bi-clipboard-check"></i> initialiser un projet nodejs avec <a
+                            href="115express_installation.html#vierge">un fichier
+                        vierge</a>,
+                    </li>
+                    <li><i class="bi bi-download"></i> télécharger les <a
+                            href="115express_installation.html#nodemonloc">modules</a> :
+                        <code>nodemon</code> et <code>express</code>.
+                    </li>
+                    <li><i class="bi bi-file-earmark"></i> créer un fichier <code>index.js</code> selon le <a
+                            href="120express_affichage.html">modèle</a>
+                        (supprimer la partie création de la route),
+                    </li>
+
+                </ol>
+            </div>
+            <h2 id="routes">1 - Création de la structure des routes</h2>
+            <section>
+                <div class="bd-callout bd-callout-warning">
+                    <h4 class="text-warning">Prérequis</h4>
+                    <p><i class="bi bi-folder"></i> Créez un répertoire <code>routes</code>.
+                        <br><i class="bi bi-file-earmark"></i> Créez un fichier <code>routes.js</code>.
+                    </p>
+                </div>
+
+                <p>Vous avez créé un fichier indépendant qui contiendra les routes. Dans ce fichier vous allez
+                    ajouter ce code :</p>
+                <pre><code class="language-js" data-lang="js">const express = require('express');
+const router = express.Router();
+//code des routes à ajouter ici
+
+
+
+module.exports = router;</code></pre>
+                <p>Dans le fichier <code>index.js</code> rajoutez au niveau des constantes :</p>
+                <pre><code class="language-js" data-lang="js">const router=require('./routes/routes')</code></pre>
+                <p>Vous allez maintenant activer la route. Ajoutez avant <code>// Gestion des erreurs HTTP</code> :</p>
+                <pre><code class="language-js" data-lang="js">app.use ('/',router);</code></pre>
+                <p>Copiez maintenant la partie du code qui correspond à la route dans le fichier <code>route.js</code>.
+                </p>
+                <div class="bd-callout bd-callout-warning bg-warning">
+                    <h4><i class="bi bi-cone-striped"></i>Lancez de nouveau l'application (si besoin)</h4>
+                    <p>Vous ne devez pas avoir d'erreurs !</p>
+                </div>
+            </section>
+            <h2 id="vues">2 - Création de la structure des vues</h2>
+            <section>
+                <div class="bd-callout bd-callout-warning">
+                    <h4 class="text-warning">Prérequis</h4>
+                    <p><i class="bi bi-download"></i> Téléchargez les modules <code>ejs</code> et
+                        <code>express-layout</code>.
+                        <br><i class="bi bi-folder"></i> Créez un répertoire <code>public</code></p>
+                    <ul>
+                        <li>Ce sera le répertoire d'ouverture de l'application. Il contiendra les fichiers
+                            nécessaires à la présentation des vues : css, javascript, images etc...
+                        </li>
+                    </ul>
+
+                    <p><i class="bi bi-folder"></i> Créez un répertoire <code>views</code>
+                        <br><i class="bi bi-file-earmark"></i> Créez les fichiers suivants :</p>
+                    <ul>
+                        <li><i class="bi bi-file-earmark"></i> <code>layout.ejs</code> : il contient la structure de la
+                            page html
+                        </li>
+                        <li><i class="bi bi-file-earmark"></i> <code>bandeau.ejs</code> : il contient un menu</li>
+                        <li><i class="bi bi-file-earmark"></i> <code>accueil.ejs</code> : il contient la page d'accueil
+                        </li>
+                    </ul>
+                </div>
+                <h3 id="middleware">a - Création du middleware</h3>
+                <article>
+                    <p>La gestion des vues nous oblige à créer un middleware (ensemble de paquet nécessaire au bon
+                        fonctionnement de l'application) dans le fichier <code>index.js</code>.
+                        Vous allez ajouter le code suivant entre les lignes <code>const router ...</code> et <code>app.use
+                            ('/',router);</code> :</p>
+                    <pre><code class="language-js" data-lang="js">// module de gestion de chemin
+const path = require('path');
+// module pour la création de la page layout
+const layout = require('express-layout');
+
+// code pour la mise en place des vues
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+const middlewares = [
+    layout()
+    // paramétrage du lien sur le répertoire public
+    , express.static(path.join(__dirname, 'public'))
+
+    ];
+// exécution du tableau middlewares
+app.use(middlewares);</code></pre>
+                </article>
+                <h3 id="layout">b - création de la vue layout</h3>
+                <article>
+                    <div class="bd-callout bd-callout-info">
+                        <h4 class="text-info">Infos</h4>
+                        <p>Le code pour l'insertion de variables est équivalent à celui de blade, ou des raccourcis
+                            PHP.</p>
+                        <ul>
+                            <li><code><%</code> pour exécuter du code</li>
+                            <li><code><%=</code> pour afficher un résultat</li>
+                            <li><code><%-</code> pour afficher du code (équivalent à la balise HTML pre)</li>
+                        </ul>
+                    </div>
+                    <p>Passons à la création des vues :
+                        <br>La vue layout est la vue de présentation, c'est dans cette vue que seront insérées toutes
+                        les
+                        vues qui seront appelées par le contrôleur. Elles seront insérées au niveau de la balise body.
+                        Voilà pourquoi, La vue <code>layout</code> rassemble les vues v_entete.php et v_pied.php :</p>
+                    <pre><code class="language-js" data-lang="js">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="utf-8"&gt
+    &lttitle&gtLafleur&lt/title&gt
+    &ltlink rel="stylesheet" href="/cssGeneral.css" type="text/css" /&gt
+    &ltlink rel="icon" type="image/png" href="/images/favicon.ico"&gt
+&lt/head&gt
+&ltbody&gt
+&lt%- body %&gt
+&lt/body&gt
+&lt/html&gt</code></pre>
+                </article>
+                <h3 id="bandeau">c - création de la vue bandeau</h3>
+                <article>
+                    <p>La vue bandeau est la même, il suffit de faire un copier collé du code. Néanmoins, l'appel des
+                        routes
+                        est différent de celui du PHP</p>
+                    <pre><code class="language-js" data-lang="js">&ltdiv id="bandeau"&gt
+    &lt!-- Images En-tête --&gt
+                    &lt!--&ltimg src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/&gt--&gt
+    &ltimg src="images/lafleur.gif"	alt="Lafleur" title="Lafleur"/&gt
+&lt/div&gt
+                    &lt!--  Menu haut--&gt
+&ltul id="menu"&gt
+    &ltli&gt&lta href="/"&gt Accueil &lt/a&gt&lt/li&gt
+    &ltli&gt&lta href="/voirProduits"&gt Voir le catalogue de fleurs &lt/a&gt&lt/li&gt
+    &ltli&gt&lta href="#"&gt Voir son panier &lt/a&gt&lt/li&gt
+    &ltli&gt&lta href="#"&gt Administrer &lt/a&gt&lt/li&gt
+&lt/ul&gt</code></pre>
+                </article>
+                <h3 id="accueil">d - création de la vue accueil</h3>
+                <article>
+                    <p>Pour la vue accueil est un peu différente. Il faut y inclure la vue bandeau.</p>
+                    <pre><code class="language-js" data-lang="js">&lt%- include ('bandeau')%&gt
+&ltdiv id="accueil"&gt
+    Lafleur, le prince des fleurs sur internet
+&lt/div&gt</code></pre>
+                    <p>la balise <code>&lt%-</code> est spécifique à ejs. Elle permet d'écrire du code qui sea
+                        interprété
+                        par ejs.
+                        Ici nous allons inclure la vue bandeau dans la vue accueil.</p>
+                    <h4>v - création de la route</h4>
+                    <p>Enfin, il faut appeler la route qui ouvre la vue accueil :</p>
+                    <pre><code class="language-js" data-lang="js">// création de la Route vers accueil
+router.get('/', (req, res) => {
+    res.render('accueil');
+});</code></pre>
+                </article>
+                <h3 id="public">e - Mise en place de css et des images</h3>
+                <article>
+                    <ul>
+                        <li>Copiez le fichier <code>cssGeneral.css</code> dans le répertoire public.</li>
+                        <li>Copiez le répertoire image dans le répertoire public.</li>
+                    </ul>
+
+                    <div class="bd-callout bd-callout-warning bg-warning">
+                        <h4><i class="bi bi-cone-striped"></i>Rafraichissez ou Lancez de nouveau l'application (si
+                            besoin)
+                        </h4>
+                        <p>Vous devez retrouver la vue d'accueil de Lafleur</p>
+                    </div>
+                </article>
+            </section>
+            <h2 id="ctrl">3 - Création du contrôleur</h2>
+            <section>
+                <div class="bd-callout bd-callout-warning">
+                    <h4 class="text-warning">Prérequis</h4>
+                    <i class="bi bi-folder"></i> Créez un répertoire <code>controller</code>.
+                    <br><i class="bi bi-file-earmark"></i> Créez dans ce répertoire, un fichier
+                    <code>voirProduits.js</code>.
+                    <br><i class="bi bi-file-earmark"></i> Créez les fichiers suivants dans le répertoire
+                    <code>views</code> :
+                    <ul>
+                        <li><i class="bi bi-file-earmark"></i> <code>categories.ejs</code> : il contient la liste des
+                            catégories
+                        </li>
+                        <li><i class="bi bi-file-earmark"></i> <code>produits.ejs</code> : il contient la liste des
+                            produits pour une catégorie
+                        </li>
+                    </ul>
+                </div>
+                <h3 id="ctrlfn">a - créer les fonctions du contrôleur</h3>
+                <article>
+                    <p>Avant de faire une connexion à la base de données, nous allons tester notre application avec,
+                        une valeur de catégorie et une valeur de produit. Comme la base de donné renvoie un tableau
+                        d'objets,
+                        nous auront les valeurs suivantes :</p>
+                    <ul>
+                        <li>lesCategories : [{id:'com',libelle:'Composition'}]</li>
+                        <li>lesProduits : [{id:"c01",description:"Panier de fleurs
+                            variées",prix:53,"image":"images/compo/aniwa.gif",idCategorie:"com"}]
+                        </li>
+                    </ul>
+                    <p>Nous construisons les fonctions d'appel de façon à les convertir quand vous vous connecterez à la
+                        base de données.
+                        <br>Copiez ce code dans le fichier <code>voirProduits.js</code> :</p>
+
+                    <pre><code class="language-js" data-lang="js">module.exports = {
+    voirCategories:async (req, res) => {
+        const lesCategories=[{id:'com',libelle:'Composition'}]
+        //Appel de la vue produit et envoie des données
+        res.status(200).render('categories',{
+            lesCategories:lesCategories
+        });
+    },
+    voirProduit:async (req, res) => {
+        const num=1;
+        const lesCategories=[{id:'com',libelle:'Composition'}]
+        const getLesProduitsDeCategorie=[{id:"c01",description:"Panier de fleurs variées",prix:53,"image":"images/compo/aniwa.gif",idCategorie:"com"}]
+        res.status(200).render('produits',{
+            lesCategories:lesCategories,
+            lesProduits:getLesProduitsDeCategorie,
+            categorie:num
+        });
+    }
+}</code></pre>
+                </article>
+                <h3 id="ctrlroute">b - lier le contrôleur à la route</h3>
+                <article>
+                    <p>Dans le fichier <code>routes.js</code> vous allez ajouter ce code au niveau des modules :</p>
+                    <pre><code class="language-js" data-lang="js">const voirProduits = require('../controller/voirProduits');</code></pre>
+                    <p>Ainsi le module du contrôleur est chargé avec celui de la route. </p>
+                    <p>Il vous reste maintenant à créer les routes qui font appel au contrôleur. Lorsque l'utilisateur
+                        clique sur le lien, l'URL est composée de <code>/voirProduit</code> ou <code>/voirProduitIdcategorie</code>.
+                        Il faut donc retrouver cette information.
+                        En suivant le détail de l'<a href="120express_affichage.html#lecture">URL</a> vous allez
+                        rajouter
+                        une route.
+                        Pour l'instant les
+                        fonctions ne font qu'afficher des valeurs, voilà pourquoi la méthode d'envoie est
+                        <code>GET</code>.
+
+                        <br>Copiez ce code :</p>
+                    <pre><code class="language-js" data-lang="js">router.get('/voirProduits',voirProduits.voirCategories);
+router.get('/voirProduits:num',voirProduits.voirProduit);</code></pre>
+                </article>
+                <h3 id="ctrlvues">c - Création des vues</h3>
+                <article>
+                    <p>Le contrôleur appel deux vues : <code>categories</code> et <code>produits</code>
+                        <br>Pour catégorie copiez ce code :</p>
+                    <pre><code class="language-js" data-lang="js">&lt%- include ('bandeau')%&gt
+&ltul id="categories"&gt
+    &lt% for(uneCategorie of lesCategories )
+    {
+	    const idCategorie = uneCategorie['id'];
+	    const libCategorie = uneCategorie['libelle'];
+	%&gt
+    &ltli&gt
+        &lta href="/voirProduits&lt%= idCategorie%&gt"&gt&lt%= libCategorie %&gt&lt/a&gt
+    &lt/li&gt
+
+&lt% }%&gt
+&lt/ul&gt</code></pre>
+                    <p>Pour la vue <code>produits</code> copiez ce code :</p>
+                    <pre><code class="language-js" data-lang="js">&lt%- include ('categories')%&gt
+&ltdiv id="produits"&gt
+
+&lt% for( unProduit of lesProduits)
+{
+	id = unProduit['id'];
+	description = unProduit['description'];
+	prix=unProduit['prix'];
+	image = unProduit['image'];
+    %&gt
+    &ltul&gt
+        &ltli&gt&ltimg src="&lt%= image%&gt" alt=image /&gt&lt/li&gt
+        &ltli&gt&lt%=description%&gt&lt/li&gt
+        &ltli&gt : &lt%= prix %&gt Euros&lt/li&gt
+        &ltli&gt&lta href="/ajouterAuPanier&lt%= categorie%&gt&&lt%= id%&gt"&gt
+                &ltimg src="images/mettrepanier.png" TITLE="Ajouter au panier"&gt &lt/a&gt&lt/li&gt
+
+    &lt/ul&gt
+
+&lt%}%&gt
+&lt/div&gt</code></pre>
+
+                    <div class="bd-callout bd-callout-warning bg-warning">
+                        <h4><i class="bi bi-cone-striped"></i>Rafraichissez ou Lancez de nouveau l'application (si
+                            besoin)
+                        </h4>
+                        <p>En cliquant sur <code>Voir le catalogue de fleur</code> et <code>Composition</code>, vous
+                            devez
+                            voire apparaitre un produit.</p>
+                        <p>Il nous reste maintenant à lier la base de données à notre application !</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

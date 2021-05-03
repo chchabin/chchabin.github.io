@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <title>Js Classes</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse show" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="false">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">H - Les Classes en ES6</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#predef">1 - Structure d'une classe</a></li>
+                    <li><a href="#construct">2 - Constructeur</a></li>
+                    <li><a href="#prop">3 - Propriétés</a></li>
+                    <li><ul>
+                        <li><a href="#staticfield">a - Propriété statique</a></li>
+                        <li><a href="#private">b - Propriétés privées</a></li>
+                    </ul></li>
+                    <li><a href="#getset">4 - Getters et Setters</a></li>
+                    <li><a href="#static">5 - Méthodes et propriétés statiques</a></li>
+                    <li><a href="#collection">6 - Les collections</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="predef">1 - Structure d'une classe</h2>
+            <section>
+                <p>Le modèle d'héritage orienté objet de JavaScript peut dérouter les développeurs issus de langages
+                    tels que C++, C#, Java et PHP. Pour cette raison, ES6 a introduit des classes . Elles sont
+                    principalement du sucre syntaxique mais offrent des concepts de programmation orientés objet plus
+                    familiers.
+                    <br>La déclaration est la suivante :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class Produit {
+
+    constructor( code='',  lib='',  px=0,  qte=0) {
+
+            this.code = code;
+            this.lib = lib;
+            this.px = px;
+            this.qte = qte;
+    }
+
+ ToString() // méthode d'affichage
+    {
+        return `code :  ${this.code} lib : ${this.lib} prix : ${this.px} Quantité en stock : ${this.qte}`;
+    }
+}</code></pre>
+                <p>Cette classe dispose d'un constructeur, avec le mot réservé <code>constructor</code> et d'une méthode
+                    qui affiche les paramètres <code>ToString</code>.
+                    Comme en C# le mot clé <code>this</code> fait référence à une propriété, mais qui est ici <code>public</code>
+                    et non déclarée.
+                    <br>L'instanciation est relativement simple :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1); //Instanciation de l'objet
+console.log(lessive.ToString()); // appel et affichage de la méthode ToString
+console.log(lessive.px); // appel de la propriété prix</code></pre>
+                <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <h4>Résultat :</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">code :  10 lib : lessive prix : 12 Quantité en stock : 1
+12</code></pre>
+                </div>
+                <p>Vous voyez que les propriétés ne sont pas privées, vous pouvez y accéder par appel.</p>
+                <div class="bd-callout bd-callout-danger">
+                    <h4>ne pas confondre instanciation et initialisation </h4>
+                    <p><code>Instancier</code>, c'est créer un nouvel objet (opérateur <code>new </code> )</p>
+                    <p><code>Initialiser</code>, c'est donner une valeur initiale à quelque chose (opérateur
+                        <code>=</code> )</p>
+                </div>
+            </section>
+            <h2 id="construct">2 - Constructeur</h2>
+            <section>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Classe : Definition</h4>
+                    <p>le constructeur est une méthode spécifique dont le rôle est de construire un objet, le plus
+                        souvent
+                        en initialisant ses attributs.</p>
+                </div>
+                <p>Le constructeur précédent vous montre comment déclarer un constructeur avec des valeurs par défaut
+                    (ce qui en passant n'existe pas pour les fonctions.</p>
+                <p>Avec la norme ES2019 il existe une autre méthode de déclaration :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+  a = 1;
+  b = 2;
+  c = 3;
+}</code></pre>
+                <p>Ceci équivaut à:</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+  constructor() {
+    this.a = 1;
+    this.b = 2;
+    this.c = 3;
+  }
+}</code></pre>
+
+            </section>
+            <h2 id="prop">3 - Propriétés</h2>
+            <section>
+                <h3 id="staticfield">a - Propriété statique</h3>
+                <article>
+                <p>La déclaration de champs <code>statique</code> est</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+  x = 1;
+  y = 2;
+  static z = 3;
+}
+
+console.log( MyClass.z ); // 3</code></pre>
+                <p>Elle est équivalente à</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+
+  constructor() {
+    this.x = 1;
+    this.y = 2;
+  }
+
+}
+
+MyClass.z = 3;
+
+console.log( MyClass.z ); // 3</code></pre>
+                </article>
+                <h3 id="private">b - Propriétés privées</h3>
+                <article>
+                <p>Dans ES2019, les champs de classe <code>privée</code> sont définis à l'aide d'un préfixe de hachage
+                    <code>#</code> :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+
+  a = 1;          // .a is public
+  #b = 2;         // .#b is private
+  static #c = 3;  // .#c is private and static
+
+  incB() {
+    this.#b++;
+  }
+
+}
+
+let m = new MyClass();
+
+m.incB(); // runs OK
+m.#b = 0; // error - private property cannot be modified outside class</code></pre>
+                <p>Notez qu'il n'y a aucun moyen de définir des méthodes privées, des getters ou des setters.</p>
+                </article>
+            </section>
+            <h2 id="getset">4 - Getters et Setters</h2>
+            <section>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Definition</h4>
+                    <p>Un mutateur est une méthode le plus souvent publique qui permet d'accéder à un attribut privé, en
+                        écriture</p>
+                </div>
+                <p>En anglais, ils commencent par le mot clé set.</p>
+                <p>Voilà pourquoi on les appelle aussi des setters.
+                    <br>En javascript, ils commencent par set</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Definition</h4>
+                    <p>Un accesseur est une méthode le plus souvent publique qui permet d'accéder à un attribut privé,
+                        en lecture</p>
+                </div>
+                <p>En anglais, ils commencent par le mot clé get.</p>
+                <p>Voilà pourquoi on les appelle aussi des getters
+                    <br>En javascript, ils commencent par get
+                    <br>Voici un exemple</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class Produit {
+    // Déclaration privée des propriétés
+    #code;
+    #lib;
+    #px;
+    #qte;
+    constructor( code='',  lib='',  px=0,  qte=0) {
+
+        this.#code = code;
+        this.#lib = lib;
+        this.#px = px;
+        this.#qte = qte;
+    }
+    // méthode de renvoie des informations privées
+    ToString()
+    {
+        return `code :  ${this.#code} lib : ${this.#lib} prix : ${this.#px} Quantité en stock : ${this.#qte}`;
+    }
+    // accesseur
+    get getCode()
+    {
+        return `${this.#code}`;
+    }
+    // mutateur
+    set setLib(lib){
+        this.#lib = lib;
+    }
+    // accesseur
+    get getPrix()
+    {
+        return this.#px;
+    }
+    // Compare les prix entre l'objet courant et un autre
+    estplusChere(p){
+        let rep = true;
+        if (this.#px < p.getPrix) { rep = false; }
+        return rep;
+    }
+}</code></pre>
+                <p>Nous avons les appels suivants :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1);
+const eau=new Produit(20,`eau 1,5l`,5,1);
+console.log(lessive.ToString()); // code :  10 lib : lessive prix : 12 Quantité en stock : 1
+console.log(lessive.getPrix); // 12
+lessive.setLib='lessive de qualité';
+console.log(lessive.ToString()); // code :  10 lib : lessive de qualité prix : 12 Quantité en stock : 1
+console.log(lessive.estplusChere(eau) // true
+                </code></pre>
+
+
+            </section>
+            <h2 id="static">5 - Méthodes et propriétés statiques</h2>
+            <section>
+                <p>La définition d'une méthode avec le mot - clé <code>static</code> lui permet d'être appelée sur une classe sans
+                    créer d'instance d'objet.
+                    ES6 ne prend pas en charge les propriétés statiques de la même manière que les autres langages, mais
+                    il est possible d'ajouter des propriétés à la définition de classe elle-même.
+                    <br>La méthode statique est appelée de cette façon</p>
+                <pre><code class="language-js" data-lang="js" translate="no">class Produit {
+    // Déclaration privée des propriétés
+    #code;
+    #lib;
+    #px;
+    #qte;
+    constructor( code='',  lib='',  px=0,  qte=0) {
+
+        this.#code = code;
+        this.#lib = lib;
+        this.#px = px;
+        this.#qte = qte;
+    }
+    // méthode de renvoie des informations privées
+    ToString()
+    {
+        return `code :  ${this.#code} lib : ${this.#lib} prix : ${this.#px} Quantité en stock : ${this.#qte}`;
+    }
+    // accesseur
+    get getCode()
+    {
+        return `${this.#code}`;
+    }
+    // mutateur
+    set setLib(lib){
+        this.#lib = lib;
+    }
+    // accesseur
+    get getPrix()
+    {
+        return this.#px;
+    }
+    // Compare les prix entre l'objet courant et un autre
+    estplusChere(p){
+        let rep = true;
+        if (this.#px < p.getPrix) { rep = false; }
+        return rep;
+    }
+        static log(text){
+        document.write(text+ "&ltbr/&gt");
+    }
+}</code></pre>
+                <p>Appel affiché sur le navigateur :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">lessive.setLib='lessive pas chère';
+Produit.log(lessive.ToString()); // code : 10 lib : lessive pas chère prix : 12 Quantité en stock : 1
+Produit.log(lessive.getCode);    // 10
+Produit.log(lessive.getPrix);    // 12
+Produit.log(lessive.estplusChere(eau)); // true
+                </code></pre>
+            </section>
+            <h2 id="collection">6 - Les collections</h2>
+            <section>
+                <p>Les collections ne sont pas aussi pratiques que celles qui se trouvent dans C#. Elles peuvent néanmoins être utilisées.
+                En vous réferant à la partie sur les tableau vous comprendrez pourquoi vous allez preférer la collection <code>Set</code>.
+                Voici un exemple de ce que vous pouvez obtenir :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1);
+const eau = new Produit(20,`eau 1,5l`,5,1);
+// Déclaration de la collection
+const lesProduits = new Set();
+
+// ajout des objets dans la collection Set
+lesProduits.add(lessive);
+lesProduits.add(eau);
+ // ajout d'un produit sans déclaration préalable
+lesProduits.add(new Produit(30,`beurre`,5,1));
+
+// Affichage des objets
+for(let unproduit of lesProduits){
+    console.log(unproduit.ToString())
+}
+// Affichage en console
+//code :  10 lib : lessive prix : 12 Quantité en stock : 1
+//code :  20 lib : eau 1,5l prix : 5 Quantité en stock : 1
+//code :  30 lib : beurre prix : 5 Quantité en stock : 1
+
+// Affichage de la collection
+ console.log(lesProduits)
+
+      </code></pre>
+                <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <h4>Résultat de l'affichage de la collection :</h4>
+                    <p>Vous remarquerez que les indices ont été automatiquement ajoutés. Les éléments sont des objets.</p>
+                    <img src="img/objetSet.PNG" class="img-fluid" alt="menuAccueil">
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

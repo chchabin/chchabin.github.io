@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Express Install</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj Mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="false">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="true"
+                            aria-current="true">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse show" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">B - l'installation</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#demarrer">1 - Pour démarrer</a>
+                        <ul>
+                            <li><a href="#generator">a - Démarrer avec une architecture Express et ejs</a></li>
+                            <li><a href="#vierge">b - Démarrer avec un fichier vierge</a></li>
+                            <li><a href="#install">c - Démarrer avec un fichier existant</a></li>
+                            <li><a href="#lancer">d - Lancer l'application</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#nodemon">2 - Installer nodemon</a>
+                        <ul>
+                            <li><a href="#nodemonglb">a - Installation nodemon globale</a></li>
+                            <li><a href="#nodemonloc">b - Installation nodemon locale</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#expressInst">3 - Installer express</a></li>
+                    <li><a href="#packages">4 - Installer d'autres packages</a>
+                        <ul>
+                            <li><a href="#raccourci">a - Raccourcis</a></li>
+                            <li><a href="#Mysql">b - Mysql</a></li>
+                            <li><a href="#dotenv">c - Dotenv</a></li>
+                            <li><a href="#ejs">d - EJS</a></li>
+                            <li><a href="#layout">e - express-layout</a></li>
+                            <li><a href="#session">f - express-session</a></li>
+                            <li><a href="#math">g - mathjs</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="#uninstall">5 - Désinstaller un module npm</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="demarrer">1 - Pour démarrer</h2>
+            <section>
+                <h3 id="generator">a - Démarrer avec une architecture Express et ejs</h3>
+                <article>
+                    <p>Express vous laisse la possibilité d'utiliser une structure préfabriquée. Pour cela il faut
+                        saisir dans le terminal :</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install express-generator -g</code> </pre>
+                    <p>Cette instruction va installer le configurateur pour tous les projets, <code>-g</code> signifie
+                        en mode global.
+                        <br>Ensuite il faut se placer dans le répertoire désiré et saisir cette instruction :</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">express --view=ejs myapp</code> </pre>
+                    <p>Le configurateur va créer le <strong>dossier </strong><code>myapp</code> dans votre répertoire.
+                        Ici nous avons choisi
+                        le moteur de template <code>ejs</code>, mais il en existe d'autres, il suffit, pour les
+                        connaitre, de saisir dans votre terminal :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">express -h</code> </pre>
+                    <p>Nous obtenons ainsi cette architecture :</p>
+                    <pre><code class="language-sh" translate="no">
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.ejs
+    ├── index.ejs
+    └── layout.ejs
+
+7 directories, 9 files
+</code>
+</pre>
+                    <p>Nous la détaillerons dans les chapitres suivants.
+                        <br>Ensuite, installons les dépendances :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">cd myapp
+$ npm install</code> </pre>
+                    <p>Pour Lancer l'application avec le debugger, dans le terminal, saisir :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">set DEBUG=myapp:*
+$ npm start</code> </pre>
+                    <p>Pour Lancer l'application, dans le navigateur, saisir :</p>
+                    <pre><code class="language-bash" data-lang="bash">http://localhost:3000/</code> </pre>
+                </article>
+                <h3 id="vierge">b - Démarrer avec un fichier vierge</h3>
+                <article>
+                    <p>Cette partie reprend l'explication qui se trouve sur le site de <a
+                            href="https://expressjs.com/fr/starter/installing.html">Express</a>
+                        .
+                        <br>Créez votre repertoire et positionner vous dessus.
+                        <br>L'expression <code>chemin</code> désigne le chemin d'accès à votre fichier. Saisir dans le
+                        terminal, le code suivant :</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">cd chemin\monappexpress</code> </pre>
+                    <p>Vous pouvez aussi grâce à votre IDE (comme visual studio code) ouvrir votre répertoire.
+                        <br>NPM garde en mémoire, dans un fichier, tous le modules crées. Ce fichier s'appelle
+                        package.json. S'il n'existe pas il faut le créer en saisissant, <code>dans le terminal</code> :
+                    </p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm init</code></pre>
+                    <p>Il suffit de répondre aux questions pour le créer.</p>
+                    <img class="img-fluid" src="img/package.PNG" alt="package">
+                    <div class="bd-callout bd-callout-info">
+                        <h4 class="text-info">Note</h4>
+                        <p>Notez que notre fichier de départ sera <code>app.js</code></p>
+                    </div>
+                    <div class="bd-callout bd-callout-info">
+                        <h4 class="text-black-50">Astuce</h4>
+                        <p>Si vous n'avez pas de préférence, il faut saisir :</p>
+                        <pre class="chroma"><code class="language-bash" data-lang="bash">npm init -y</code></pre>
+                        <p>Notez qu'ici, notre fichier de départ sera <code>index.js</code></p>
+                    </div>
+                </article>
+                <h3 id="install">c - Démarrer avec un fichier existant</h3>
+                <article>
+                    <p>Par contre si ce fichier existe déjà dans votre répertoire, en le copiant collant par exemple, il
+                        faut taper</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install</code> </pre>
+                    <p>Si les deux fichiers package.json et package-lock.json sont déjà présents, il suffit de taper
+                        :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm ci</code> </pre>
+                </article>
+                <h3 id="lancer">d - Lancer l'application</h3>
+                <article>
+                    <h4>Lancer l 'application à partir d&nbsp;'un fichier package.json</h4>
+                    <p>Pour Lancer l'application, il suffit de saisir, si notre fichier créée avec <code>npm init</code>
+                        est <code>app.js</code> :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">node app.js</code> </pre>
+                    <h4>Lancer l'application sans fichier package.json</h4>
+                    <p>Si vous utilisez NPM 5.2.0 ou une version plus récente, vous pouvez utiliser le serveur http sans
+                        l'installer avec npx. Ce n'est pas recommandé pour une utilisation en production, mais c'est un
+                        excellent moyen de faire fonctionner rapidement un serveur sur localhost.
+                        <br>Le serveur lira le premier fichier index qu'il rencontrera.</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npx http-server</code> </pre>
+                    <a href="https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server"></a>
+                </article>
+            </section>
+            <h2 id="nodemon">2 - Installer nodemon</h2>
+            <section>
+                <p>Nodemon est un outil qui permet de développer des applications basées sur node.js en redémarrant
+                    automatiquement
+                    l'application de nœud lorsque des modifications de fichier dans le répertoire sont détectées.
+                    nodemon s'installe à l'aide de npm, soit localement, soit globalement.</p>
+                <h3 id="nodemonglb">a - Installation globale</h3>
+                <article>
+                    <p>C'est l'installation que nous allons préférer. Si ce n'est pas déjà fait pour un autre projet,
+                        saisissez l'instruction suivante :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install -g nodemon</code></pre>
+                </article>
+                <h3 id="nodemonloc">b - Installation locale</h3>
+                <article>
+                    <p>Vous pouvez également utiliser npm pour installer nodemon localement. Pour procéder à une
+                        installation locale,
+                        nous pouvons installer nodemon sous la forme d'une dev dependency avec <code>--save-dev</code>
+                        (ou <code>--dev</code>) :</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save-dev nodemon</code></pre>
+                    <p>Une écriture simplifiée est :</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm i -D nodemon</code></pre>
+                    <p>Il y a cependant une chose à retenir concernant une installation locale. Il vous sera impossible
+                        d'utiliser la commande nodemon directement à partir de la ligne de commande.
+                        Vous pouvez cependant l'utiliser dans le cadre de certains scripts <a
+                                href="https://www.digitalocean.com/community/tutorials/nodejs-utilizing-npm-scripts-during-development">npm</a>
+                        ou avec npx.
+                        Néanmoins, il est possible de le lancer en saisissant pour le fichier app.js:</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">node node_modules/nodemon/bin/nodemon.js app.js</code></pre>
+                    <p>Vous pouvez aussi modifier le fichier <code>package.json</code>, de cette façon, pour la partie
+                        script :</p>
+                    <pre><code class="language-bash" data-lang="bash">"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev":"nodemon index"
+  },</code></pre>
+                    <p>Ainsi pour lancer nodemon en local, il faut saisir, dans le terminal :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm run dev</code></pre>
+                </article>
+            </section>
+            <h2 id="expressInst">3 - Installer express</h2>
+            <section>
+                <p>Installez ensuite Express dans le répertoire, puis sauvegardez-le dans la liste des dépendances</p>
+                <pre class="chroma"><code class="language-bash"
+                                          data-lang="bash">npm install --save express</code> </pre>
+                <p>Pour installer express dans sa version simplifié :</p>
+                <pre class="chroma"><code class="language-bash"
+                                          data-lang="bash">npm i -S express</code> </pre>
+                <p>Cette version simplifiée est valable pour tous les paquets.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4 class="text-info">Note</h4>
+                    <p>Les modules Node.js installés à l’aide de l’option --save sont ajoutés à la liste des dépendances
+                        dependencies, dans le fichier package.json.</p>
+                </div>
+                <div class="bd-callout bd-callout-info">
+                    <h4 class="text-info">Note</h4>
+                    <p>Si vous regardez maintenant le fichier <code>package.json</code> vous verez dans <code>dependencies</code>
+                        que la ligne <code>"express": "^4.17.1"</code> est ajoutée.</p>
+                </div>
+            </section>
+            <h2 id="packages">4 - Installer d'autres packages</h2>
+            <section>
+                <h3 id="raccourci">a - Raccourcis</h3>
+                <article>
+                    <p>Voici une ligne pour lancer tous les paquets en même temps :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm i -S express mysql dotenv ejs express-layout express-session mathjs</code></pre>
+                </article>
+                <h3 id="Mysql">b - Mysql</h3>
+                <article>
+                    <p>La procédure est comparable aux autres, il faut saisir :</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save Mysql</code></pre>
+                    <p>Il existe aussi un autre paquet Mysql qui offre d'autres possibilités. Il faudra regarder la
+                        documentation.</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save Mysql2</code></pre>
+                </article>
+                <h3 id="dotenv">c - Dotenv</h3>
+                <article>
+                    <p>Ce paquet permet de gérer un fichier d'environnement qui s'appelle <code>.env</code>, dans lequel
+                        on inscrit par exemple tous les paramètres de connexion, de cette façon l'application est plus
+                        sécurisée. Il suffit de télécharger le paquet suivant :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install --save i dotenv</code></pre>
+                </article>
+                <h3 id="ejs">d - EJS</h3>
+                <article>
+                    <p>Ce paquet est un moteur de template, comme dans Laravel. Concrètement, il permet de coder des
+                        interfaces/</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install --save ejs</code></pre>
+                </article>
+                <h3 id="layout">e - express-layout</h3>
+                <article>
+                    <p>Ce paquet permet d'obtenir un patron d'interface. Tout appel de page sera intégré dans ce
+                        patron.</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save express-layout</code></pre>
+                </article>
+                <h3 id="session">f - express-session</h3>
+                <article>
+                    <p>Ce paquet permet de gérer les sessions avec express.</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save express-session</code></pre>
+                </article>
+                <h3 id="math">g - mathjs</h3>
+                <article>
+                    <p>Ce paquet permet d'avoir des fonctions mathématiques.</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save mathjs</code></pre>
+                </article>
+                <h3 id="cookie">h - cookie-parser</h3>
+                <article>
+                    <p>Ce paquet permet avec les session de gérer les cookies.</p>
+                    <pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save cookie-parser</code></pre>
+                </article>
+                <h3 id=""></h3>
+                <article></article>
+            </section>
+            <h2 id="uninstall">5 - Désinstaller un module npm</h2>
+            <section>
+                <p>Comme, vous l'avez compris, tout module npm peut être installé en exécutant une simple commande:
+                    <code>npm install</code>.
+                    <br>Comment désinstaller les modules npm dans le noeud js ?
+                    <br>La commande est simplement npm uninstall
+                    <br>Les documents nodejs <a href="https://npmjs.org/doc/">https://npmjs.org/doc/</a> ont toutes les
+                    commandes à connaître avec npm.
+                    <br>Une installation locale sera dans le node_modules/ de votre application. Cela n’affectera pas
+                    l’application si un module y rest sans référence.
+                    <br>Si vous supprimez un package global, toutes les applications qui le référencent seront bloquées.
+                    <br>Voici différentes options:
+                    <br><code>npm uninstall module1</code> supprime le module de node_modules , mais pas package.json
+                    <br><code>npm uninstall --save module1</code> supprime également des dependencies dans package.json
+                    <br><code>npm uninstall --save-dev module1</code> supprime également de devDependencies dans
+                    package.json
+                    <br><code>npm -g uninstall --save module1</code> supprime également globalement
+                </p>
+
+
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+  <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <title>PHP Ex02</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="tp01htmlPhpNew.html">TP PHP</a>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Documentation</a>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#php01Gintroduction" aria-expanded="false">
+                        I - Introduction au développement Web
+                    </button>
+                    <div class="collapse" id="php01Gintroduction">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php01Gintroduction.html#foncweb">
+                                    Principes de fonctionnement du Web
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php02Gbaseslg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="php02Gbaseslg">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li><a class="d-inline-flex align-items-center rounded active"
+                                   href="php02Gbaseslg.html">Les bases du langage
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php031ProgPhp_Variables" aria-expanded="false">
+                        III - Programmer avec PHP
+                    </button>
+                    <div class="collapse" id="php031ProgPhp_Variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php031ProgPhp_Variables.html">A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php032ProgPhp_Tests.html">B - Tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php034ProgPhp_Boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php041Transmission" aria-expanded="false">
+                        IV - Transmettre des données entre des pages
+                    </button>
+                    <div class="collapse" id="php041Transmission">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php041Transmission.html">A - Notion de variable superglobale
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php042Transmission.html">B - Notion de formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php043Transmission.html">C - $_GET et la transmission via l'URL
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php044Transmission.html">D - $_POST et la transmission via un formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php045Transmission.html">E - $_SESSION et la transmission via la session
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php046Transmission.html">F - La transmission de données et sécurité
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php05AccesSGBD_Introduction"
+                            aria-expanded="false">
+                        V - Accéder à une base de données
+                    </button>
+                    <div class="collapse" id="php05AccesSGBD_Introduction">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Introduction.html"> A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec SELECT
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtSimple.html">D - query - Requêtes simples
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtParam.html">E - prepare et execute - Requêtes avec paramètres
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec INSERT, UPDATE,
+                                    DELETE et exec</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpTP" aria-expanded="false">
+                        TP - les bases du PHP
+                    </button>
+                    <div class="collapse" id="phpTP">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp01htmlPhpNew.html">
+                                    TP01 - Affichage, déclaration de variables, tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp02htmlPhpNew.html">
+                                    TP02 - Tableaux, Boucles, formulaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp03htmlPhpNew.html">
+                                    TP03 - Tableaux Associatifs, Boucles foreach
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp04htmlPhpNew.html">
+                                    TP04 - Pattern MVC
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp05htmlPhpNew.html">
+                                    TP05 - Pattern MVC, Session
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp06htmlPhpNew.html">
+                                    TP06 - Pattern MVC, connexion à un SGBD
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpEx" aria-expanded="true" aria-current="true">
+                        Exercices sur le MVC
+                    </button>
+                    <div class="collapse show" id="phpEx">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="ex01htmlPhp.html">
+                                    Ex01 - Modifier un site en fonction du pattern MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="ex02htmlPhp.html">
+                                    Ex02 - Création d'un contrôleur
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="content">Ex02 - Création d'un contrôleur</h1>
+            </div>
+
+            <div class="bd-callout bd-callout-info">
+                <h4 class="text-info">Objectif</h4>
+                <p>Exercice à faire à partir du TP sur le PHP</p>
+            </div>
+            <hr class="my-4">
+        </div>
+        <!--            Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#tp01prerequis">Prérequis</a></li>
+                    <li><a href="#tp01Ex1">Partie 1 - Les fichiers de base</a></li>
+                    <ul>
+                        <li><a href="#tp01ex1a">a - Exécution du script</a></li>
+                        <li><a href="#tp01ex1b">b - Exécution de l'application</a></li>
+                    </ul>
+                    <li><a href="#tp01Ex2">Partie 2 - Modification de l'application sous forme MVC</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <section>
+
+                <div class="bd-callout bd-callout-danger">
+                    <h4 class="text-danger">Attention</h4>
+                    <p>Ne remplissez pas le rapport sur votre navigateur , vous ne pourrez pas le sauvegarder.</p>
+                    <p>Téléchargez le sur votre disque dur !</p>
+                </div>
+                <div class="list-group-flush">
+                    <a class="list-group-item list-group-item-action " href="../download/AideMemoirePHP.pdf"
+                       target="_blank"><i class="bi bi-patch-question"></i> Aide mémoire PHP</a>
+                    <a class="list-group-item list-group-item-action "
+                       href="http://boraklerouge.free.fr/PHP-AideMemoire/" target="_blank"><i
+                            class="bi bi-patch-question"></i> Aide mémoire PHP</a>
+                </div>
+            </section>
+            <h2 id="tp01prerequis">Prérequis</h2>
+            <section>
+                <h4 class="text-info">Avant de commencer</h4>
+                <ul class="list-group-flush">
+                    <li class="list-group-item list-group-item-action "><i class="bi bi-folder"></i> Créez un répertoire
+                        EX02
+                    </li>
+                </ul>
+                <div class="bd-callout bd-callout-danger">
+                    <h4 class="text-danger">Attention</h4>
+                    <p>Vérifiez bien que vous êtes en UTF8.</p>
+                </div>
+            </section>
+            <h2 id="tp01Ex1">Partie 1 - Les fichiers de base</h2>
+            <section>
+                <h3 id="tp01ex1a">a - Exécution du script</h3>
+                <article>
+                    <p>La structure de l'application est la suivante :</p>
+                    <pre><code class="language-sh" translate="no">├── index.php
+├── v_gabarit_entete.php
+├── v_gabarit_pied.php
+├── v_accueil.php
+├── v_erreur.php
+├── v_ajouter.php
+└── style.css
+</code></pre>
+                    <p>Voici le fichier <code>index.php</code> :</p>
+                    <pre><code class="language-php" translate="no">&lt?php
+include("vue/v_gabarit_entete.php") ;
+
+
+if(!isset($_REQUEST['uc']))
+    $uc = 'accueil';
+else
+    $uc = $_REQUEST['uc'];
+
+switch($uc)
+{
+    case 'accueil':
+    {include("vue/v_accueil.php");
+        break;
+    }
+    case 'formAjouter':
+    {include("vue/v_ajouter.php");
+        break;
+    }
+    case 'formSupprimer' :
+    {
+        $message="Site en construction";
+        include("vue/v_erreur.php");
+        break;
+    }
+
+}
+
+include("vue/v_gabarit_pied.php") ;</code></pre>
+                    <p>Ce fichier à la même structure qu'un fichier MVC, mais vous remarquerez que les vues sont affichées
+                    directement, elles ne passent pas par un contrôleur.
+                    <br>Ce programme utilise un gabarit, c'est-à-dire une structure qui sera permanente, en occurrence une entête et un pied
+                    de page, qui sera permanent quelque soit la vue appelée. Voici le fichier <code>v_gabarit_entete.php</code>
+                    pour l'entête :</p>
+                    <pre><code class="language-html" translate="no">&lt!doctype&gt
+&lthtml lang="fr"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8" /&gt
+    &ltlink rel="stylesheet" href="style.css" /&gt
+    &lttitle&gtMon Blog&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+&ltdiv id="global"&gt
+    &ltheader&gt
+        &lta href="index.php"&gt&lth1 id="titreBlog"&gtMon Blog&lt/h1&gt&lt/a&gt
+        &ltul id="menu"&gt
+            &ltli&gt&lta href="index.php?uc=accueil"&gt Accueil &lt/a&gt&lt/li&gt
+            &ltli&gt&lta href="index.php?uc=formAjouter"&gt Ajouter Billet &lt/a&gt&lt/li&gt
+            &ltli&gt&lta href="index.php?uc=formSupprimer"&gt Supprimer Billet &lt/a&gt&lt/li&gt
+        &lt/ul&gt
+        &ltp&gtJe vous souhaite la bienvenue sur ce modeste blog.&lt/p&gt
+    &lt/header&gt
+    &ltdiv id="contenu"&gt</code></pre>
+                <p>Voici le fichier <code>v_gabarit_pied.php</code> pour le pied de page :</p>
+                    <pre><code class="language-html" translate="no">&lt/div&gt &lt!-- #contenu --&gt
+        &ltfooter id="piedBlog"&gt
+            Blog réalisé avec PHP, HTML5 et CSS.
+        &lt/footer&gt
+&lt/div&gt &lt!-- #global --&gt
+&lt/body&gt
+&lt/html&gt</code></pre>
+                    <p>Pour cet exemple les autres vue sont simplement crées pour tester le bon fonctionnement du pattern :</p>
+                    <pre><code class="language-html" translate="no">&lt!-- Créez la vue accueil --&gt
+&ltp&gtCeci est la vue accueil !&lt/p&gt
+&lt!-- Créez la vue erreur (sur un autre fichier bien sûr) --&gt
+                        <h1>Page introuvable</h1>
+<h2> <?php echo $message; ?></h2>
+</code></pre>
+                    <p>La vue ajouter est un formulaire :</p>
+                    <pre><code class="language-html" translate="no">&ltform method="post" action="index.php"&gt
+    &ltdiv&gt
+        &ltlabel for="untitre"&gtVeuillez choisir le titre du billet:&lt/label&gt
+        &ltinput type="text" name="untitre" id="untitre"&gt
+    &lt/div&gt
+    &ltdiv&gt
+        &ltlabel for="uncontenu"&gtVeuillez saisir le contenu du billet :&lt/label&gt&ltbr/&gt
+        &lttextarea name="uncontenu" id="uncontenu"
+                  rows="10" cols="50" placeholder="Vous pouvez écrire ici."&gt&lt/textarea&gt
+    &lt/div&gt
+    &ltdiv&gt
+        &ltbutton&gtEnvoyer&lt/button&gt
+    &lt/div&gt
+&lt/form&gt</code></pre>
+
+                    <p>Pour finir n'oubliez pas la partie css avec le fichier style.css :</p>
+                    <pre><code class="language-css" translate="no">/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+   (min-height) sur un bloc, il faut que son parent direct ait lui-même une
+   hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
+   pixels, em, autres unités...).
+   Si la hauteur du parent est en pourcentage, elle se réfère alors à la
+   hauteur du «grand-père», et ainsi de suite.
+   Pour pouvoir utiliser un "min-height: 100%" sur div#global, il nous faut:
+   - un parent (body) en "height: 100%";
+   - le parent de body également en "height: 100%". */
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #bfbfbf;
+    background: black;
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+.titreBillet {
+    margin-bottom : 0px;
+}
+
+#global {
+    min-height: 100%;  /* Voir commentaire sur html et body plus haut */
+    background: #333534;
+    width: 70%;
+    margin: auto;	/* Permet de centrer la div */
+    text-align: justify;
+    padding: 5px 20px;
+}
+
+#contenu {
+    margin-bottom : 30px;
+}
+
+#titreBlog, #piedBlog {
+    text-align: center;
+}
+
+#titreReponses {
+    font-size : 100%;
+}
+
+#txtCommentaire {
+    width: 50%;
+}
+#menu{
+    height: 1.8em ;
+}
+#menu li {
+    list-style-type: none;
+    list-style-image:none;
+    float: left ;
+    text-align: center;
+
+    width: 200px ;
+    border: 1px solid #600 ;
+    margin-right: 1px ;
+    color: #fff ;
+    background: black ;
+}
+
+#menu li a  {
+    text-decoration:none;
+    color: white;
+}</code></pre>
+                </article>
+                <h3 id="tp01ex1b">b - Exécution de l'application</h3>
+                <article>
+                    <p>En lançant le fichier <code>index.php</code>, l'application fournie 3 vues, avec les résultats suivants :</p>
+
+                    <div class="bd-callout bd-callout-info bg-secondary text-white">
+                        <h4>Résultat de la première vue</h4>
+                        <p>Vous avez la vue accueil :</p>
+                        <img src="images/Ex/blogAccueil00.PNG" class="img-fluid" alt="menuAccueil">
+                    </div>
+                    <div class="bd-callout bd-callout-info bg-secondary text-white">
+                        <h4>Résultat de la deuxième vue</h4>
+                        <p>Vous avez la vue ajouter :</p>
+                        <img src="images/Ex/blogAjouter00.PNG" class="img-fluid" alt="menuAccueil">
+                    </div>
+                    <div class="bd-callout bd-callout-info bg-secondary text-white">
+                        <h4>Résultat de la troisième vue</h4>
+                        <p>Vous avez la vue erreur, lorsque par exemple vous cliquez sur le bouton du formulaire sans remplir les champs :</p>
+                        <img src="images/Ex/blogErreur00.PNG" class="img-fluid" alt="menuAccueil">
+                    </div>
+                </article>
+            </section>
+            <h2 id="tp01Ex2">Partie 2 - Modification de l'application sous forme MVC</h2>
+            <section>
+                <h3 id="tp01ex2a">a - structure attendue</h3>
+                <article>
+                    <div class="bd-callout bd-callout-info">
+                        <h4 class="text-info">Objectif</h4>
+                        <p>Modifier le fichier index.php en créant un contrôleur.</p>
+                    </div>
+                    <p>En rajoutant le contrôleur, la structure ressemblera au schéma suivant :</p>
+                    <pre><code class="language-sh" translate="no">├── index.php
+├── c_controleur.php
+├── v_gabarit_entete.php
+├── v_gabarit_pied.php
+├── v_accueil.php
+├── v_erreur.php
+├── v_ajouter.php
+└── style.css
+</code></pre>
+
+                    <div class="bd-callout bd-callout-warning bg-warning">
+                        <h4><i class="bi bi-cone-striped"></i> Travail à faire :</h4>
+                        <ol>
+                            <li>Créez le fichier c_controleur.php</li>
+                            <li>En vous aidant du <a href="tp04htmlPhpNew.html#titrea">TP</a>, modifier le fichier index.php pour intégrer le contrôleur</li>
+                            <li>En vous aidant du <a href="tp04htmlPhpNew.html#titrec">TP</a>, à partir de l'ancien fichier index.php,
+                                créez le code du contrôleur</li>
+                            <li>En vous aidant du <a href="tp04htmlPhpNew.html#ex3">TP</a>,et ou du <a href="php043Transmission.html">cours</a>
+                                modifiez les routes du fichier v_gabarit_entete.php, pour que les liens passent par le contrôleur.</li>
+                        </ol>
+                        <h4>Faites les modification nécessaires</h4>
+                        <p>Lancez votre application et afficher les 3 vues: v_accueil, v_erreur, v_ajouter</p>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+        <span class="text-end">
+                    <a href="#bdNavbar" id="backToTopBtn" style="font-size: 2rem; color: cornflowerblue;"><i
+                            class="bi bi-chevron-up"></i> </a>
+            </span>
+    </main>
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/"></script>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Fullstack</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="false">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="false">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="true" aria-current="true">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse show" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D - Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E - Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">B - DOM Utilisation</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#selection">1 - L'objet document</a>
+                        <ul>
+                            <li><a href="#byid">a - getElementById</a></li>
+                            <li><a href="#byname">b - getElementByName</a></li>
+                            <li><a href="#byclassname">c - getElementsByClassName</a></li>
+                            <li><a href="#bytagname">d - getElementsByTagName</a></li>
+                            <li><a href="#queryselector">e - querySelector</a></li>
+                            <li><a href="#base">f- les éléments de base</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#attributs">2 - Les Attributs</a>
+                        <ul>
+                            <li><a href="#hasAttribute">a - hasAttribute</a></li>
+                            <li><a href="#getAttribute">b - getAttribute</a></li>
+                            <li><a href="#setAttribute">c - setAttribute</a></li>
+                            <li><a href="#removeAttribute">d - removeAttribute</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#modifierprop">3 - Modifier le DOM</a>
+                        <ul>
+                            <li><a href="#innerHTML">a - innerHTML</a></li>
+                            <li><a href="#value">b - value</a></li>
+                            <li><a href="#textContent">c - textContent</a></li>
+                            <li><a href="#style">d - style</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="selection">1 - L'objet document</h2>
+            <section>
+                <div class="bd-callout bd-callout-info">
+                    <h4 class="text-info">Résumé</h4>
+                    <p>Pour sélectionner un élément, le couteau suisse est la méthode <code>querySelector</code>, elle
+                        fait
+                        les mêmes choses que <code>getElementById</code>, <code>getElementsByName</code>, <code>getElementsByClassName</code>
+                        ou <code>getElementsByTagName</code> . Avec un
+                        bémol, <code>querySelector</code> sélectionne que le premier élément, s'il y en a plusieurs de même
+                        type.</p>
+                    <p>Pour sélectionner plusieurs éléments, il faut préférer <code>querySelectorAll</code> et <code>getElementsByName</code>
+                        à <code>getElementsByClassName</code> ou <code>getElementsByTagName</code>, car ils renvoient un
+                        tableau d'objets
+                        qui est plus facile à itérer avec un <code>forEach</code>, par exemple.</p>
+                </div>
+                <p>L’objet global document est l’objet principal d’un document HTML. Il contient les méthodes de ciblage
+                    d’éléments.</p>
+                <h3 id="byid">a - getElementById</h3>
+                <article>
+                    <p>L'instruction getElementById permet de cibler un élément particulier de notre document en
+                        utilisant son id. Ainsi, si notre code HTML contient ceci</p>
+                    <pre><code class="language-js" data-lang="js"
+                               translate="no">&ltinput type="radio" id="section1" name="language" value="JavaScript"&gt</code></pre>
+                    <p>Nous pourrons le sélectionner de cette façon</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">let section = document.getElementById("section1")</code></pre>
+                    <p>La variable <code>section</code> contiendra l'objet correspondant à la balise <code>input</code>.
+                    </p>
+                    <p>La valeur de <code>section.value</code> sera <code>Ma section</code>.</p>
+                </article>
+                <h3 id="byname">b - getElementsByName</h3>
+                <article>
+                    <p>L'instruction getElementByName permet de cibler un élément particulier de notre document en
+                        utilisant son attibut name.</p>
+                    <pre><code class="language-js" data-lang="js"
+                               translate="no">&ltinput type="radio" id="section1" name="language" value="JavaScript"&gt</code></pre>
+                    <p>Nous pourrons le sélectionner de cette façon</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">let language = document.getElementByName("language")</code></pre>
+                    <p>La valeur de <code>language.value</code> sera <code>JavaScript</code>.</p>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4 class="text-warning">Le retour peut être un tableau d'objet</h4>
+                        <p>Si le name fait référence à plusieurs balise, le retour sera un tableau d'objet :</p>
+                        <pre><code class="language-js" data-lang="js" translate="no">&ltinput type="radio" name="rate" value="Very poor"&gt Very poor
+&ltinput type="radio" name="rate" value="Poor"&gt Poor
+&ltinput type="radio" name="rate" value="OK"&gt OK
+&ltinput type="radio" name="rate" value="Good"&gt Good
+&ltinput type="radio" name="rate" value="Very Good"&gt Very Good</code></pre>
+                        <p>L'appel</p>
+                        <pre><code class="language-js" data-lang="js" translate="no">let rates = document.getElementsByName("rate")</code></pre>
+                        <p>renverra un <strong>tableau</strong> d'objets (une nodelist pour être plus précis) qu'il
+                            faudra itérer
+                            avec un <code>forEach</code> par exemple.</p>
+                    </div>
+                </article>
+                <h3 id="byclassname">c - getElementsByClassName</h3>
+                <article>
+                    <p>L'instruction getElementsByClassName permet de cibler tous les éléments de notre document portant
+                        une classe précise.
+                        <br>Ainsi, si notre code HTML contient ceci</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv class="row"&gt&lt/div&gt
+&ltsection class="row"&gt&lt/section&gt
+&ltfooter class="row"&gt&lt/footer&gt</code></pre>
+                    <p>Nous pourrons les sélectionner de cette façon :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">let lignes = document.getElementsByClassName("row")</code></pre>
+                    <p>La variable <code>lignes</code> contiendra une <strong>collection</strong> d'objets correspondant
+                        aux 3 balises portant la classe
+                        "row".</p>
+                </article>
+                <h3 id="bytagname">d - getElementsByTagName</h3>
+                <article>
+                    <p>L'instruction getElementsByTagName permet de cibler tous les éléments de notre document portant
+                        une balise précise.
+                        <br>Nous pourrons les sélectionner de cette façon</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">let balisesDiv = document.getElementsByTagName("div")</code></pre>
+                    <p>La variable <code>balisesDiv</code> contiendra une <strong>collection</strong> d'objets
+                        correspondant à toutes les balises <code>div</code>
+                        de notre document.</p>
+
+                </article>
+                <h3 id="queryselector">e - querySelector et querySelectorAll</h3>
+                <article>
+                    <p> Avec querySelector et querySelectorAll, nous avons la possibilité d'effectuer des sélections en
+                        utilisant des sélecteurs CSS, beaucoup plus précis et détaillés que les simples ID, classes et
+                        balises.
+                        <br>Cette fonctionnalité était avant implantée dans <code>Jquery</code>. Elle est maintenant
+                        disponible dans javascript.
+                        <br>La différence entre les deux méthodes est la suivante :</p>
+                    <ul>
+                        <li>querySelector : retourne la première occurrence répondant au sélecteur</li>
+                        <li>querySelectorAll : retourne toutes les occurrences répondant au sélecteur
+                            sous forme de tableau d'objet
+                        </li>
+                    </ul>
+                    <p>Nous pouvons, par exemple, écrire les différentes lignes ci-dessous</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Sélectionner la première occurrence qui correspond à une balise p
+let baliseP = document.querySelector("p")
+
+// Sélectionner toutes les occurrences qui correspondent à une balise p
+let balisesP = document.querySelectorAll("p")
+
+// Sélectionner la première occurrence qui correspond à une balise section qui a la classe "rouge"
+let sectionRouge = document.querySelector("section.rouge")
+
+// Sélectionner toutes les occurrences qui correspond à un élément ayant la classe "rouge" dans une une balise section
+let classeRouge = document.querySelector("section .rouge")</code></pre>
+                </article>
+                <h3 id="base">f- les éléments de base</h3>
+                <article>
+                    <p>les éléments de base de la page peuvent être ciblés plus facilement :
+                        <br><code>document.documentElement</code> est l'élément principal du document (html)</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Sélectionne l'élément head
+document.head
+// Sélectionne l'élément body
+document.body</code></pre>
+                </article>
+            </section>
+            <h2 id="attributs">2 - Les Attributs</h2>
+            <section>
+                <h3 id="hasAttribute">a - hasAttribute</h3>
+                <article>
+                    <p>La méthode javascript hasAttribute(<code>nom</code>) de l'objet Element permet de savoir si un
+                        attribut
+                        existe.</p>
+                    <pre><code class="language-js" data-lang="js"
+                               translate="no">&ltdiv class="row" lang="fr"&gt&ltdiv</code></pre>
+                    <p>Nous pourrons les tester de cette façon :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return true
+document.getElementsByTagName("div").hasAttribute("lang")</code></pre>
+                </article>
+                <h3 id="getAttribute">b - getAttribute</h3>
+                <article>
+                    <p>La méthode javascript getAttribute(<code>nom</code>) de l'objet Element permet de récupérer la
+                        valeur d'un
+                        attribut d'un élément par rapport à son nom</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltvideo src="pub.ogv" id="publicite"&gt&lt/video&gt</code></pre>
+                    <p>Nous pourrons les sélectionner de cette façon :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return pub.ogv
+let attribut =document.getElementById("publicite").getAttribute("src")</code></pre>
+                </article>
+                <h3 id="setAttribute">c - setAttribute</h3>
+                <article>
+                    <p>La méthode javascript setAttribute(<code>nom</code>,<code>donnée</code>) de l'objet Element
+                        permet de spécifier la valeur
+                        d'un attribut d'un élément par rapport à son nom, ou d'en créer un, s'il n'existe pas dans
+                        l'élément.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv align="left"&gtContenu de la DIV.&ltdiv</code></pre>
+                    <p>Nous pouvons aligner le texte de la "div" à droite de cette façon :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Alignement du texte à droite
+document.getElementsByTagName("div").item(0).setAttribute("align","right");</code></pre>
+                </article>
+                <h3 id="removeAttribute">d - removeAttribute</h3>
+                <article>
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv align="left"&gtContenu de la DIV.&ltdiv&gt</code></pre>
+                    <p>Nous pouvons supprimet l'attribut align de cette façon :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Alignement du texte à droite
+document.getElementsByTagName("div").item(0).removeAttribute("lang");</code></pre>
+                </article>
+            </section>
+            <h2 id="modifierprop">3 - Modifier le DOM</h2>
+            <section>
+                <p>Les propriétés principales manipulables sont les suivantes :</p>
+                <ul>
+                    <li><strong>innerHTML</strong> : le html contenu dans l'élément sélectionné,</li>
+                    <li><strong>textContent</strong> : le contenu textuel uniquement,</li>
+                    <li><strong>style</strong> : permet de modifier le CSS de l'élément,</li>
+                    <li><strong>value</strong> : valeur des champs de formulaire,</li>
+                    <li><strong>attributes</strong> : les attributs de l'élément sélectionné (href, src...) cf. supra
+                    </li>
+                </ul>
+
+                <h3 id="innerHTML">a - innerHTML</h3>
+                <article>
+                    <p>L'attribut javascript innerHTML de l'objet Element permet de connaître et de modifier le contenu
+                        HTMLd'une balise </p>
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv id="contenu"&gtContenu de la DIV.&lt/div&gt</code></pre>
+                    <p>Voici deux exemples d'affichage :</p>
+                    <h4>Afficher un élément</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&gt&ltContenu de la DIV.&lt/div&gt
+document.getElementById("contenu").innerHTML;</code></pre>
+                    <h4>Insérer un élément</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&lth1&gtContenu de la DIV.&lt/h1&gt&lt/div&gt
+document.getElementById("contenu").innerHTML="&lth1&gtContenu de la DIV.&lt/h1&gt";</code></pre>
+                </article>
+                <h3 id="value">b - value</h3>
+                <article>
+                    <p>La propriété value définit ou renvoie la valeur de l'attribut value d'un champ de texte.L</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltinput type="text" id="myText" value="Mickey"&gt</code></pre>
+                    <h4>Afficher un élément</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return : Mickey
+document.getElementById("myText").value;</code></pre>
+                    <h4>Insérer un élément</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return : ... value="Donald"&gt
+document.getElementById("myText").value="Donald";</code></pre>
+                </article>
+                <h3 id="textContent">c - textContent</h3>
+                <article>
+                    <p>L'attribut <a
+                            href="https://developer.mozilla.org/fr/docs/Web/API/Node/textContent">textContent</a>
+                        récupéré le texte d'un nœud et de ses descendants. Sa structure est comparable à <code>innerHTML</code>,
+                        avec des différences références dans la page mozilla. Ici, il n'est pas possible d'insérer des balises HTML qui pourront être interprétées.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&gtBonjour&lt/div&gt
+document.getElementById("contenu").textContent="Bonjour";</code></pre>
+                    <p>On aura la même chose avec ceci :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&gtBonjour&lt/div&gt
+document.getElementById("contenu").innerText="Bonjour";</code></pre>
+                </article>
+                <h3 id="style">d - style</h3>
+                <article>
+                    <p>L'attribut javascript style de l'objet Element du Document Object Model HTML (DOM HTML) permet de
+                        connaître et de modifier l'attribut STYLE d'une balise HTML.
+                        Plus de détails dans cette <a
+                                href="https://developer.mozilla.org/fr/docs/Web/API/HTMLStyleElement">page</a>.</p>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4 class="text-warning">ATTENTION</h4>
+                        <p>La propriété style n'est pas prévues pour être lues. On ne pourra donc pas lire le CSS de
+                            l'élément par cette propriété</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

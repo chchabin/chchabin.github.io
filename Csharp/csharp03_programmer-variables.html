@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
-
+       <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
     <title>Programmer avec C#</title>
 </head>
 <body>
@@ -202,7 +202,12 @@
                     <li><a href="#variablesSpe">c - Les caractères spéciaux</a></li>
                     <li><a href="#variablesSaisie">d - Saisie de variables</a></li>
                     <li><a href="#variablesOpe">e - Opérations sur les nombres</a></li>
-                    <li><a href="#variablesConcat">f - Concaténation</a></li>
+                    <li><a href="#variablesConcat">f - Affichage et Concaténation</a></li>
+                    <ul>
+                        <li><a href="#concclass">i - La concaténation classique</a></li>
+                        <li><a href="#conccomp">ii - Le format composé</a></li>
+                        <li><a href="#concch">iii - $ : l'interpolation de chaine</a></li>
+                    </ul>
 
                 </ul>
             </nav>
@@ -560,9 +565,12 @@
                 <pre class="chroma"><code class="language-csharp" data-lang="csharp">i--;<span class="c"> // i -= 1; // i = i – 1;</span></code></pre>
             </div>
 
-            <h3 id="variablesConcat">f - Concaténation</h3>
+            <h3 id="variablesConcat">f - Affichage et Concaténation</h3>
+            <article>
             <p>La concaténation est une opération visant à regrouper plusieurs
-                chaînes de caractères entre elles. Elle s’effectue par
+                chaînes de caractères entre elles.</p>
+            <h5 id="concclass">i - La concaténation classique</h5>
+            <p>  Elle s’effectue par
                 l’intermédiaire de l’opérateur + et ne peut avoir lieu qu’entre
                 types string.
                 <br> Les autres opérateurs ne s’emploient pas sur les types
@@ -572,10 +580,10 @@
                 caractères (ou string) entre elles. </p>
             <p>Exemple d’utilisation :</p>
             <div class="highlight">
-                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> a = "Coucou,";</code></pre>
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> a = <span class="s">"Coucou,"</span>;</code></pre>
             </div>
             <div class="highlight">
-                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> b = " c’est moi !";</code></pre>
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> b = <span class="s">" c’est moi !"</span>;</code></pre>
             </div>
             <div class="highlight">
                 <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> c = a + b;<span
@@ -583,8 +591,35 @@
             </div>
             <div class="highlight">
                 <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine(<span
-                        class="s">"Vous avez entré : "</span> + myString);<span class="c">//Vous avez entré :  Coucou, c’est moi !</span></code></pre>
+                        class="s">"Vous avez entré : "</span> + c);<span class="c">//Vous avez entré :  Coucou, c’est moi !</span></code></pre>
             </div>
+            <h5 id="conccomp">ii - Le format composé</h5>
+            <p>Il s'agit de créer un masque qui sera ensuite chargé par les variable. Reprenons l'exemple précédent</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine(<span
+                        class="s">"Vous avez entré : {0}"</span> , c);<span class="c">//Vous avez entré :  Coucou, c’est moi !</span></code></pre>
+            </div>
+            <p>Ici le caractère <code>{0}</code> va utilisé, la première variable qui se trouve après la virgule.
+            <br>S'il existe plusieurs variables, il faut incrémenter les accolades :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine(<span
+                        class="s">"Vous avez entré : {0} {1}"</span> , a, b);<span class="c">//Vous avez entré :  Coucou, c’est moi !</span></code></pre>
+            </div>
+        <h5 id="concch">iii - $ : l'interpolation de chaine</h5>
+            <p>Avec la même idée, il est possible de saisir uniquement le nom des variables. Vous conviendrais que c'est beaucoup plus facile à utiliser et à lire !</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">string</span> d = <span class="s">$"Vous avez entré : {c}"</span>;<span
+                        class="c">//d contient "Vous avez entré : Coucou, c’est moi !"</span></code></pre>
+            </div>
+            <p>On obtient le même résultat à l'affichage :</p>
+            <div class="highlight">
+                <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine(c);<span class="c">//Vous avez entré :  Coucou, c’est moi !</span></code></pre>
+            </div>
+            <div class="bd-callout bd-callout-danger">
+                <h4 class="text-danger">Attention</h4>
+                <p>N’ajoutez pas d’espace entre les signes <code>$</code> et <code>"</code> au début d’un littéral de chaîne.</p>
+            </div>
+            </article>
         </div>
     </main>
 

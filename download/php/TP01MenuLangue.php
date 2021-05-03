@@ -1,6 +1,6 @@
 <?php
 //Déclaration de variables
-$menu01=["accueil","nos services","nous contacter","plan d'accés","qui sommes nous ?"];
+$menu01=["accueil","nos produits","nous contacter","plan d'accés","qui sommes nous ?"];
 $menu02=["home","services"];
 ?>
 <!doctype html>

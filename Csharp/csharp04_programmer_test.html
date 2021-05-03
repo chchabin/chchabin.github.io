@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
-
+       <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
     <title>Programmer avec C#</title>
 </head>
 <body>
@@ -201,9 +201,9 @@
                     <li><a href="#testCdt">b - La notion de condition</a></li>
                     <li><a href="#testLog">c - Les opérateurs logiques</a></li>
                     <li><a href="#testSwitch">d - L'instruction <code>switch</code></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#ternaire">e - l'opérateur <code>?:</code> ou la condition ternaire</a></li>
+                    <li><a href="#fusionNull">f - L'opérateur <code>??</code> de fusion Null</a></li>
+                    <li><a href="#fusionNull=">g - L'opérateur <code>??=</code></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul>
@@ -352,6 +352,7 @@
             </div>
 
             <h3 id="testSwitch">d - L'instruction <code>switch</code></h3>
+            <article>
             <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc
                 d'instructions parmi plusieurs possibles. Seul le bloc
                 correspondant à la valeur testée sera pris en compte.</p>
@@ -378,6 +379,79 @@
             <p>Les instructions <code>break;</code> dans les blocs
                 <code>case</code> sont indispensables pour éviter de passer d'un
                 bloc à un autre.</p>
+            </article>
+            <h3 id="ternaire">e - l'opérateur <code>?:</code> ou la condition ternaire</h3>
+            <article>
+                <p>La syntaxe est la suivante :</p>
+                <div class="highlight">
+                    <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">bool</span> condition = (a &gt; b)
+<span class="nt">int</span> action = condition <span class="s">?</span> -1 <span class="s">:</span> 1;</code></pre>
+                </div>
+                <p>La syntaxe ici semble étrange si vous ne l'avez pas rencontrée auparavant.
+                    Vous savez réellement ce qui se passe ici, mais vous ne l'avez pas vu exprimé de cette manière.
+                    Le code ici est une instruction if abrégée (ou ternaire) , et son exécution est identique à
+                    celle-ci: </p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> action = 0
+<span class="nt">if</span>(a &gt; b) {
+    action = -1;
+<span class="nt">else</span> {
+    action = 1;
+}</code></pre></div>
+                    <p>Vous remarquerez, qu'avec une expression ternaire, il n'est pas nécessaire d'initialiser la variable.</p>
+
+                <div class="bd-callout bd-callout-info">
+                    <h4>Définition</h4>
+                    <p>L'expression <code>(expr1) ? (expr2) : (expr3)</code> est évaluée à expr2 si expr1 est
+                        évaluée à TRUE, et expr3 si expr1 est évaluée à FALSE.
+                       </p>
+                </div>
+            </article>
+            <h3 id="fusionNull">f - L'opérateur <code>??</code> de fusion Null</h3>
+            <article>
+                <p>La syntaxe est la suivante :</p>
+                <div class="highlight">
+                    <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> a = null;
+<span class="nt">int</span> b = a <span class="s">??</span> 1;
+<span class="cp">Console</span>.WriteLine(b);<span class="c">//Affiche 1 si a est null sinon a</span></code></pre></code></pre>
+                </div>
+                <p>C'est un nom très déroutant, mais ce
+                    n'est en fait qu'un raccourci pour cela:</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">
+<span class="s">if</span>(a != null) {
+    <span class="na">return</span> 1;
+<span class="s">else</span> {
+    <span class="na">return</span> a;
+}</code></pre>
+                </div>
+                <p>Sur le côté gauche de l' opérateur ?? se trouve la variable en cours de vérification, et sur la
+                    droite se trouve la sortie qui est utilisée si elle n'est pas définie. Dans le cas ci-dessus, si
+                    la variable <code>a</code> est définie, il affichera le contenu de la variable. Si la variable
+                    n'est pas définie, affichera <code>1</code>. </p>
+
+                <div class="bd-callout bd-callout-info">
+                    <h4>Définition</h4>
+                    <p>l'expression <code>(expr1) ?? (expr2)</code> retourne expr2 si expr1 est <strong>NULL</strong>,
+                        et expr1 dans les autres cas.
+                        En particulier, cet opérateur n'émet pas de notice si la partie gauche n'existe pas,
+                        exactement
+                        comme <code>isset()</code>. Ceci est particulièrement utile pour les clés des tableaux..</p>
+                </div>
+            </article>
+            <h3 id="fusionNull=">g - L'opérateur <code>??=</code></h3>
+            <article>
+                <p>À compter de C# 8.0, la syntaxe est la suivante :</p>
+                <div class="highlight">
+                    <pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">int</span> a = null;
+<span class="nt">int</span> b = a <span class="s">??=</span> 1;
+<span class="cp">Console</span>.WriteLine(b);<span class="c">//Affiche 1</span></code></pre>
+                </div>
+                <p>C'est un nom très déroutant, mais ce n'est en fait qu'un raccourci pour cela:</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">
+<span class="s">if</span>(a == null) {
+    <span class="na">return</span> 1;
+}</code></pre>
+                </div>
+            </article>
         </div>
     </main>
 </div>

@@ -8,7 +8,8 @@ $nombre=5000;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TP01 Form</title>
+        <link rel="icon" type="image/png"  href="../img/favicon.png">
+        <title>TP01 Form</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />

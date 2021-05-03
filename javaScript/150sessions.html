@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <title>Express Session </title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="false">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="true" aria-current="true">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse show" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">D - Gérer les sessions</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#principe">1 - Principales fonctions d'une Session</a></li>
+                    <li><a href="#install">2 - Installation et utilisation</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="principe">1 - Principales fonctions d'une Session</h2>
+            <section>
+                <p><strong>Pourquoi utilisons-nous Session dans une application Web?</strong></p>
+                <article>
+                    <p>La session est utile pour stocker les données entre les applications et entre les pages côté serveur.
+                        L'application Web fonctionne sur le protocole HTTP. Le HTTP est sans état, donc, l'application ne
+                        connaît pas la demande ou l'activité précédente, la session aide à résoudre ce problème.</p>
+                </article>
+
+               <p><strong>Différentes façons de stocker la session dans Nodejs</strong></p>
+                <article>
+                    <p>Vous pouvez stocker la session de différentes façons dans l'application ExpressJS.
+                        Ces moyens pour stocker des données de session sont courants dans tous les langages de programmation.</p>
+                    <ul>
+                        <li>Le cookie : Vous pouvez stocker la session dans un cookie, mais il stockera des données côté <strong>client</strong>.</li>
+                        <li>Le cache mémoire : vous pouvez également stocker les données de session dans le cache.
+                            Comme nous le savons, le cache est stocké en mémoire.
+                            Vous pouvez utiliser n'importe quel module de cache comme <code>Redis</code> et <code>Memcached</code>.</li>
+                        <li>La base de données : La base de données est également une option pour stocker les données de session côté <strong>serveur</strong>.</li>
+                    </ul>
+                </article>
+            </section>
+            <h2 id="install">2 - Installation et utilisation</h2>
+            <section>
+                <h3 id="module"></h3>
+                <article>
+                    <p>Dans le terminal, il faut saisir :</p>
+                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install express-session --save</code></pre>
+                    <p>Une fois le module  installé, il faut le charger dans le fichier d'appel, index.js ou app.js :</p>
+                    <pre><code class="language-js" data-lang="js">// chargement du module
+const express = require('express')
+// appel du module
+const app = express()
+const session = require('express-session')
+// paramétrage du port
+const port = 8888
+
+// Utilisation de la session
+app.use (session ({secret: 'session'}));
+
+// création de la Route
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+// Gestion des erreurs HTTP
+app.use((req, res, next) => {
+  res.status(404).send("Désolé, nous ne pouvons pas accéder à votre requête !");
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Quelque chose bloque!');
+});
+
+// ouverture du serveur
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})</code></pre>
+                    <p>Ici, « secret » est utilisé pour la gestion des cookies, etc., mais nous devons mettre un mot de passe,
+                     pour secret afin de gérer la session dans Express.</p>
+                    <p>Maintenant, en utilisant la variable <code>request</code>, vous pouvez affecter une session à n'importe
+                        quelle variable. Tout comme nous le faisons en PHP en utilisant la variable <code>$_SESSION</code> par exemple.</p>
+                    <pre><code class="language-js" data-lang="js">var=sess; //variable globale, non recommandé
+    app.get ( '/' , (req , res) => {
+    / *
+    * Maintenant, nous pouvons créer n'importe quel nombre
+    * de variables de session que nous voulons.
+    * in PHP nous faisons comme $_SESSION ['var name'].
+    * Ici, nous faisons comme ceci.
+    * Il est aussi possible d'affecter 'req.session' à une variable.
+    * Pour des raisons de sécurité, elle ne doit pas être globale
+    * /
+    req.session.email='Jacques@gmail.com' ; // équivalent à $_SESSION ['email'] en PHP.
+    req.session.username='Sionne' ; // équivalent à $_SESSION ['username'] en PHP.
+} );</code></pre>
+                    <p>L'utilisation de la session est globale. Il est possible par exemple d'afficher ses valeurs de cette façon :</p>
+                    <pre><code class="language-js" data-lang="js">app.get("/session", (req, res) => {
+    const name = req.session.username
+    return res.send(name)
+});</code></pre>
+                    <p>Ici, le serveur enverra <code>Sionne</code> au navigateur.</p>
+
+                </article>
+            </section>
+<!--<p>
+    Et je souhaiterais savoir une fois la variable de session définie, comment la renvoyer au client ?
+
+    En PHP on aurait un banal $_SESSION['pseudo'] qui serait interprêté, mais en nodeJS, comment faire pour avoir
+
+    accès à cette variable au sein de la page 'game.html' ?
+
+    Faut-il écrire des cookies pour pouvoir y accéder via un script javascript, j'ai regardé du côté d'EJS sans trop comprendre et je viens
+
+    donc demander votre aide :/
+
+    Cordialement
+    (je précise que côté serveur j'ai ma variable de session fonctionnelle, je ne sais juste pas comment faire pour l'exploiter côté client)
+
+    Qu'est-ce que tu veux faire ? Je comprend pas trop. Si on lis la doc c'est marqué dés le début :
+
+    Note Session data is not saved in the cookie itself, just the session ID. Session data is stored server-side.
+
+    Après il faut encore que tu utlise un middleware pour stocker tes sessions (une bdd, des fichiers, ..) sinon elle seront perdues au redémarrage du serveur. Si tu veux, la session doit rester côté server, il faut juste définir un cookie pour identifier le client et l'associer à la session. Après si tu as besoin de ces variables pour un rendu il suffit d'utiliser un template engine (nunjucks, jade, ..) en passant au moment du res.render ta session utilisateur en paramètre (au format JSON).
+</p>-->
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

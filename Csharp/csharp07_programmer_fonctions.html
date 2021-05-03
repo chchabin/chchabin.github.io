@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
-
+       <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
     <title>Programmer avec C#</title>
 </head>
 <body>
@@ -199,7 +199,7 @@
                 <ul>
                     <li><a href="#predef">a - Utilisation de fonctions prédéfinies</a></li>
                     <li><a href="#ecriture">b - Écriture de fonctions</a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#lambda">c - les fonctions lambda</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
@@ -215,6 +215,7 @@
             </div>
 
             <h2 id="predef">a - Utilisation de fonctions prédéfinies</h2>
+            <section>
             <p>Une fonction est morceau de programme qui réalise un traitement
                 précis et qui est appelé à partir du programme principal. Cela
                 permet :</p>
@@ -333,8 +334,9 @@ b = <span class="cp">Convert</span>.ToDouble(a); <span class="c">//appel de la f
                         l’appel</strong> de la fonction, comme dans l’exemple
                     précédent.</p>
             </div>
-
+            </section>
             <h2 id="ecriture"> b - Écriture de fonctions</h2>
+            <section>
             <p>La déclaration de fonction permet de spécifier à C# la signature
                 de la fonction. Dans sa forme générale elle correspond à :</p>
             <div class="bd-callout bd-callout-info">
@@ -372,7 +374,7 @@ b = <span class="cp">Convert</span>.ToDouble(a); <span class="c">//appel de la f
             <p>Cela donne concrètement :</p>
             <p>Déclaration générale de fonction maximum :</p>
             <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
-                    class="nt">static int</span> maximum(int nb1, int nb2, int nb3)
+                    class="nt">static int</span> maximum(<span class="nt">int</span> nb1, <span class="nt">int</span> nb2, <span class="nt">int</span> nb3)
     {
         <span class="nt">int</span> max = nb1;
         <span class="nt">if</span> (nb2 > max) {max = nb2;}
@@ -434,6 +436,37 @@ d = maximum(a, b, c);</code></pre>
                 variables qui doivent absolument l’être. Et chaque fois que
                 possible, lorsqu'on crée une fonction, on utilise le passage de
                 paramètres par valeur plutôt que des variables publiques</p>
+            </section>
+            <h2 id="lambda">c - les fonctions lambda</h2>
+            <article>
+                <p>Les expressions lambda sont utilisées dans le cas de fonction anonymes. Il s'agit de créer des fonctions dont le nom n'a aucun intérêt dans la programmation.
+                Concrètement on s'intéresse plus au résultat qu'a l'appel de fonction.
+                <br> ce genre de fonction est utilisée dpour des fonctions simples. Soit la déclaration suivante :</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp">Func <<span class="nt">string</span>,<span class="nt">string</span>> greet = (name) =><span class="s">$"Hello</span> {name}<span class="s">!"</span>;</code></pre>
+                </div>
+                <p>Qui correspond à :</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                        class="nt">static string</span> greet(<span class="nt">string</span> name)
+{
+    <span class="nt">return</span> <span class="s">$"Hello</span> {name}<span class="s">!"</span>;
+}</code></pre>
+                </div>
+                <p>Retournera la même valeur pour</p>
+                    <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="cp">Console</span>.WriteLine (greet(<span class="s">"TOTO"</span>));<span class="c">// Hello TOTO</span></code></pre>
+                </div>
+                <h5>Exemple objet</h5>
+                <p>Dans un cadre qui dépasse un peu cette partie du cours, car l'objet est vue un peu plus loin, nous avons aussi</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="nt">public override string</span> <span class="cp">ToString</span>() => <span class="s">$"</span>{fname} {lname}<span class="s">"</span>.Trim();
+                </code></pre>
+                </div>
+                <p>A la place de :</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"> <span class="nt">public override string</span> <span class="cp">ToString</span>()
+{
+   <span class="nt">return</span> <span class="s">$"</span>{fname} {lname}<span class="s">"</span>.Trim();
+}
+                </code></pre>
+                </div>
+            </article>
         </div>
     </main>
 </div>

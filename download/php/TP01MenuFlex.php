@@ -1,7 +1,7 @@
 <?php
 //Déclaration de variables
-$id=["accueil","services","contacts","plan","quisommesnous"];
-$français=["accueil","nos services","nous contacter","plan d'accés","qui sommes nous ?"];
+$id=["accueil","produits","contacts","plan","quisommesnous"];
+$français=["accueil","nos produits","nous contacter","plan d'accés","qui sommes nous ?"];
 $anglais=["home","servecices"];
 //Déclaration de variables
 			$menu01="HOME";
@@ -26,7 +26,7 @@ $anglais=["home","servecices"];
           <a class="nav-link" href="#presentation"><?php echo $menu01;?></a>
         </li>
         <li>
-          <a class="nav-link" href="#services">Nos services</a>
+          <a class="nav-link" href="#produits">nos produits</a>
         </li>
         <li>
           <a class="nav-link" href="#contacts">Nous contacter</a>

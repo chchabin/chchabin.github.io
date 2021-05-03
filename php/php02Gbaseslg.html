@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
-
+       <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
     <title>PHP - bases du langage</title>
 
 </head>
@@ -41,16 +41,7 @@
                         <ul class="list-unstyled fw-normal pb-1 small">
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#foncweb">
-                                    A - Le fonctionnement du Web
-                                </a>
-                            </li>
-                            <li>
-                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#protocole-HTTP">
-                                    B - Le protocole HTTP
-                                </a>
-                            </li>
-                            <li>
-                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#siteDyn">C - L'évolution vers des sites dynamiques
+                                    Principes de fonctionnement du Web
                                 </a>
                             </li>
                         </ul>
@@ -131,8 +122,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="d-inline-flex align-items-center rounded collapsed" href="php046Transmission.html">F - htmlspecialchars et la transmission de données
-                                    et sécurité
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php046Transmission.html">F - La transmission de données et sécurité
                                 </a>
                             </li>
                         </ul>
@@ -168,6 +158,70 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed" href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec INSERT, UPDATE,
                                     DELETE et exec</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpTP" aria-expanded="false">
+                        TP - les bases du PHP
+                    </button>
+                    <div class="collapse" id="phpTP">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp01htmlPhpNew.html">
+                                    TP01 - Affichage, déclaration de variables, tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp02htmlPhpNew.html">
+                                    TP02 - Tableaux, Boucles, formulaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp03htmlPhpNew.html">
+                                    TP03 - Tableaux Associatifs, Boucles foreach
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp04htmlPhpNew.html">
+                                    TP04 - Pattern MVC
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp05htmlPhpNew.html">
+                                    TP05 - Pattern MVC, Session
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp06htmlPhpNew.html">
+                                    TP06 - Pattern MVC, connexion à un SGBD
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpEx" aria-expanded="false">
+                        Exercices sur le MVC
+                    </button>
+                    <div class="collapse" id="phpEx">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="ex01htmlPhp.html">
+                                    Ex01 - Modifier un site en fonction du pattern MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="ex02htmlPhp.html">
+                                    Ex02 - Création d'un contrôleur
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -250,19 +304,21 @@
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></div>
             <p>En l'exécutant, nous obtiendrons le résultat suivant :</p>
-            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">Affichons du texte avec PHP...
-Ce titre est écrit directement en HTML
+                <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <pre>Ce titre est écrit directement en HTML
 Celui-ci contient une partie générée avec PHP
-Celui-là est entièrement généré avec PHP
-</code></pre></div>
+Celui-là est entièrement généré avec PHP</pre>
+                 </div>
             <p>Les fichiers php peuvent ne contenir que du code php.
                 Considérons le petit script suivant, que nous appellerons essaiBis.php (notez la casse Camel !)</p>
             <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="s">&lt;?php </span>
 <span class="s">echo</span>'Ce titre est écrit directement générée avec PHP';
 <span class="s">echo</span>'Celui-là est entièrement généré avec PHP';</code></pre></div>
             <p>En l'exécutant, nous obtiendrons le résultat suivant :</p>
-            <div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php">Ce titre est écrit directement générée avec PHP
-Celui-là est entièrement généré avec PHP</code></pre></div>
+                <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <pre>Ce titre est écrit directement générée avec PHP
+Celui-là est entièrement généré avec PHP</pre>
+                </div>
             <div class="bd-callout bd-callout-warning">
                 <h4>Attention</h4>
                 <p>Lorsque la balise php entour une seule ligne de code il n'est pas nécessaire de mettre un <code>;</code> à la fin de la ligne</p>

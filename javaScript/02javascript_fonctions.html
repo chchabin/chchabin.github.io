@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Js Fonctions</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse show" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="false">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">G - Fonctions</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#ecriture">1 - Écriture de fonctions</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#declaration">a - déclaration et appel d'une fonction</a></li>
+                            <li><a href="#argument">b - la gestion des arguments</a></li>
+                            <li><a href="#rest">c - Les paramètres rest</a></li>
+                            <li><a href="#spread">d - L'opérateur spread</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#portee">2 - la portée des variables</a></li>
+                    <li><a href="#anonyme">3 - les fonctions anonymes</a></li>
+                    <li><a href="#closure">4 - la closure</a></li>
+                    <li><a href="#fleche">5 - fonctions fléchées (arrow function)</a></li>
+                    <li><a href="#hissage">6 - le hissage (Hosting)</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="ecriture">1 - Écriture de fonctions</h2>
+            <section>
+                <h3 id="declaration">a - déclaration et appel d'une fonction</h3>
+                <article>
+                    <p>La déclaration de fonction permet de spécifier la signature
+                        de la fonction. Dans sa forme générale elle correspond à :</p>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Déclaration générale de fonction :</h4>
+                        <pre><code class="language-js" data-lang="js" translate="no">function nomDeLaFonction (parametre1, parametre2, parametre3 ...) {
+  // instructions javascript
+  // pouvant utiliser les paramètres parametre1, parametre2 et parametre3
+  return resultat;
+}</code></pre>
+                    </div>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Définition d’une fonction</h4>
+                        <p> Les 6 étapes de définition</p>
+                        <ul>
+                            <li>Nom : un identificateur suffisamment explicite.</li>
+                            <li>Paramètres : la liste des paramètres d’entrée-sortie du
+                                programme.
+                            </li>
+                            <li>Préconditions : une liste d’expressions booléennes qui
+                                précisent les conditions d’utilisation des paramètres.
+                            </li>
+                            <li>Appel : des exemples d’utilisation du programme avec les
+                                résultats attendus (jeu de tests).
+                            </li>
+                            <li>Description : une phrase qui dit ce que fait le programme.
+                            </li>
+                            <li>Code : la séquence d’instructions nécessaires à la
+                                résolution du problème
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Cela donne concrètement :</p>
+                    <p>Déclaration générale de fonction maximum :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">function maximum( nb1, nb2, nb3)
+    {
+        int max = nb1;
+        if (nb2 > max) {max = nb2;}
+        if (nb3 > max) {max = nb3;}
+        return max;
+    }</code></pre>
+                    <p>Appel de la fonction :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">maximum(1, 2, 3); // retourne 3</code></pre>
+                </article>
+                <h3 id="argument">b - la gestion des arguments</h3>
+                <article>
+                    <p>La gestion des arguments est particulière en javascript, les arguments seront récupérés par
+                        l’objet arguments.</p>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4>Note :</h4>
+                        <p>L’objet n’est pas un tableau, vous ne pouvez pas l’utiliser avec les propriétés ou les
+                            méthodes de l’objet tableau (comme pop()..) sauf avec la propriété length qui renvoie le
+                            nombre d’arguments.
+                            Vous pouvez récupérer chaque argument à partir de l’indice de l’objet arguments.</p>
+                    </div>
+                    <p>Soit l'exemple suivant :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">function invitation(){
+    console.log(`Il y a ${arguments.length} invités qui sont : `);
+    for(let i=0;i &lt arguments.length;i++){
+        console.log(arguments[i]);
+    }
+}</code></pre>
+                    <p>L'appel de la fonction donne :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">invitation("dany","roby"); // affiche : Il y a 2 invités qui sont : dany roby </code></pre>
+                    <p>A la différence des autres langages, il n'est pas nécessaire de déclarer les paramètres dans la
+                        signature de la fonction.</p>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Transformer l’objet arguments en tableau</h4>
+                        <pre><code class="language-js" data-lang="js" translate="no">const tabArgs = Array.prototype.slice.call(arguments);</code></pre>
+                    </div>
+                </article>
+                <h3 id="rest">c - Les paramètres rest</h3>
+                <article>
+                    <p>Disponible au sein de chaque fonction, la fonction magique argument, permet de récupérer, comme
+                        son nom l'indique, les
+                        arguments. Si l'objet récupéré est similaire à un Array, il ne dispose d'aucune des propriétés
+                        ou des méthodes de celui-ci, à l'exception de length.
+                        <br>Les paramètres rest vous permettent de récupérer un véritable Array à l'aide du simple
+                        préfixe <code>...</code> appliqué sur le dernier argument de votre fonction.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">function invitation(separator, ...words) {
+  return words.join(separator);
+}
+
+invitation("-", "dany","roby"); // "dany-roby"</code></pre>
+                </article>
+                <h3 id="spread">d - L'opérateur spread</h3>
+                <article>
+                    <p>Aussi appelé opérateur de décomposition, il permet de développer un objet itérable (comme un
+                        <code>Array</code>) lorsqu'on a besoin de plusieurs arguments.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const myArray = [1991, 8, 1]
+new Date(...myArray) // object Date - équivaut à: new Date(1991, 8, 1)
+
+const myString = "foo bar"
+// les objets String étant itérables
+[...myString] // ["f", "o", "o", " ", "b", "a", "r"]</code></pre>
+                    <p>À noter que contrairement aux paramètres rest, l'opérateur spread peut être mélangé aux autres
+                        arguments d'une fonction.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const myArray = [8, 1];
+new Date(1991, ...myArray, 12); // object Date - équivaut à: new Date(1991, 8, 1, 12)</code></pre>
+                    <p>Les possibilités offertes par cette nouveauté sont très nombreuses. Voici quelques usages un peu
+                        plus avancés pour stimuler votre inspiration :</p>
+                    <h4>Concaténer plusieurs itérables</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const stronglyTyped = ["scala", "haskell"]
+
+// ES6 / ES2015
+["go", "rust", ...stronglyTyped] // ["go", "rust", "scala", "haskell"]</code></pre>
+                    <h4>Déstructurer dans un tableau</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const words = ["foo", "bar", "baz"];
+
+// ES6 / ES2015
+const [first, ...rest] = words;
+console.log(rest) // ["bar", "baz"]</code></pre>
+                    <p>Cela marche aussi avec des objets :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const words = {param1:"foo", param2:"bar", param3:"baz"};
+
+const {param2, ...rest} = words;
+console.log(rest)  //  {param1:"foo", param3:"baz"}</code></pre>
+                </article>
+            </section>
+            <h2 id="portee">2 - la portée des variables</h2>
+            <section>
+                <p>Les variables n’ont pas toutes la même visibilité dans un script. Une variable déclarée à l’extérieur
+                    d’une fonction est globale . Elle est donc accessible aussi dans la fonction.
+                    Une variable déclarée dans la fonction ne pourra pas être utilisée à l’extérieur.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Portée globale</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const nb = 2;
+function affiche(){
+    console.log(nb);
+}
+affiche(); // affichera 2</code></pre>
+                </div>
+                <p>Les variables définies en dehors d'une fonction sont accessibles dans la fonction. Elles peuvent être
+                    modifiées en dehors de la fonction aussi bien que par la fonction elle-même. On dit qu'elles ont une
+                    portée globale.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Portée locale</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">function affiche(){
+    const nb=2;
+    console.log(nb);
+}
+affiche(); // affichera 2
+console.log(nb); // affichera une erreur</code></pre>
+                </div>
+                <p>Les variables définies dans une fonction, ainsi que les arguments d'une fonction ne sont disponibles
+                    qu'à l'intérieur de la fonction. On dit qu'elles ont une portée locale</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Variables passées en argument</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">let nb = 2;
+function affiche(nb){
+    nb=nb+1
+    console.log(nb);
+}
+affiche(nb); // affichera 3
+console.log(nb) // affichera 2</code></pre>
+                </div>
+                <p>Lorsque la variable est passé en argument elle devient locale dans la fonction. C'est la valeur de la
+                    variable qui est passée.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4><a href="08javascript_objet.html" target="_blank">Objet</a> passé en argument</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const monObjet={
+    nb : 2
+}
+
+function affiche(Obj){
+    Obj.nb=Obj.nb+1
+    console.log( Obj.nb);
+}
+affiche(monObjet); // affichera 3
+console.log(monObjet) // affichera {nb:3}
+</code></pre>
+                </div>
+                <p>Le comportement est différent pour les objets et les tableaux (qui sont aussi des objets) car les
+                    variables qui permettent d'y accéder contiennent en fait une référence vers l'objet. C'est donc la
+                    référence qui est copiée dans l'argument et non l'objet, or Javascript fait automatiquement le lien
+                    entre une référence et l'objet sur lequel elle pointe. On accède donc au même objet.</p>
+            </section>
+            <h2 id="anonyme">3 - les fonctions anonymes</h2>
+            <section>
+                <p>Le principe consiste à appeler une fonction sans qu’elle porte de nom. Elle sera donc appeler qu’une
+                    seule fois.</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Création d'une fonction anonyme</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">function (){
+    const nb=2;
+    console.log(nb);
+} // ici une fonction anonyme est créée, mais sans l'exécuter</code></pre>
+                </div>
+                <p>Il existe une syntaxe un peu spéciale qui permet d'exécuter une fonction anonyme : il faut englober
+                    la fonction anonyme dans des parenthèses. l'ensemble devient donc une fonction que l'on peut
+                    exécuter en ajoutant une paire de parenthèses à la fin. (Note: N'oubliez pas le point virgule final,
+                    son absence provoquant parfois des erreurs)</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Exécution d'une fonction anonyme</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">function (){
+    const nb=2;
+    console.log(nb);
+} ();   // Attention ici il faut le point virgule pour l'exécuter.</code></pre>
+                </div>
+                <p>Une fonction n'est en fait qu'une variable un peu spéciale, on peut l'affecter à une variable :</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Exécution d'une fonction anonyme en l'affectant à une variable</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const afficher=function (){
+    const nb=2;
+    console.log(nb);
+};   // Attention ici il faut le point virgule.
+afficher(); // affichera 2</code></pre>
+                </div>
+            </section>
+            <h2 id="closure">4 - la closure</h2>
+            <section>
+                <p>La closure consiste à créer un fonction à l’intérieur d’une fonction pour pouvoir retourner la
+                    fonction interne.
+                    <br>La closure (fermeture ou clôture en français) est une technique de programmation qui permet de
+                    séparer une variable de son contenu. Comme vous le savez sûrement, une variable possède deux
+                    composantes : un nom et une valeur)
+                    <br>En utilisant une closure, on va conserver la valeur d'une variable de telle sorte qu'elle ne
+                    soit plus accessible en passant par la variable qui la contenait à l'origine.
+                    Voici un exemple :</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Déclaration d'une closure</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">function MaFonction(nombre) {
+    console.log(`nombre : ${nombre}`)
+    function Ajouter(valeur) {
+        console.log(`valeur : ${valeur}`)
+        // La variable "nombre" est accessible dans cette fonction, car "nombre"
+        // a été définie en dehors de la fonction Ajouter
+        return nombre + valeur;
+    }
+
+    // Comme on l'a vu, Ajouter est une variable,
+    //j'ai donc le droit de la rendre en
+    // tant que résultat de la fonction
+    return Ajouter;
+}</code></pre>
+                </div>
+                <p>Voici les résultat en faisant plusieurs appels :</p>
+                <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <h4>Résultat :</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const a = MaFonction(10); // affiche nombre : 10
+console.log(a(2)) // affiche nombre : 10 valeur : 2 12
+console.log(a(3)) // affiche nombre : 10 valeur : 3 13</code></pre>
+                </div>
+                <p>La première valeur 10 est <code>clôturée</code>. Elle n'est plus accessible après les appels suivant.
+                    Seul la variable valeur
+                    est affectée.
+                    <br>vous savez désormais le principe de fonctionnement d'une closure ainsi que comment la mettre en
+                    place. Les closures permettent de se sortir de situations autrement insolubles. Elles peuvent
+                    sembler difficiles à aborder au début, mais une fois qu'on a compris leur fonctionnement leur
+                    utilisation devient naturelle et salvatrice.</p>
+            </section>
+            <h2 id="fleche">5 - fonctions fléchées (arrow function)</h2>
+            <section>
+                <p>Les fonctions fléchées offrent une syntaxe raccourcie des fonctions en utilisant la syntaxe
+                    <code>=></code>.</p>
+                <p>Il existe une syntaxe un peu spéciale qui permet d'exécuter une fonction anonyme : il faut englober
+                    la fonction anonyme dans des parenthèses. l'ensemble devient donc une fonction que l'on peut
+                    exécuter en ajoutant une paire de parenthèses à la fin. (Note: N'oubliez pas le point virgule final,
+                    son absence provoquant parfois des erreurs)</p>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Exemple</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">// es5
+var myFn = function(x) {
+  return x + 1;
+};
+
+// es6
+const myFn = x => {
+  return x + 1;
+};.
+// ou encore plus simple
+const myFn = x =>  x + 1;</code></pre>
+                </div>
+                <p>Les fonctions fléchées sont syntaxiquement similaires à ce qu'on trouve déjà dans d'autres langages
+                    comme Java (8+), C#, PHP…
+                    <br>Les exemples suivants sont donc tous les mêmes :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x) => {
+  return x + 1;
+};
+// ===
+const myFn = (x) => x + 1;
+// ===
+const myFn = x => x + 1;
+// ===
+const myFn = x => (x + 1);</code></pre>
+                <p>Notez que dans le cas, où il y a plusieurs arguments, il faut des parenthèses :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x,y) => x+y;</code></pre>
+                <p>Dans le cas, où il y a des accolades (et le plus souvent plusieurs instructions), il faut un return
+                    :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x,y) => {
+ return x+y;
+};                </code></pre>
+                <p>Dans le cas des Objets, Les fonctions fléchées n'ont pas de this.
+                    <br>Attention à la façon d'écrire les fonctions :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const aFn = obj => {
+  key: obj.value;
+};
+const anObj = {
+  value: 'my value'
+};
+console.log(aFn(anObj)); // undefined</code></pre>
+                <p>Il faudra préférer cette écriture :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">const aFn = obj => {
+  return { key: obj.value };
+};
+// ou plus simplement
+const aFn = obj => ({ key: obj.value }); // It works !</code></pre>
+            </section>
+            <h2 id="hissage">6 - le hissage (Hosting)</h2>
+            <section>
+                <p>En Javascript, les variables sont hissées en haut de l'étendue dans laquelle elles sont déclarées.
+                    <br>Ainsi, le code suivant :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">function nomChat(nom) {
+  console.log("Le nom de mon chat est " + nom);
+}
+
+nomChat("Tigrou");
+/*
+Le résultat du code ci-dessus est : "Le nom de mon chat est Tigrou"
+*/</code></pre>
+                <p>est équivalent à :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">nomChat("Chloé");
+
+function nomChat(nom) {
+  console.log("Le nom de mon chat est " + nom);
+}
+/*
+Le résultat du code ci-dessus est : "Le nom de mon chat est Chloé"
+*/</code></pre>
+                <p>Mais cela ne fonctionne pas dans le cas suivant :</p>
+                <pre><code class="language-js" data-lang="js" translate="no">num = 6; // initialisation
+num + 7;
+var num;
+/* Ne donne aucune erreur tant que num est déclarée*/</code></pre>
+                <p>Car JavaScript hisse seulement les déclarations, pas les initialisations.</p>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

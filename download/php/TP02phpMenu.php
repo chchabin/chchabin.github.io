@@ -1,14 +1,15 @@
 <?php
 //Déclaration de variables
-$id=array("accueil","services","contacts","plan","quisommesnous");
-$francais=array("accueil","nos services","nous contacter","plan d'accés","qui sommes nous ?");
-$anglais=array("home","services");
+$id=array("accueil","produits","contacts","plan","quisommesnous");
+$francais=array("accueil","nos produits","nous contacter","plan d'accés","qui sommes nous ?");
+$anglais=array("home","products");
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TP02phpMenu</title>
+        <link rel="icon" type="image/png"  href="../img/favicon.png">
+        <title>TP02phpMenu</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -60,7 +61,7 @@ $anglais=array("home","services");
           <a href="#presentation"><?php echo $francais[0];?></a>
         </li>
         <li>
-          <a href="#services"><?php echo $francais[1];?></a>
+          <a href="#produits"><?php echo $francais[1];?></a>
         </li>
         <li>
           <a href="#contacts">Nous contacter</a>

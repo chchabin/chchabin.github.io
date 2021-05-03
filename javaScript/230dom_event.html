@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Fullstack</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="false">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="false">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="true" aria-current="true">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse show" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="230dom_event.html">
+                                    D - Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E - Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">D - DOM Associer un évènement à un nœud</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#eventlist">1 - Associer un évènement prédéfini</a>
+                        <ul>
+                            <li><a href="#listener">a- Les évènements préprogrammés</a></li>
+                            <li><a href="#exemple">b - exemple d'évènements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#event">2 - l'objet event</a>
+                        <ul>
+                            <li><a href="#addEventListener">a - addEventListener</a></li>
+                            <li><a href="#target">b - event.target</a></li>
+                            <li><a href="#flux">c - Flux d'événements</a></li>
+                            <li><a href="#gestionflux">d - Gestion du flux</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="bd-callout bd-callout-info">
+                <h4 class="text-info">Objectif</h4>
+                <p>Faire des modifications dans une page HTML sans avoir à y écrire de code.</p>
+            </div>
+            <h2 id="eventlist">1 - Associer un évènement prédéfini</h2>
+            <section>
+                <h3 id="listener">a- Les évènements préprogrammés</h3>
+                <article>
+                    <p>Les événements sont des actions ou des occurrences qui se produisent dans le système que vous
+                        programmez et dont le système vous informe afin que vous puissiez y répondre d'une manière ou
+                        d'une autre si vous le souhaitez.
+                        <br>Les éléments qui constituent un document étant en général nombreux, les signaux envoyés par
+                        l'interface sont nombreux et constituent ce que l'on appelle un flux d'événements. Ce flux est
+                        envoyé par défaut sans que le programmeur JavaScript n'ait besoin de le demander.
+                        <br>
+                        Par contre le programmeur a la possibilité d'écouter un événement faisant partie de ce flux et
+                        de programmer un code qui s'exécutera à chaque fois qu'il "entendra" cet événement passer dans
+                        le flux. Il le fera en mettant en place un gestionnaire d'événement.</p>
+                    <p>Etapes de la gestion d'un événement :</p>
+                    <ol>
+                        <li>Écouter un évènement,</li>
+                        <li>Détecter l'évènement,</li>
+                        <li>Traiter l'évènement (exécuter du code).</li>
+                    </ol>
+                    <pre><code class="language-js" data-lang="js" translate="no">const btn = document.querySelector('button');</code></pre>
+                    <p>Nous avons sélectionné un bouton, et lorsque ce bouton est cliqué (c'est l'évènement <code>onclick</code>),
+                        changeons le fonds de la page :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">btn.onclick = ()=> {
+ document.body.style.backgroundColor ='black'
+}</code></pre>
+                </article>
+                <h3 id="exemple">b - exemple d'évènements</h3>
+                <article>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">evénement</th>
+                            <th scope="col">descriptif</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>onblur</td>
+                            <td>Perte du focus.</td>
+                        </tr>
+                        <tr>
+                            <td>onchange</td>
+                            <td>Quand on change le contenu.</td>
+                        </tr>
+                        <tr>
+                            <td>onclick</td>
+                            <td>Quand je clique.</td>
+                        </tr>
+                        <tr>
+                            <td>ondblclick</td>
+                            <td>Quand on fait un double clique.</td>
+                        </tr>
+
+                        <tr>
+                            <td>onerror</td>
+                            <td>Lorsqu'il se produit une erreur de script.</td>
+                        </tr>
+                        <tr>
+                            <td>onfocus</td>
+                            <td>Quand un élément gagne le focus.</td>
+                        </tr>
+                        <tr>
+                            <td>oninput</td>
+                            <td>Quand je saisi une valeur dans un champs input.</td>
+                        </tr>
+                        <tr>
+                            <td>onkeydown</td>
+                            <td>Quand j'appuie sur la touche.</td>
+                        </tr>
+                        <tr>
+                            <td>onkeypress</td>
+                            <td>Quand j'appuie sur une touche.</td>
+                        </tr>
+                        <tr>
+                            <td>onkeyup</td>
+                            <td>Quand je relâche la touche.</td>
+                        </tr>
+                        <tr>
+                            <td>onload</td>
+                            <td>Quand la page est totalement chargée (images incluses).</td>
+                        </tr>
+                        <tr>
+                            <td>onmousedown</td>
+                            <td>Quand le bouton de la souris est appuyé.</td>
+                        </tr>
+                        <tr>
+                            <td>onmouseout</td>
+                            <td>Quand je sors de l'élément.</td>
+                        </tr>
+                        <tr>
+                            <td>onmouseover</td>
+                            <td>Quand je passe sur l'élément.</td>
+                        </tr>
+                        <tr>
+                            <td>onmouseup</td>
+                            <td>Quand le bouton de la souris est relâché.</td>
+                        </tr>
+                        <tr>
+                            <td>onmousemove</td>
+                            <td>Quand je bouge la souris</td>
+                        </tr>
+                        <tr>
+                            <td>onmove</td>
+                            <td>Quand je déplace la fenêtre.</td>
+                        </tr>
+                        <tr>
+                            <td>onreset</td>
+                            <td>Quand je réinitialise.</td>
+                        </tr>
+                        <tr>
+                            <td>onresize</td>
+                            <td>Quand je redimensionne la fenêtre (seulement sur window )</td>
+                        </tr>
+                        <tr>
+                            <td>onselect</td>
+                            <td>Quand je sélectionne.</td>
+                        </tr>
+                        <tr>
+                            <td>onsubmit</td>
+                            <td>Quand j'envoie un formulaire.</td>
+                        </tr>
+                        <tr>
+                            <td>onunload</td>
+                            <td>Quand on ferme la fenêtre, peut être ignoré par certain navigateur.</td>
+                        </tr>
+                        <tr>
+                            <td>onscroll</td>
+                            <td>Quand on déplace la barre de scroll.<br/>
+                                sur window ou un element avec overflow
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <h2 id="event">2 - l'objet event</h2>
+            <section>
+                <h3 id="addEventListener">a - addEventListener</h3>
+                <article>
+                    <p>La méthode <code>addEventListener(nomEvent, nomFonction, typePropagation)</code> appelée par un
+                        élément écoute un événement sur cet élément. Lorsque
+                        cet événement est détecté, la méthode appelle une fonction callback que vous devez lui passer en
+                        argument. C'est dans cette fonction que vous placez votre code.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">myForm.addEventListener('submit', onSubmit);</code></pre>
+                    <p>Ici, la méthode <code>addEventListener</code> est associé au formulaire <code>myForm</code>.
+                        L'évènement écouté est
+                        <code>submit</code> (pour d'autres besoins, se référencer à la liste supra). A cet évènement est
+                        associé la fonction <code>onSubmit</code>.
+                        la fonction peut ressembler à ça :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">function onSubmit(e) {
+    // Le paramètre e capture l'évènement
+    // Blocage de l'éxécution de l'évènement
+    e.preventDefault();
+    //Test si les champs sont vides
+    if(nameInput.value === '' || emailInput.value === '') {
+        // Envoi d'un message
+        msg.classList.add('error');
+        msg.innerHTML = 'Please enter all fields';
+
+        // Le message disparait après 3 secondes
+        setTimeout(() => msg.remove(), 3000);
+    }
+ }</code></pre>
+                    <div class="bd-callout bd-callout-info">
+                        <h4 class="text-info">Remarque</h4>
+                        <p>Il existe aussi la méthode removeEventListener() pour enlever un gestionnaire
+                            d'événement..</p>
+                    </div>
+                </article>
+                <h3 id="target">b - event.target</h3>
+                <article>
+                    <p>C'est une référence à l'objet qui a envoyé l'événement. Capturons le boutons, d'une classe
+                        bouton, d'un formulaire :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const btn = document.querySelector('.btn');</code></pre>
+                    <p>Associons lui à l'événement clique, l'affichage de la cible :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">btn.addEventListener('click', e => {
+     // Blocage de l'éxécution de l'évènement
+    e.preventDefault();
+    console.log(e.target.className);
+}</code></pre>
+                    <p>L'affichage dans la condole sera <code>btn</code></p>
+                </article>
+                <h3 id="flux">c - Flux d'événements</h3>
+                <article>
+                    <p>Dans l'exemple précédent nous avons cliqué sur le bouton d'un formulaire, on pourrait penser que
+                        seul le
+                        paragraphe a reçu l'événement et l'a traité. Il n'en est rien car certains événements se
+                        propagent. Pas tous mais la plupart et c'est le cas du click.</p>
+                    <p>Il y a eu une première phase que l'on appelle la phase de <strong>capture</strong> dans laquelle
+                        l'événement est
+                        parti de la racine du document pour descendre jusqu'au bouton.</p>
+
+                    <p> Ensuite il y a eu une deuxième phase que l'on appelle phase de <strong>bouillonnement</strong>
+                        dans laquelle
+                        l'événement est remonté du paragraphe vers la racine du document en traversant une nouvelle fois
+                        la liste de ses ancêtres.
+                        <br>Lorsque vous cliquez sur le bouton, l'événement click se propage dans l'ordre suivant:</p>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Phase capture</th>
+                            <th>Phase bouillonement</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <ol>
+                                    <li>document</li>
+                                    <li>html</li>
+                                    <li>body</li>
+                                    <li>div avec l'id du container</li>
+                                    <li>button</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>button</li>
+                                    <li>div avec l'id du container</li>
+                                    <li>body</li>
+                                    <li>html</li>
+                                    <li>document</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </article>
+                <h3 id="gestionflux">d - Gestion du flux</h3>
+                <article>
+                    <p>On peut changer ce comportement par défaut si on souhaite, et on peut même interrompre le flux de
+                        propagation de l'événements.</p>
+                    <p><strong>preventDefault()</strong>: Cette méthode empêche le navigateur d'entamer une action par
+                        défaut. Par
+                        exemple, le fait de cliquer sur un bouton de type submit redirige le navigateur vers la page
+                        définie dans l'attribut action du formulaire, ce qui représente le comportement par défaut. Or,
+                        si on déclare convenablement la méthode preventDefault(), le navigateur n'entamera pas la
+                        redirection.</p>
+                    <p><strong>stopPropagation()</strong>: Cette méthode empêche la propagation du flux d'événement. Si
+                        le flux se propage automatiquement sur les deux phases qu'on a vu dans le paragraphe précédent,
+                        la méthode stopPropagation() permet de rompre ce flux de telle sorte à empêcher la capture
+                        répétée de l'événement par les objets qui s’emboîtent les uns dans les autres et exécuter la
+                        même fonction plusieurs fois.
+                    </p>
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

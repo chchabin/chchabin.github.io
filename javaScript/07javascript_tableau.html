@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <title>Js Tableaux</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse show" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="false">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">D - Les tableaux</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#tableau">1 - Caractéristiques</a></li>
+                    <li><ul>
+                        <li><a href="#creation">a - Création d'un tableau</a></li>
+                        <li><a href="#longueur">b - Taille du tableau</a></li>
+                        <li><a href="#multidim">c - Tableau multidimensionnel</a></li>
+                    </ul></li>
+                    <li><a href="#fonction">2 - Fonctions associées au tableau</a></li>
+                    <li><ul>
+                        <li><a href="#ajout">a - Ajout d’élément</a></li>
+                        <li><a href="#retrait">b - Retrait d’élément</a></li>
+                    </ul></li>
+                    <li><a href="#setmap">3 - Les nouveaux objets Set et Map en javascript ES6</a></li>
+                    <li><ul>
+                        <li><a href="#set">a - L’objet Set</a></li>
+                        <li><a href="#map">b - L’objet Map</a></li>
+                    </ul></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="list-group-flush">
+                <a class="list-group-item list-group-item-action "
+                   href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                   target="_blank"><i class="bi bi-book">Détail des fonctions liées aux tableaux</i></a>
+            </div>
+            <h2 id="tableau">1 - Caractéristiques</h2>
+            <section>
+                <h3 id="creation">a - Création d'un tableau</h3>
+                <article>
+                    <p>Les tableaux en JavaScript sont dynamiques. Comme tous les langages de script, JavaScript a des
+                        tableaux dynamiques: leur taille n'est pas prédéterminée, ni le type des données contenues.
+                        Ils peuvent être créés avec un littéral ou un constructeur.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const fruits = [ 'Mangue', 'Raisin', 'Figue' ]; // littéral
+const fruits  = new Array();      //  constructeur
+const fruits  = new Array('Mangue', 'Raisin', 'Figue' );   // constructeur avec éléments</code></pre>
+                    <p>Comme tous les autres types de valeur, un tableau peut être stocké dans une variable.
+                        <br>En revanche, en JavaScript, les tableaux sont considérés comme une forme particulière du
+                        type object. Autrement dit, typeof [] retourne "object".
+                        <br>Comme toute variable en JavaScript, les valeurs stockées dans un tableau peuvent être de
+                        n’importe quel type (y compris un tableau), et n’ont pas besoin d’être tous du même type:</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const fruits = [ 'Mangue', 'Raisin', 'Figue',123,,false ];</code></pre>
+                </article>
+                <h3 id="longueur">b - Taille du tableau</h3>
+                <article>
+                    <p>Tout tableau possède une propriété length qui vaut le nombre de valeurs qu’il contient:</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">fruits.length //retourne 6</code></pre>
+                </article>
+                <h3 id="multidim">c - Tableau multidimensionnel</h3>
+                <article>
+                    <p>Il existe plusieurs méthode pour créer un tableau multidimensionnel</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const a = new Array(
+new Array(1, 2, 3),
+new Array(4, 5, 6));
+document.write(a);</code></pre>
+                    <div class="bd-callout bd-callout-info bg-secondary text-white">
+                        <h4>Résultat :</h4>
+                        <p>1,2,3,4,5,6</p>
+                    </div>
+                    <p>Ce tableau aura pour dimension, 2 lignes, 3 colonnes.
+                        <br>Ce code donne la même chose :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const a = [ [ 1, 2, 3], [ 4, 5, 6] ];
+document.write(a);</code></pre>
+                    <p>Ce code donne la même chose :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">a[0][0] = 1;
+a[0][1] = 2;
+a[0][2] = 3;
+a[1][0] = 4;
+a[1][1] = 5;
+a[1][2] = 6;
+document.write(a);</code></pre>
+
+                </article>
+            </section>
+            <h2 id="fonction">2 - Fonctions associées au tableau</h2>
+            <section>
+                <h3 id="ajout">a - Ajout d’élément</h3>
+                <article>
+                    <p>La méthode <code>push()</code> permet d’ajouter un élément à la fin du tableau. La valeur de cet
+                        élément est à passer en paramètre (entre parenthèses) de la méthode, quand on l’appelle:</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const fruits = [ 'Mangue', 'Raisin', 'Figue' ];
+fruits.push('Banane'); // appel de la méthode push() sur le tableau fruits, avec `Banane` en paramètre
+console.log(fruits); // => [ 'Mangue', 'Raisin', 'Figue', 'Banane' ]</code></pre>
+                </article>
+                <h3 id="retrait">b - Retrait d’élément</h3>
+                <article>
+                    <p>La méthode pop() retourne la dernière valeur du tableau puis la retire de ce tableau:</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const fruits = [ 'Mangue', 'Raisin', 'Figue' ];
+const f = fruits.pop();
+f;      // => `Figue`
+fruits; // => [ 'Mangue', 'Raisin' ];</code></pre>
+                </article>
+            </section>
+            <h2 id="setmap">3 - Les nouveaux objets Set et Map en javascript ES6</h2>
+            <section>
+                <p>Set : L’objet Set vous permet de stocker des valeurs uniques de tout type.
+                    <br>Map : L’objet Map vous permet de stocker les paires clé-valeur et de mémoriser l’ordre
+                    d’insertion original des clés.</p>
+                <p><strong>Pourquoi pas un tableau ?</strong></p>
+                <p>Un tableau, comme un ensemble, est une structure de données qui permet d’ajouter, de supprimer et de
+                    boucler des opérations sur ses éléments. Cependant, un tableau diffère d’un ensemble en ce sens
+                    qu’il permet l’addition de valeurs dupliquées et que ses opérations sont relativement plus
+                    lentes.</p>
+                <h3 id="set">a - L’objet Set</h3>
+                <article>
+                    <p>Les objets Set sont des ensembles de valeurs. Il est possible d’itérer sur les éléments contenus
+                        dans l’objet Set dans leur ordre d’insertion. <strong>Une valeur donnée ne peut apparaître qu’une seule fois par Set</strong>.</p>
+                    <h6><strong>i - Comment créer un ensemble (Set) ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">const set = new Set();
+console.log(set); // Set {}</code></pre>
+                    <h6><strong>ii - Comment initialiser un ensemble (Set) ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">const confectioneries = new Set(['oreo', 'marshmallow','oreo', 'kitkat', 'gingerbread']);
+console.log(confectioneries); // result: Set { 'oreo', 'marshmallow', 'kitkat', 'gingerbread' }</code></pre>
+                    <p>Dans l’extrait ci-dessus, la valeur en double “oreo” est discrètement supprimée de l’ensemble et seules les valeurs uniques sont renvoyées.</p>
+                   <h6><strong>iii - Comment ajouter un élément dans un ensemble (Set) ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">const confectioneries = new Set(['oreo', 'marshmallow', 'kitkat', 'oreo','gingerbread']);
+confectioneries.add('donut');
+console.log(confectioneries); //_ log result: Set { 'oreo', 'marshmallow', 'kitkat', 'gingerbread', 'donut' } _
+
+confectioneries.add('kitkat'); // ajout d'un élément déjà existant
+console.log(confectioneries); //_ log result: Set { 'oreo', 'marshmallow', 'kitkat', 'gingerbread', 'donut' } _</code></pre>
+                    <h6><strong>iv - Comment supprimer un élément dans un ensemble (Set) ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">confectioneries.delete('kitkat'); // première possibilité
+console.log(confectioneries); //_ log result: Set { 'oreo', 'marshmallow', 'gingerbread', 'donut' }_
+
+confectioneries.clear(); // deuxième possibilité
+console.log(confectioneries); // log result: Set {}</code></pre>
+                    <h6><strong>v - Comment connaitre la taille d’un ensemble (Set)  ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">const confectioneries = new Set(['oreo', 'marshmallow', 'kitkat', 'oreo','gingerbread']);
+console.log(confectioneries.size); // log result: 5</code></pre>
+                    <h6><strong>vi - Comment rechercher un élément parmi un ensemble (Set)  ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">const confectioneries = new Set(['oreo', 'marshmallow', 'kitkat', 'oreo','gingerbread']);
+console.log(confectioneries.has('marshmallow')); // log result: true</code></pre>
+                    <h6><strong>vii - Comment recupérer les éléments d’un ensemble (Set)  ?</strong></h6>
+                    <p>Nous pouvons retourner les éléments d’un objet Set dans le même ordre d’insertion en utilisant la méthode values(). Cette méthode retourne un nouvel objet setIterator. Une méthode similaire pour retourner les éléments d’un ensemble est la méthode keys() :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const confectioneries = new Set(['oreo', 'marshmallow', 'kitkat', 'oreo','gingerbread', 'donut']);
+
+console.log(confectioneries.values()); // _log result: _[_Set Iterator] { 'oreo', 'marshmallow', 'kitkat', 'gingerbread', 'donut' }_
+
+console.log(confectioneries.keys()); //_ log result: _[_Set Iterator] { 'oreo', 'marshmallow', 'kitkat', 'gingerbread', 'donut' }_</code></pre>
+                    <h6><strong>viii - L'objet Iterator</strong></h6>
+                    <p>L’objet setIterator est un objet Iterator car il implémente les protocoles Iteratable et Iterator. Le protocole Iterable spécifie un moyen d’itération à travers un ensemble de valeurs en utilisant des constructions en boucle. Il permet également d’itérer les valeurs à l’aide de la méthode next(). Quand nous appelons next() sur un objet setIterator, nous obtenons la valeur suivante dans l’itération et une false si toutes les valeurs du Set ont été itérées :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const confectioneries = new Set(['oreo', 'marshmallow', 'kitkat', 'oreo','gingerbread', 'donut']);
+
+let iterator = confectioneries.values();
+
+console.log( iterator.next()); // _{ value: 'oreo', done: false }
+_
+console.log( iterator.next()); // _{ value: 'marshmallow', done: false }
+_
+console.log( iterator.next()); //_ { value: 'kitkat', done: false }
+_
+console.log( iterator.next()); //_ { value: 'gingerbread', done: false }
+_
+console.log( iterator.next()); //_ { value: 'donut', done: false }
+_
+console.log( iterator.next()); // _{ value: undefined, done: true }_</code></pre>
+<p>Puisque les ensembles implémentent le protocole Itérable, les constructions de boucle telles que for…of peuvent être utilisées comme indiqué ci-dessous :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">for (let confectionery of confectioneries) {
+  console.log(confectionery);
+}
+
+/_ _console.log() result
+oreo
+marshmallow
+kitkat
+gingerbread
+donut
+__/</code></pre>
+
+                </article>
+                <h3 id="map">b - L’objet Map</h3>
+                <article>
+                    <p>Les Maps Javascript sont des objets conçus pour stocker et récupérer efficacement des éléments en fonction d’une clé unique pour chaque élément. Une Map stocke des paires clé-valeur où les clés et les valeurs peuvent être soit des valeurs primitives, soit des objets, soit les deux.
+                        Un objet Map permet de retrouver ses éléments dans leur ordre d’insertion. Par exemple, une boucle for...of renverra un tableau de [clé, valeur] pour chaque itération.</p>
+                    <h6><strong>i - Comment créer un ensemble (Map) ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">const Map = new Map();
+console.log(Map); // Map {}</code></pre>
+                   <h6><strong>ii - Comment ajouter un élément dans un ensemble (Map) ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">users.set('John Doe', {
+  email: 'johndoe@example.com',
+});
+
+users.set('Jane Doe', {
+  email: 'janedoe@example.com',
+});
+
+console.log(users);
+
+/__ console.log result
+Map {
+  'John Doe' => { email: 'johndoe@example.com'},
+  'Jane Doe' => { email: 'janedoe@example.com'} }
+__/</code></pre>
+                    <p>Contrairement aux Sets qui suppriment les clés dupliquées, Maps met à jour la valeur attachée à cette clé </p>
+                    <pre><code class="language-js" data-lang="js" translate="no">users.set('John Doe', {
+  email: 'johndoe477@example.com',
+});
+
+console.log(users);
+
+/__ console.log result
+Map {
+  'John Doe' => {email: 'johndoe477@example.com'},
+  'Jane Doe' => { email: 'janedoe@example.com'} }
+__/</code></pre>
+                    <h6><strong>iii - Comment supprimer un élément dans un ensemble (Map) ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">users.delete('Jane Doe'); // première possibilité
+users.clear();// deuxième possibilité
+
+console.log(users); // Map {}</code></pre>
+                    <h6><strong>iv - Comment rechercher un élément parmi un ensemble (Map)  ?</strong></h6>
+                    <pre><code class="language-js" data-lang="js" translate="no">let users = new Map();
+
+users.set('John Doe', {
+  email: 'johndoe@example.com',
+});
+
+users.set('Jane Doe', {
+  email: 'janedoe@example.com',
+});
+
+console.log(users.has('John Doe')); // true</code></pre>
+                    <h6><strong>v - Comment récupérer les éléments d’un ensemble (Map)  ?</strong></h6>
+                    <p>Il est possible d’obtenir toutes les clés et valeurs d’un objet Map en utilisant les méthodes keys() et values() respectivement. Ces deux méthodes retournent un nouvel objet MapIterator qui a une méthode next() utilisable pour boucler les éléments de la Map :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">console.log(users.get('Jane Doe'); // { email: 'janedoe@example.com' }
+let userKeys = users.keys();
+
+console.log(userKeys.next()); // { value: 'John Doe', done: false }
+
+let userValues = users.values();
+
+console.log(userValues.next()); // _{ value: { email: 'johndoe@example.com' }</code></pre>
+                    <p>Comme pour les Sets, les boucles telles que for…of et forEach() peuvent être utilisées pour itérer à travers les éléments de la Map </p>
+                    <pre><code class="language-js" data-lang="js" translate="no">for (let user of users) {
+  console.log('[for...of]: ', user);
+}
+
+/_ Log result
+  _[_for...of]:  _[_ 'John Doe', { email: 'johndoe@example.com' } ]
+  _[_for...of]:  _[___ 'Jane Doe', { email: 'janedoe@example.com' } ]
+_/
+
+users.forEach((value, key) => console.log('[__forEach()]:  ', key, value));
+
+/*_ Log result
+  [__forEach()]:   John Doe { email: 'johndoe@example.com' }
+  _[_forEach()]:   Jane Doe { email: 'janedoe@example.com' }
+*_/</code></pre>
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

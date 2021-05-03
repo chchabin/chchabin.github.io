@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>MVC-SGBD</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="false">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="false">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse show" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">Connexion à un SGBD</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#mysql">1 - Exécution du script sql</a></li>
+                    <li><a href="#controller">2 - Création de la structure des répertoires et des fichiers</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#env">a - modification du fichier .env</a></li>
+                            <li><a href="#connexion">b - ajout de la connexion dans le fichier dbConnexion</a></li>
+                            <li><a href="#ctrl">c - Récupération des données dans le contrôleur</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <div class="bd-callout bd-callout-info">
+                <h4 class="text-info">Création et accès à la page catégories (2/3)</h4>
+                <p>Vous allez récrire l'application <a href="../download/lafleur2013.zip">Lafleur</a>, initialement
+                    écrite enPHP, en javascript.</p>
+            </div>
+            <div class="bd-callout bd-callout-warning">
+                <h4 class="text-warning">Prérequis</h4>
+                <p><i class="bi bi-folder"></i> Créez un répertoire <code>db</code></p>
+                <p><i class="bi bi-file-earmark"></i> Créez dans ce répertoire un fichier <code>dbConnexion.js</code>.</p>
+                <p><i class="bi bi-file-earmark"></i> Créez un fichier <code>.env</code> à partir de la racine (ne pas oublier le point devant
+                    env !!!).</p>
+                <p><i class="bi bi-download"></i> télécharger les modules :
+                    <code>mysql</code> et <code>dotenv</code>.
+                </p>
+            </div>
+            <h2 id="mysql">1 - Exécution du script sql</h2>
+            <section>
+                <p>Créez votre base de données et lancez le fichier sql.
+                    <br>Si vous avez oublié, voyez comment faire <a href="../php/tp06htmlPhpNew.html" target="_blank">ici</a>
+                </p>
+            </section>
+            <h2 id="controller">2 - Création de la structure des répertoires et des fichiers</h2>
+            <section>
+                <h3 id="env">a - modification du fichier .env</h3>
+                <article>
+                    <pre><code class="language-js" data-lang="js"># DB Configurations
+DB_HOST=localhost
+DB_USER='root'
+DB_PASS=''
+DB_DATABASE=lafleur2013</code></pre>
+                </article>
+                <h3 id="connexion">b - ajout de la connexion dans le fichier dbConnexion</h3>
+                <article>
+                    <pre><code class="language-js" data-lang="js">const dotenv = require('dotenv');
+const mysql = require('mysql');
+// Chargement du fichier .env
+dotenv.config();
+
+// Affectation des variables du fichier.env
+const {DB_HOST,DB_USER,DB_PASS,DB_DATABASE}= process.env;
+//Paramétrage de la connexion fournie par le fichier .env
+const db = mysql.createConnection({
+    host: DB_HOST,
+    user: DB_USER,
+    password: DB_PASS,
+    database: DB_DATABASE
+});
+
+//Établissement de la connexion
+db.connect((err) => {
+    if (err) {
+        throw err;
+    }
+    // console.log('Mysql Connecté ....')
+    console.log('Base de données : ' + db.state);
+});
+// Préparation de l'exécution d'une requête
+query = async (sql, values) => {
+    return new Promise((resolve, reject) => {
+        const callback = (error, result) => {
+            if (error) {
+                reject(error);
+                return;
+            }
+            resolve(result);
+        }
+        // L'exécution appellera les requêtes préparées ou classiques
+        db.query(sql, values, callback);
+    }).catch(err => {
+        const mysqlErrorList = Object.keys(HttpStatusCodes);
+        // converti les erreurs mysql en statut HTTP
+        err.status = mysqlErrorList.includes(err.code) ? HttpStatusCodes[err.code] : err.status;
+
+        throw err;
+    });
+};
+const HttpStatusCodes = Object.freeze({
+    ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: 422,
+    ER_DUP_ENTRY: 409
+});</code></pre>
+                    <p>Réécriture des requêtes PHP en Javascript. Ce code est à mettre à la suite du précédent :</p>
+                    <pre><code class="language-js" data-lang="js">module.exports = {
+    getLesCategories:async (param=[]) => {
+        try {
+            return await new Promise((resolve, reject) => {
+                const sql = `select * from categorie`;
+                // db.query(requête sql, paramètres s'ils existent, callback (soit erreur soit execution requête)
+                db.query(sql, param, (err, result) => {
+                    if (err) throw reject(new Error(err.message));
+                    //Exécution de la requête s'il n'y a pas d'erreurs
+                    resolve(result)
+                })
+            });
+
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+
+}</code></pre>
+                    <p>La fonction exploite les promesses comme expliqué dans la fiche <a
+                            href="03javascript_promesses.html">promesses</a>.
+                        Si l'exécution se passe correctement c'est la fonction resolve qui s'exécute, sinon c'est une
+                        fonction reject qui n'est pas utilisée ici.</p>
+                </article>
+                <h3 id="ctrl">c - Récupération des données dans le contrôleur </h3>
+                <article>
+                    <p>Vous allez connecter le module de base de données au contrôleur.
+                    En haut du fichier du contrôleur copiez :</p>
+                    <pre><code class="language-js" data-lang="js">const db = require('../db/dbConnexion');</code></pre>
+                    <p>Il s'agit maintenant d'appeler les données à partir du modèle. La variable
+                        <code>lesCategories</code> est instanciée à partir d'une fonction :</p>
+                    <pre><code class="language-js" data-lang="js">voirCategories:async (req, res) => {
+        const lesCategories=await db.getLesCategories();
+        //Appel de la vue produit et envoie des données
+        res.render('produit',{
+            lesCategories:lesCategories
+        });
+}</code></pre>
+                    <h4>le code de la vue</h4>
+                    <p>Pour la vue il n'y a rien à changer</p>
+                </article>
+                <div class="bd-callout bd-callout-warning bg-warning">
+                    <h4><i class="bi bi-cone-striped"></i>Rafraichissez ou Lancez de nouveau l'application (si besoin)
+                    </h4>
+                    <p>Vous devez voir les 3 catégories s'afficher.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

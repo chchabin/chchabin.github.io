@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
-
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
     <title>PHP</title>
 </head>
 <body>
@@ -39,17 +39,8 @@
                     <div class="collapse show" id="php01Gintroduction">
                         <ul class="list-unstyled fw-normal pb-1 small">
                             <li>
-                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#foncweb">
-                                    A - Le fonctionnement du Web
-                                </a>
-                            </li>
-                            <li>
-                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#protocole-HTTP">
-                                    B - Le protocole HTTP
-                                </a>
-                            </li>
-                            <li>
-                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#siteDyn">C - L'évolution vers des sites dynamiques
+                                <a class="d-inline-flex align-items-center rounded active" href="php01Gintroduction.html#foncweb">
+                                    Principes de fonctionnement du Web
                                 </a>
                             </li>
                         </ul>
@@ -132,8 +123,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="d-inline-flex align-items-center rounded collapsed" href="php046Transmission.html">F - htmlspecialchars et la transmission de données
-                                    et sécurité
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php046Transmission.html">F - La transmission de données et sécurité
                                 </a>
                             </li>
                         </ul>
@@ -173,6 +163,70 @@
                         </ul>
                     </div>
                 </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpTP" aria-expanded="false">
+                        TP - les bases du PHP
+                    </button>
+                    <div class="collapse" id="phpTP">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp01htmlPhpNew.html">
+                                    TP01 - Affichage, déclaration de variables, tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp02htmlPhpNew.html">
+                                    TP02 - Tableaux, Boucles, formulaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp03htmlPhpNew.html">
+                                    TP03 - Tableaux Associatifs, Boucles foreach
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp04htmlPhpNew.html">
+                                    TP04 - Pattern MVC
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp05htmlPhpNew.html">
+                                    TP05 - Pattern MVC, Session
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp06htmlPhpNew.html">
+                                    TP06 - Pattern MVC, connexion à un SGBD
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpEx" aria-expanded="false">
+                        Exercices sur le MVC
+                    </button>
+                    <div class="collapse" id="phpEx">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="ex01htmlPhp.html">
+                                    Ex01 - Modifier un site en fonction du pattern MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="ex02htmlPhp.html">
+                                    Ex02 - Création d'un contrôleur
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </nav>
     </aside>
@@ -194,15 +248,24 @@
             <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
             <nav id="TableOfContents">
                 <ul>
+                    <li> <a href="php01Gintroduction.html#foncweb">A - Le fonctionnement du Web</a></li>
+                    <ul>
                     <li><a href="#notion">1 - notion de serveur Web</a></li>
                     <li><a href="#notionClt">2 - notion de client Web</a></li>
                     <li><a href="#comm">3 - communication entre client et serveur</a></li>
+                    </ul>
+                    <li><a href="php01Gintroduction.html#protocole-HTTP">B - Le protocole HTTP</a></li>
+                    <ul>
                     <li><a href="#anatomie">4 - Anatomie d'une requête HTTP</a></li>
                     <li><a href="#anatomieRep">5 - Anatomie d'une réponse HTTP</a></li>
                     <li><a href="#codeHTTP">6 - Les codes HTTP</a></li>
+                    </ul>
+                    <li><a href="php01Gintroduction.html#siteDyn">C - L'évolution vers des sites dynamiques</a></li>
+                    <ul>
                     <li><a href="#siteStat">7 - Au commencement du Web : les sites statiques</a></li>
                     <li><a href="#siteEvol">8 - L'évolution vers des sites dynamiques</a></li>
                     <li><a href="#lgServeur">9 - Les langages serveur du Web dynamique</a></li>
+                    </ul>
         </ul>
             </nav>
         </div>

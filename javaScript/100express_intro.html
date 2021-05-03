@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Node Intro</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="false">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="true"
+                            aria-current="true">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse show" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">A - Principes généraux de Node.js et de ses principaux modules</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#api">1 - Les API REST</a>
+                        <ul>
+                            <li><a href="#rest">a - L'API REST</a></li>
+                            <li><a href="#http">b - Les méthodes HTTP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#nodejs">2 - Introduction node.js</a></li>
+                    <li><a href="#expressIntro">3 - Express framework</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="api">1 - Les API REST</h2>
+            <section>
+                <h3 id="rest">a - L'API REST</h3>
+                <article>
+                    <p>Une API (Application Program Interface) permet d'établir des contrats entre un parie d'un
+                        logiciel et
+                        une autre. Cela consiste à établir une structure de requête (request), réponse (response). Cela
+                        consiste pour une application à recevoir une requête et à fournir des données correspondantes
+                        formatées.
+                        <br>Une API REST. REST (pour REpresentational State Transfer) est un style d’architecture basé
+                        sur
+                        le protocole HTTP et qui permet de manipuler des ressources via un URI Une API REST. HTTP est le
+                        protocole de base de communication pour internet. REST permet de traiter les objets coté
+                        serveur,
+                        selon l'acronyme <code>CRUD</code> (Create, Update, Delete). Il utilise aussi, parfois, des
+                        éléments
+                        du standard JSON.</p>
+                    <div class="bd-callout bd-callout-info">
+                        <h4>Qu'est ce que JSON ?</h4>
+                        <p>JSON signifie Java Script Objet Nottaison. Il s'agit d'un format textuel indépendant de la
+                            langue, couramment utilisé pour la transmission de données dans les applications Web. JSON a
+                            été inspiré par la notation JavaScript Object Literal, mais il existe des différences entre
+                            les deux. Par exemple, dans les clés JSON doivent être entre guillemets, alors que dans les
+                            littéraux d'objet, ce n'est pas le cas.
+                    </div>
+                    <p>Une API REST doit respecter un certain nombre de contraintes :</p>
+                    <ul>
+                        <li><strong>Client-Serveur</strong> : Il y a séparation des rôles entre le client et le serveur
+                            permettant à
+                            chacun d’évoluer séparément;
+                        </li>
+                        <li><strong>Sans état (stateless)</strong> : Chaque requête du client contient toutes les
+                            informations
+                            nécessaires au traitement. Il n’y a donc pas de session côté serveur;
+                        </li>
+                        <li><strong>Cache</strong> : La réponse du serveur peut-être mise en cache côté client ou côté
+                            serveur;
+                        </li>
+                        <li><strong>Interface uniforme (Uniform Interface)</strong> : Chaque ressource doit être
+                            identifiable de manière
+                            unique via
+                            son URI, représentable (via le format XML ou JSON par exemple), manipulable via sa
+                            représentation (en
+                            utilisant les méthodes HTTP), autodescriptive (doit contenir toutes les informations pour
+                            son
+                            traitement, par exemple on peut connaitre son format via l’utilisation des types MIME);
+                        </li>
+                        <li><strong>Organisation en couches (Layered System)</strong> : Le système peut être séparé en
+                            plusieurs couches
+                            (serveurs
+                            proxy, load balancers, firewalls, etc.);
+                        </li>
+                        <li><strong>Code à la demande (Code-On-Demand)</strong> : Cette contrainte optionnelle permet au
+                            client
+                            d’exécuter du code à
+                            la demande, c’est-à-dire d’étendre une partie de la logique du serveur au client, via
+                            l’envoi de code
+                            JavaScript par exemple.
+                        </li>
+                    </ul>
+                </article>
+                <h3 id="http">b - Les méthodes HTTP</h3>
+                <article>
+                    <h4>Les requêtes HTTP de base :</h4>
+                    <ul>
+                        <li>GET : Récupération d’une ressource;</li>
+                        <li>POST : Ajout d’une ressource;</li>
+                        <li>PUT : Mise à jour d’une ressource spécifique;</li>
+                        <li>DELETE : Suppression d’une ressource;</li>
+                        <li>HEAD : Similaire à GET, mais permet uniquement de récupérer les en-têtes HTTP.</li>
+                    </ul>
+                    <h4>Les requêtes HTTP plus spécifiques :</h4>
+                    <ul>
+                        <li>HEAD : Semblable à GET mais ne retourne pas de ressources (body);</li>
+                        <li>OPTION : Décrit les options de communication pour la ressource ciblée;</li>
+                        <li>PATCH : Mise à jour de certaines ressources.</li>
+                    </ul>
+                    <h4>Exemple d'URL (Endpoint)</h4>
+                    <table class="table table-hover caption-top table-light">
+                        <thead class="table-warning">
+                        <tr>
+                            <th scope="col">Action</th>
+                            <th scope="col">Méthode</th>
+                            <th scope="col">URL</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Récupérer la liste des articles</td>
+                            <td>GET</td>
+                            <td>https://monsite.fr/api/posts</td>
+                        </tr>
+                        <tr>
+                            <td>Récupérer un article en particulier</td>
+                            <td>GET</td>
+                            <td>https://monsite.fr/api/posts/8</td>
+                        </tr>
+                        <tr>
+                            <td>Récupérer le détail d'un article</td>
+                            <td>GET</td>
+                            <td>https://monsite.fr/api/posts/8/details</td>
+                        </tr>
+                        <tr>
+                            <td>Ajouter un article</td>
+                            <td>POST</td>
+                            <td>https://monsite.fr/api/posts</td>
+                        </tr>
+                        <tr>
+                            <td>Modifier un article en particulier</td>
+                            <td>PUT</td>
+                            <td>https://monsite.fr/api/posts/8</td>
+                        </tr>
+                        <tr>
+                            <td>Supprimer un article en particulier</td>
+                            <td>DELETE</td>
+                            <td>https://monsite.fr/api/posts/8</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>Authentification</h4>
+                    <p>Certaines API nécessitent une authentification soit pour limiter l'accès à des données, soit pour
+                        en plus, rendre l'accès payant. Le plus souvent c'est le protocole <code>OAuth</code> qui est
+                        utilisé.
+                        C'est un protocole libre qui permet d'autoriser un site web, un logiciel ou une application
+                        (dite « consommateur ») à utiliser l'API sécurisée d'un autre site web (dit « fournisseur »)
+                        pour le compte d'un utilisateur. L'authentification se fait à l'aide d'un jeton (access <code>token</code>).
+                        <br>Voici quelques exemple avec L'API de github. Ils utilisent <code>curl</code> qui est un
+                        outils
+                        pour transférer des données en utilisant plusieurs protocoles dont HTTP.</p>
+
+                    <table class="table table-hover caption-top table-light">
+                        <thead class="table-warning">
+                        <tr>
+                            <th scope="col">Action</th>
+                            <th scope="col">URL</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Transfert du jeton dans le header</td>
+                            <td>curl -H "Authorization: token OAUTH-TOKEN" https://api.github.com</td>
+                        </tr>
+                        <tr>
+                            <td>Transfert du token par l'URI</td>
+                            <td>curl https://api.github/?access_token= OAUTH-TOKEN</td>
+                        </tr>
+                        <tr>
+                            <td>Génération du token par paramètres</td>
+                            <td>curl 'https://api.github/whatever?client_id=xxxx&client_secret=yyy'</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <h2 id="nodejs">2 - Introduction node.js</h2>
+            <section>
+                <p>Qu'est-ce que node.js</p>
+                <ul>
+                    <li>C'est un environnement d'exécution (Runtime), pas un langage, p)as un framework,</li>
+                    <li>Produit à partir du moteur Javascript V8 comme google chrome,</li>
+                    <li>Écrit en C++,</li>
+                    <li>Seul le langage javascript est utilisé pour ce serveur.</li>
+                </ul>
+                <p>Que faut-il connaitre pour utiliser node.js</p>
+                <ul>
+                    <li>Le langage javascript (Objets, tableaux, conditions etc...),</li>
+                    <li>Il est utile de connaitre,
+                        <ul>
+                            <li>Le protocole HTTP (les codes de retour, les entêtes etc...),</li>
+                            <li>Le format JSON,</li>
+                            <li>Les fonctions Arrow,</li>
+                            <li>Les promises,</li>
+                            <li>le pattern MVC.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Pourquoi utiliser node.js</p>
+                <ul>
+                    <li>Rapide, efficace et fortement évolutif,</li>
+                    <li>Gestion des évènements, un modèle d'entrée/sortie non bloquant,</li>
+                    <li>Populaire chez les programmeurs,</li>
+                    <li>Le même langage en front et en back office (JS).</li>
+                </ul>
+                <p>Un modèle d'entrée/sortie non bloquant</p>
+                <ul>
+                    <li>Travail sur un seul thread, et utilise des entrée/sortie non bloquants,</li>
+                    <li>Supporte 10 000 connexions simultanées,</li>
+                    <li>Optimise le débit et l'évolutivité, dans une application avec plusieurs opérations
+                        d'entrée/sortie,
+                    </li>
+                    <li>Tout ceci rend les applications node.js rapides et efficaces.</li>
+                </ul>
+                <p>La boucle d'évènement node.js</p>
+                <ul>
+                    <li>Une seul thread</li>
+                    <li>Support la concurrence d'accès entre les événements(events) et les rappels(callback),</li>
+                    <li>EventEmitter est une classe pour relier les événements (events) et le écouteurs (listener).</li>
+                </ul>
+                <p>Les projets les plus utilisés pour node.js</p>
+                <ul>
+                    <li>les API REST & les microservices,</li>
+                    <li>les services en temps réels (chat, mise à jour),</li>
+                    <li>les applications en lecture, écriture, mise à jour, suppression (CRUD) - Blogs, Boutiques,
+                        Réseaux sociaux,
+                    </li>
+                    <li>les outils (tools) & les utilitaires (utilities).</li>
+                </ul>
+                <p>NPM - Node Package Manager (npm)</p>
+                <ul>
+                    <li>Install la troisième partie des packages (framework, librairie, outils etc ...),</li>
+                    <li>Les paquets sont enregistrés dan le répertoire <strong>"node_modules"</strong>,</li>
+                    <li>Toutes les dépendances sont recensées dans le fichier <strong>"package.json"</strong>,</li>
+                    <li>Des script npm sont créés pour effectuer certaines tâches comme lancer un serveur.</li>
+                </ul>
+                <p>Exemples</p>
+                <ul>
+                    <li>npm init : générer le fichier fichier package.json,</li>
+                    <li>npm install express : installer un paquet localement,</li>
+                    <li>npm -g nodemon : installer un paquet pour toutes les applications (global).</li>
+                </ul>
+            </section>
+            <h2 id="expressIntro">3 - Express framework</h2>
+            <section>
+                <p>Qu'est-ce-qu'Express</p>
+                <ul>
+                    <li>Express est un framework pour le web et node.js, il est rapide, minimaliste et ouvert (dans la
+                        mesure où il peut intégrer différents packages),
+                    </li>
+                    <li>Express est un framework aussi bien coté serveur que coté client,</li>
+                    <li>Il n'est pas comparable à des framework uniquement coté client comme <code>React</code>, <code>Angular</code>,
+                        <code>Vue</code>,
+                    </li>
+                    <li>Il peut être utilisé avec d'autres framework pour créer des applications "full stack" : qui
+                        integre aussi bien le coté client que le coté serveur.
+                    </li>
+                </ul>
+                <p>Pourquoi utiliser Express ?</p>
+                <ul>
+                    <li>Pour créer plus facilement un site web avec node.js,</li>
+                    <li>Le rendu serveur, utilisé pour des applications, est aussi bien que des API ou des micro
+                        services,
+                    </li>
+                    <li>Extrêmement léger, rapide et gratuit,</li>
+                    <li>Le plus populaire framework node.js,</li>
+                    <li>Facile à utliser coté client car en javascript</li>
+                </ul>
+                <p>Que faut-il connaitre pour utiliser node.js</p>
+                <ul>
+                    <li>Le langage javascript (Objets, tableaux, conditions etc...),</li>
+                    <li>les fonctionnalités de base de node.js et NPM</li>
+                    <li>Il est utile de connaitre,
+                        <ul>
+                            <li>Le protocole HTTP (les codes de retour, les entêtes etc...),</li>
+                            <li>Le format JSON,</li>
+                            <li>Les fonctions Arrow,</li>
+                            <li>Les méthodes des tableaux (foreach, map, filter...).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>La syntaxe de base du serveur</p>
+                <pre class="chroma"><code class="language-js" data-lang="js">// Chargement du module
+const express = require('express');
+// init express
+const app = express();
+
+// création de la route
+app.get('/', (req, res)=> {
+      res.send('Hello Wordl !');
+});
+
+// écoute du port
+server.listen(8888);
+</code></pre>
+                <p>Gestion de base des routes</p>
+                <ul>
+                    <li>gérer les routes et le requêtes est simple</li>
+                    <li>app.get(), app.post(), app.put(), app.delete(), etc...</li>
+                    <li>accès aux paramètres, requêtage, découpe d'url, etc...</li>
+                    <li>Express dispose d'un Routeur, il est possible de stocker les routes dans un fichier séparé,</li>
+                    <li>On peut analyser les données entrantes avec le Body Parser.</li>
+                </ul>
+                <pre class="chroma"><code class="language-js" data-lang="js">app.get('/', (req, res)=> {
+      // Récupération de données depuis la base de données
+      // Charger des pages
+      // Retourner un fichier json
+      // Accès complet aux request & response
+});</code></pre>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

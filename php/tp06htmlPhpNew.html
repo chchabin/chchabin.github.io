@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <title>PHP TP06</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="tp01htmlPhpNew.html">TP PHP</a>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Documentation</a>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--    Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+               <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start" data-bs-toggle="collapse" data-bs-target="#php01Gintroduction" aria-expanded="false">
+                        I - Introduction au développement Web
+                    </button>
+                    <div class="collapse" id="php01Gintroduction">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="php01Gintroduction.html#foncweb">
+                                    Principes de fonctionnement du Web
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php02Gbaseslg" aria-expanded="false">
+                        II - Les bases du langage
+                    </button>
+                    <div class="collapse" id="php02Gbaseslg">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li><a class="d-inline-flex align-items-center rounded active"
+                                   href="php02Gbaseslg.html">Les bases du langage
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php031ProgPhp_Variables" aria-expanded="false">
+                        III - Programmer avec PHP
+                    </button>
+                    <div class="collapse" id="php031ProgPhp_Variables">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php031ProgPhp_Variables.html">A - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php032ProgPhp_Tests.html">B - Tests et conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php033ProgPhp_Tableaux.html">C - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php034ProgPhp_Boucles.html">D - Les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php035ProgPhp_Fonctions.html"> E - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php036ProgPhp_Raccourcis.html"> F - Les raccourcis
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php041Transmission" aria-expanded="false">
+                        IV - Transmettre des données entre des pages
+                    </button>
+                    <div class="collapse" id="php041Transmission">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php041Transmission.html">A - Notion de variable superglobale
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php042Transmission.html">B - Notion de formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php043Transmission.html">C - $_GET et la transmission via l'URL
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php044Transmission.html">D - $_POST et la transmission via un formulaire
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php045Transmission.html">E - $_SESSION et la transmission via la session
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php046Transmission.html">F - La transmission de données et sécurité
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start"
+                            data-bs-toggle="collapse" data-bs-target="#php05AccesSGBD_Introduction"
+                            aria-expanded="false">
+                        V - Accéder à une base de données
+                    </button>
+                    <div class="collapse" id="php05AccesSGBD_Introduction">
+
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Introduction.html"> A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_Connexion.html">B - Connexion à la base de données
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RappelSQL.html">C - Rappel SQL avec SELECT
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtSimple.html">D - query - Requêtes simples
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtParam.html">E - prepare et execute - Requêtes avec paramètres
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="php05AccesSGBD_RqtLMD.html">F - Le cas particulier avec INSERT, UPDATE,
+                                    DELETE et exec</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpTP" aria-expanded="true" aria-current="true">
+                        TP - les bases du PHP
+                    </button>
+                    <div class="collapse show" id="phpTP">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="tp01htmlPhpNew.html">
+                                    TP01 - Affichage, déclaration de variables, tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp02htmlPhpNew.html">
+                                    TP02 - Tableaux, Boucles, formulaires
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp03htmlPhpNew.html">
+                                    TP03 - Tableaux Associatifs, Boucles foreach
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp04htmlPhpNew.html">
+                                    TP04 - Pattern MVC
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="tp05htmlPhpNew.html">
+                                    TP05 - Pattern MVC, Session
+
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active" href="tp06htmlPhpNew.html">
+                                    TP06 - Pattern MVC, connexion à un SGBD
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#phpEx" aria-expanded="false">
+                        Exercices sur le MVC
+                    </button>
+                    <div class="collapse" id="phpEx">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed" href="ex01htmlPhp.html">
+                                    Ex01 - Modifier un site en fonction du pattern MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="ex02htmlPhp.html">
+                                    Ex02 - Création d'un contrôleur
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row align-items-center justify-content-between">
+                <h1 class="bd-title" id="content">TP06 - Pattern MVC, connexion à un SGBD (6/6)</h1>
+            </div>
+            <div class="bd-callout bd-callout-info">
+                <h4 class="text-info">Objectif</h4>
+                <p>Il s'agit d'obtenir des données qui sont stockées dans une base de données.
+                    Il faut ensuite pourvoir les afficher en fonction des besoins du contrôleur.
+                </p>
+            </div>
+            <hr class="my-4">
+        </div>
+        <!--            Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#prerequis">Prérequis</a></li>
+                    <li><a href="#mysql">Exercice 1 - Exécution du script sql</a></li>
+                    <ul>
+                        <li><a href="#base">a - Création de la base</a></li>
+                        <li><a href="#script">b - Execution du script</a></li>
+                    </ul>
+                    <li><a href="#ex2">Exercice 2 - La création de la classe connexion</a></li>
+                    <li><a href="#ex3">Exercice 3 - Modification du contrôleur</a></li>
+                    <li><a href="#ex4">Exercice 4 - La création de la vue</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <section>
+                <div class="bd-callout bd-callout-danger">
+                    <h4 class="text-danger">Attention</h4>
+                    <p>Ne remplissez pas le rapport sur votre navigateur , vous ne pourrez pas le sauvegarder.</p>
+                    <p>Téléchargez le sur votre disque dur !</p>
+                </div>
+                <div class="list-group-flush">
+                    <a class="list-group-item list-group-item-action " href="../download/phpTP03rapport.pdf"
+                       target="_blank"><i class="bi bi-cloud-download-fill"></i> Format du rapport à télécharger</a>
+                    <a class="list-group-item list-group-item-action "
+                       href="https://tutowebdesign.com/bien-demarrer-bootstrap-4.php" target="_blank"><i
+                            class="bi bi-patch-question"></i> Tuto Bootstrap 4 (rien de pertinent sur bootstrap 5 en ce
+                        moment) </a>
+                    <a class="list-group-item list-group-item-action " href="../download/AideMemoirePHP.pdf"
+                       target="_blank"><i class="bi bi-patch-question"></i> Aide mémoire PHP</a>
+                    <a class="list-group-item list-group-item-action "
+                       href="http://boraklerouge.free.fr/PHP-AideMemoire/" target="_blank"><i
+                            class="bi bi-patch-question"></i> Aide mémoire PHP</a>
+                    <a class="list-group-item list-group-item-action "
+                       href="php05AccesSGBD_Introduction.html" target="_blank"><i
+                            class="bi bi-patch-question"></i> Cours sur les bases de données</a>
+                </div>
+            </section>
+            <h2 id="prerequis">Prérequis</h2>
+            <section>
+                <h4 class="text-info">Avant de commencer</h4>
+                <ul class="list-group-flush">
+                    <li class="list-group-item list-group-item-action "><i class="bi bi-folder"></i> Créez un répertoire
+                        TP06
+                    </li>
+                    <li class="list-group-item list-group-item-action "><i class="bi bi-clipboard"></i> Copiez collez les
+                        fichiers du répertoire TP05
+                    </li>
+                </ul>
+                <div class="bd-callout bd-callout-danger">
+                    <h4 class="text-danger">Attention</h4>
+                    <p>Vérifiez bien que vous êtes en UTF8.</p>
+                </div>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Téléchargez</h4>
+                    <p>Téléchargez le dossier <a href="../download/lafleur2013.zip">Lafleur</a> </p>
+                    <ol>
+                        <li>décompresses le fichier zip</li>
+                        <li>déplacez le répertoire images dans le répertoire TP06</li>
+                    </ol>
+                </div>
+            </section>
+            <h2 id="mysql">Exercice 1 - Exécution du script sql</h2>
+            <section>
+                <h3 id="base">a - Création de la base</h3>
+                <article>
+                    <p>Si vous connaissez phpmyadmin (c'est celui qui sera en démonstration), lancez l'application ,
+                        sinon utilisez votre application favorite ou les lignes de code.
+                    Une fois phpmyadmin connecté, cliquez sur base pour créer la base <code>lafleur</code></p>
+                    <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <h4>Résultat</h4>
+                    <p>
+                        Voici ce que vous obtenez en créant la base :
+                    </p>
+                    <img src="images/TP/creationBase.PNG" class="img-fluid" alt="menuAccueil">
+                    </div>
+                </article>
+                <h3 id="script">b - Execution du script</h3>
+                <article>
+                    <p>Si vous avez décompressé le fichier, vous avez accès au fichier <code>lafleur2013.sql</code></p>
+                    <div class="bd-callout bd-callout-danger">
+                        <h4 class="text-danger">Décompressez le fichier !</h4>
+                        <p>
+                            Si vous voulez exécuter le fichier sql <strong>sans</strong> décompresser le fichier zip vous obtiendrez une erreur.
+                        </p>
+                    </div>
+                        <p>Pour lancer le script, il suffit d'aller sur l'onglet importer et de cliquer su <code>go</code>
+                        tout en bas de la page.</p>
+                    <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <h4>Résultat</h4>
+                    <p>
+                        Voici ce que vous obtenez en voulant lancer le script :
+                    </p>
+                    <img src="images/TP/scriptBase.PNG" class="img-fluid" alt="menuAccueil">
+                    </div>
+                </article>
+            </section>
+            <h2 id="ex2">Exercice 2 - La création de la classe connexion</h2>
+            <section>
+                <p>La connexion se fait par l'intermédiaire d'une classe objet : la classe <code>PDO</code>.
+                    C'est une classe indépendante du type de base de données. Créez un fichier <code>m_pdo.php</code>.
+                    Copiez coller le code suivant :
+                </p>
+                <pre><code class="language-php" data-lang="php">&lt;?php
+
+class PdoTd
+{
+
+    private static $serveur = 'mysql:host=localhost';
+    private static $bdd = 'dbname=lafleur';
+    private static $user = 'root';
+    private static $mdp = '';// mettre ici votre mot de passe
+    /**
+     * @var PDO $monPdo
+     */
+    private static $monPdo;
+    private static $monPdoTd = null;
+
+    /**
+     * Constructeur privé, crée l'instance de PDO qui sera sollicitée
+     * pour toutes les méthodes de la classe
+     *
+     */
+     private function __construct()
+        {
+            self::$monPdo = new PDO(self::$serveur.';'.self::$bdd,
+                    self::$user, self::$mdp);
+            self::$monPdo->query("SET CHARACTER SET utf8");
+
+        }
+    public function _destruct(){
+        self::$monPdo = null;
+    }
+    /**
+     * Fonction statique qui crée l'unique instance de la classe
+     *
+     * Appel : $instancePdoTd = PdoTd::getPdoTd();
+     * @return null l'unique objet de la classe PdoTd
+     */
+    public  static function getPdoTd()
+    {
+        if(self::$monPdoTd == null)
+        {
+            self::$monPdoTd= new PdoTd();
+        }
+        return self::$monPdoTd;
+    }
+    /**
+     * Ici commence la déclaration des fonctions qui
+     *               permettrons d'exécuter les requêtes.
+     */
+    /**
+     * @return array
+     */
+    public function getLesCategories()
+    {
+        $req = "select * from categorie";
+        $res = self::$monPdo->query($req);
+        $lesLignes = $res->fetchAll();
+        return $lesLignes;
+    }
+    /**
+     * @return array
+     */
+    public function getLesProduits()
+    {
+        $req="select * from produit";
+        $res = self::$monPdo->query($req);
+        $lesLignes = $res->fetchAll();
+        return $lesLignes;
+    }
+
+}</code></pre>
+                <p>Pour instancier la classe, modifiez le fichier <code>index.php</code>, de la façon suivante :</p>
+                <pre><code class="language-php" data-lang="php">include('m_model.php');
+include('v_entete.php');
+require_once 'm_pdo.php';
+session_start();
+$pdo = PdoTd::getPdoTd();</code></pre>
+                <div class="bd-callout bd-callout-warning bg-warning">
+                    <h4><i class="bi bi-cone-striped"></i> En vous aidant de la documentation php répondez aux questions suivantes :</h4>
+                    <ol>
+                        <li>Que signifie private ?</li>
+                        <li>Que signifie public ?</li>
+                        <li>Que signifie self ?</li>
+                        <li>Que signifie -> ?</li>
+                        <li>Que signifie query()?</li>
+                        <li>Que signifie fetchAll() ?</li>
+                        <li>Que signifie :: ?</li>
+                        <li>Que signifie require_once ?</li>
+                        <li>Comment est appelé le constructeur de la classe ?</li>
+                   </ol>
+                </div>
+            </section>
+            <h2 id="ex3">Exercice 3 - Modification du contrôleur</h2>
+            <section>
+                <p>Il s'agit maintenant de remonter les informations obtenues de la base de données pour les transmettre au contrôleur.
+                    Il faut donc rajouter du code dans la partie produits du contrôleur. Vous allez chercher à afficher les catégories, il faut donc
+                obtenir les catégories du modèle. Vous allez remplacer le code existant par le code suivant :</p>
+                <pre><code class="language-php" data-lang="php">    case 'produits' :
+{
+    $lesCategories = $pdo->getLesCategories();
+    include('v_produits.php');
+    break;
+}</code></pre>
+        </section>
+            <h2 id="ex4">Exercice 4 - La création de la vue</h2>
+            <section>
+                <p>Vous avez remarqué que les requêtes renvoient des tableaux. Il faut donc pourvoir les parcourir pour les afficher.
+                    Voua allez créer un fichier <code>v_produit.php</code>, et saisir le code est le suivant :</p>
+                <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
+    &lt?php foreach($lesCategories as $uneCategorie) : ?&gt
+                    &lth2&gt&lt?= $uneCategorie['libelle']; ?&gt&lt/h2&gt
+        &lthr&gt
+        &ltdiv class="card-group"&gt
+            &lt? //lire un tableau les produits
+              //test pour savoir si le produit a la même reference que celle de une catégorie?&gt
+            &ltdiv class="card"&gt
+
+                        &ltdiv class="card-body"&gt
+                            &lth5 class="card-title"&gt&lt?= "//description d'un produit" ?&gt&lt/h5&gt
+                        &lt/div&gt
+                        &ltimg class="card-img-top" src="&lt?= "//image d'un produit" ?&gt" alt="Card image du produit"&gt
+                        &ltdiv class="card-footer text-muted"&gt
+                            &ltp&gtprix : &lt?= "//prix d'un produit" ?&gt €&lt/p&gt
+                        &lt/div&gt
+                    &lt/div&gt
+            &lt? //fin de la condition?&gt
+            &lt?// fin de la boucle?&gt
+        &lt/div&gt
+    &lt?php endforeach; ?&gt
+&lt/div&gt</code></pre>
+                <p>Voici le résultat obtenu :</p>
+                <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <h4>Résultat</h4>
+                    <p>
+                        Voici ce que vous obtenez avec la composition :
+                    </p>
+                    <img src="images/TP/vueComposition.PNG" class="img-fluid" alt="menuAccueil">
+                </div>
+                <div class="bd-callout bd-callout-warning bg-warning">
+                    <h4><i class="bi bi-cone-striped"></i> En vous aidant de la documentation php répondez aux questions suivantes :</h4>
+                    <ol>
+                        <li>En vous aidant du code pour les catégories, modifiez le contrôleur pour obtenir le tableau des produits nommé lesProduits.</li>
+                        <li>Dans la vue, remplacez les commentaires par le code php permettant d'afficher les produits.
+                        Vous appellerez chaque élément du tableau lesProduits : unProduit.</li>
+                        <li>Pour voir à quoi ressemble lesProduits, vous pouvez, dans le contrôleur, rajouter après l'appel var_dump($lesProduits);</li>
+                        <li>Modifier le titre de l'onglet pour obtenir 'LesFleurs'</li>
+                    </ol>
+                </div>
+                <div class="bd-callout bd-callout-info bg-secondary text-white">
+                    <h4>Résultat</h4>
+                    <p>
+                        Voici ce que vous obtenez avec les produits :
+                    </p>
+                    <img src="images/TP/vueProduits.PNG" class="img-fluid" alt="menuAccueil">
+                </div>
+            </section>
+                </div>
+        <span class="text-end">
+                    <a href="#bdNavbar" id="backToTopBtn" style="font-size: 2rem; color: cornflowerblue;"><i
+                            class="bi bi-chevron-up"></i> </a>
+        </span>
+    </main>
+</div>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/"></script>
+
+</body>
+</html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
-
+       <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link rel="icon" type="image/png"  href="../img/favicon.png">
     <title>Création d'objet</title>
 </head>
 <body>
@@ -198,7 +198,7 @@
                 <ul>
                     <li><a href="#predef">a - Structure d'une classe.</a></li>
                     <li><a href="#objetDeclare">b - Déclaration et instanciation d'un objet</a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#appelMethode">c - Appeler une méthode</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul>
@@ -207,6 +207,7 @@
         <!--            Docs-->
         <div class="bd-content ps-lg-4">
             <h2 id="predef">a - Structure d'une classe.</h2>
+            <section>
             <div class="bd-callout bd-callout-info">
                 <h4>Classe : Definition</h4>
                 <p>Une classe permet de définir un nouveau type, d'instancier des objets, d'appeler les services sur cet
@@ -252,13 +253,22 @@
                 <p> On parle alors de services ou de variables d'instances</p>
             </div>
             <div class="bd-callout bd-callout-warning">
+                <h4>Vocabulaire : accès aux éléments de la classe (Public,Private)</h4>
+                <p>Les modificateurs private et public se mettent devant un type (par exemple : une classe) ou un membre
+                    (par exemple : un
+                    champ ou une méthode).
+                    <br><code>private</code> restreint l'accès de ce qui suit à l'usage exclusif dans le bloc où il a été déclaré.
+                    <br><code>public</code> autorise quant à lui l'accès de ce qui suit depuis l'extérieur.</p>
+            </div>
+            <div class="bd-callout bd-callout-warning">
                 <h4>Vocabulaire : classe static</h4>
                 <p>Lorsqu'une déclaration est précédée du mot clé static, cette information concerne la classe, tous les
                     services définis dans la classe auront accès à cette information.</p>
                 <p> On parle alors de services ou de variables de classe</p>
             </div>
-
+            </section>
             <h2 id="objetDeclare">b - Déclaration et instanciation d'un objet</h2>
+            <section>
             <p>Une classe C# peut être considérée comme un nouveau type dans le
                 programme et donc des variables d'objets peuvent être déclarées selon ce nouveau "type"</p>
             <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
@@ -268,7 +278,8 @@
         <span class="nt">class</span> <span class="cp">HelloWorld</span> {
              <span class="nt">static</span> <span class="nt">void</span> Main() {
 
-                <span class="cp">Exemple</span> ex1; <span class="c">// --déclaration d'un nouvel objet</span>
+                <span class="cp">Exemple</span> ex1; <span
+                        class="c">// --déclaration d'un nouvel objet de type Exemple</span>
                 ex1 = <span class="nt">new </span><span class="cp">Exemple</span>();<span class="c">// --instanciation de cet objet</span>
 
                 <span class="c">// --autre forme plus compacte</span>
@@ -276,25 +287,58 @@
                 <span class="cp">Exemple</span> ex3 = <span class="nt">new </span><span class="cp">Exemple</span>();
                 <span class="c">// ...</span>
                 <span class="c">// il n'y a pas de limite au nombre d'objets que l'on peut créer</span>
+				
+		<span class="c">// --l'instanciation peu se faire avec des paramètres, selon la définition de la classe</span>
+		<span class="cp">Exemple</span> ex4 = <span class="nt">new </span><span class="cp">Exemple</span>(209,30);
              }
     }</code></pre>
             </div>
             <p>La déclaration permet de créer une nouvelle variable, appelée ex1 dans
                 l'exemple ci-dessus. A ce stade, aucune réservation de mémoire n'a eu lieu pour cet objet. Il
                 est donc inutilisable.</p>
-            <p>Le type de la variable ex1 est <span class="cp">Exemple</span> : le type d'un objet est sa classe.</p>
-            <p>L'instanciation utilise l'opérateur <span class="nt">new </span>, qui permet de réserver une zone mémoire
-                spécifique pour l'objet. On dit que l'objet est instancié par l'opérateur <span class="nt">new </span>.
+            <p>Le type de la variable ex1 est <code>Exemple</code> : le type d'un objet est sa classe.</p>
+            <p>L'instanciation utilise l'opérateur <code>new </code>, qui permet de réserver une zone mémoire
+                spécifique pour l'objet. On dit que l'objet est instancié par l'opérateur <code>new </code>.
                 Sans cette étape
                 indispensable, l'objet déclaré ne peut pas être utilisé.
             </p>
             <div class="bd-callout bd-callout-danger">
                 <h4>ne pas confondre instanciation et initialisation </h4>
-                <p><span class="s">Instancier</span>, c'est créer un nouvel objet (opérateur <span
-                        class="nt">new </span> )</p>
-                <p><span class="s">Initialiser</span>, c'est donner une valeur initiale à quelque chose (opérateur
+                <p><code>Instancier</code>, c'est créer un nouvel objet (opérateur <code>new </code> )</p>
+                <p><code>Initialiser</code>, c'est donner une valeur initiale à quelque chose (opérateur
                     <code>=</code> )</p>
             </div>
+            </section>
+            <h2 id="appelMethode">c - Appeler une méthode</h2>
+            <section>
+                <div class="bd-callout bd-callout-info">
+                    <h4>Appel d'une méthode</h4>
+                    <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"> nomDeLaMéthode(paramètresSéparésParUneVirgule);</code></pre></div>
+                </div>
+                <p>Dans notre exemple, nous souhaitons appeler les méthode de la classe exemple :</p>
+                <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span
+                        class="nt">using</span> System;
+    <span class="nt">namespace</span> demonstration
+    {
+        <span class="nt">class</span> <span class="cp">HelloWorld</span> {
+             <span class="nt">static</span> <span class="nt">void</span> Main() {
+
+                <span class="cp">Exemple</span> ex1; <span
+                            class="c">// --déclaration d'un nouvel objet de type Exemple</span>
+                ex1 = <span class="nt">new </span><span class="cp">Exemple</span>();<span class="c">// --instanciation de cet objet</span>
+
+                <span class="c">// --autre forme plus compacte</span>
+                <span class="cp">Exemple</span> ex2 = <span class="nt">new </span><span class="cp">Exemple</span>();
+                <span class="cp">Exemple</span> ex3 = <span class="nt">new </span><span class="cp">Exemple</span>();
+                <span class="c">// ...</span>
+                <span class="c">// il n'y a pas de limite au nombre d'objets que l'on peut créer</span>
+
+		<span class="c">// --l'instanciation peu se faire avec des paramètres, selon la définition de la classe</span>
+		<span class="cp">Exemple</span> ex4 = <span class="nt">new </span><span class="cp">Exemple</span>(209,30);
+             }
+    }</code></pre>
+                </div>
+            </section>
         </div>
     </main>
 </div>

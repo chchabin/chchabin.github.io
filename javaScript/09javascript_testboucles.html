@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Js Tests Boucles</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="">Guide Stack npm express esj mysql </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
+                        1 - Programmer avec Javascript
+                    </button>
+                    <div class="collapse show" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="00javascript_intro.html">A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="05javascript_affichage.html">B - Affichage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="06javascript_variables.html">C - Les variables
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="07javascript_tableau.html">D - Les tableaux
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="08javascript_objet.html">E - Les objets n'ont pas de classes
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="09javascript_testboucles.html">F - Les tests et les boucles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="02javascript_fonctions.html">G - Les fonctions
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="04javascript_classes.html">H - Les Classes en ES6
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="03javascript_promesses.html">I - Les Promesses
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="false">
+                        2 - NodeJs et ExpressJs
+                    </button>
+                    <div class="collapse" id="express">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="100express_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="115express_installation.html">
+                                    B - Installation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="120express_affichage.html">
+                                    C - Démarrer et Afficher
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="125express_mvc.html">
+                                    D - Architecture MVC
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="130javascript_sgbd.html">
+                                    E - Connexion à un SGBD
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="140javascript_mvc3.html">
+                                    F - Création de page avec URL Paramétrée
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="150sessions.html">
+                                    G - Gérer les sessions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#dom" aria-expanded="false">
+                        3 - Manipuler le DOM
+                    </button>
+                    <div class="collapse" id="dom">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="200dom_intro.html">
+                                    A - Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="210dom_crud.html">
+                                    B - Manipulation de l'objet Document
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="220dom_crudElement.html">
+                                    C - Création manipulation d'éléments
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="230dom_event.html">
+                                    D -  Associer un évènement à un nœud
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="240dom_exemple.html">
+                                    E -  Exemple récapitulatif
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">F - Les tests et les boucles</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#test">1 - Tests et conditions</a>
+                        <ul>
+                            <li><a href="#testsIf">a - L'instruction <code>if</code></a></li>
+                            <li><a href="#testsCondition">b - La notion de condition</a></li>
+                            <li><a href="#testsSwitch">c - L'instruction <code>switch</code></a></li>
+                            <li><a href="#ternaire">d - L'opérateur ternaire</a></li>
+                            <li><a href="#valdefaut">e - L'opérateur <code>||</code></a></li>
+                            <li><a href="#fusionull">f - L'opérateur <code>??</code> de fusion Null</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#boucles">2 - Les boucles</a>
+                        <ul>
+                            <li><a href="#bouclesWhile">a - La boucle <code>while</code></a></li>
+                            <li><a href="#bouclesfor">b - La boucle <code>for</code></a></li>
+                            <li><a href="#bouclesforeach">c - La boucle <code>foreach</code></a></li>
+                            <li><a href="#forin">d - la boucle for..in</a></li>
+                            <li><a href="#forof">e - la boucle for..of</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#autre">3 - Les boucles qui la boucle (map, filter, reduce)</a>
+                        <ul>
+                            <li><a href="#map">a - map</a></li>
+                            <li><a href="#filter">b - filter</a></li>
+                            <li><a href="#reduce">c - reduce</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="test">1 - Tests et conditions</h2>
+            <section>
+                <p>La notion de test et condition est commune à PHP ou C#. Vous aurez un petit rappel.</p>
+                <h3 id="testsIf">a - L'instruction <code>if</code></h3>
+                <article>
+                    <pre><code class="language-js" data-lang="js" translate="no">if(nb1 &gt; nb2) {
+    // sera exécuté si nb1 &gt; nb2
+else {
+    // sera exécuté si nb1 &lt;= nb2
+}</code></pre>
+                    <p>Il est aussi possible de combiner des instructions if :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">if(nb1 &gt; nb2) {
+    // sera exécuté si nb1 &gt; nb2
+else if (nb2 > nb1) {
+    // sera exécuté si  nb1 < nb2
+}
+else {
+    // sera exécuté si nb1 = nb2
+}</code></pre>
+                </article>
+                <h3 id="testsCondition">b - La notion de condition</h3>
+                <article>
+                    <p><strong>La notion d'égalité</strong></p>
+                    <p>Une égalité laxiste <code>==</code> consiste à dire que deux valeurs sont vues comme
+                        équivalentes, mais pas exactement égales.
+                        <br>L’égalité stricte <code>===</code> vérifie en plus que le type des deux valeurs comparées
+                        est le même.
+                        <br>Exemple :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">1 == '1'; // => true
+1 === `1`; // => false (car types différents)
+
+0 == false; // => true
+0 === false; // => false
+
+null == undefined; // => true
+null === undefined; // => false</code></pre>
+                    <p>La comparaison entre valeurs de types avancés fonctionne différemment. Ce ne sont pas les valeurs
+                        à proprement parler qui sont comparées, mais la référence vers cette valeur.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">[1,2] == [1,2]; // => false, car deux tableaux ont été créés
+
+const monTab = [1,2];
+monTab == monTab; // => true, car la variable monTab référence un seul et même tableau
+
+monTab == [1,2]; // => false, car ce sont deux références de tableaux différents
+
+const monTab2 = monTab;
+monTab == monTab2; // => true, car monTab2 fait référence au même tableau que monTab</code></pre>
+                    <p><strong>Les opérateurs de comparaison</strong></p>
+                    <pre><code class="language-js" data-lang="js" translate="no">1 < 1; // => false
+1 > 1; // => false
+1 <= 1; // => true
+1 >= 1; // => true
+
+1 < 2; // => true
+1 > 2; // => false
+1 <= 2; // => true
+1 >= 2; // => false</code></pre>
+                </article>
+                <h3 id="testsSwitch">c - L'instruction <code>switch</code></h3>
+                <article>
+                    <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc d'instructions parmi plusieurs
+                        possibles. Seul le bloc correspondant à la valeur testée sera pris en compte.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">switch (nombre) {
+    case 1:
+        ...
+        break; // break force la sortie du switch
+    case 2:
+        ...
+        break;
+    case 3:
+        ...
+        break;
+    default:
+        ...
+        break;</code></pre>
+                </article>
+                <h3 id="ternaire">d - L'opérateur ternaire</h3>
+                <article>
+                    <p>Son utilisation est comparable à celle du C# ou du PHP :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const baseURL = config.baseURL ? config.baseURL : 'localhost';</code></pre>
+                </article>
+                <h3 id="valdefaut">e - L'opérateur <code>||</code></h3>
+                <article>
+                    <p>Nous avons régulièrement besoin d’attribuer une valeur par défaut à une variable si une autre
+                        variable qu’on lui affecte n’existe pas, pour cela nous utilisons l’opérateur logique
+                        <code>||</code>. Cette instruction simplifie l'opérateur ternaire.
+                        Soit l'instruction suivante :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const hostname = config.baseURL || 'localhost';</code></pre>
+                    <p>La valeur <code>hostaneme</code> prend <code>localhost</code> si la valeur de <code>config.baseURL</code>
+                        est évaluée à <code>false</code>.
+                        Mais cet opérateur ne fait pas de différence entre les valeurs <code>false</code> et les valeurs
+                        <code>null</code> ou <code>undefined</code></p>
+                </article>
+                <h3 id="fusionull">f - L'opérateur <code>??</code> de fusion Null</h3>
+                <article>
+                    <p>L'<a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">
+                        ECMAScript 2020</a> propose un nouvel opérateur nommé le “nullish coalescing operator” qui
+                        s’écrit <code>??</code>. Celui-ci s’utilise de la même façon que l’opérateur <code>||</code> à
+                        la différence qu’il renvoie la première expression si celle-ci est différente de
+                        <code>null</code> ou <code>undefined</code> et la seconde expression dans le cas contraire.
+                        L'expression sera alors la suivante :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const hostname = config.baseURL ?? 'localhost';</code></pre>
+                    <div class="bd-callout bd-callout-danger">
+                        <h4>Attention à la compatibilité !</h4>
+                        <p>Votre version de navigateur ou de nodejs doit être suffisamment récente pour prendre cette
+                            modification en compte</p>
+                    </div>
+                </article>
+            </section>
+            <h2 id="boucles">2 - Les boucles</h2>
+            <section>
+                <h3 id="bouclesWhile">a - La boucle <code>while</code></h3>
+                <article>
+                    <p>La boucle <code>while</code> permet de répéter des instructions tant qu'une condition est
+                        vérifiée.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">let i = 0;
+while (i < 10) {
+    console.log('ligne ${i} de la boucle while');
+    i++;
+} </code></pre>
+                </article>
+                <h3 id="bouclesfor">b - La boucle <code>for</code></h3>
+                <article>
+                    <p>La boucle <code>for</code> permet de répéter un bloc d'instructions un nombre défini de fois.</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">for (let i=0; i < 10; i++) {
+    console.log('ligne ${i} de la boucle for');
+}</code></pre>
+                </article>
+                <h3 id="bouclesforeach">c - La boucle <code>foreach</code></h3>
+                <article>
+                    <p>La méthode JavaScript forEach s’applique à un tableau, une map ou un set (et pas seulement un
+                        tableau).
+                        forEach prend en paramètre une fonction callback, et l’execute en lui passant chaque élément de
+                        la collection.
+                        <br>forEach n’est pas conçu pour produire une valeur de retour. La méthode retourne undefined.
+                        Elle n’est donc pas chainable avec d’autres méthodes JavaScript qui arriveraient après forEach
+                    </p>
+                    <h4>Exemple avec ARRAY</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const array = [1, 5, 10];
+array.forEach(function(currentValue) {
+    console.log(currentValue); // result 1 5 10
+});</code></pre>
+                    <h4>Exemple avec Set</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const set = new Set(['a', 'b', 'c']);
+set.forEach(value => console.log(value)); // result a b c</code></pre>
+                    <h4>Exemple avec Map</h4>
+                    <pre><code class="language-js" data-lang="js" translate="no">const map = new Map();
+const keyObject = { desc: 'an object as a key'};
+
+map.set('key 1', 'value 1');
+map.set('key 2', 'value 2');
+map.set(keyObject, 'value for keyObject');
+
+map.forEach((value, index) =>
+    console.log(`at key: ${index}, value is: ${value}`));</code></pre>
+                    <div class="bd-callout bd-callout-info bg-secondary text-white">
+                        <h4>Résultat :</h4>
+                        <p> at key: key 1, value is: value 1
+                            <br>at key: key 2, value is: value 2
+                            <br>at key: [object Object], value is: value for keyObject</p>
+                    </div>
+                </article>
+                <h3 id="forin">d - la boucle for..in</h3>
+                <article>
+                    <p>Une boucle for in est l'équivalent du foreach de PHP et autres langages, elle assigne directement
+                        les éléments du tableau à une variable.
+                        Cette méthode est la moins performante.
+                        La boucle for..in est conçue pour itérer sur les propriétés d’un objet (ou les caractères d’une
+                        string). Et non pas sur les valeurs d’un tableau. </p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const array = [1, 5, 10];
+for (let a in array){
+console.log(array[a])
+} // result 1 5 10</code></pre>
+                </article>
+                <h3 id="forof">e - la boucle for..of</h3>
+                <article>
+                    <p>Le code idéal, car concis et lisible ?</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const array = [1, 5, 10];
+for (const a of array){
+    console.log(a)
+} // result 1 5 10</code></pre>
+                </article>
+            </section>
+            <h2 id="autre">3 - Les boucles qui la boucle (map, filter, reduce)</h2>
+            <section>
+                <p>Le but de forEach est uniquement d’obtenir chaque élément de la collection, pas de créer une nouvelle
+                    collection résultant d’une transformation, car pour cela il existe des méthodes comme filter, map,
+                    etc…</p>
+                <h3 id="map">a - map</h3>
+                <article>
+                    <p>En utilisant foreach, il est nécessaire de créer un tableau vide pour avoir un nouveau
+                        tableau</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const numbers = [1, 2, 3, 4];
+const new_numbers = [];// création d'un tableau vide
+for(let i = 0; i < numbers.length; i++) {
+new_numbers[i] = numbers[i] * 2;
+}
+console.log("Les nombres doublés sont", new_numbers); // [2, 4, 6, 8]</code></pre>
+                    <p>Ce code, bien que fonctionnel et clair peut être simplifié davantage et faire abstraction des
+                        boucles, ainsi :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const numbers = [1, 2, 3, 4];
+const new_numbers = numbers.map(function(number){
+     return number * 2;
+});
+console.log("Les nombres doublés sont", new_numbers); // [2, 4, 6, 8]</code></pre>
+                </article>
+                <h3 id="filter">b - filter</h3>
+                <article>
+                    <p>La fonction map() est bien utile pour modifier des groupes entiers de valeurs, mais dans bien des
+                        cas on désire uniquement modifier un sous-ensemble de ces valeurs en se basant sur un énoncé
+                        conditionnel. C’est à ce moment qu’entre en jeu la fonction filter(). La fonction filter()
+                        permet de, tel que son nom l’indique, filtrer un ensemble de données.
+                        <br>Voyez l’exemple suivant :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const words = ['Python', 'Javascript', 'Go', 'Java', 'PHP', 'Ruby'];
+const result = words.filter(word => word.length < 8);
+console.log(result); // retourne [ 'Python', 'Go', 'Java', 'PHP', 'Ruby' ]</code></pre>
+                    <p>Le nouveau tableau rassemble tous les nom qui ont moins de 8 caractères.</p>
+                </article>
+                <h3 id="reduce">c - reduce</h3>
+                <article>
+                    <p>Si ce que vous désirez faire, est obtenir un sous-produit des données d’un tableau, la fonction
+                        reduce() est là pour répondre à la majeure partie de vos besoins les plus simples.
+                        <br>Aimeriez-vous avoir un total? Voici un exemple d’usage où on double toutes les valeurs d’un
+                        tableau avant d’en faire le cumul. :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">const numbers = [1, 2, 3, 4];
+const total_number = numbers.map(function(number){
+     return number * 2;
+}).reduce(function(total, number){
+     return total + number;
+}, 0);
+console.log("Le total est", total_number); // 20</code></pre>
+                    <p>La seconde valeur passée à la méthode est la valeur de départ de la valeur qui sera retournée.
+                        Dans ce cas-ci, la valeur de départ est 0. Pour chacune des valeurs dans le tableau, on double
+                        la valeur et la cumule à partir de 0. La résultante est de 20. ((1×2)+(2×2)+(3×2)+(4×2)).
+                        La forme générale de la fonction est :</p>
+                    <pre><code class="language-js" data-lang="js" translate="no">let newArray = arr.filter(callback(valeurCourante, valeurAccumulée) {
+  // return la valeur cumulée à partir du cumul précédent et de la valeur courante
+}, valeurDépart[, thisArg]);</code></pre>
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>
