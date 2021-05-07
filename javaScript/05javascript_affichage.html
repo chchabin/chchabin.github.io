@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Affichage</title>
 
 </head>
@@ -37,7 +38,8 @@
             <ul class="list-unstyled mb-0 py-3 pt-md-1">
                 <li class="mb-1 active">
                     <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
-                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
                         1 - Programmer avec Javascript
                     </button>
                     <div class="collapse show" id="javascript_programmer">
@@ -170,13 +172,13 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="230dom_event.html">
-                                    D -  Associer un évènement à un nœud
+                                    D - Associer un évènement à un nœud
                                 </a>
                             </li>
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="240dom_exemple.html">
-                                    E -  Exemple récapitulatif
+                                    E - Exemple récapitulatif
                                 </a>
                             </li>
                         </ul>
@@ -208,75 +210,91 @@
 
         <!--            Docs-->
         <div class="bd-content ps-lg-4">
-                <h2 id="alert">1 - L'affichage popup</h2>
-                <section>
+            <h2 id="alert">1 - L'affichage popup</h2>
+            <section>
                 <p>C'est l'affichage le plus classique, il suffit d'écrire :</p>
-                <pre><code class="language-js" data-lang="js">&ltscript&gt
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">&ltscript&gt
     alerte ('hello World');
-&lt/script&gt</code></pre>
+&lt/script&gt</code></pre></div>
                 <p>Une fenêtre popup apparait avec le texte Hello world</p>
-                </section>
-                <h2 id="console">2 - L'affichage dans la console</h2>
-                <section>
-                    <p>Sur le navigateur la console apparait, dans le cas de chrome (mais aussi de façon comparable sur tous les autres navigateurs)
-                        quand on clique droit puis <code>Inspecter</code>.il suffit d'écrire :
-                    </p>
+            </section>
+            <h2 id="console">2 - L'affichage dans la console</h2>
+            <section>
+                <p>Sur le navigateur la console apparait, dans le cas de chrome (mais aussi de façon comparable sur tous
+                    les autres navigateurs)
+                    quand on clique droit puis <code>Inspecter</code>.il suffit d'écrire :
+                </p>
+                <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&ltscript&gt
     console.log('hello World');
-&lt/script&gt</code></pre>
-                    <p>Le texte Hello world apparait dans la console. D'autre fonctionnalités sont disponibles avec console.
-                    </p>
+&lt/script&gt</code></pre></div>
+                <p>Le texte Hello world apparait dans la console. D'autre fonctionnalités sont disponibles avec console.
+                </p>
+                <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&ltscript&gt
     console.error('C'est une erreur');
-&lt/script&gt</code></pre>
-                    <p>Le message <span class="text-danger">C'est une erreur</span> apparait dans la console avec la couleur rouge.</p>
+&lt/script&gt</code></pre></div>
+                <p>Le message <span class="text-danger">C'est une erreur</span> apparait dans la console avec la couleur
+                    rouge.</p>
+                <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&ltscript&gt
     console.warning('C'est une alerte');
-&lt/script&gt</code></pre>
-                    <p>Le message <span class="text-warning">C'est une alerte</span> apparait dans la console avec la couleur marron.</p>
-                </section>
-                <h2 id="document">3 - L'affichage direct dans le navigateur</h2>
-                <section>
-                    <p>Il suffit d'écrire :</p>
+&lt/script&gt</code></pre></div>
+                <p>Le message <span class="text-warning">C'est une alerte</span> apparait dans la console avec la
+                    couleur marron.</p>
+            </section>
+            <h2 id="document">3 - L'affichage direct dans le navigateur</h2>
+            <section>
+                <p>Il suffit d'écrire :</p>
+                <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&ltscript&gt
     document.write ('hello World');
-&lt/script&gt</code></pre>
-                    <p>Le texte Hello world apparait dans le navigateur.</p>
-                </section>
-                <h2 id="balise">4 - l'affichage avec les balises</h2>
-                <section>
-                    <p>Le javascript permet de lire ou d'afficher des éléments, dont du texte, entre des balises html
+&lt/script&gt</code></pre></div>
+                <p>Le texte Hello world apparait dans le navigateur.</p>
+            </section>
+            <h2 id="balise">4 - l'affichage avec les balises</h2>
+            <section>
+                <p>Le javascript permet de lire ou d'afficher des éléments, dont du texte, entre des balises html
                     grâce à la propriété <code>innerHTML</code>.
                     Soit l'élément suivant :</p>
-                    <pre><code class="language-html" data-lang="html" translate="no">&ltp id="balise"&gt hello World &lt/p&gt</code></pre>
-                    <p>On peut obtenir le contenu du paragraphe avec ce code:</p>
+                <div class="highlight">
+                    <pre><code class="language-html" data-lang="html" translate="no">&ltp id="balise"&gt hello World &lt/p&gt</code></pre></div>
+                <p>On peut obtenir le contenu du paragraphe avec ce code:</p>
+                <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">&ltscript&gt
     const c = document.getElementById("balise"); // sélection de l'id
     document.write (c.innerHTML);  // affiche hello World
-&lt/script&gt</code></pre>
-                    <p>On peut remplacer dynamiquement le contenu du paragraphe avec ce code:</p>
+&lt/script&gt</code></pre></div>
+                <p>On peut remplacer dynamiquement le contenu du paragraphe avec ce code:</p>
+                <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">&ltscript&gt
     const c = document.getElementById("balise"); // sélection de l'id
     c.innerHTML = "Bonjour le monde";  // affiche Bonjour le monde
-&lt/script&gt</code></pre>
-                    <p>La même chose peut être faite à partir d'une balise sans texte. Soit l'élément suivant :</p>
-                    <pre><code class="language-html" data-lang="html" translate="no">&ltp id="balise"&gt &lt/p&gt</code></pre>
-                    <p>On peut afficher dynamiquement le contenu du paragraphe avec ce code:</p>
+&lt/script&gt</code></pre></div>
+                <p>La même chose peut être faite à partir d'une balise sans texte. Soit l'élément suivant :</p>
+                <div class="highlight">
+                    <pre><code class="language-html" data-lang="html"
+                           translate="no">&ltp id="balise"&gt &lt/p&gt</code></pre></div>
+                <p>On peut afficher dynamiquement le contenu du paragraphe avec ce code:</p>
+                <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">&ltscript&gt
     const c = document.getElementById("balise"); // sélection de l'id
     c.innerHTML = "hello World";  // affiche hello World
-&lt/script&gt</code></pre>
-                    <p>A partir de <code>document</code>, d'autres méthodes sont possibles, comme <code>querySelector</code>,
-                    qui lui identifie les balises. Vous devez connaitre les éléments du <abbr title="Document Object Model" class="initialism">DOM</abbr>
-                        pour approfondir ce domaine.
-                    </p>
+&lt/script&gt</code></pre></div>
+                <p>A partir de <code>document</code>, d'autres méthodes sont possibles, comme <code>querySelector</code>,
+                    qui lui identifie les balises. Vous devez connaitre les éléments du <abbr
+                            title="Document Object Model" class="initialism">DOM</abbr>
+                    pour approfondir ce domaine.
+                </p>
 
-                </section>
+            </section>
         </div>
     </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js" data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
 <script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/5.0/js/docs.min.js"></script>
 </body>

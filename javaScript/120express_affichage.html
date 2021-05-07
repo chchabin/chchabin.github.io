@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Express Affichage</title>
 
 </head>
@@ -92,7 +93,8 @@
                 </li>
                 <li class="mb-1 active">
                     <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
-                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="true" aria-current="true">
+                            data-bs-toggle="collapse" data-bs-target="#express" aria-expanded="true"
+                            aria-current="true">
                         2 - NodeJs et ExpressJs
                     </button>
                     <div class="collapse show" id="express">
@@ -170,13 +172,13 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="230dom_event.html">
-                                    D -  Associer un évènement à un nœud
+                                    D - Associer un évènement à un nœud
                                 </a>
                             </li>
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="240dom_exemple.html">
-                                    E -  Exemple récapitulatif
+                                    E - Exemple récapitulatif
                                 </a>
                             </li>
                         </ul>
@@ -200,10 +202,12 @@
                 <ul>
                     <li><a href="#app">1 - Création d'<code>app.js</code></a></li>
                     <li><a href="#anatomie">2 - Anatomie du fichier app</a></li>
-                    <li><ul>
-                        <li><a href="#module">a - Les modules</a></li>
-                        <li><a href="#route">b - Les routes</a></li>
-                    </ul></li>
+                    <li>
+                        <ul>
+                            <li><a href="#module">a - Les modules</a></li>
+                            <li><a href="#route">b - Les routes</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#lecture">3 - Affichage statique et dynamique à partir de l'URL</a></li>
                 </ul>
             </nav>
@@ -214,7 +218,8 @@
             <h2 id="app">1 - Création d'<code>app.js</code></h2>
             <section>
                 <p>Dans votre IDE, créez le fichier <code>app.js</code> et copiez ce code :</p>
-                <pre><code class="language-js" data-lang="js">// chargement du module
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">// chargement du module
 const express = require('express');
 // appel du module
 const app = express();
@@ -239,16 +244,20 @@ app.use((err, req, res, next) => {
 // ouverture du serveur
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
-})</code></pre>
-                <p>Ouvrez le terminal et saisissez <code>nodemon main</code> ou <code>nodemon app</code> (en regardant dans le fichier package vous comprendrez pourquoi !).
-                    <br>Cliquez, dans le terminal sur le lien <code>http://localhost:8888</code> et vous voyez Hello World! apparaitre dans votre navigateur.
+})</code></pre></div>
+                <p>Ouvrez le terminal et saisissez <code>nodemon main</code> ou <code>nodemon app</code> (en regardant
+                    dans le fichier package vous comprendrez pourquoi !).
+                    <br>Cliquez, dans le terminal sur le lien <code>http://localhost:8888</code> et vous voyez Hello
+                    World! apparaitre dans votre navigateur.
                 </p>
                 <h5>Questions !</h5>
                 <p>A quoi sert <code>console.log()</code>?
                     <br>Quelle est la différence entre <code>console.log</code> et <code>res.send</code> ?
-                    <br>Vous remarquerez l'utilisation des fonctions lambda, pour la route et le serveur. Réécrivez les, en fonction traditionnelle.
+                    <br>Vous remarquerez l'utilisation des fonctions lambda, pour la route et le serveur. Réécrivez les,
+                    en fonction traditionnelle.
                     <a href="http://es6-features.org/#BlockScopedVariables" target="_blank">Pour vous aider !</a>
-                    <br>A quoi sert l'accent aigu (backticks en anglais), obtenu avec la combinaison <kbd>ALT GR</kbd> + <kbd>7</kbd>.
+                    <br>A quoi sert l'accent aigu (backticks en anglais), obtenu avec la combinaison <kbd>ALT GR</kbd> +
+                    <kbd>7</kbd>.
                     <br>A quoi correspondent les erreurs HTTP mentionnées.</p>
             </section>
             <h2 id="anatomie">2 - Anatomie du fichier app</h2>
@@ -256,7 +265,8 @@ app.listen(port, () => {
                 <h3 id="module">a - Les modules</h3>
                 <article>
                     <p>Pour l'instant nous n'avons qu'un module : express.
-                        Pour tous les autres que nous allons installé, la procédure sera la même, il faudra d'abord les charger,
+                        Pour tous les autres que nous allons installé, la procédure sera la même, il faudra d'abord les
+                        charger,
                         puis les appeler.</p>
                 </article>
                 <h3 id="route">b - Les routes</h3>
@@ -269,17 +279,24 @@ app.listen(port, () => {
                     <ul>
                         <li>'/' : donne le chemin auquel la fonction s'applique</li>
                         <li>(req, res) : fonction de middelware</li>
-                        <li><ul>
-                            <li>req : Argument de demande HTTP à la fonction middleware (url envoyée au navigateur), appelé "req" par convention.</li>
-                            <li>res : Argument de réponse HTTP à la fonction middleware (lecture de l'url et exécution du code), appelé "res" par convention.</li>
-                        </ul></li>
+                        <li>
+                            <ul>
+                                <li>req : Argument de demande HTTP à la fonction middleware (url envoyée au navigateur),
+                                    appelé "req" par convention.
+                                </li>
+                                <li>res : Argument de réponse HTTP à la fonction middleware (lecture de l'url et
+                                    exécution du code), appelé "res" par convention.
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </article>
             </section>
             <h2 id="lecture">3 - Affichage statique et dynamique à partir de l'URL</h2>
             <section>
                 <p>Modifions notre code de cette façon :</p>
-                <pre><code class="language-js" data-lang="js">const express = require('express')
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">const express = require('express')
 const app = express()
 const port = 8888
 
@@ -310,19 +327,22 @@ app.use((err, req, res, next) => {
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-})</code></pre>
+})</code></pre></div>
                 <p>A l'affichage les résultats seront les suivants :</p>
                 <dl>
                     <dt>Affichage statique 1</dt>
                     <dd>si l'url est <code>http://localhost:8888/</code> l'affichage sera <code>Accueil</code></dd>
                     <dt>Affichage statique 2</dt>
-                    <dd>si l'url est <code>http://localhost:8888/page</code> l'affichage sera <code>Ceci est une page</code></dd>
+                    <dd>si l'url est <code>http://localhost:8888/page</code> l'affichage sera <code>Ceci est une
+                        page</code></dd>
                     <dt>Affichage dynamique</dt>
-                    <dd>si l'url est <code>http://localhost:8888/page3</code> l'affichage sera <code>Ceci est la page 3</code></dd>
+                    <dd>si l'url est <code>http://localhost:8888/page3</code> l'affichage sera <code>Ceci est la page
+                        3</code></dd>
                 </dl>
                 <div class="bd-callout bd-callout-danger">
                     <h4 class="text-danger">Attention au cas dynamique</h4>
-                    <p>Vérifiez <span class="fst-italic">a priori</span> ce qui est saisi par l'utilisateur afin d'éviter
+                    <p>Vérifiez <span class="fst-italic">a priori</span> ce qui est saisi par l'utilisateur afin
+                        d'éviter
                         l'injection de code !</p>
                 </div>
             </section>
@@ -330,7 +350,8 @@ app.listen(port, () => {
     </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js" data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
 <script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/5.0/js/docs.min.js"></script>
 </body>

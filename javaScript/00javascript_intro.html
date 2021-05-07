@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-  <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Introduction</title>
 
 </head>
@@ -37,7 +38,8 @@
             <ul class="list-unstyled mb-0 py-3 pt-md-1">
                 <li class="mb-1 active">
                     <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
-                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
                         1 - Programmer avec Javascript
                     </button>
                     <div class="collapse show" id="javascript_programmer">
@@ -170,13 +172,13 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="230dom_event.html">
-                                    D -  Associer un évènement à un nœud
+                                    D - Associer un évènement à un nœud
                                 </a>
                             </li>
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="240dom_exemple.html">
-                                    E -  Exemple récapitulatif
+                                    E - Exemple récapitulatif
                                 </a>
                             </li>
                         </ul>
@@ -235,9 +237,10 @@
             <section>
                 <h3>a - Avec un fichier HTML</h3>
                 <article>
-                <p>Commençons par envisager le javascript coté client. Nous verrons le javascript coté serveur avec
-                    <code>ExpressJs</code></p>
-                <pre><code class="language-html" data-lang="html">&lt!DOCTYPE html&gt
+                    <p>Commençons par envisager le javascript coté client. Nous verrons le javascript coté serveur avec
+                        <code>ExpressJs</code></p>
+                    <div class="highlight">
+                    <pre><code class="language-html" data-lang="html">&lt!DOCTYPE html&gt
 &lthtml&gt
     &lthead&gt
         &lttitle&gtCours JavaScript&lt/title&gt
@@ -256,25 +259,27 @@
             &lt!-- Bonne pratique : mettre ici un script javascript --&gt
         &lt/script&gt
     &lt/body&gt
-&lt/html&gt</code></pre>
-                <p>Les scripts javascript peuvent être placés à deux endroits :</p>
-                <ul>
-                    <li>dans la balise Head, dans ces conditions, le script sera exécuté avant le chargement du body
-                    </li>
-                    <li>à la fin du body, le script sera exécuté après le chargement du body</li>
-                </ul>
-                <div class="bd-callout bd-callout-info">
-                    <h4 class="text-info">Bonnes pratiques</h4>
-                    <p>Comme le langage script est tès rapide, il est préférable de mettre les scripts à la fin du body,
-                        pour permettre au langage HTML de se charger d'abord.</p>
-                </div>
-                <p>La forme du script peut être soit :</p>
-                <ul>
-                    <li>des lignes de code</li>
-                    <li>le nom d'un fichier, comme s<code>script.js</code>, ce qui permet de séparer les langages, comme
-                        dans le cas du css.
-                    </li>
-                </ul>
+&lt/html&gt</code></pre></div>
+                    <p>Les scripts javascript peuvent être placés à deux endroits :</p>
+                    <ul>
+                        <li>dans la balise Head, dans ces conditions, le script sera exécuté avant le chargement du body
+                        </li>
+                        <li>à la fin du body, le script sera exécuté après le chargement du body</li>
+                    </ul>
+                    <div class="bd-callout bd-callout-info">
+                        <h4 class="text-info">Bonnes pratiques</h4>
+                        <p>Comme le langage script est tès rapide, il est préférable de mettre les scripts à la fin du
+                            body,
+                            pour permettre au langage HTML de se charger d'abord.</p>
+                    </div>
+                    <p>La forme du script peut être soit :</p>
+                    <ul>
+                        <li>des lignes de code</li>
+                        <li>le nom d'un fichier, comme s<code>script.js</code>, ce qui permet de séparer les langages,
+                            comme
+                            dans le cas du css.
+                        </li>
+                    </ul>
                 </article>
                 <h3>b - Avec un serveur javascript comme NodeJs</h3>
                 <article>
@@ -296,7 +301,8 @@
             </section>
             <h2 id="syntaxe">4 - La syntaxe</h2>
             <section>
-                <p><strong>Le point-virgule</strong> est généralement utilisé en informatique pour indiquer la fin d’une instruction,
+                <p><strong>Le point-virgule</strong> est généralement utilisé en informatique pour indiquer la fin d’une
+                    instruction,
                     c’est-à-dire pour séparer deux instructions l’une de l’autre et cela va également être le cas en
                     JavaScript.
                 <p>

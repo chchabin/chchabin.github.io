@@ -334,7 +334,8 @@
                 </ol>
                 <p>Comme notre fichier <code>TPModel.php</code> contient des données, c'est un modèle, nous le nommerons <code>m_model.php</code>.
                 Nous allons toutefois changer les valeurs du tableau associatif, car le routage sera un petit peu différent.</p>
-                <pre><code class="language-php" data-lang="php">&lt;?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt;?php
 //Déclaration de variables
 $lang = array();
 $menu01 = ['accueil' => 'accueil',
@@ -348,7 +349,8 @@ $form01 = 'Valider';
 $form02 = 'Sign in';
 $lang = $menu01;</code></pre>
                 <p>Comme le fichier <code>TPEntete.php</code> contient l'en-tête HTML, qui sert à l'affichage, nous le nommerons <code>v_entete.php</code> : </p>
-                <pre><code class="language-php" data-lang="php">&lt!doctype html&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt!doctype html&gt
 &lthead lang="fr"&gt
     &lthead&gt
         &lt!-- Required meta tags --&gt
@@ -366,7 +368,8 @@ $lang = $menu01;</code></pre>
                 <p>la situation est la même pour <code>TPNav.php</code>. Nous le nommerons <code>v_nav.php</code>.
                 Notez que la structure des liens a changé, l'URL s'écrit maintenant comme expliquée dans cette
                     <a href="php043Transmission.html#transmissionURL">partie</a>.</p>
-                <pre><code class="language-php" data-lang="php">&ltnav class="navbar navbar-expand-lg navbar-light bg-light"&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&ltnav class="navbar navbar-expand-lg navbar-light bg-light"&gt
     &ltul class="navbar-nav"&gt
         &lt?php foreach ($lang as $cle =&gt $valeur): ?&gt
             &ltli  class="nav-item"&gt
@@ -377,14 +380,16 @@ $lang = $menu01;</code></pre>
 &lt/nav&gt
 &ltnav class="bd-subnavbar py-2" aria-label="Secondary navigation"&gt&lt/nav&gt</code></pre>
                 <p>Enfin, pour <code>TPPied.php</code>, nous le nommerons <code>v_pied.php</code></p>
-                <pre><code class="language-php" data-lang="php">&lt!-- Option 1: Bootstrap Bundle with Popper --&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt!-- Option 1: Bootstrap Bundle with Popper --&gt
 &ltscript src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"&gt&lt/script&gt
 &lt/body&gt
 &lt/html&gt</code></pre>
                 <p>Il existe encore deux vues :
                     <br><code>TPAccueil.php</code> devient <code>v_accueil.php</code>, <strong>vous noterez néanmoins la disparition des</strong>
                     <code>include</code>  </p>
-                <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
     &ltdiv class="bg-light row align-items-center"&gt
         &ltdiv class="col"&gt
         &lth1 class="display-4"&gtCeci est la page d'accueil!&lt/h1&gt
@@ -397,7 +402,8 @@ $lang = $menu01;</code></pre>
 &lt/div&gt</code></pre>
                 <p><code>TPConstruction.php</code> va devenir, <code>v_construction.php</code>. <strong>vous noterez aussi la disparition des</strong>
                     <code>include</code></p>
-                <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
         &ltdiv class="bg-light row align-items-center"&gt
             &ltdiv class="col"&gt
                 &lth1 class="display-4"&gtPage en construction!&lt/h1&gt
@@ -416,6 +422,7 @@ $lang = $menu01;</code></pre>
                     <p>Le serveur que vous utilisez, apache ou nginx, est paramétré pour lire d'abord les fichiers <code>index</code> avec les extensions soit html, soit php.
                     Voila pourquoi notre fichier s'appelle index.php car ce sera le premier fichier lu automatiquement par le serveur.
                     <br>Voici le code lié à ce fichier :</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt?php
 include('m_model.php');
 include('v_entete.php');
@@ -468,6 +475,7 @@ include('v_Pied.php') ;</code></pre>
                     <p>Vous allez modifier la page <code>v_construction.php</code> afin de l'adapter à tous les messages d'erreur que le site pourra rencontrer.
                     Vous allez remplacer le texte par une variable <code>message</code> qui sera instanciée par le contrôleur.
                     Vous obtenez :</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
     &ltdiv class="bg-light row align-items-center"&gt
         &ltdiv class="col"&gt
@@ -482,6 +490,7 @@ include('v_Pied.php') ;</code></pre>
                     vous voyez apparaitre une valeur pour les deux variables <code>uc</code> et <code>action</code>.
                     Comme nous n'avons qu'un contrôleur, la valeur de uc sera toujours la même. La valeur de action affectera
                     l'ouverture de la page dans le contrôleur. Voici son code :</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt;?php
 $action = $_REQUEST['action'];
 switch($action)
@@ -546,7 +555,8 @@ switch($action)
             <section>
                 <p>A l'aide de ce que nous avons fait dans le TP02, nous allons établir une version anglaise de ce site.
                     Il faut tout d'abord modifier le fichier <code>v_nav.php</code> pour mettre le formulaire de choix.</p>
-                <pre><code class="language-php" data-lang="php">&ltnav class="navbar navbar-expand-lg navbar-light bg-light"&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&ltnav class="navbar navbar-expand-lg navbar-light bg-light"&gt
     &ltul class="navbar-nav"&gt
         &lt?php foreach (array_slice($lang,0,count($lang)-1) as $cle =&gt $valeur): ?&gt
             &ltli  class="nav-item"&gt
@@ -567,7 +577,8 @@ switch($action)
                    <p>Vous remarquerez que l'action du formulaire a changée. L'url pointe sur l'action 'accueil' du contrôleur.
                    Mais pour connaitre le tableau à modifier il faut connaitre la réponse du formulaire. Elle se fera dans le fichier
                        <code>index</code>. Modifiez l'index de la façon suivante :</p>
-                <pre><code class="language-php" data-lang="php">&lt?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt?php
 include('m_model.php');
 include('v_entete.php');
 
@@ -604,7 +615,8 @@ switch($uc)
 include('v_Pied.php') ;</code></pre>
                 <p>Vous avez rajouté ici, la gestion de la langue. Mais pour que cela fonctionne, il faut que la page d'accueil soit en anglais.
                 Vous allez créer une page <code>v_welcome.php</code> dans laquelle vous mettrez le code suivant :</p>
-                <pre><code class="language-html" data-lang="html">&ltdiv class="container"&gt
+                <div class="highlight">
+                    <pre><code class="language-html" data-lang="html">&ltdiv class="container"&gt
     &ltdiv class="bg-light row align-items-center"&gt
         &ltdiv class="col"&gt
             &lth1 class="display-4"&gtWelcome&lt/h1&gt
@@ -616,7 +628,8 @@ include('v_Pied.php') ;</code></pre>
     &lt/div&gt
 &lt/div&gt</code></pre>
                 <p>Il faut enfin dire au contrôleur de faire le changement de page en fonction de la langue.</p>
-                <pre><code class="language-php" data-lang="php">case 'accueil':
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">case 'accueil':
     {
         if($selected=='Anglais')
         {

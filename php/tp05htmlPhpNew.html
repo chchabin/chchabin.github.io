@@ -331,7 +331,8 @@
                     <br>Pour éviter cela, il faut conserver la valeur de la variable en mémoire, grâce à la Session.
                     Pour ce faire, modifiez la page <code>index.php de cette façon :</code>
                 </p>
-                <pre><code class="language-php" data-lang="php">session_start();
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">session_start();
 
 //Gestion de la langue
 if (!isset($_REQUEST['langue'])&&!isset($_SESSION['selected'])) {
@@ -350,7 +351,8 @@ if (!isset($_REQUEST['langue'])&&!isset($_SESSION['selected'])) {
 }
 include('v_nav.php');</code></pre>
                 <p>Pour éviter d'avoir à tout changer vous modifierez le contrôleur <code>c_controleur</code> de cette façon :</p>
-                <pre><code class="language-php" data-lang="php">$action = $_REQUEST['action'];
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">$action = $_REQUEST['action'];
 $selected=isset($_SESSION)?$_SESSION['selected']:'Français';</code></pre>
                 <div class="bd-callout bd-callout-warning bg-warning">
                     <h4><i class="bi bi-cone-striped"></i> En vous aidant de la documentation php répondez aux questions suivantes :</h4>
@@ -367,7 +369,8 @@ $selected=isset($_SESSION)?$_SESSION['selected']:'Français';</code></pre>
                 <section>
                 <p>La modification est partielle comme vous l'avez vu en répondant à la dernière question. Nous allons donc modifier notre code
                 pour avoir une stabilité du menu.</p>
-                <pre><code class="language-php" data-lang="php">//Gestion de la langue
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">//Gestion de la langue
 if (!isset($_REQUEST['langue'])&&!isset($_SESSION['selected'])) {
     $_SESSION['lang'] = $menu01;
     $_SESSION['selected']  = $menu01['langage'];

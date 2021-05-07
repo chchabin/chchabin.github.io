@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Fullstack</title>
 
@@ -236,7 +237,8 @@
                 <h2 id="createElement">2 - createElement</h2>
                 <section>
                     <p>La méthode <code>createElement()</code> permet de créer un nouveau nœud élément (balise).</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">const li = document.createElement('li');</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const li = document.createElement('li');</code></pre></div>
                     <p>Ici, c'est un nœud correspondant à la balise <code>&ltli&gt</code> qui est créé.</p>
                     <div class="bd-callout bd-callout-warning">
                         <h4 class="text-warning">Attention</h4>
@@ -248,16 +250,19 @@
                 <section>
                     <p>La méthode createTextNode(données) génère un nœud de texte. Le paramètre « données » est la
                         chaîne qui spécifie le contenu du nœud de texte.</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">const node=document.createTextNode(`Tille : jeantille@mail.fr`)</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const node=document.createTextNode(`Tille : jeantille@mail.fr`)</code></pre></div>
                     <p>Le couple d'information <code>Tille : jeantille@mail.fr</code> est inséré dans le noeud.</p>
                 </section>
                 <h2 id="appendChild">4 - appendChild</h2>
                 <section>
                     <p>La méthode appendChild() ajoute un nœud à la fin de la liste des enfants d'un nœud parent
                         spécifié.</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">li.appendChild(node);</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">li.appendChild(node);</code></pre></div>
                     <p>Ici, le lien est fait entre le nœud élément et le texte qui lui est associé.</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">ul.appendChild(li);</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">ul.appendChild(li);</code></pre></div>
                     <p>Ici le nœud enfant est associé au nœud parent <code>ul</code>.</p>
                     <div class="bd-callout bd-callout-warning">
                         <h4 class="text-warning">Remarque</h4>

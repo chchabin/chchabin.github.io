@@ -8,8 +8,9 @@
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-  <link rel="icon" type="image/png"  href="../img/favicon.png">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>PHP Ex02</title>
 
 </head>
@@ -327,6 +328,7 @@
                 <h3 id="tp01ex1a">a - Exécution du script</h3>
                 <article>
                     <p>La structure de l'application est la suivante :</p>
+                    <div class="highlight">
                     <pre><code class="language-sh" translate="no">├── index.php
 ├── v_gabarit_entete.php
 ├── v_gabarit_pied.php
@@ -336,6 +338,7 @@
 └── style.css
 </code></pre>
                     <p>Voici le fichier <code>index.php</code> :</p>
+                    <div class="highlight">
                     <pre><code class="language-php" translate="no">&lt?php
 include("vue/v_gabarit_entete.php") ;
 
@@ -370,6 +373,7 @@ include("vue/v_gabarit_pied.php") ;</code></pre>
                     <br>Ce programme utilise un gabarit, c'est-à-dire une structure qui sera permanente, en occurrence une entête et un pied
                     de page, qui sera permanent quelque soit la vue appelée. Voici le fichier <code>v_gabarit_entete.php</code>
                     pour l'entête :</p>
+                    <div class="highlight">
                     <pre><code class="language-html" translate="no">&lt!doctype&gt
 &lthtml lang="fr"&gt
 &lthead&gt
@@ -390,6 +394,7 @@ include("vue/v_gabarit_pied.php") ;</code></pre>
     &lt/header&gt
     &ltdiv id="contenu"&gt</code></pre>
                 <p>Voici le fichier <code>v_gabarit_pied.php</code> pour le pied de page :</p>
+                    <div class="highlight">
                     <pre><code class="language-html" translate="no">&lt/div&gt &lt!-- #contenu --&gt
         &ltfooter id="piedBlog"&gt
             Blog réalisé avec PHP, HTML5 et CSS.
@@ -398,6 +403,7 @@ include("vue/v_gabarit_pied.php") ;</code></pre>
 &lt/body&gt
 &lt/html&gt</code></pre>
                     <p>Pour cet exemple les autres vue sont simplement crées pour tester le bon fonctionnement du pattern :</p>
+                    <div class="highlight">
                     <pre><code class="language-html" translate="no">&lt!-- Créez la vue accueil --&gt
 &ltp&gtCeci est la vue accueil !&lt/p&gt
 &lt!-- Créez la vue erreur (sur un autre fichier bien sûr) --&gt
@@ -405,6 +411,7 @@ include("vue/v_gabarit_pied.php") ;</code></pre>
 <h2> <?php echo $message; ?></h2>
 </code></pre>
                     <p>La vue ajouter est un formulaire :</p>
+                    <div class="highlight">
                     <pre><code class="language-html" translate="no">&ltform method="post" action="index.php"&gt
     &ltdiv&gt
         &ltlabel for="untitre"&gtVeuillez choisir le titre du billet:&lt/label&gt
@@ -421,6 +428,7 @@ include("vue/v_gabarit_pied.php") ;</code></pre>
 &lt/form&gt</code></pre>
 
                     <p>Pour finir n'oubliez pas la partie css avec le fichier style.css :</p>
+                    <div class="highlight">
                     <pre><code class="language-css" translate="no">/* Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
    (min-height) sur un bloc, il faut que son parent direct ait lui-même une
    hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
@@ -523,6 +531,7 @@ h1 {
                         <p>Modifier le fichier index.php en créant un contrôleur.</p>
                     </div>
                     <p>En rajoutant le contrôleur, la structure ressemblera au schéma suivant :</p>
+                    <div class="highlight">
                     <pre><code class="language-sh" translate="no">├── index.php
 ├── c_controleur.php
 ├── v_gabarit_entete.php

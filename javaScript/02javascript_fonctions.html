@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Fonctions</title>
 
@@ -227,11 +228,12 @@
                         de la fonction. Dans sa forme générale elle correspond à :</p>
                     <div class="bd-callout bd-callout-info">
                         <h4>Déclaration générale de fonction :</h4>
-                        <pre><code class="language-js" data-lang="js" translate="no">function nomDeLaFonction (parametre1, parametre2, parametre3 ...) {
+                        <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">function nomDeLaFonction (parametre1, parametre2, parametre3 ...) {
   // instructions javascript
   // pouvant utiliser les paramètres parametre1, parametre2 et parametre3
   return resultat;
-}</code></pre>
+}</code></pre></div>
                     </div>
                     <div class="bd-callout bd-callout-info">
                         <h4>Définition d’une fonction</h4>
@@ -256,15 +258,17 @@
                     </div>
                     <p>Cela donne concrètement :</p>
                     <p>Déclaration générale de fonction maximum :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function maximum( nb1, nb2, nb3)
     {
         int max = nb1;
         if (nb2 > max) {max = nb2;}
         if (nb3 > max) {max = nb3;}
         return max;
-    }</code></pre>
+    }</code></pre></div>
                     <p>Appel de la fonction :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">maximum(1, 2, 3); // retourne 3</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">maximum(1, 2, 3); // retourne 3</code></pre></div>
                 </article>
                 <h3 id="argument">b - la gestion des arguments</h3>
                 <article>
@@ -278,19 +282,22 @@
                             Vous pouvez récupérer chaque argument à partir de l’indice de l’objet arguments.</p>
                     </div>
                     <p>Soit l'exemple suivant :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function invitation(){
     console.log(`Il y a ${arguments.length} invités qui sont : `);
     for(let i=0;i &lt arguments.length;i++){
         console.log(arguments[i]);
     }
-}</code></pre>
+}</code></pre></div>
                     <p>L'appel de la fonction donne :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">invitation("dany","roby"); // affiche : Il y a 2 invités qui sont : dany roby </code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">invitation("dany","roby"); // affiche : Il y a 2 invités qui sont : dany roby </code></pre></div>
                     <p>A la différence des autres langages, il n'est pas nécessaire de déclarer les paramètres dans la
                         signature de la fonction.</p>
                     <div class="bd-callout bd-callout-info">
                         <h4>Transformer l’objet arguments en tableau</h4>
-                        <pre><code class="language-js" data-lang="js" translate="no">const tabArgs = Array.prototype.slice.call(arguments);</code></pre>
+                        <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const tabArgs = Array.prototype.slice.call(arguments);</code></pre></div>
                     </div>
                 </article>
                 <h3 id="rest">c - Les paramètres rest</h3>
@@ -301,44 +308,50 @@
                         ou des méthodes de celui-ci, à l'exception de length.
                         <br>Les paramètres rest vous permettent de récupérer un véritable Array à l'aide du simple
                         préfixe <code>...</code> appliqué sur le dernier argument de votre fonction.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function invitation(separator, ...words) {
   return words.join(separator);
 }
 
-invitation("-", "dany","roby"); // "dany-roby"</code></pre>
+invitation("-", "dany","roby"); // "dany-roby"</code></pre></div>
                 </article>
                 <h3 id="spread">d - L'opérateur spread</h3>
                 <article>
                     <p>Aussi appelé opérateur de décomposition, il permet de développer un objet itérable (comme un
                         <code>Array</code>) lorsqu'on a besoin de plusieurs arguments.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const myArray = [1991, 8, 1]
 new Date(...myArray) // object Date - équivaut à: new Date(1991, 8, 1)
 
 const myString = "foo bar"
 // les objets String étant itérables
-[...myString] // ["f", "o", "o", " ", "b", "a", "r"]</code></pre>
+[...myString] // ["f", "o", "o", " ", "b", "a", "r"]</code></pre></div>
                     <p>À noter que contrairement aux paramètres rest, l'opérateur spread peut être mélangé aux autres
                         arguments d'une fonction.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const myArray = [8, 1];
-new Date(1991, ...myArray, 12); // object Date - équivaut à: new Date(1991, 8, 1, 12)</code></pre>
+new Date(1991, ...myArray, 12); // object Date - équivaut à: new Date(1991, 8, 1, 12)</code></pre></div>
                     <p>Les possibilités offertes par cette nouveauté sont très nombreuses. Voici quelques usages un peu
                         plus avancés pour stimuler votre inspiration :</p>
                     <h4>Concaténer plusieurs itérables</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const stronglyTyped = ["scala", "haskell"]
 
 // ES6 / ES2015
-["go", "rust", ...stronglyTyped] // ["go", "rust", "scala", "haskell"]</code></pre>
+["go", "rust", ...stronglyTyped] // ["go", "rust", "scala", "haskell"]</code></pre></div>
                     <h4>Déstructurer dans un tableau</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const words = ["foo", "bar", "baz"];
 
 // ES6 / ES2015
 const [first, ...rest] = words;
-console.log(rest) // ["bar", "baz"]</code></pre>
+console.log(rest) // ["bar", "baz"]</code></pre></div>
                     <p>Cela marche aussi avec des objets :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const words = {param1:"foo", param2:"bar", param3:"baz"};
 
 const {param2, ...rest} = words;
-console.log(rest)  //  {param1:"foo", param3:"baz"}</code></pre>
+console.log(rest)  //  {param1:"foo", param3:"baz"}</code></pre></div>
                 </article>
             </section>
             <h2 id="portee">2 - la portée des variables</h2>
@@ -348,40 +361,44 @@ console.log(rest)  //  {param1:"foo", param3:"baz"}</code></pre>
                     Une variable déclarée dans la fonction ne pourra pas être utilisée à l’extérieur.</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Portée globale</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const nb = 2;
 function affiche(){
     console.log(nb);
 }
-affiche(); // affichera 2</code></pre>
+affiche(); // affichera 2</code></pre></div>
                 </div>
                 <p>Les variables définies en dehors d'une fonction sont accessibles dans la fonction. Elles peuvent être
                     modifiées en dehors de la fonction aussi bien que par la fonction elle-même. On dit qu'elles ont une
                     portée globale.</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Portée locale</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function affiche(){
     const nb=2;
     console.log(nb);
 }
 affiche(); // affichera 2
-console.log(nb); // affichera une erreur</code></pre>
+console.log(nb); // affichera une erreur</code></pre></div>
                 </div>
                 <p>Les variables définies dans une fonction, ainsi que les arguments d'une fonction ne sont disponibles
                     qu'à l'intérieur de la fonction. On dit qu'elles ont une portée locale</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Variables passées en argument</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">let nb = 2;
 function affiche(nb){
     nb=nb+1
     console.log(nb);
 }
 affiche(nb); // affichera 3
-console.log(nb) // affichera 2</code></pre>
+console.log(nb) // affichera 2</code></pre></div>
                 </div>
                 <p>Lorsque la variable est passé en argument elle devient locale dans la fonction. C'est la valeur de la
                     variable qui est passée.</p>
                 <div class="bd-callout bd-callout-info">
                     <h4><a href="08javascript_objet.html" target="_blank">Objet</a> passé en argument</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const monObjet={
     nb : 2
 }
@@ -392,7 +409,7 @@ function affiche(Obj){
 }
 affiche(monObjet); // affichera 3
 console.log(monObjet) // affichera {nb:3}
-</code></pre>
+</code></pre></div>
                 </div>
                 <p>Le comportement est différent pour les objets et les tableaux (qui sont aussi des objets) car les
                     variables qui permettent d'y accéder contiennent en fait une référence vers l'objet. C'est donc la
@@ -405,10 +422,11 @@ console.log(monObjet) // affichera {nb:3}
                     seule fois.</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Création d'une fonction anonyme</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function (){
     const nb=2;
     console.log(nb);
-} // ici une fonction anonyme est créée, mais sans l'exécuter</code></pre>
+} // ici une fonction anonyme est créée, mais sans l'exécuter</code></pre></div>
                 </div>
                 <p>Il existe une syntaxe un peu spéciale qui permet d'exécuter une fonction anonyme : il faut englober
                     la fonction anonyme dans des parenthèses. l'ensemble devient donc une fonction que l'on peut
@@ -416,19 +434,21 @@ console.log(monObjet) // affichera {nb:3}
                     son absence provoquant parfois des erreurs)</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Exécution d'une fonction anonyme</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function (){
     const nb=2;
     console.log(nb);
-} ();   // Attention ici il faut le point virgule pour l'exécuter.</code></pre>
+} ();   // Attention ici il faut le point virgule pour l'exécuter.</code></pre></div>
                 </div>
                 <p>Une fonction n'est en fait qu'une variable un peu spéciale, on peut l'affecter à une variable :</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Exécution d'une fonction anonyme en l'affectant à une variable</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const afficher=function (){
     const nb=2;
     console.log(nb);
 };   // Attention ici il faut le point virgule.
-afficher(); // affichera 2</code></pre>
+afficher(); // affichera 2</code></pre></div>
                 </div>
             </section>
             <h2 id="closure">4 - la closure</h2>
@@ -443,6 +463,7 @@ afficher(); // affichera 2</code></pre>
                     Voici un exemple :</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Déclaration d'une closure</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function MaFonction(nombre) {
     console.log(`nombre : ${nombre}`)
     function Ajouter(valeur) {
@@ -456,14 +477,15 @@ afficher(); // affichera 2</code></pre>
     //j'ai donc le droit de la rendre en
     // tant que résultat de la fonction
     return Ajouter;
-}</code></pre>
+}</code></pre></div>
                 </div>
                 <p>Voici les résultat en faisant plusieurs appels :</p>
                 <div class="bd-callout bd-callout-info bg-secondary text-white">
                     <h4>Résultat :</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const a = MaFonction(10); // affiche nombre : 10
 console.log(a(2)) // affiche nombre : 10 valeur : 2 12
-console.log(a(3)) // affiche nombre : 10 valeur : 3 13</code></pre>
+console.log(a(3)) // affiche nombre : 10 valeur : 3 13</code></pre></div>
                 </div>
                 <p>La première valeur 10 est <code>clôturée</code>. Elle n'est plus accessible après les appels suivant.
                     Seul la variable valeur
@@ -483,6 +505,7 @@ console.log(a(3)) // affiche nombre : 10 valeur : 3 13</code></pre>
                     son absence provoquant parfois des erreurs)</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Exemple</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// es5
 var myFn = function(x) {
   return x + 1;
@@ -493,12 +516,13 @@ const myFn = x => {
   return x + 1;
 };.
 // ou encore plus simple
-const myFn = x =>  x + 1;</code></pre>
+const myFn = x =>  x + 1;</code></pre></div>
                 </div>
                 <p>Les fonctions fléchées sont syntaxiquement similaires à ce qu'on trouve déjà dans d'autres langages
                     comme Java (8+), C#, PHP…
                     <br>Les exemples suivants sont donc tous les mêmes :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x) => {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x) => {
   return x + 1;
 };
 // ===
@@ -506,56 +530,63 @@ const myFn = (x) => x + 1;
 // ===
 const myFn = x => x + 1;
 // ===
-const myFn = x => (x + 1);</code></pre>
+const myFn = x => (x + 1);</code></pre></div>
                 <p>Notez que dans le cas, où il y a plusieurs arguments, il faut des parenthèses :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x,y) => x+y;</code></pre>
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x,y) => x+y;</code></pre></div>
                 <p>Dans le cas, où il y a des accolades (et le plus souvent plusieurs instructions), il faut un return
                     :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x,y) => {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const myFn = (x,y) => {
  return x+y;
-};                </code></pre>
+};                </code></pre></div>
                 <p>Dans le cas des Objets, Les fonctions fléchées n'ont pas de this.
                     <br>Attention à la façon d'écrire les fonctions :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const aFn = obj => {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const aFn = obj => {
   key: obj.value;
 };
 const anObj = {
   value: 'my value'
 };
-console.log(aFn(anObj)); // undefined</code></pre>
+console.log(aFn(anObj)); // undefined</code></pre></div>
                 <p>Il faudra préférer cette écriture :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const aFn = obj => {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const aFn = obj => {
   return { key: obj.value };
 };
 // ou plus simplement
-const aFn = obj => ({ key: obj.value }); // It works !</code></pre>
+const aFn = obj => ({ key: obj.value }); // It works !</code></pre></div>
             </section>
             <h2 id="hissage">6 - le hissage (Hosting)</h2>
             <section>
                 <p>En Javascript, les variables sont hissées en haut de l'étendue dans laquelle elles sont déclarées.
                     <br>Ainsi, le code suivant :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">function nomChat(nom) {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">function nomChat(nom) {
   console.log("Le nom de mon chat est " + nom);
 }
 
 nomChat("Tigrou");
 /*
 Le résultat du code ci-dessus est : "Le nom de mon chat est Tigrou"
-*/</code></pre>
+*/</code></pre></div>
                 <p>est équivalent à :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">nomChat("Chloé");
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">nomChat("Chloé");
 
 function nomChat(nom) {
   console.log("Le nom de mon chat est " + nom);
 }
 /*
 Le résultat du code ci-dessus est : "Le nom de mon chat est Chloé"
-*/</code></pre>
+*/</code></pre></div>
                 <p>Mais cela ne fonctionne pas dans le cas suivant :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">num = 6; // initialisation
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">num = 6; // initialisation
 num + 7;
 var num;
-/* Ne donne aucune erreur tant que num est déclarée*/</code></pre>
+/* Ne donne aucune erreur tant que num est déclarée*/</code></pre></div>
                 <p>Car JavaScript hisse seulement les déclarations, pas les initialisations.</p>
             </section>
         </div>

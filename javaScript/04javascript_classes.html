@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Classes</title>
 
 </head>
@@ -37,7 +38,8 @@
             <ul class="list-unstyled mb-0 py-3 pt-md-1">
                 <li class="mb-1 active">
                     <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
-                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
                         1 - Programmer avec Javascript
                     </button>
                     <div class="collapse show" id="javascript_programmer">
@@ -170,13 +172,13 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="230dom_event.html">
-                                    D -  Associer un évènement à un nœud
+                                    D - Associer un évènement à un nœud
                                 </a>
                             </li>
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="240dom_exemple.html">
-                                    E -  Exemple récapitulatif
+                                    E - Exemple récapitulatif
                                 </a>
                             </li>
                         </ul>
@@ -201,10 +203,12 @@
                     <li><a href="#predef">1 - Structure d'une classe</a></li>
                     <li><a href="#construct">2 - Constructeur</a></li>
                     <li><a href="#prop">3 - Propriétés</a></li>
-                    <li><ul>
-                        <li><a href="#staticfield">a - Propriété statique</a></li>
-                        <li><a href="#private">b - Propriétés privées</a></li>
-                    </ul></li>
+                    <li>
+                        <ul>
+                            <li><a href="#staticfield">a - Propriété statique</a></li>
+                            <li><a href="#private">b - Propriétés privées</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#getset">4 - Getters et Setters</a></li>
                     <li><a href="#static">5 - Méthodes et propriétés statiques</a></li>
                     <li><a href="#collection">6 - Les collections</a></li>
@@ -221,7 +225,8 @@
                     principalement du sucre syntaxique mais offrent des concepts de programmation orientés objet plus
                     familiers.
                     <br>La déclaration est la suivante :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class Produit {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class Produit {
 
     constructor( code='',  lib='',  px=0,  qte=0) {
 
@@ -235,19 +240,21 @@
     {
         return `code :  ${this.code} lib : ${this.lib} prix : ${this.px} Quantité en stock : ${this.qte}`;
     }
-}</code></pre>
+}</code></pre></div>
                 <p>Cette classe dispose d'un constructeur, avec le mot réservé <code>constructor</code> et d'une méthode
                     qui affiche les paramètres <code>ToString</code>.
                     Comme en C# le mot clé <code>this</code> fait référence à une propriété, mais qui est ici <code>public</code>
                     et non déclarée.
                     <br>L'instanciation est relativement simple :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1); //Instanciation de l'objet
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1); //Instanciation de l'objet
 console.log(lessive.ToString()); // appel et affichage de la méthode ToString
-console.log(lessive.px); // appel de la propriété prix</code></pre>
+console.log(lessive.px); // appel de la propriété prix</code></pre></div>
                 <div class="bd-callout bd-callout-info bg-secondary text-white">
                     <h4>Résultat :</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">code :  10 lib : lessive prix : 12 Quantité en stock : 1
-12</code></pre>
+12</code></pre></div>
                 </div>
                 <p>Vous voyez que les propriétés ne sont pas privées, vous pouvez y accéder par appel.</p>
                 <div class="bd-callout bd-callout-danger">
@@ -268,35 +275,39 @@ console.log(lessive.px); // appel de la propriété prix</code></pre>
                 <p>Le constructeur précédent vous montre comment déclarer un constructeur avec des valeurs par défaut
                     (ce qui en passant n'existe pas pour les fonctions.</p>
                 <p>Avec la norme ES2019 il existe une autre méthode de déclaration :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
   a = 1;
   b = 2;
   c = 3;
-}</code></pre>
+}</code></pre></div>
                 <p>Ceci équivaut à:</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
   constructor() {
     this.a = 1;
     this.b = 2;
     this.c = 3;
   }
-}</code></pre>
+}</code></pre></div>
 
             </section>
             <h2 id="prop">3 - Propriétés</h2>
             <section>
                 <h3 id="staticfield">a - Propriété statique</h3>
                 <article>
-                <p>La déclaration de champs <code>statique</code> est</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+                    <p>La déclaration de champs <code>statique</code> est</p>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
   x = 1;
   y = 2;
   static z = 3;
 }
 
-console.log( MyClass.z ); // 3</code></pre>
-                <p>Elle est équivalente à</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+console.log( MyClass.z ); // 3</code></pre></div>
+                    <p>Elle est équivalente à</p>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
 
   constructor() {
     this.x = 1;
@@ -307,13 +318,15 @@ console.log( MyClass.z ); // 3</code></pre>
 
 MyClass.z = 3;
 
-console.log( MyClass.z ); // 3</code></pre>
+console.log( MyClass.z ); // 3</code></pre></div>
                 </article>
                 <h3 id="private">b - Propriétés privées</h3>
                 <article>
-                <p>Dans ES2019, les champs de classe <code>privée</code> sont définis à l'aide d'un préfixe de hachage
-                    <code>#</code> :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
+                    <p>Dans ES2019, les champs de classe <code>privée</code> sont définis à l'aide d'un préfixe de
+                        hachage
+                        <code>#</code> :</p>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class MyClass {
 
   a = 1;          // .a is public
   #b = 2;         // .#b is private
@@ -328,8 +341,8 @@ console.log( MyClass.z ); // 3</code></pre>
 let m = new MyClass();
 
 m.incB(); // runs OK
-m.#b = 0; // error - private property cannot be modified outside class</code></pre>
-                <p>Notez qu'il n'y a aucun moyen de définir des méthodes privées, des getters ou des setters.</p>
+m.#b = 0; // error - private property cannot be modified outside class</code></pre></div>
+                    <p>Notez qu'il n'y a aucun moyen de définir des méthodes privées, des getters ou des setters.</p>
                 </article>
             </section>
             <h2 id="getset">4 - Getters et Setters</h2>
@@ -351,7 +364,8 @@ m.#b = 0; // error - private property cannot be modified outside class</code></p
                 <p>Voilà pourquoi on les appelle aussi des getters
                     <br>En javascript, ils commencent par get
                     <br>Voici un exemple</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class Produit {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class Produit {
     // Déclaration privée des propriétés
     #code;
     #lib;
@@ -389,27 +403,30 @@ m.#b = 0; // error - private property cannot be modified outside class</code></p
         if (this.#px < p.getPrix) { rep = false; }
         return rep;
     }
-}</code></pre>
+}</code></pre></div>
                 <p>Nous avons les appels suivants :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1);
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1);
 const eau=new Produit(20,`eau 1,5l`,5,1);
 console.log(lessive.ToString()); // code :  10 lib : lessive prix : 12 Quantité en stock : 1
 console.log(lessive.getPrix); // 12
 lessive.setLib='lessive de qualité';
 console.log(lessive.ToString()); // code :  10 lib : lessive de qualité prix : 12 Quantité en stock : 1
 console.log(lessive.estplusChere(eau) // true
-                </code></pre>
+                </code></pre></div>
 
 
             </section>
             <h2 id="static">5 - Méthodes et propriétés statiques</h2>
             <section>
-                <p>La définition d'une méthode avec le mot - clé <code>static</code> lui permet d'être appelée sur une classe sans
+                <p>La définition d'une méthode avec le mot - clé <code>static</code> lui permet d'être appelée sur une
+                    classe sans
                     créer d'instance d'objet.
                     ES6 ne prend pas en charge les propriétés statiques de la même manière que les autres langages, mais
                     il est possible d'ajouter des propriétés à la définition de classe elle-même.
                     <br>La méthode statique est appelée de cette façon</p>
-                <pre><code class="language-js" data-lang="js" translate="no">class Produit {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">class Produit {
     // Déclaration privée des propriétés
     #code;
     #lib;
@@ -450,21 +467,25 @@ console.log(lessive.estplusChere(eau) // true
         static log(text){
         document.write(text+ "&ltbr/&gt");
     }
-}</code></pre>
+}</code></pre></div>
                 <p>Appel affiché sur le navigateur :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">lessive.setLib='lessive pas chère';
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">lessive.setLib='lessive pas chère';
 Produit.log(lessive.ToString()); // code : 10 lib : lessive pas chère prix : 12 Quantité en stock : 1
 Produit.log(lessive.getCode);    // 10
 Produit.log(lessive.getPrix);    // 12
 Produit.log(lessive.estplusChere(eau)); // true
-                </code></pre>
+                </code></pre></div>
             </section>
             <h2 id="collection">6 - Les collections</h2>
             <section>
-                <p>Les collections ne sont pas aussi pratiques que celles qui se trouvent dans C#. Elles peuvent néanmoins être utilisées.
-                En vous réferant à la partie sur les tableau vous comprendrez pourquoi vous allez preférer la collection <code>Set</code>.
-                Voici un exemple de ce que vous pouvez obtenir :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1);
+                <p>Les collections ne sont pas aussi pratiques que celles qui se trouvent dans C#. Elles peuvent
+                    néanmoins être utilisées.
+                    En vous réferant à la partie sur les tableau vous comprendrez pourquoi vous allez preférer la
+                    collection <code>Set</code>.
+                    Voici un exemple de ce que vous pouvez obtenir :</p>
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const lessive = new Produit(10,`lessive`,12,1);
 const eau = new Produit(20,`eau 1,5l`,5,1);
 // Déclaration de la collection
 const lesProduits = new Set();
@@ -487,10 +508,11 @@ for(let unproduit of lesProduits){
 // Affichage de la collection
  console.log(lesProduits)
 
-      </code></pre>
+      </code></pre></div>
                 <div class="bd-callout bd-callout-info bg-secondary text-white">
                     <h4>Résultat de l'affichage de la collection :</h4>
-                    <p>Vous remarquerez que les indices ont été automatiquement ajoutés. Les éléments sont des objets.</p>
+                    <p>Vous remarquerez que les indices ont été automatiquement ajoutés. Les éléments sont des
+                        objets.</p>
                     <img src="img/objetSet.PNG" class="img-fluid" alt="menuAccueil">
                 </div>
             </section>

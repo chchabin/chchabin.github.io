@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>MVC-Vue</title>
 
@@ -219,7 +220,8 @@
                 </p>
                 <p>Vous allez modifier l'action voir produit dans le contrôleur après l'action voirCategories, de façon
                     à charger les données en fonction du modèle.</p>
-                <pre><code class="language-js" data-lang="js">voirProduit:async (req, res) => {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">voirProduit:async (req, res) => {
         // Récupération du code renvoyé dans l'URL
         const num=req.params.num;
 
@@ -235,7 +237,7 @@
             lesProduits:getLesProduitsDeCategorie,
             categorie:num
         });
-    },</code></pre>
+    },</code></pre></div>
                 <div class="bd-callout bd-callout-danger">
                     <h4 class="text-danger">Attention</h4>
                     <p>N'oubliez pas la virgule à la fin de voirCategorie !!!</p>
@@ -246,7 +248,8 @@
             <h2 id="model">2 - modification du modèle</h2>
             <section>
                 <p>Dans le modèle, le fichier dbConnexion, vous allez créer une requête paramétrée, </p>
-                <pre><code class="language-js" data-lang="js">getLesProduitsDeCategorie:async (param=[]) => {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">getLesProduitsDeCategorie:async (param=[]) => {
         try {
             return await new Promise((resolve, reject) => {
                  // création de la requête paramétrée
@@ -262,7 +265,7 @@
         } catch (error) {
             console.log(error);
         }
-    },</code></pre>
+    },</code></pre></div>
                 <div class="bd-callout bd-callout-danger">
                     <h4 class="text-danger">Attention</h4>
                     <p>N'oubliez pas la virgule à la fin de getLesCategories !!!</p>

@@ -8,7 +8,8 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Express Session </title>
 
 </head>
@@ -234,8 +235,9 @@
                 <h3 id="module"></h3>
                 <article>
                     <p>Dans le terminal, il faut saisir :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install express-session --save</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm install express-session --save</code></pre></div>
                     <p>Une fois le module  installé, il faut le charger dans le fichier d'appel, index.js ou app.js :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">// chargement du module
 const express = require('express')
 // appel du module
@@ -265,11 +267,12 @@ app.use((err, req, res, next) => {
 // ouverture du serveur
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-})</code></pre>
+})</code></pre></div>
                     <p>Ici, « secret » est utilisé pour la gestion des cookies, etc., mais nous devons mettre un mot de passe,
                      pour secret afin de gérer la session dans Express.</p>
                     <p>Maintenant, en utilisant la variable <code>request</code>, vous pouvez affecter une session à n'importe
                         quelle variable. Tout comme nous le faisons en PHP en utilisant la variable <code>$_SESSION</code> par exemple.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">var=sess; //variable globale, non recommandé
     app.get ( '/' , (req , res) => {
     / *
@@ -282,12 +285,13 @@ app.listen(port, () => {
     * /
     req.session.email='Jacques@gmail.com' ; // équivalent à $_SESSION ['email'] en PHP.
     req.session.username='Sionne' ; // équivalent à $_SESSION ['username'] en PHP.
-} );</code></pre>
+} );</code></pre></div>
                     <p>L'utilisation de la session est globale. Il est possible par exemple d'afficher ses valeurs de cette façon :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">app.get("/session", (req, res) => {
     const name = req.session.username
     return res.send(name)
-});</code></pre>
+});</code></pre></div>
                     <p>Ici, le serveur enverra <code>Sionne</code> au navigateur.</p>
 
                 </article>

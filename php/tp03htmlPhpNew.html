@@ -335,7 +335,8 @@
                 </ol>
                 <p>Avec cette présentation modulaire, vous pourrez plus facilement intégrer des pages liées au menu.
                 <br>Dans un premier temps créer un fichier PHP nommé <code>TPModel.php</code>, dans lequel nous mettrons toutes nos données.</p>
-                <pre><code class="language-php" data-lang="php">&lt;?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt;?php
 //Déclaration de variables
 $lang = array();
 $menu01 = ['accueil' => 'accueil',
@@ -349,7 +350,8 @@ $form01 = 'Valider';
 $form02 = 'Sign in';
 $lang = $menu01;</code></pre>
                 <p>Vous allez maintenant créer le fichier qui contiendra l'en-tête HTML : <code>TPEntete.php</code></p>
-                <pre><code class="language-php" data-lang="php">&lt!doctype html&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt!doctype html&gt
 &lthead lang="fr"&gt
     &lthead&gt
         &lt!-- Required meta tags --&gt
@@ -365,7 +367,8 @@ $lang = $menu01;</code></pre>
     &lt/head&gt
 &ltbody&gt</code></pre>
                 <p>Vous allez ensuite créer un fichier de navigation nommé <code>TPNav.php</code></p>
-                <pre><code class="language-php" data-lang="php">&ltnav class="navbar navbar-expand-lg navbar-light bg-light"&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&ltnav class="navbar navbar-expand-lg navbar-light bg-light"&gt
     &ltul class="navbar-nav"&gt
         &lt?php foreach ($lang as $cle =&gt $valeur): ?&gt
             &ltli  class="nav-item"&gt
@@ -376,7 +379,8 @@ $lang = $menu01;</code></pre>
 &lt/nav&gt
 &ltnav class="bd-subnavbar py-2" aria-label="Secondary navigation"&gt&lt/nav&gt</code></pre>
               <p>Enfin, vous allez créer le fichier de pied de page <code>TPPied.php</code></p>
-                <pre><code class="language-php" data-lang="php">&lt!-- Option 1: Bootstrap Bundle with Popper --&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt!-- Option 1: Bootstrap Bundle with Popper --&gt
 &ltscript src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"&gt&lt/script&gt
 &lt/body&gt
 &lt/html&gt</code></pre>
@@ -391,6 +395,7 @@ $lang = $menu01;</code></pre>
                 <h3 id="titrea">A - Création de la page Accueil</h3>
                 <article>
                     <p>Vous allez créer la page <code>TPAccueil.php</code> en y copiant le code suivant :</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt?php
 include 'TPModel.php';
 include 'TPEntete.php';
@@ -431,6 +436,7 @@ include 'TPNav.php'; ?&gt
                 <h3 id="titreb">B - Création de la page "En Construction"</h3>
                 <article>
                     <p>Vous allez créer la page <code>TPConstruction.php</code> en y copiant le code suivant :</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt?php
 include 'TPModel.php';
 include 'TPEntete.php';

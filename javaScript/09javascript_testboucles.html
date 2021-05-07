@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Tests Boucles</title>
 
@@ -236,12 +237,15 @@
                 <p>La notion de test et condition est commune à PHP ou C#. Vous aurez un petit rappel.</p>
                 <h3 id="testsIf">a - L'instruction <code>if</code></h3>
                 <article>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">if(nb1 &gt; nb2) {
     // sera exécuté si nb1 &gt; nb2
 else {
     // sera exécuté si nb1 &lt;= nb2
 }</code></pre>
+                </div>
                     <p>Il est aussi possible de combiner des instructions if :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">if(nb1 &gt; nb2) {
     // sera exécuté si nb1 &gt; nb2
 else if (nb2 > nb1) {
@@ -249,7 +253,7 @@ else if (nb2 > nb1) {
 }
 else {
     // sera exécuté si nb1 = nb2
-}</code></pre>
+}</code></pre></div>
                 </article>
                 <h3 id="testsCondition">b - La notion de condition</h3>
                 <article>
@@ -259,6 +263,7 @@ else {
                         <br>L’égalité stricte <code>===</code> vérifie en plus que le type des deux valeurs comparées
                         est le même.
                         <br>Exemple :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">1 == '1'; // => true
 1 === `1`; // => false (car types différents)
 
@@ -267,8 +272,10 @@ else {
 
 null == undefined; // => true
 null === undefined; // => false</code></pre>
+                </div>
                     <p>La comparaison entre valeurs de types avancés fonctionne différemment. Ce ne sont pas les valeurs
                         à proprement parler qui sont comparées, mais la référence vers cette valeur.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">[1,2] == [1,2]; // => false, car deux tableaux ont été créés
 
 const monTab = [1,2];
@@ -277,8 +284,9 @@ monTab == monTab; // => true, car la variable monTab référence un seul et mêm
 monTab == [1,2]; // => false, car ce sont deux références de tableaux différents
 
 const monTab2 = monTab;
-monTab == monTab2; // => true, car monTab2 fait référence au même tableau que monTab</code></pre>
+monTab == monTab2; // => true, car monTab2 fait référence au même tableau que monTab</code></pre></div>
                     <p><strong>Les opérateurs de comparaison</strong></p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">1 < 1; // => false
 1 > 1; // => false
 1 <= 1; // => true
@@ -287,12 +295,13 @@ monTab == monTab2; // => true, car monTab2 fait référence au même tableau que
 1 < 2; // => true
 1 > 2; // => false
 1 <= 2; // => true
-1 >= 2; // => false</code></pre>
+1 >= 2; // => false</code></pre></div>
                 </article>
                 <h3 id="testsSwitch">c - L'instruction <code>switch</code></h3>
                 <article>
                     <p>L'instruction <code>switch</code> déclenche l'exécution d'un bloc d'instructions parmi plusieurs
                         possibles. Seul le bloc correspondant à la valeur testée sera pris en compte.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">switch (nombre) {
     case 1:
         ...
@@ -305,12 +314,13 @@ monTab == monTab2; // => true, car monTab2 fait référence au même tableau que
         break;
     default:
         ...
-        break;</code></pre>
+        break;</code></pre></div>
                 </article>
                 <h3 id="ternaire">d - L'opérateur ternaire</h3>
                 <article>
                     <p>Son utilisation est comparable à celle du C# ou du PHP :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">const baseURL = config.baseURL ? config.baseURL : 'localhost';</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const baseURL = config.baseURL ? config.baseURL : 'localhost';</code></pre></div>
                 </article>
                 <h3 id="valdefaut">e - L'opérateur <code>||</code></h3>
                 <article>
@@ -318,7 +328,8 @@ monTab == monTab2; // => true, car monTab2 fait référence au même tableau que
                         variable qu’on lui affecte n’existe pas, pour cela nous utilisons l’opérateur logique
                         <code>||</code>. Cette instruction simplifie l'opérateur ternaire.
                         Soit l'instruction suivante :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">const hostname = config.baseURL || 'localhost';</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const hostname = config.baseURL || 'localhost';</code></pre></div>
                     <p>La valeur <code>hostaneme</code> prend <code>localhost</code> si la valeur de <code>config.baseURL</code>
                         est évaluée à <code>false</code>.
                         Mais cet opérateur ne fait pas de différence entre les valeurs <code>false</code> et les valeurs
@@ -332,7 +343,8 @@ monTab == monTab2; // => true, car monTab2 fait référence au même tableau que
                         la différence qu’il renvoie la première expression si celle-ci est différente de
                         <code>null</code> ou <code>undefined</code> et la seconde expression dans le cas contraire.
                         L'expression sera alors la suivante :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">const hostname = config.baseURL ?? 'localhost';</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const hostname = config.baseURL ?? 'localhost';</code></pre></div>
                     <div class="bd-callout bd-callout-danger">
                         <h4>Attention à la compatibilité !</h4>
                         <p>Votre version de navigateur ou de nodejs doit être suffisamment récente pour prendre cette
@@ -346,18 +358,20 @@ monTab == monTab2; // => true, car monTab2 fait référence au même tableau que
                 <article>
                     <p>La boucle <code>while</code> permet de répéter des instructions tant qu'une condition est
                         vérifiée.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">let i = 0;
 while (i < 10) {
     console.log('ligne ${i} de la boucle while');
     i++;
-} </code></pre>
+} </code></pre></div>
                 </article>
                 <h3 id="bouclesfor">b - La boucle <code>for</code></h3>
                 <article>
                     <p>La boucle <code>for</code> permet de répéter un bloc d'instructions un nombre défini de fois.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">for (let i=0; i < 10; i++) {
     console.log('ligne ${i} de la boucle for');
-}</code></pre>
+}</code></pre></div>
                 </article>
                 <h3 id="bouclesforeach">c - La boucle <code>foreach</code></h3>
                 <article>
@@ -369,14 +383,17 @@ while (i < 10) {
                         Elle n’est donc pas chainable avec d’autres méthodes JavaScript qui arriveraient après forEach
                     </p>
                     <h4>Exemple avec ARRAY</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const array = [1, 5, 10];
 array.forEach(function(currentValue) {
     console.log(currentValue); // result 1 5 10
-});</code></pre>
+});</code></pre></div>
                     <h4>Exemple avec Set</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const set = new Set(['a', 'b', 'c']);
-set.forEach(value => console.log(value)); // result a b c</code></pre>
+set.forEach(value => console.log(value)); // result a b c</code></pre></div>
                     <h4>Exemple avec Map</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const map = new Map();
 const keyObject = { desc: 'an object as a key'};
 
@@ -385,7 +402,7 @@ map.set('key 2', 'value 2');
 map.set(keyObject, 'value for keyObject');
 
 map.forEach((value, index) =>
-    console.log(`at key: ${index}, value is: ${value}`));</code></pre>
+    console.log(`at key: ${index}, value is: ${value}`));</code></pre></div>
                     <div class="bd-callout bd-callout-info bg-secondary text-white">
                         <h4>Résultat :</h4>
                         <p> at key: key 1, value is: value 1
@@ -400,18 +417,20 @@ map.forEach((value, index) =>
                         Cette méthode est la moins performante.
                         La boucle for..in est conçue pour itérer sur les propriétés d’un objet (ou les caractères d’une
                         string). Et non pas sur les valeurs d’un tableau. </p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const array = [1, 5, 10];
 for (let a in array){
 console.log(array[a])
-} // result 1 5 10</code></pre>
+} // result 1 5 10</code></pre></div>
                 </article>
                 <h3 id="forof">e - la boucle for..of</h3>
                 <article>
                     <p>Le code idéal, car concis et lisible ?</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const array = [1, 5, 10];
 for (const a of array){
     console.log(a)
-} // result 1 5 10</code></pre>
+} // result 1 5 10</code></pre></div>
                 </article>
             </section>
             <h2 id="autre">3 - Les boucles qui la boucle (map, filter, reduce)</h2>
@@ -423,19 +442,21 @@ for (const a of array){
                 <article>
                     <p>En utilisant foreach, il est nécessaire de créer un tableau vide pour avoir un nouveau
                         tableau</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const numbers = [1, 2, 3, 4];
 const new_numbers = [];// création d'un tableau vide
 for(let i = 0; i < numbers.length; i++) {
 new_numbers[i] = numbers[i] * 2;
 }
-console.log("Les nombres doublés sont", new_numbers); // [2, 4, 6, 8]</code></pre>
+console.log("Les nombres doublés sont", new_numbers); // [2, 4, 6, 8]</code></pre></div>
                     <p>Ce code, bien que fonctionnel et clair peut être simplifié davantage et faire abstraction des
                         boucles, ainsi :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const numbers = [1, 2, 3, 4];
 const new_numbers = numbers.map(function(number){
      return number * 2;
 });
-console.log("Les nombres doublés sont", new_numbers); // [2, 4, 6, 8]</code></pre>
+console.log("Les nombres doublés sont", new_numbers); // [2, 4, 6, 8]</code></pre></div>
                 </article>
                 <h3 id="filter">b - filter</h3>
                 <article>
@@ -444,9 +465,10 @@ console.log("Les nombres doublés sont", new_numbers); // [2, 4, 6, 8]</code></p
                         conditionnel. C’est à ce moment qu’entre en jeu la fonction filter(). La fonction filter()
                         permet de, tel que son nom l’indique, filtrer un ensemble de données.
                         <br>Voyez l’exemple suivant :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const words = ['Python', 'Javascript', 'Go', 'Java', 'PHP', 'Ruby'];
 const result = words.filter(word => word.length < 8);
-console.log(result); // retourne [ 'Python', 'Go', 'Java', 'PHP', 'Ruby' ]</code></pre>
+console.log(result); // retourne [ 'Python', 'Go', 'Java', 'PHP', 'Ruby' ]</code></pre></div>
                     <p>Le nouveau tableau rassemble tous les nom qui ont moins de 8 caractères.</p>
                 </article>
                 <h3 id="reduce">c - reduce</h3>
@@ -455,20 +477,22 @@ console.log(result); // retourne [ 'Python', 'Go', 'Java', 'PHP', 'Ruby' ]</code
                         reduce() est là pour répondre à la majeure partie de vos besoins les plus simples.
                         <br>Aimeriez-vous avoir un total? Voici un exemple d’usage où on double toutes les valeurs d’un
                         tableau avant d’en faire le cumul. :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const numbers = [1, 2, 3, 4];
 const total_number = numbers.map(function(number){
      return number * 2;
 }).reduce(function(total, number){
      return total + number;
 }, 0);
-console.log("Le total est", total_number); // 20</code></pre>
+console.log("Le total est", total_number); // 20</code></pre></div>
                     <p>La seconde valeur passée à la méthode est la valeur de départ de la valeur qui sera retournée.
                         Dans ce cas-ci, la valeur de départ est 0. Pour chacune des valeurs dans le tableau, on double
                         la valeur et la cumule à partir de 0. La résultante est de 20. ((1×2)+(2×2)+(3×2)+(4×2)).
                         La forme générale de la fonction est :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">let newArray = arr.filter(callback(valeurCourante, valeurAccumulée) {
   // return la valeur cumulée à partir du cumul précédent et de la valeur courante
-}, valeurDépart[, thisArg]);</code></pre>
+}, valeurDépart[, thisArg]);</code></pre></div>
                 </article>
             </section>
         </div>

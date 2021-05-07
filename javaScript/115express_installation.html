@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Express Install</title>
 
@@ -240,19 +241,20 @@
                 <article>
                     <p>Express vous laisse la possibilité d'utiliser une structure préfabriquée. Pour cela il faut
                         saisir dans le terminal :</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install express-generator -g</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install express-generator -g</code></pre></div>
                     <p>Cette instruction va installer le configurateur pour tous les projets, <code>-g</code> signifie
                         en mode global.
                         <br>Ensuite il faut se placer dans le répertoire désiré et saisir cette instruction :</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">express --view=ejs myapp</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">express --view=ejs myapp</code></pre></div>
                     <p>Le configurateur va créer le <strong>dossier </strong><code>myapp</code> dans votre répertoire.
                         Ici nous avons choisi
                         le moteur de template <code>ejs</code>, mais il en existe d'autres, il suffit, pour les
                         connaitre, de saisir dans votre terminal :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">express -h</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">express -h</code></pre></div>
                     <p>Nous obtenons ainsi cette architecture :</p>
+                    <div class="highlight">
                     <pre><code class="language-sh" translate="no">
 .
 ├── app.js
@@ -273,17 +275,17 @@
     └── layout.ejs
 
 7 directories, 9 files
-</code>
-</pre>
+</code></pre></div>
                     <p>Nous la détaillerons dans les chapitres suivants.
                         <br>Ensuite, installons les dépendances :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">cd myapp
-$ npm install</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">cd myapp
+$ npm install</code></pre></div>
                     <p>Pour Lancer l'application avec le debugger, dans le terminal, saisir :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">set DEBUG=myapp:*
-$ npm start</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">set DEBUG=myapp:*
+$ npm start</code></pre></div>
                     <p>Pour Lancer l'application, dans le navigateur, saisir :</p>
-                    <pre><code class="language-bash" data-lang="bash">http://localhost:3000/</code> </pre>
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">http://localhost:3000/</code></pre></div>
                 </article>
                 <h3 id="vierge">b - Démarrer avec un fichier vierge</h3>
                 <article>
@@ -293,13 +295,13 @@ $ npm start</code> </pre>
                         <br>Créez votre repertoire et positionner vous dessus.
                         <br>L'expression <code>chemin</code> désigne le chemin d'accès à votre fichier. Saisir dans le
                         terminal, le code suivant :</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">cd chemin\monappexpress</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">cd chemin\monappexpress</code></pre></div>
                     <p>Vous pouvez aussi grâce à votre IDE (comme visual studio code) ouvrir votre répertoire.
                         <br>NPM garde en mémoire, dans un fichier, tous le modules crées. Ce fichier s'appelle
                         package.json. S'il n'existe pas il faut le créer en saisissant, <code>dans le terminal</code> :
                     </p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm init</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm init</code></pre></div>
                     <p>Il suffit de répondre aux questions pour le créer.</p>
                     <img class="img-fluid" src="img/package.PNG" alt="package">
                     <div class="bd-callout bd-callout-info">
@@ -309,7 +311,7 @@ $ npm start</code> </pre>
                     <div class="bd-callout bd-callout-info">
                         <h4 class="text-black-50">Astuce</h4>
                         <p>Si vous n'avez pas de préférence, il faut saisir :</p>
-                        <pre class="chroma"><code class="language-bash" data-lang="bash">npm init -y</code></pre>
+                        <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm init -y</code></pre></div>
                         <p>Notez qu'ici, notre fichier de départ sera <code>index.js</code></p>
                     </div>
                 </article>
@@ -317,23 +319,23 @@ $ npm start</code> </pre>
                 <article>
                     <p>Par contre si ce fichier existe déjà dans votre répertoire, en le copiant collant par exemple, il
                         faut taper</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm install</code></pre></div>
                     <p>Si les deux fichiers package.json et package-lock.json sont déjà présents, il suffit de taper
                         :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm ci</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm ci</code></pre></div>
                 </article>
                 <h3 id="lancer">d - Lancer l'application</h3>
                 <article>
                     <h4>Lancer l 'application à partir d&nbsp;'un fichier package.json</h4>
                     <p>Pour Lancer l'application, il suffit de saisir, si notre fichier créée avec <code>npm init</code>
                         est <code>app.js</code> :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">node app.js</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">node app.js</code></pre></div>
                     <h4>Lancer l'application sans fichier package.json</h4>
                     <p>Si vous utilisez NPM 5.2.0 ou une version plus récente, vous pouvez utiliser le serveur http sans
                         l'installer avec npx. Ce n'est pas recommandé pour une utilisation en production, mais c'est un
                         excellent moyen de faire fonctionner rapidement un serveur sur localhost.
                         <br>Le serveur lira le premier fichier index qu'il rencontrera.</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npx http-server</code> </pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx http-server</code></pre></div>
                     <a href="https://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server"></a>
                 </article>
             </section>
@@ -347,7 +349,7 @@ $ npm start</code> </pre>
                 <article>
                     <p>C'est l'installation que nous allons préférer. Si ce n'est pas déjà fait pour un autre projet,
                         saisissez l'instruction suivante :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install -g nodemon</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm install -g nodemon</code></pre></div>
                 </article>
                 <h3 id="nodemonloc">b - Installation locale</h3>
                 <article>
@@ -355,37 +357,38 @@ $ npm start</code> </pre>
                         installation locale,
                         nous pouvons installer nodemon sous la forme d'une dev dependency avec <code>--save-dev</code>
                         (ou <code>--dev</code>) :</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install --save-dev nodemon</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save-dev nodemon</code></pre></div>
                     <p>Une écriture simplifiée est :</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm i -D nodemon</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm i -D nodemon</code></pre></div>
                     <p>Il y a cependant une chose à retenir concernant une installation locale. Il vous sera impossible
                         d'utiliser la commande nodemon directement à partir de la ligne de commande.
                         Vous pouvez cependant l'utiliser dans le cadre de certains scripts <a
                                 href="https://www.digitalocean.com/community/tutorials/nodejs-utilizing-npm-scripts-during-development">npm</a>
                         ou avec npx.
                         Néanmoins, il est possible de le lancer en saisissant pour le fichier app.js:</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">node node_modules/nodemon/bin/nodemon.js app.js</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">node node_modules/nodemon/bin/nodemon.js app.js</code></pre></div>
                     <p>Vous pouvez aussi modifier le fichier <code>package.json</code>, de cette façon, pour la partie
                         script :</p>
+                    <div class="highlight">
                     <pre><code class="language-bash" data-lang="bash">"scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
     "dev":"nodemon index"
-  },</code></pre>
+  },</code></pre></div>
                     <p>Ainsi pour lancer nodemon en local, il faut saisir, dans le terminal :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm run dev</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm run dev</code></pre></div>
                 </article>
             </section>
             <h2 id="expressInst">3 - Installer express</h2>
             <section>
                 <p>Installez ensuite Express dans le répertoire, puis sauvegardez-le dans la liste des dépendances</p>
-                <pre class="chroma"><code class="language-bash"
-                                          data-lang="bash">npm install --save express</code> </pre>
+                <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                          data-lang="bash">npm install --save express</code></pre></div>
                 <p>Pour installer express dans sa version simplifié :</p>
-                <pre class="chroma"><code class="language-bash"
-                                          data-lang="bash">npm i -S express</code> </pre>
+                <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                          data-lang="bash">npm i -S express</code></pre></div>
                 <p>Cette version simplifiée est valable pour tous les paquets.</p>
                 <div class="bd-callout bd-callout-info">
                     <h4 class="text-info">Note</h4>
@@ -403,55 +406,55 @@ $ npm start</code> </pre>
                 <h3 id="raccourci">a - Raccourcis</h3>
                 <article>
                     <p>Voici une ligne pour lancer tous les paquets en même temps :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm i -S express mysql dotenv ejs express-layout express-session mathjs</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm i -S express mysql dotenv ejs express-layout express-session mathjs</code></pre></div>
                 </article>
                 <h3 id="Mysql">b - Mysql</h3>
                 <article>
                     <p>La procédure est comparable aux autres, il faut saisir :</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install --save Mysql</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save Mysql</code></pre></div>
                     <p>Il existe aussi un autre paquet Mysql qui offre d'autres possibilités. Il faudra regarder la
                         documentation.</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install --save Mysql2</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save Mysql2</code></pre></div>
                 </article>
                 <h3 id="dotenv">c - Dotenv</h3>
                 <article>
                     <p>Ce paquet permet de gérer un fichier d'environnement qui s'appelle <code>.env</code>, dans lequel
                         on inscrit par exemple tous les paramètres de connexion, de cette façon l'application est plus
                         sécurisée. Il suffit de télécharger le paquet suivant :</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install --save i dotenv</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm install --save i dotenv</code></pre></div>
                 </article>
                 <h3 id="ejs">d - EJS</h3>
                 <article>
                     <p>Ce paquet est un moteur de template, comme dans Laravel. Concrètement, il permet de coder des
                         interfaces/</p>
-                    <pre class="chroma"><code class="language-bash" data-lang="bash">npm install --save ejs</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm install --save ejs</code></pre></div>
                 </article>
                 <h3 id="layout">e - express-layout</h3>
                 <article>
                     <p>Ce paquet permet d'obtenir un patron d'interface. Tout appel de page sera intégré dans ce
                         patron.</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install --save express-layout</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save express-layout</code></pre></div>
                 </article>
                 <h3 id="session">f - express-session</h3>
                 <article>
                     <p>Ce paquet permet de gérer les sessions avec express.</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install --save express-session</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save express-session</code></pre></div>
                 </article>
                 <h3 id="math">g - mathjs</h3>
                 <article>
                     <p>Ce paquet permet d'avoir des fonctions mathématiques.</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install --save mathjs</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save mathjs</code></pre></div>
                 </article>
                 <h3 id="cookie">h - cookie-parser</h3>
                 <article>
                     <p>Ce paquet permet avec les session de gérer les cookies.</p>
-                    <pre class="chroma"><code class="language-bash"
-                                              data-lang="bash">npm install --save cookie-parser</code></pre>
+                    <div class="highlight"><pre class="chroma"><code class="language-bash"
+                                              data-lang="bash">npm install --save cookie-parser</code></pre></div>
                 </article>
                 <h3 id=""></h3>
                 <article></article>

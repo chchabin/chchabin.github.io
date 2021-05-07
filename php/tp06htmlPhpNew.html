@@ -379,7 +379,8 @@
                     C'est une classe indépendante du type de base de données. Créez un fichier <code>m_pdo.php</code>.
                     Copiez coller le code suivant :
                 </p>
-                <pre><code class="language-php" data-lang="php">&lt;?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt;?php
 
 class PdoTd
 {
@@ -450,7 +451,8 @@ class PdoTd
 
 }</code></pre>
                 <p>Pour instancier la classe, modifiez le fichier <code>index.php</code>, de la façon suivante :</p>
-                <pre><code class="language-php" data-lang="php">include('m_model.php');
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">include('m_model.php');
 include('v_entete.php');
 require_once 'm_pdo.php';
 session_start();
@@ -475,7 +477,8 @@ $pdo = PdoTd::getPdoTd();</code></pre>
                 <p>Il s'agit maintenant de remonter les informations obtenues de la base de données pour les transmettre au contrôleur.
                     Il faut donc rajouter du code dans la partie produits du contrôleur. Vous allez chercher à afficher les catégories, il faut donc
                 obtenir les catégories du modèle. Vous allez remplacer le code existant par le code suivant :</p>
-                <pre><code class="language-php" data-lang="php">    case 'produits' :
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">    case 'produits' :
 {
     $lesCategories = $pdo->getLesCategories();
     include('v_produits.php');
@@ -486,7 +489,8 @@ $pdo = PdoTd::getPdoTd();</code></pre>
             <section>
                 <p>Vous avez remarqué que les requêtes renvoient des tableaux. Il faut donc pourvoir les parcourir pour les afficher.
                     Voua allez créer un fichier <code>v_produit.php</code>, et saisir le code est le suivant :</p>
-                <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&ltdiv class="container"&gt
     &lt?php foreach($lesCategories as $uneCategorie) : ?&gt
                     &lth2&gt&lt?= $uneCategorie['libelle']; ?&gt&lt/h2&gt
         &lthr&gt

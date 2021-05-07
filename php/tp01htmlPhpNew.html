@@ -331,7 +331,8 @@
                     <p>Vérifiez bien que vous êtes en UTF8.</p>
                 </div>
                 <p>Copiez le code suivant dans un fichier que vous allez appeler TPMenu.php :</p>
-                <pre><code class="language-php" data-lang="php">&lt;?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt;?php
 ?&gt;
 &lt;!doctype html&gt;
 &lt;html lang="fr"&gt;
@@ -380,6 +381,7 @@
                         une version anglaise.
                         <br>Avant le doctype insérez le code suivant :
                     </p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt;?php
 //Déclaration de variables
 $menu01="ACCUEIL";
@@ -403,6 +405,7 @@ $menu02="HOME";
                 <h3 id="tp01ex1b">b - Paramétrons le lien accueil :</h3>
                 <article>
                     <p>Remplacez le lien existant par celui ci-dessous et exécutez la page.</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt;a class="nav-link" href="#presentation"&gt;&lt;?php echo $menu01;?&gt;&lt;/a&gt;</code></pre>
                     <div class="bd-callout bd-callout-info bg-secondary text-white">
                         <h4>Résultat de menu01</h4>
@@ -433,6 +436,7 @@ $menu02="HOME";
                 <article>
                     <p>Copiez le code de TPMenu.php dans un nouveau fichier TPMenuLangue.php. Changez le contenu de la
                         balise <code>titre</code> comme l'exemple suivant</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt;title&gt;&lt;?= basename(__File__)?&gt;&lt;/title&gt;</code></pre>
                     <div class="bd-callout bd-callout-info bg-secondary text-white">
                         <h4>Résultat de menu02</h4>
@@ -501,6 +505,7 @@ $menu02="HOME";
                     </div>
                     <p>Création au niveau de la déclaration de variables de 2 tableaux $menu01 et $menu02 à partir du
                         tableau précédent :</p>
+                    <div class="highlight">
                     <pre><code class="language-php" data-lang="php">&lt;?php
 //Déclaration de variables
 $menu01 = ["accueil","nos produits","nous contacter","plan d’accès","qui sommes nous ?","langage"];
@@ -533,7 +538,8 @@ $lang=array();
                         </li>
                         <li>A cette place copiez le code suivant :
 
-                            <pre><code class="language-php" data-lang="php">&lt;?php
+                            <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt;?php
 for ($i= 0; $i &lt; count($lang); $i++) { ?&gt;
     &lt;li&gt;&lt;a&nbsp;class="nav-link" href="#" &gt;&lt;?php echo ucfirst($lang[$i]);?&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;?php } //fin de la boucle ?&gt;</code></pre>

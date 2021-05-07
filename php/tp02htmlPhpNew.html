@@ -325,7 +325,8 @@
             <h2 id="ex1">Exercice 1 - Création du formulaire</h2>
             <section>
                 <p>Modifiez votre code dans TPMenu.php de façon à obtenir le code suivant :</p>
-                <pre><code class="language-php" data-lang="php">&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
     &lt;ul class="navbar-nav"&gt;
         &lt;?php
         for ($i= 0; $i &lt; count($lang)-1; $i++) { ?&gt;
@@ -372,7 +373,8 @@
             <section>
                 <p>Vous allez modifier les attributs du formulaire pour qu'il puisse renvoyer quelque chose. Vous
                     obtenez :</p>
-                <pre><code class="language-php" data-lang="php">&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
     &lt;ul class="navbar-nav"&gt;
         &lt;?php
         for ($i= 0; $i &lt; count($lang)-1; $i++) { ?&gt;
@@ -389,7 +391,8 @@
     &lt;/form&gt;
 &lt;/nav&gt;</code></pre>
                 <p>Ensuite créez une page <code>TPreponse.php</code>, dans laquelle vous mettrez le code : </p>
-                <pre><code class="language-php" data-lang="php">&lt?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt?php
 var_dump($_REQUEST);</code></pre>
 
                 <div class="bd-callout bd-callout-info bg-secondary text-white">
@@ -418,7 +421,8 @@ var_dump($_REQUEST);</code></pre>
                 </ol>
                 </div>
                 <p>Modifiez votre code dans <code>TPreponse.php</code> pour obtenir :</p>
-                <pre><code class="language-php" data-lang="php">&lt?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt?php
 var_dump($_REQUEST);
 echo '&ltbr&gt';
 echo $_REQUEST['langue'];</code></pre>
@@ -447,7 +451,8 @@ echo $_REQUEST['langue'];</code></pre>
             <section>
                 <p>Voua allez faire plusieurs changements, tou d'abord au niveau de la balise <code>php</code> modifiez
                     le code de la façon suivante :</p>
-                <pre><code class="language-php" data-lang="php">&lt?php
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&lt?php
 $menu01 = ["accueil", "nos produits", "nous contacter", "plan d’accès", "qui sommes nous ?", "langage"];
 $menu02 = ["home", "products", ""];
 //test du $_REQUEST
@@ -463,7 +468,8 @@ if (!isset($_REQUEST)) {
 };
 ?&gt</code></pre>
                 <p>Ensuite au niveau du formulaire, modifiez le code comme suit :</p>
-                <pre><code class="language-php" data-lang="php">&ltform class="d-flex" method="post" action="TPMenu.php"&gt
+                <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">&ltform class="d-flex" method="post" action="TPMenu.php"&gt
         &ltselect class="form-select" aria-label="Default select example" name="langue"&gt
             &ltoption selected&gt&lt?= $selected; ?&gt&lt/option&gt
             &ltoption value="1"&gtFrançais&lt/option&gt

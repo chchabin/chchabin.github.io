@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Variables</title>
 
 </head>
@@ -37,7 +38,8 @@
             <ul class="list-unstyled mb-0 py-3 pt-md-1">
                 <li class="mb-1 active">
                     <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
-                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
                         1 - Programmer avec Javascript
                     </button>
                     <div class="collapse show" id="javascript_programmer">
@@ -170,13 +172,13 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="230dom_event.html">
-                                    D -  Associer un évènement à un nœud
+                                    D - Associer un évènement à un nœud
                                 </a>
                             </li>
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="240dom_exemple.html">
-                                    E -  Exemple récapitulatif
+                                    E - Exemple récapitulatif
                                 </a>
                             </li>
                         </ul>
@@ -199,17 +201,21 @@
             <nav id="TableOfContents">
                 <ul>
                     <li><a href="#variable">1 - Les variables</a></li>
-                    <li><ul>
-                        <li><a href="#var">a - La déclaration avec var</a></li>
-                        <li><a href="#let">b - La déclaration avec let</a></li>
-                        <li><a href="#const">c - La déclaration avec const</a></li>
-                    </ul></li>
+                    <li>
+                        <ul>
+                            <li><a href="#var">a - La déclaration avec var</a></li>
+                            <li><a href="#let">b - La déclaration avec let</a></li>
+                            <li><a href="#const">c - La déclaration avec const</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#types">2 - Les types</a></li>
                     <li><a href="#concat">3 - La concaténation</a></li>
-                    <li><ul>
-                        <li><a href="#classique">a - La concaténation classique</a></li>
-                        <li><a href="#masque">b - L'utilisation d'un masque</a></li>
-                    </ul></li>
+                    <li>
+                        <ul>
+                            <li><a href="#classique">a - La concaténation classique</a></li>
+                            <li><a href="#masque">b - L'utilisation d'un masque</a></li>
+                        </ul>
+                    </li>
 
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
@@ -221,39 +227,47 @@
         <div class="bd-content ps-lg-4">
             <div class="bd-callout bd-callout-info">
                 <h4 class="text-info">Détails</h4>
-                <p>Nous ne détaillerons pas les concepts, vous pouvez les retrouver dans la partie guide C# de ce site</p>
+                <p>Nous ne détaillerons pas les concepts, vous pouvez les retrouver dans la partie guide C# de ce
+                    site</p>
             </div>
-        <h2 id="variable">1 - Les variables</h2>
+            <h2 id="variable">1 - Les variables</h2>
             <section>
-            <h3 id="var">a - La déclaration avec var</h3>
-            <article>
-                <p>La déclaration avec <code>var</code> était la seule déclaration possible avec la norme <code>ES5</code>.
-                Elle avait un in inconvenient majeur, sa portée est globale. Elle peut donc être réaffectée sans contrôle
-                dans tous le programme, ce qui est générateur de bugs ou de conflits !</p>
-            </article>
-            <h3 id="let">b - La déclaration avec let</h3>
-            <article>
-                <p>Comme la déclaration <code>const</code>, que nous verrons infra, <code>let</code> à une portée qui ne dépasse pas le bloc.
-                Mais avec <code>let</code> il est possible de réassigner la valeur de la variable.</p>
-                <pre><code class="language-js" data-lang="js">&ltscript&gt
+                <h3 id="var">a - La déclaration avec var</h3>
+                <article>
+                    <p>La déclaration avec <code>var</code> était la seule déclaration possible avec la norme
+                        <code>ES5</code>.
+                        Elle avait un in inconvenient majeur, sa portée est globale. Elle peut donc être réaffectée sans
+                        contrôle
+                        dans tous le programme, ce qui est générateur de bugs ou de conflits !</p>
+                </article>
+                <h3 id="let">b - La déclaration avec let</h3>
+                <article>
+                    <p>Comme la déclaration <code>const</code>, que nous verrons infra, <code>let</code> à une portée
+                        qui ne dépasse pas le bloc.
+                        Mais avec <code>let</code> il est possible de réassigner la valeur de la variable.</p>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">&ltscript&gt
     let age=18;
     console.log(age);// affiche 18
     age=20;
     console.log(age);// affiche 20
-&lt/script&gt</code></pre>
-            </article>
-            <h3 id="const">c - La déclaration avec const</h3>
-            <article>
-            <p>Voici une méthode d'utilisation qui affiche une erreur :</p>
-            <pre><code class="language-js" data-lang="js">&ltscript&gt
+&lt/script&gt</code></pre></div>
+                </article>
+                <h3 id="const">c - La déclaration avec const</h3>
+                <article>
+                    <p>Voici une méthode d'utilisation qui affiche une erreur :</p>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">&ltscript&gt
     cont age=18;
     console.log(age);// affiche 18
     age=20;// affiche erreur
 
-&lt/script&gt</code></pre>
-            <p>L'erreur affichée sera <span class="text-danger">Type error : Assignment to constant variable</span>.
-            La déclaration const rend, comme en C#, le code très robuste, elle évite des affectations 'sauvage' des variables.</p>
-            </article>
+&lt/script&gt</code></pre></div>
+                    <p>L'erreur affichée sera <span
+                            class="text-danger">Type error : Assignment to constant variable</span>.
+                        La déclaration const rend, comme en C#, le code très robuste, elle évite des affectations
+                        'sauvage' des variables.</p>
+                </article>
             </section>
             <h2 id="types">2 - Les types</h2>
             <section>
@@ -320,24 +334,27 @@
                 <h3 id="classique">a - La concaténation classique</h3>
                 <article>
                     <p>Il s'agit d'une méthode qui se retrouve dans tous les languages :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&ltscript&gt
     const name = 'toto';
     const age=18;
     console.log('Mon nom est ' + name + ', mon age est de ' + age + ' ans');
     // affiche : Mon nom est toto, mon age est de 18 ans
-&lt/script&gt</code></pre>
+&lt/script&gt</code></pre></div>
                 </article>
                 <h3 id="masque">b - L'utilisation d'un masque</h3>
                 <article>
-                      <pre><code class="language-js" data-lang="js">&ltscript&gt
+                      <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">&ltscript&gt
     const name = 'toto';
     const age=18;
     console.log(`Mon nom est ${name}, mon age est de ${age} ans`);
     // affiche : Mon nom est toto, mon age est de 18 ans
-&lt/script&gt</code></pre>
+&lt/script&gt</code></pre></div>
                     <div class="bd-callout bd-callout-warning">
                         <h4 class="text-warning">Attention</h4>
-                        <p>Pour que cela fonctionne la chaine doit être entourée de backticks <code>`</code>  (touches <kbd>ALT GR</kbd> + <kbd>7</kbd>) et pas de cotes <code>'</code></p>
+                        <p>Pour que cela fonctionne la chaine doit être entourée de backticks <code>`</code> (touches
+                            <kbd>ALT GR</kbd> + <kbd>7</kbd>) et pas de cotes <code>'</code></p>
                     </div>
                 </article>
             </section>
@@ -345,7 +362,8 @@
     </main>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js" data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
 <script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/5.0/js/docs.min.js"></script>
 </body>

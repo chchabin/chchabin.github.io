@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Objets</title>
 
 </head>
@@ -37,7 +38,8 @@
             <ul class="list-unstyled mb-0 py-3 pt-md-1">
                 <li class="mb-1 active">
                     <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
-                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
                         1 - Programmer avec Javascript
                     </button>
                     <div class="collapse show" id="javascript_programmer">
@@ -170,13 +172,13 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="230dom_event.html">
-                                    D -  Associer un évènement à un nœud
+                                    D - Associer un évènement à un nœud
                                 </a>
                             </li>
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="240dom_exemple.html">
-                                    E -  Exemple récapitulatif
+                                    E - Exemple récapitulatif
                                 </a>
                             </li>
                         </ul>
@@ -201,10 +203,12 @@
                     <li><a href="#def">1 - Définition</a></li>
                     <li><a href="#modif">2 - Accès et modification</a></li>
                     <li><a href="#tab">3 - Les formats proches de l'objet</a></li>
-                    <li><ul>
-                        <li><a href="#tableau">a - le tableau d'objet(s)</a></li>
-                        <li><a href="#json">b - le format JSON</a></li>
-                    </ul></li>
+                    <li>
+                        <ul>
+                            <li><a href="#tableau">a - le tableau d'objet(s)</a></li>
+                            <li><a href="#json">b - le format JSON</a></li>
+                        </ul>
+                    </li>
 
                 </ul>
             </nav>
@@ -223,7 +227,8 @@
                     objet doit être précédée du nom de cette propriété (aussi appelé clé, ou key en anglais), et suivi
                     par <code>:</code> (deux points). Les objets ont donc la même structure qu'un tableau associatif.
                 </p>
-                <pre><code class="language-js" data-lang="js" translate="no">const personne = {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const personne = {
     nom: 'Sionne',
     prenom:'Jacques',
     age:20,
@@ -235,6 +240,7 @@
         ville:'Aulnay sous bois'
     }
 }</code></pre>
+                </div>
 
                 <p>Il est possible d'avoir différents type dans un objet :</p>
                 <ul>
@@ -251,31 +257,39 @@
             <h2 id="modif">2 - Accès et modification</h2>
             <section>
                 <p>Il est possible d'ajouter des propriétés à un objet.</p>
-                <pre><code class="language-js" data-lang="js"
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js"
                            translate="no">personne.email='sionne@free.fr'</code></pre>
+                </div>
                 <div class="bd-callout bd-callout-info bg-secondary text-white">
                     <h4>Résultat :</h4>
                     <p>en faisant un console.log(personne) vous obtenez:</p>
                     <img src="img/objet2.PNG" class="img-fluid" alt="menuAccueil">
                 </div>
                 <p>Pour accéder aux valeurs, plusieurs choix sont possibles :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">personne.nom //Sionne
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">personne.nom //Sionne
 personne.hobbies[0] // sport
 personne.adresse.voie // route de Mitry</code></pre>
+                </div>
             </section>
             <h2 id="tab">3 - Les formats proches de l'objet</h2>
             <section>
                 <h3 id="tableau">a - le tableau d'objet(s)</h3>
                 <article>
                     <p>Les tableaux d'objets, sont souvent utilisés en javascript, par exemple :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const bandes = [
   { genre: 'Rap', band: 'Migos', albums: 2},
   { genre: 'Pop', band: 'Coldplay', albums: 4},
   { genre: 'Rock', band: 'Breaking Benjamins', albums: 1}
 ];</code></pre>
+                </div>
                     <p>L'accès aux données est relativement simple :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js"
                                translate="no">console.log(bandes[1].band)</code></pre>
+                </div>
                     <p>donne :</p>
                     <div class="bd-callout bd-callout-info bg-secondary text-white">
                         <h4>Résultat :</h4>
@@ -299,6 +313,7 @@ personne.adresse.voie // route de Mitry</code></pre>
                         Le site json.org fournit un parseur en C et donne une liste de parseurs pour d'autres langages.
                         <br>Reprenons notre fichier précédent :
                     </p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">const bandes = [
    {
       "genre":"Rap",
@@ -316,7 +331,9 @@ personne.adresse.voie // route de Mitry</code></pre>
       "albums":1
    }
 ]</code></pre>
+                </div>
                     <p>ou encore :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">{
    "nom":"Sionne",
    "prenom":"Jacques",
@@ -333,10 +350,14 @@ personne.adresse.voie // route de Mitry</code></pre>
       "ville":"Aulnay sous bois"
    }
 }</code></pre>
+                </div>
                     <p>Le format JSON est très proche du format objet.
                         <br><strong>Vous voyez que toutes les chaines sont entourées de double quotes.</strong>
                         <br>Il est aussi possible de convertir directement un objet au format JSON :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">const bandesJson=JSON.stringify(bands);</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js"
+                               translate="no">const bandesJson=JSON.stringify(bands);</code></pre>
+                </div>
                 </article>
             </section>
         </div>

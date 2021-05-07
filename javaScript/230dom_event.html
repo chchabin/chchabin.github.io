@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Fullstack</title>
 
@@ -243,12 +244,14 @@
                         <li>Détecter l'évènement,</li>
                         <li>Traiter l'évènement (exécuter du code).</li>
                     </ol>
-                    <pre><code class="language-js" data-lang="js" translate="no">const btn = document.querySelector('button');</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const btn = document.querySelector('button');</code></pre></div>
                     <p>Nous avons sélectionné un bouton, et lorsque ce bouton est cliqué (c'est l'évènement <code>onclick</code>),
                         changeons le fonds de la page :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">btn.onclick = ()=> {
  document.body.style.backgroundColor ='black'
-}</code></pre>
+}</code></pre></div>
                 </article>
                 <h3 id="exemple">b - exemple d'évènements</h3>
                 <article>
@@ -367,12 +370,14 @@
                         élément écoute un événement sur cet élément. Lorsque
                         cet événement est détecté, la méthode appelle une fonction callback que vous devez lui passer en
                         argument. C'est dans cette fonction que vous placez votre code.</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">myForm.addEventListener('submit', onSubmit);</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">myForm.addEventListener('submit', onSubmit);</code></pre></div>
                     <p>Ici, la méthode <code>addEventListener</code> est associé au formulaire <code>myForm</code>.
                         L'évènement écouté est
                         <code>submit</code> (pour d'autres besoins, se référencer à la liste supra). A cet évènement est
                         associé la fonction <code>onSubmit</code>.
                         la fonction peut ressembler à ça :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">function onSubmit(e) {
     // Le paramètre e capture l'évènement
     // Blocage de l'éxécution de l'évènement
@@ -386,7 +391,7 @@
         // Le message disparait après 3 secondes
         setTimeout(() => msg.remove(), 3000);
     }
- }</code></pre>
+ }</code></pre></div>
                     <div class="bd-callout bd-callout-info">
                         <h4 class="text-info">Remarque</h4>
                         <p>Il existe aussi la méthode removeEventListener() pour enlever un gestionnaire
@@ -397,13 +402,15 @@
                 <article>
                     <p>C'est une référence à l'objet qui a envoyé l'événement. Capturons le boutons, d'une classe
                         bouton, d'un formulaire :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">const btn = document.querySelector('.btn');</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">const btn = document.querySelector('.btn');</code></pre></div>
                     <p>Associons lui à l'événement clique, l'affichage de la cible :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">btn.addEventListener('click', e => {
      // Blocage de l'éxécution de l'évènement
     e.preventDefault();
     console.log(e.target.className);
-}</code></pre>
+}</code></pre></div>
                     <p>L'affichage dans la condole sera <code>btn</code></p>
                 </article>
                 <h3 id="flux">c - Flux d'événements</h3>

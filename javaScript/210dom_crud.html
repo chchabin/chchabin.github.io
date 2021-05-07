@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Fullstack</title>
 
@@ -251,10 +252,12 @@
                 <article>
                     <p>L'instruction getElementById permet de cibler un élément particulier de notre document en
                         utilisant son id. Ainsi, si notre code HTML contient ceci</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js"
-                               translate="no">&ltinput type="radio" id="section1" name="language" value="JavaScript"&gt</code></pre>
+                               translate="no">&ltinput type="radio" id="section1" name="language" value="JavaScript"&gt</code></pre></div>
                     <p>Nous pourrons le sélectionner de cette façon</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">let section = document.getElementById("section1")</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">let section = document.getElementById("section1")</code></pre></div>
                     <p>La variable <code>section</code> contiendra l'objet correspondant à la balise <code>input</code>.
                     </p>
                     <p>La valeur de <code>section.value</code> sera <code>Ma section</code>.</p>
@@ -263,21 +266,25 @@
                 <article>
                     <p>L'instruction getElementByName permet de cibler un élément particulier de notre document en
                         utilisant son attibut name.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js"
-                               translate="no">&ltinput type="radio" id="section1" name="language" value="JavaScript"&gt</code></pre>
+                               translate="no">&ltinput type="radio" id="section1" name="language" value="JavaScript"&gt</code></pre></div>
                     <p>Nous pourrons le sélectionner de cette façon</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">let language = document.getElementByName("language")</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">let language = document.getElementByName("language")</code></pre></div>
                     <p>La valeur de <code>language.value</code> sera <code>JavaScript</code>.</p>
                     <div class="bd-callout bd-callout-warning">
                         <h4 class="text-warning">Le retour peut être un tableau d'objet</h4>
                         <p>Si le name fait référence à plusieurs balise, le retour sera un tableau d'objet :</p>
-                        <pre><code class="language-js" data-lang="js" translate="no">&ltinput type="radio" name="rate" value="Very poor"&gt Very poor
+                        <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltinput type="radio" name="rate" value="Very poor"&gt Very poor
 &ltinput type="radio" name="rate" value="Poor"&gt Poor
 &ltinput type="radio" name="rate" value="OK"&gt OK
 &ltinput type="radio" name="rate" value="Good"&gt Good
-&ltinput type="radio" name="rate" value="Very Good"&gt Very Good</code></pre>
+&ltinput type="radio" name="rate" value="Very Good"&gt Very Good</code></pre></div>
                         <p>L'appel</p>
-                        <pre><code class="language-js" data-lang="js" translate="no">let rates = document.getElementsByName("rate")</code></pre>
+                        <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">let rates = document.getElementsByName("rate")</code></pre></div>
                         <p>renverra un <strong>tableau</strong> d'objets (une nodelist pour être plus précis) qu'il
                             faudra itérer
                             avec un <code>forEach</code> par exemple.</p>
@@ -288,11 +295,13 @@
                     <p>L'instruction getElementsByClassName permet de cibler tous les éléments de notre document portant
                         une classe précise.
                         <br>Ainsi, si notre code HTML contient ceci</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">&ltdiv class="row"&gt&lt/div&gt
 &ltsection class="row"&gt&lt/section&gt
-&ltfooter class="row"&gt&lt/footer&gt</code></pre>
+&ltfooter class="row"&gt&lt/footer&gt</code></pre></div>
                     <p>Nous pourrons les sélectionner de cette façon :</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">let lignes = document.getElementsByClassName("row")</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">let lignes = document.getElementsByClassName("row")</code></pre></div>
                     <p>La variable <code>lignes</code> contiendra une <strong>collection</strong> d'objets correspondant
                         aux 3 balises portant la classe
                         "row".</p>
@@ -302,7 +311,8 @@
                     <p>L'instruction getElementsByTagName permet de cibler tous les éléments de notre document portant
                         une balise précise.
                         <br>Nous pourrons les sélectionner de cette façon</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">let balisesDiv = document.getElementsByTagName("div")</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">let balisesDiv = document.getElementsByTagName("div")</code></pre></div>
                     <p>La variable <code>balisesDiv</code> contiendra une <strong>collection</strong> d'objets
                         correspondant à toutes les balises <code>div</code>
                         de notre document.</p>
@@ -323,6 +333,7 @@
                         </li>
                     </ul>
                     <p>Nous pouvons, par exemple, écrire les différentes lignes ci-dessous</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Sélectionner la première occurrence qui correspond à une balise p
 let baliseP = document.querySelector("p")
 
@@ -333,16 +344,17 @@ let balisesP = document.querySelectorAll("p")
 let sectionRouge = document.querySelector("section.rouge")
 
 // Sélectionner toutes les occurrences qui correspond à un élément ayant la classe "rouge" dans une une balise section
-let classeRouge = document.querySelector("section .rouge")</code></pre>
+let classeRouge = document.querySelector("section .rouge")</code></pre></div>
                 </article>
                 <h3 id="base">f- les éléments de base</h3>
                 <article>
                     <p>les éléments de base de la page peuvent être ciblés plus facilement :
                         <br><code>document.documentElement</code> est l'élément principal du document (html)</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Sélectionne l'élément head
 document.head
 // Sélectionne l'élément body
-document.body</code></pre>
+document.body</code></pre></div>
                 </article>
             </section>
             <h2 id="attributs">2 - Les Attributs</h2>
@@ -352,21 +364,25 @@ document.body</code></pre>
                     <p>La méthode javascript hasAttribute(<code>nom</code>) de l'objet Element permet de savoir si un
                         attribut
                         existe.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js"
-                               translate="no">&ltdiv class="row" lang="fr"&gt&ltdiv</code></pre>
+                               translate="no">&ltdiv class="row" lang="fr"&gt&ltdiv</code></pre></div>
                     <p>Nous pourrons les tester de cette façon :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return true
-document.getElementsByTagName("div").hasAttribute("lang")</code></pre>
+document.getElementsByTagName("div").hasAttribute("lang")</code></pre></div>
                 </article>
                 <h3 id="getAttribute">b - getAttribute</h3>
                 <article>
                     <p>La méthode javascript getAttribute(<code>nom</code>) de l'objet Element permet de récupérer la
                         valeur d'un
                         attribut d'un élément par rapport à son nom</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">&ltvideo src="pub.ogv" id="publicite"&gt&lt/video&gt</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltvideo src="pub.ogv" id="publicite"&gt&lt/video&gt</code></pre></div>
                     <p>Nous pourrons les sélectionner de cette façon :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return pub.ogv
-let attribut =document.getElementById("publicite").getAttribute("src")</code></pre>
+let attribut =document.getElementById("publicite").getAttribute("src")</code></pre></div>
                 </article>
                 <h3 id="setAttribute">c - setAttribute</h3>
                 <article>
@@ -374,17 +390,21 @@ let attribut =document.getElementById("publicite").getAttribute("src")</code></p
                         permet de spécifier la valeur
                         d'un attribut d'un élément par rapport à son nom, ou d'en créer un, s'il n'existe pas dans
                         l'élément.</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv align="left"&gtContenu de la DIV.&ltdiv</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv align="left"&gtContenu de la DIV.&ltdiv</code></pre></div>
                     <p>Nous pouvons aligner le texte de la "div" à droite de cette façon :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Alignement du texte à droite
-document.getElementsByTagName("div").item(0).setAttribute("align","right");</code></pre>
+document.getElementsByTagName("div").item(0).setAttribute("align","right");</code></pre></div>
                 </article>
                 <h3 id="removeAttribute">d - removeAttribute</h3>
                 <article>
-                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv align="left"&gtContenu de la DIV.&ltdiv&gt</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv align="left"&gtContenu de la DIV.&ltdiv&gt</code></pre></div>
                     <p>Nous pouvons supprimet l'attribut align de cette façon :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Alignement du texte à droite
-document.getElementsByTagName("div").item(0).removeAttribute("lang");</code></pre>
+document.getElementsByTagName("div").item(0).removeAttribute("lang");</code></pre></div>
                 </article>
             </section>
             <h2 id="modifierprop">3 - Modifier le DOM</h2>
@@ -403,25 +423,31 @@ document.getElementsByTagName("div").item(0).removeAttribute("lang");</code></pr
                 <article>
                     <p>L'attribut javascript innerHTML de l'objet Element permet de connaître et de modifier le contenu
                         HTMLd'une balise </p>
-                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv id="contenu"&gtContenu de la DIV.&lt/div&gt</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltdiv id="contenu"&gtContenu de la DIV.&lt/div&gt</code></pre></div>
                     <p>Voici deux exemples d'affichage :</p>
                     <h4>Afficher un élément</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&gt&ltContenu de la DIV.&lt/div&gt
-document.getElementById("contenu").innerHTML;</code></pre>
+document.getElementById("contenu").innerHTML;</code></pre></div>
                     <h4>Insérer un élément</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&lth1&gtContenu de la DIV.&lt/h1&gt&lt/div&gt
-document.getElementById("contenu").innerHTML="&lth1&gtContenu de la DIV.&lt/h1&gt";</code></pre>
+document.getElementById("contenu").innerHTML="&lth1&gtContenu de la DIV.&lt/h1&gt";</code></pre></div>
                 </article>
                 <h3 id="value">b - value</h3>
                 <article>
                     <p>La propriété value définit ou renvoie la valeur de l'attribut value d'un champ de texte.L</p>
-                    <pre><code class="language-js" data-lang="js" translate="no">&ltinput type="text" id="myText" value="Mickey"&gt</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">&ltinput type="text" id="myText" value="Mickey"&gt</code></pre></div>
                     <h4>Afficher un élément</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return : Mickey
-document.getElementById("myText").value;</code></pre>
+document.getElementById("myText").value;</code></pre></div>
                     <h4>Insérer un élément</h4>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return : ... value="Donald"&gt
-document.getElementById("myText").value="Donald";</code></pre>
+document.getElementById("myText").value="Donald";</code></pre></div>
                 </article>
                 <h3 id="textContent">c - textContent</h3>
                 <article>
@@ -429,11 +455,13 @@ document.getElementById("myText").value="Donald";</code></pre>
                             href="https://developer.mozilla.org/fr/docs/Web/API/Node/textContent">textContent</a>
                         récupéré le texte d'un nœud et de ses descendants. Sa structure est comparable à <code>innerHTML</code>,
                         avec des différences références dans la page mozilla. Ici, il n'est pas possible d'insérer des balises HTML qui pourront être interprétées.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&gtBonjour&lt/div&gt
-document.getElementById("contenu").textContent="Bonjour";</code></pre>
+document.getElementById("contenu").textContent="Bonjour";</code></pre></div>
                     <p>On aura la même chose avec ceci :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js" translate="no">// Return : &ltdiv id="contenu"&gtBonjour&lt/div&gt
-document.getElementById("contenu").innerText="Bonjour";</code></pre>
+document.getElementById("contenu").innerText="Bonjour";</code></pre></div>
                 </article>
                 <h3 id="style">d - style</h3>
                 <article>

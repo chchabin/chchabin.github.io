@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Github</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
+                        1 - Fiche GIT
+                    </button>
+                    <div class="collapse show" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="00git-install.html">A - Installer Git sur votre poste de travail
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="10git_local.html">B - Créer un dépôt sur github puis votre poste de travail
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapse"
+                                   href="20git_collaborer.html">C - travailler en groupe
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">A - INSTALLER GIT SUR VOTRE POSTE DE TRAVAIL</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#verifier">Vérifier que git est opérationnel avec Laragon</a></li>
+                    <li><a href="#installer">Installer git</a></li>
+                    <li><a href="#utiliser">Utiliser git</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="verifier">Vérifier que git est opérationnel avec Laragon</h2>
+            <section>
+                <p>Ouvrez Laragon, Cliquez sur Terminal :</p>
+                <div class="highlight"><img src="images/laragon_accueil.PNG" alt="images/laragon_accueil.PNG"></div>
+                <p>Saisir git et vous devez voir apparaitre les messages suivant :</p>
+                <div class="highlight"><img src="images/laragon_git.PNG" alt="images/laragon_git.PNG"></div>
+
+            </section>
+            <h2 id="installer">Installer git</h2>
+            <section>
+                <p>Vous pouvez installer git depuis Laragon en suivant le chemin :</p>
+                <div class="highlight"><img src="images/laragon_install.PNG" alt="images/laragon_install.PNG"></div>
+            </section>
+            <h2 id="utiliser">Utiliser git</h2>
+            <section>
+                <p>vous pouvez utiliser git :</p>
+                <ul>
+                    <li>depuis le terminal de Laragon,</li>
+                    <li>depuis le terminal de Visual studio code (trouvez des tuto à ce sujet).</li>
+                </ul>
+                <h3>Configurer git sur votre poste de travail</h3>
+                <p>les couleurs :</p>
+                <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git config --global color.diff auto
+git config --global color.status auto
+git config --global color.branch auto</code></pre>
+                </div>
+                <p>L'identification :</p>
+                <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git config --global user.name “Mon Nom”
+git config --global user.email mon@mail.com
+git config --global --list  /* Affiche les propriétés globales */
+</code></pre>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

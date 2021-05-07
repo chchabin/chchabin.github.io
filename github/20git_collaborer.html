@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>Github</title>
+
+</head>
+<body>
+
+<!--        navbar-->
+<header class="navbar navbar-expand-md navbar-dark bd-navbar bg-success">
+    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <div class="collapse navbar-collapse" id="bdNavbar">
+            <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation"></nav>
+<div class="container-xxl my-md-4 bd-layout">
+    <!--        Menu Gauche-->
+    <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+            <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                <li class="mb-1 active">
+                    <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
+                        1 - Fiche GIT
+                    </button>
+                    <div class="collapse show" id="javascript_programmer">
+                        <ul class="list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapse"
+                                   href="00git-install.html">A - Installer Git sur votre poste de travail
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded collapsed"
+                                   href="10git_local.html">B - Créer un dépôt sur github puis votre poste de travail
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-inline-flex align-items-center rounded active"
+                                   href="20git_collaborer.html">C - travailler en groupe
+                                </a>
+                            </li>
+                          </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!--        Page de cours-->
+    <main class="bd-main order-1">
+        <!--            Titre-->
+        <div class="bd-intro ps-lg-4">
+            <div class="d-md-flex flex-md-row ">
+                <h1 class="bd-title" id="content">C - Travailler en groupe</h1>
+            </div>
+        </div>
+        <!--        Menu droite-->
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+            <strong class="d-block h6 my-2 pb-2 border-bottom">Dans cette page</strong>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#workflow">1 - Paramétrage et utilisation du worflow</a></li>
+                    <li><ul>
+                        <li><a href="#principe">a - principe du workflow</a></li>
+                        <li><a href="#ajouter">b - ajouter des collaborateurs</a></li>
+                        <li><a href="#branche">c - la création de branche</a></li>
+                        <li><a href="#clone">d - cloner le projet</a>
+                        <li><a href="#publication">e - publication des fonctionnalités</a>
+                    </ul></li>
+                    <li><a href="#conflits">2 - Gestion des conflits</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#rebase">a - déplacer l'origine d'une branche</a></li>
+                            <li><a href="#merge">b - publication</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!--            Docs-->
+        <div class="bd-content ps-lg-4">
+            <h2 id="workflow">1 - Paramétrage et utilisation du worflow</h2>
+            <section>
+                <h3 id="principe">a - principe du workflow</h3>
+                <article>
+                    <p>Examinons étape par étape comment une petite équipe peut collaborer en utilisant un workflow.
+                        Nous verrons comment deux développeurs, John et Jessica, peuvent travailler sur des
+                        fonctionnalités distinctes et partager leurs contributions via un dépôt centralisé.</p>
+                    <p>L'organisation d'un petit projet suit cette logique :</p>
+                    <div class="highlight"><img src="images/github_small-team-flow.png"
+                                                alt="images/github_small-team-flow.png"></div>
+                </article>
+                <h3 id="ajouter">b - ajouter des collaborateurs</h3>
+                <article>
+                    <h4>Préliminaire : vous avez créé un projet</h4>
+                    <p>La création de collaborateurs permet de leurs donner les droits en lecture et écriture. Allez sur
+                        <code>settings</code> et <code>Manage access</code> pour ajouter les collaborateurs.</p>
+                    <div class="highlight"><img src="images/github_collaborateurs.PNG"
+                                                alt="images/github_collaborateurs.PNG"></div>
+                    <p>Votre mot de passe vous sera demandé. Maintenant vous avez tous les deux les droits en écriture
+                        sur le répertoire.</p>
+
+                </article>
+                <h3 id="branche">c - la création de branche</h3>
+                <article>
+                    <p>S'il n’existe pas encore de branche, il faut tout d’abord les créer.</p>
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git branch john
+git branch jessica                        </code></pre>
+                    </div>
+                    <p>Il faut ensuite les pousser sur le site github</p>
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git push -u origin john
+git push -u origin jessica</code></pre>
+                    </div>
+                </article>
+                <h3 id="clone">d - cloner le projet</h3>
+                <article>
+                    <p>A présent chaque développeur peut cloner le repo afin de travailler. Les collaborateurs doivent
+                        cloner le projet sur leur machine, par exemple :</p>
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git clone https://github.com/chchabin/mon-application.git
+git checkout -b develop origin/jessica /* se positionne sur la branche jessica */</code></pre>
+                    </div>
+                    <h5>John travaille sur sa fonctionnalité</h5>
+                    <p>Dans son dépôt local, john peut développer des fonctionnalités en utilisant le processus de
+                        commit Git standard : édition, staging et commit.
+                        <br>N'oubliez pas que, puisque ces commandes créent des commits locaux, john peut répéter ce
+                        processus autant de fois qu'il le souhaite sans avoir à se soucier de ce qui se passe dans le
+                        dépôt centralisé.
+                    </p>
+                    <h5>Jessica travaille sur sa fonctionnalité</h5>
+                    <p>Dans le même temps, jessica travaille sur sa propre fonctionnalité dans son dépôt local en
+                        utilisant le même processus (édition, staging et commit). Tout comme john, elle ne se préoccupe
+                        pas de ce qu'il se passe dans le dépôt centralisé et elle ne se soucie vraiment pas de ce que
+                        john fait dans son dépôt local, puisque tous les dépôts locaux sont privés.</p>
+                </article>
+                <h3 id="publication">e - publication des fonctionnalités</h3>
+                <article>
+                    <div class="bd-callout bd-callout-warning">
+                        <h4 class="text-warning">Bonne pratique</h4>
+                        <p>La publication des fonctionnalités doit être faite par le chef de projet.</p>
+                    </div>
+                    <h5>John publie sa fonctionnalité</h5>
+                    <p>Une fois que John aura terminé de développer sa fonctionnalité, il devra publier ses commits
+                        locaux dans le dépôt centralisé pour que les autres membres de l'équipe puissent y accéder. Pour
+                        ce faire, il peut utiliser la commande <code>git push</code> comme suit :
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git push -u origin master</code></pre>
+                    </div>
+                    <p>Souvenez-vous que <code>origin</code> constitue la connexion distante avec le dépôt centralisé
+                        que Git a créé
+                        lorsque John l'a cloné. L'argument <code>master</code> indique à Git de faire de la branche
+                        master de origin
+                        sa branche master locale. Comme le dépôt centralisé n'a pas été mis à jour depuis que John l'a
+                        cloné, l'opération se déroulera sans conflit, et le push fonctionnera comme prévu.</p>
+                </article>
+            </section>
+            <h2 id="conflits">2 - Gestion des conflits</h2>
+            <section>
+                <h3 id="rebase">a - déplacer l'origine d'une branche</h3>
+                <article>
+                    <h5>John tente de publier la fonctionnalité de jessica.</h5>
+                    <p>Voyons ce qu'il se passe si Marie tente de faire un push de sa fonctionnalité après que Jean a
+                        publié ses changements dans le dépôt centralisé. Elle peut utiliser la même commande push. Mais,
+                        comme son historique local diverge du dépôt centralisé, Git refusera la demande et renverra un
+                        message d'erreur détaillé :</p>
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">error: failed to push some refs to '/path/to/repo.git' hint: Updates were rejected because the tip of your current branch is behind hint: its remote counterpart. Merge the remote changes (e.g. 'git pull') hint: before pushing again. hint: See the 'Note about fast-forwards' in 'git push --help' for details.</code></pre>
+                    </div>
+                    <p>Cela empêche Marie d'écraser les commits officiels. Elle doit faire un pull des mises à jour de
+                        Jean dans son dépôt, les intégrer avec ses changements locaux, puis réessayer.</p>
+                    <h5>Jessica fait un rebase par-dessus le ou les commits de John</h5>
+                    <p>John peut lancer git pull pour intégrer à son dépôt les changements effectués en amont. Cette
+                        commande est très similaire fait un pull de tout l'historique du commit en
+                        amont dans le dépôt local de Marie et tente de l'intégrer à ses commits locaux :</p>
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git pull --rebase origin master</code></pre>
+                    </div>
+                    <p>L'option <code>--rebase</code> indique à Git de déplacer tous les commits de Jessica vers la
+                        pointe de la
+                        branche master après l'avoir synchronisée avec les changements issus du dépôt centralisé.</p>
+                    <p>Le pull fonctionnera toujours si vous oubliez cette option, mais vous vous retrouverez avec un
+                        commit de merge superflu à chaque fois qu'un utilisateur devra synchroniser son dépôt avec le
+                        dépôt centralisé. Pour ce workflow, il est toujours préférable de procéder à un rebase plutôt
+                        que de générer un commit de merge.</p>
+                </article>
+                <h3 id="merge">b - publication</h3>
+                <article>
+                    <h5>John publie avec succès la fonctionnalité de Jessica</h5>
+                    <p>Après avoir synchronisé le dépôt centralisé, Marie pourra publier ses changements avec succès :</p>
+                    <div class="highlight">
+                    <pre><code class="language-bash" data-lang="bash">git push origin master</code></pre>
+                    </div>
+                </article>
+                <div class="bd-callout bd-callout-info">
+                    <h4 class="text-info">Sources complémentaires</h4>
+                    <ul>
+                        <li><a href="http://defeo.lu/in202/tutorials/tutorial4/">TD workflow</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.js"
+        data-autoloader-path="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/components/"></script>
+<script src="../dist/5.0/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/5.0/js/docs.min.js"></script>
+</body>
+</html>

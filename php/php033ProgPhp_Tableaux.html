@@ -291,7 +291,8 @@
                         contenant les valeurs que vous souhaitez stocker, séparées par des virgules.
                     </p>
                     <div class="highlight">
-                        <pre><code class="language-php" data-lang="php">$myArray = ['one', 2, '3'];<span
+                        <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">$myArray = ['one', 2, '3'];<span
                                 class="c"></span></code></pre>
                     </div>
                     <div class="bd-callout bd-callout-info">
@@ -299,7 +300,8 @@
                         <p>Les tableaux en PHP peuvent également être définis à l'aide du mot - clé <code>array</code>.
                             Le code suivant est équivalent à la notation entre crochets ci-dessus: </p>
                         <div class="highlight">
-                            <pre><code class="language-php" data-lang="php">$myArray = <span class="s">array</span>('one', 2, '3');</code></pre>
+                            <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">$myArray = <span class="s">array</span>('one', 2, '3');</code></pre>
                         </div>
                         <p>La notation entre crochets a été introduite dans PHP 5.4 et est préférée par les développeurs
                             PHP, car les crochets sont plus facilement visibles
@@ -336,13 +338,15 @@ $nbLangages = <span class="s">count</span>($langages);
                         crochets pour ajouter de nouveaux éléments ou attribuer de nouvelles valeurs aux éléments de
                         tableau existants:</p>
                     <div class="highlight">
-                        <pre><code class="language-php" data-lang="php">$langages[1]='JavaScript';<span class="c">// Assigne javascript à la deuxième colonne du tableau</span></code></pre>
+                        <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">$langages[1]='JavaScript';<span class="c">// Assigne javascript à la deuxième colonne du tableau</span></code></pre>
                     </div>
                     <p>Vous pouvez également ajouter des éléments à la fin d'un tableau en utilisant l'opérateur
                         d'affectation comme d'habitude, mais en laissant vides les crochets qui suivent le nom de la
                         variable</p>
                     <div class="highlight">
-                        <pre><code class="language-php" data-lang="php">$langages[]='HTML';
+                        <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">$langages[]='HTML';
 <span class="s">echo</span> $langages[3];<span class="c">// Affiche HTML</span></code></pre>
                     </div>
                     <div class="bd-callout bd-callout-warning">
@@ -433,7 +437,8 @@ $nbChamps2 = <span class="s">count</span>($client[0]);
                     <p>Pour ajouter un client, il faut laissant vides les crochets correspondant au numéro
                         d"enregistrement, car il s'incrémentera automatiquement. Nous aurons alors :</p>
                     <div class="highlight">
-                        <pre><code class="language-php" data-lang="php">$client[]['Nom']='Jacques Sionne';
+                        <div class="highlight">
+                    <pre><code class="language-php" data-lang="php">$client[]['Nom']='Jacques Sionne';
 $client[]['Ville']='Dijon';
 $client[]['Courriel']='Jacques.Sionne@libre.fr';</code></pre>
                     </div>

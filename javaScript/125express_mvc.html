@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Architecture MVC</title>
 
@@ -259,17 +260,20 @@
 
                 <p>Vous avez créé un fichier indépendant qui contiendra les routes. Dans ce fichier vous allez
                     ajouter ce code :</p>
-                <pre><code class="language-js" data-lang="js">const express = require('express');
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">const express = require('express');
 const router = express.Router();
 //code des routes à ajouter ici
 
 
 
-module.exports = router;</code></pre>
+module.exports = router;</code></pre></div>
                 <p>Dans le fichier <code>index.js</code> rajoutez au niveau des constantes :</p>
-                <pre><code class="language-js" data-lang="js">const router=require('./routes/routes')</code></pre>
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">const router=require('./routes/routes')</code></pre></div>
                 <p>Vous allez maintenant activer la route. Ajoutez avant <code>// Gestion des erreurs HTTP</code> :</p>
-                <pre><code class="language-js" data-lang="js">app.use ('/',router);</code></pre>
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">app.use ('/',router);</code></pre></div>
                 <p>Copiez maintenant la partie du code qui correspond à la route dans le fichier <code>route.js</code>.
                 </p>
                 <div class="bd-callout bd-callout-warning bg-warning">
@@ -307,6 +311,7 @@ module.exports = router;</code></pre>
                         fonctionnement de l'application) dans le fichier <code>index.js</code>.
                         Vous allez ajouter le code suivant entre les lignes <code>const router ...</code> et <code>app.use
                             ('/',router);</code> :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">// module de gestion de chemin
 const path = require('path');
 // module pour la création de la page layout
@@ -323,7 +328,7 @@ const middlewares = [
 
     ];
 // exécution du tableau middlewares
-app.use(middlewares);</code></pre>
+app.use(middlewares);</code></pre></div>
                 </article>
                 <h3 id="layout">b - création de la vue layout</h3>
                 <article>
@@ -342,6 +347,7 @@ app.use(middlewares);</code></pre>
                         les
                         vues qui seront appelées par le contrôleur. Elles seront insérées au niveau de la balise body.
                         Voilà pourquoi, La vue <code>layout</code> rassemble les vues v_entete.php et v_pied.php :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&lt!DOCTYPE html&gt
 &lthtml lang="en"&gt
 &lthead&gt
@@ -353,13 +359,14 @@ app.use(middlewares);</code></pre>
 &ltbody&gt
 &lt%- body %&gt
 &lt/body&gt
-&lt/html&gt</code></pre>
+&lt/html&gt</code></pre></div>
                 </article>
                 <h3 id="bandeau">c - création de la vue bandeau</h3>
                 <article>
                     <p>La vue bandeau est la même, il suffit de faire un copier collé du code. Néanmoins, l'appel des
                         routes
                         est différent de celui du PHP</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&ltdiv id="bandeau"&gt
     &lt!-- Images En-tête --&gt
                     &lt!--&ltimg src="images/menuGauche.gif"	alt="Choisir" title="Choisir"/&gt--&gt
@@ -371,25 +378,27 @@ app.use(middlewares);</code></pre>
     &ltli&gt&lta href="/voirProduits"&gt Voir le catalogue de fleurs &lt/a&gt&lt/li&gt
     &ltli&gt&lta href="#"&gt Voir son panier &lt/a&gt&lt/li&gt
     &ltli&gt&lta href="#"&gt Administrer &lt/a&gt&lt/li&gt
-&lt/ul&gt</code></pre>
+&lt/ul&gt</code></pre></div>
                 </article>
                 <h3 id="accueil">d - création de la vue accueil</h3>
                 <article>
                     <p>Pour la vue accueil est un peu différente. Il faut y inclure la vue bandeau.</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&lt%- include ('bandeau')%&gt
 &ltdiv id="accueil"&gt
     Lafleur, le prince des fleurs sur internet
-&lt/div&gt</code></pre>
+&lt/div&gt</code></pre></div>
                     <p>la balise <code>&lt%-</code> est spécifique à ejs. Elle permet d'écrire du code qui sea
                         interprété
                         par ejs.
                         Ici nous allons inclure la vue bandeau dans la vue accueil.</p>
                     <h4>v - création de la route</h4>
                     <p>Enfin, il faut appeler la route qui ouvre la vue accueil :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">// création de la Route vers accueil
 router.get('/', (req, res) => {
     res.render('accueil');
-});</code></pre>
+});</code></pre></div>
                 </article>
                 <h3 id="public">e - Mise en place de css et des images</h3>
                 <article>
@@ -440,6 +449,7 @@ router.get('/', (req, res) => {
                         base de données.
                         <br>Copiez ce code dans le fichier <code>voirProduits.js</code> :</p>
 
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">module.exports = {
     voirCategories:async (req, res) => {
         const lesCategories=[{id:'com',libelle:'Composition'}]
@@ -458,12 +468,13 @@ router.get('/', (req, res) => {
             categorie:num
         });
     }
-}</code></pre>
+}</code></pre></div>
                 </article>
                 <h3 id="ctrlroute">b - lier le contrôleur à la route</h3>
                 <article>
                     <p>Dans le fichier <code>routes.js</code> vous allez ajouter ce code au niveau des modules :</p>
-                    <pre><code class="language-js" data-lang="js">const voirProduits = require('../controller/voirProduits');</code></pre>
+                    <div class="highlight">
+                    <pre><code class="language-js" data-lang="js">const voirProduits = require('../controller/voirProduits');</code></pre></div>
                     <p>Ainsi le module du contrôleur est chargé avec celui de la route. </p>
                     <p>Il vous reste maintenant à créer les routes qui font appel au contrôleur. Lorsque l'utilisateur
                         clique sur le lien, l'URL est composée de <code>/voirProduit</code> ou <code>/voirProduitIdcategorie</code>.
@@ -476,13 +487,15 @@ router.get('/', (req, res) => {
                         <code>GET</code>.
 
                         <br>Copiez ce code :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">router.get('/voirProduits',voirProduits.voirCategories);
-router.get('/voirProduits:num',voirProduits.voirProduit);</code></pre>
+router.get('/voirProduits:num',voirProduits.voirProduit);</code></pre></div>
                 </article>
                 <h3 id="ctrlvues">c - Création des vues</h3>
                 <article>
                     <p>Le contrôleur appel deux vues : <code>categories</code> et <code>produits</code>
                         <br>Pour catégorie copiez ce code :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&lt%- include ('bandeau')%&gt
 &ltul id="categories"&gt
     &lt% for(uneCategorie of lesCategories )
@@ -495,8 +508,9 @@ router.get('/voirProduits:num',voirProduits.voirProduit);</code></pre>
     &lt/li&gt
 
 &lt% }%&gt
-&lt/ul&gt</code></pre>
+&lt/ul&gt</code></pre></div>
                     <p>Pour la vue <code>produits</code> copiez ce code :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">&lt%- include ('categories')%&gt
 &ltdiv id="produits"&gt
 

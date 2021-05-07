@@ -8,6 +8,7 @@
     <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>MVC-SGBD</title>
 
@@ -241,14 +242,17 @@
             <section>
                 <h3 id="env">a - modification du fichier .env</h3>
                 <article>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js"># DB Configurations
 DB_HOST=localhost
 DB_USER='root'
 DB_PASS=''
 DB_DATABASE=lafleur2013</code></pre>
+                </div>
                 </article>
                 <h3 id="connexion">b - ajout de la connexion dans le fichier dbConnexion</h3>
                 <article>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">const dotenv = require('dotenv');
 const mysql = require('mysql');
 // Chargement du fichier .env
@@ -295,8 +299,10 @@ query = async (sql, values) => {
 const HttpStatusCodes = Object.freeze({
     ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: 422,
     ER_DUP_ENTRY: 409
-});</code></pre>
+});</code></pre></div>
+
                     <p>Réécriture des requêtes PHP en Javascript. Ce code est à mettre à la suite du précédent :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">module.exports = {
     getLesCategories:async (param=[]) => {
         try {
@@ -317,6 +323,7 @@ const HttpStatusCodes = Object.freeze({
 
 
 }</code></pre>
+                </div>
                     <p>La fonction exploite les promesses comme expliqué dans la fiche <a
                             href="03javascript_promesses.html">promesses</a>.
                         Si l'exécution se passe correctement c'est la fonction resolve qui s'exécute, sinon c'est une
@@ -326,9 +333,12 @@ const HttpStatusCodes = Object.freeze({
                 <article>
                     <p>Vous allez connecter le module de base de données au contrôleur.
                     En haut du fichier du contrôleur copiez :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">const db = require('../db/dbConnexion');</code></pre>
+                </div>
                     <p>Il s'agit maintenant d'appeler les données à partir du modèle. La variable
                         <code>lesCategories</code> est instanciée à partir d'une fonction :</p>
+                    <div class="highlight">
                     <pre><code class="language-js" data-lang="js">voirCategories:async (req, res) => {
         const lesCategories=await db.getLesCategories();
         //Appel de la vue produit et envoie des données
@@ -336,6 +346,7 @@ const HttpStatusCodes = Object.freeze({
             lesCategories:lesCategories
         });
 }</code></pre>
+                </div>
                     <h4>le code de la vue</h4>
                     <p>Pour la vue il n'y a rien à changer</p>
                 </article>

@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../dist/5.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="../dist/5.0/css/docs.css" rel="stylesheet">
+    <link href="../dist/5.0/css/docs.css" rel="stylesheet">
     <link href="../dist/5.0/bootstrap-icons/bootstrap-icons-1.2.2/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
-    <link rel="icon" type="image/png"  href="../img/favicon.png">
+    <link href="../dist/5.0/css/docs.perso.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <title>Js Promise</title>
 
 </head>
@@ -37,7 +38,8 @@
             <ul class="list-unstyled mb-0 py-3 pt-md-1">
                 <li class="mb-1 active">
                     <button class="btn d-inline-flex align-items-center rounded collapsed text-start justify-content-start"
-                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true" aria-current="true">
+                            data-bs-toggle="collapse" data-bs-target="#javascript_programmer" aria-expanded="true"
+                            aria-current="true">
                         1 - Programmer avec Javascript
                     </button>
                     <div class="collapse show" id="javascript_programmer">
@@ -170,13 +172,13 @@
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="230dom_event.html">
-                                    D -  Associer un évènement à un nœud
+                                    D - Associer un évènement à un nœud
                                 </a>
                             </li>
                             <li>
                                 <a class="d-inline-flex align-items-center rounded collapsed"
                                    href="240dom_exemple.html">
-                                    E -  Exemple récapitulatif
+                                    E - Exemple récapitulatif
                                 </a>
                             </li>
                         </ul>
@@ -224,10 +226,11 @@
                     Une fois terminé, le navigateur est libre de traiter l'élément suivant de la file d'attente.</p>
                 <div class="bd-callout bd-callout-info">
                     <h4>Note latérale:</h4>
-                 <p>D'autres langages tels que PHP utilisent également un seul thread mais peuvent
-                     être
-                     gérés par un serveur multi-thread tel qu'Apache. Deux requêtes sur la même page PHP en même temps
-                     peuvent initier deux threads exécutant des instances isolées de PHP Durée.</p>
+                    <p>D'autres langages tels que PHP utilisent également un seul thread mais peuvent
+                        être
+                        gérés par un serveur multi-thread tel qu'Apache. Deux requêtes sur la même page PHP en même
+                        temps
+                        peuvent initier deux threads exécutant des instances isolées de PHP Durée.</p>
                 </div>
 
                 <h3>Devenir asynchrone avec les rappels</h3>
@@ -237,7 +240,8 @@
                     opération peut prendre plusieurs secondes, voire quelques minutes . Un navigateur se verrouillait en
                     attendant une réponse. Sur le serveur, une application Node.js ne serait pas en mesure de traiter
                     d'autres demandes d'utilisateurs. Voici un exemple :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">// tableau d'objets post
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">// tableau d'objets post
 const posts=[
     {title:'post one',body:'est post1'},
     {title:'post two',body:'est post2'},
@@ -257,12 +261,13 @@ function createPost(post){
     setTimeout(()=>{
         posts.push(post);
     },2000);
-}                </code></pre>
+}                </code></pre></div>
                 <p>Appelez les méthodes :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">// Affichage des posts
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">// Affichage des posts
 getPosts();
 //Création du post
-createPost({title:'post three',body:'est post3'});</code></pre>
+createPost({title:'post three',body:'est post3'});</code></pre></div>
                 <p>En exécutant c code, vous constaterez que le post n'est jamais créé. En effet, l'exécution du code
                     d'affichage,
                     lancée par la fonction <code>setTimeout</code>, 1000, se fait avant l'exécution du code de création
@@ -282,17 +287,19 @@ createPost({title:'post three',body:'est post3'});</code></pre>
                     appeler une autre fonction lorsque le résultat est prêt. C'est ce qu'on appelle un rappel et il est
                     passé en tant qu'argument à toute fonction asynchrone.
                     <br> Reprenons notre exemple avec un callback :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">// Modification de la fonction de création
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">// Modification de la fonction de création
 function createPost(post,callback){
     setTimeout(()=>{
         posts.push(post);
         callback()
     },2000);
-} </code></pre>
+} </code></pre></div>
                 <p>L'appel de la fonction sera un peut différent car il faut que la fonction de création soit finie pour
                     effectuer l'affichage.
                     La fonction <code>getPosts</code> est passée en callback</p>
-                <pre><code class="language-js" data-lang="js" translate="no">createPost({title:'post three',body:'est post3'},getPosts());</code></pre>
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">createPost({title:'post three',body:'est post3'},getPosts());</code></pre></div>
                 <p>Mais cette méthode a un inconveignant, elle devient illisible lorsque les callbacks s'enchainent.</p>
             </section>
             <h2 id="promises">2 - Les Promesses</h2>
@@ -310,7 +317,8 @@ function createPost(post,callback){
                     <li>reject: une fonction de rappel optionnelle s'exécute en cas d'échec.</li>
                 </ul>
                 <p>Voici la modification de notre exemple :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">function createPost(post) {
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">function createPost(post) {
     return new Promise((resolve, reject) => {
             setTimeout(() => {
                 posts.push(post);
@@ -323,14 +331,15 @@ function createPost(post,callback){
             }, 2000)
         }
     );
-}</code></pre>
+}</code></pre></div>
                 <p>La fonction renvoie une promesse qui exécutera la fonction <code>setTimeout</code> s'il n'y a pas
                     d'erreurs.
                     Dans le cas contraire, elle renverra une erreur.
                     <br>L'appel de cette fonction doit tenir compte des deux cas.</p>
-                <pre><code class="language-js" data-lang="js" translate="no">createPost({title: 'post three', body: 'est post3'})
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">createPost({title: 'post three', body: 'est post3'})
     .then(getPosts) // Exécution de getposts s'il n'y a pas d'erreurs
-    .catch(err => console.log(err)); // Exécution du cas où la promesse renvoie une erreur</code></pre>
+    .catch(err => console.log(err)); // Exécution du cas où la promesse renvoie une erreur</code></pre></div>
                 <p>Les promesses réduisent l'enfer des rappels mais introduisent leurs propres problèmes.
 
                     <br>Les didacticiels omettent souvent de mentionner que toute la chaîne Promise est asynchrone .
@@ -341,11 +350,13 @@ function createPost(post,callback){
             </section>
             <h2 id="asyncawait">4 - Async/Await</h2>
             <section>
-                <p>Les promesses peuvent être décourageantes, c'est pourquoi ES2017 a introduit <code>async</code> et <code>await</code>. Bien que
+                <p>Les promesses peuvent être décourageantes, c'est pourquoi ES2017 a introduit <code>async</code> et
+                    <code>await</code>. Bien que
                     ce ne soit que du sucre syntaxique, cela rend les promesses beaucoup plus douces et vous pouvez
                     éviter les chaînes <code>.then()</code>.
                     <br>Voici votre code modifié, au niveau de l'appel cette fois :</p>
-                <pre><code class="language-js" data-lang="js" translate="no">// création d'une fonction anonyme de sortie
+                <div class="highlight">
+                    <pre><code class="language-js" data-lang="js" translate="no">// création d'une fonction anonyme de sortie
 const output=async ()=>{
     try{
         //Création du post
@@ -360,7 +371,7 @@ const output=async ()=>{
 
 }
 // Appel de la fonction
-output()</code></pre>
+output()</code></pre></div>
                 <p>L'appel du code est ici plus conforme à l'enchainement logique des méthodes.</p>
             </section>
         </div>
